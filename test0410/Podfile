@@ -1,0 +1,8 @@
+use_frameworks!
+
+target 'test0410' do
+  pod 'LeanCloud'
+  pod 'AVOSCloud'
+  pod 'AVOSCloudIM'
+  pod 'AVOSCloudCrashReporting'
+end
