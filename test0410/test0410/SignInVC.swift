@@ -31,6 +31,11 @@ class SignInVC: UIViewController {
     @IBOutlet weak var passwd: UITextField!
     
     
+    @IBOutlet weak var forgetPasswdBut: UIButton!
+    @IBOutlet weak var loginBut: UIButton!
+    @IBOutlet weak var regesiterBut: UIButton!
+    
+    
     @IBAction func login(_ sender: Any) {
         print("start to login")
         print("\(account)")
