@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class SignUpVC: UIViewController {
 
@@ -21,10 +22,61 @@ class SignUpVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var accountStr: UITextField!
 
-    @IBAction func onTest(_ sender: Any) {
-        print("Im herer")
+    @IBOutlet weak var passwdStr: UITextField!
+    
+    @IBOutlet weak var phoneStr: UITextField!
+    
+    @IBOutlet weak var classStr: UITextField!
+    
+    
+    @IBAction func regesterStart(_ sender: AnyObject) {
+        
+        print("\(accountStr)")
+        print("\(passwdStr)")
+        
+        if(accountStr.text!.isEmpty || passwdStr.text!.isEmpty || phoneStr.text!.isEmpty){
+            
+            let alert = UIAlertController(title:"注册失败",message:"账号密码或者电话不能空",preferredStyle: .alert)
+            let ok = UIAlertAction(title:"OK",style:.cancel,handler:nil);
+            
+            alert.addAction(ok);
+            self.present(alert, animated: true, completion: nil)
+            print("注册失败")
+            
+        }else{
+            let testObject = AVObject(className:"register")
+            
+            
+            testObject["account"]=accountStr.text;
+            testObject["passwd"]=passwdStr.text;
+            testObject["class"]=classStr.text;
+            testObject["phone"]=phoneStr.text;
+            
+            testObject.save()
+            
+            let user = AVUser()
+            user.username = accountStr.text;
+            user.password = passwdStr.text;
+            user.mobilePhoneNumber=phoneStr.text;
+            
+            var error: NSError?
+            do {
+                try user.signUp()
+            } catch let error1 as NSError {
+                error = error1
+            }
+
+        }
+
+        
+        
+        
     }
+  
+    
+ 
     /*
     // MARK: - Navigation
 

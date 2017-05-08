@@ -32,6 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    
+    func login() {
+        // 获取UserDefaults中存储的Key为username的值
+        let username: String? = UserDefaults.standard.string(forKey: "username")
+        
+        // 如果之前成功登陆过
+        if username != nil {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let myTabBar = storyboard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+            window?.rootViewController = myTabBar
+        }
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

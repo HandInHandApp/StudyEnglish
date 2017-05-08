@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D43B06780FA0F001C3045F20F7EA7E3ECB9AD559" : 9223372036854775807,
+    "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C9996250-D1DC-4FF2-9302-F0E2DCF9EF88",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D43B06780FA0F001C3045F20F7EA7E3ECB9AD559" : "LeanStorageDemo-iOS\/",
+    "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69" : "trainingApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "test0410",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "test0410\/test0410.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:zhu04303661\/trainingApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/leancloud\/LeanStorageDemo-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D43B06780FA0F001C3045F20F7EA7E3ECB9AD559"
+    }
+  ]
+}
