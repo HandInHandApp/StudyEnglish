@@ -9,7 +9,7 @@
 import UIKit
 import AVOSCloud
 
-class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpVCparents: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   @IBOutlet weak var avaImg: UIImageView!
   
@@ -18,15 +18,13 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
   @IBOutlet weak var repeatPasswordTxt: UITextField!
   @IBOutlet weak var emailTxt: UITextField!
   
-  @IBOutlet weak var phoneTxt: UITextField!
+    @IBOutlet weak var phoneTxt: UITextField!
     
-
-  @IBOutlet weak var parentPhoneTxt: UITextField!
-    
-    
+    @IBOutlet weak var studentPhoneTxt: UITextField!
   @IBOutlet weak var fullnameTxt: UITextField!
 //  @IBOutlet weak var bioTxt: UITextField!
-
+//  @IBOutlet weak var webTxt: UITextField!
+//  
   @IBOutlet weak var scrollView: UIScrollView!
   
   @IBOutlet weak var signUpBtn: UIButton!
@@ -66,10 +64,10 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     avaImg.addGestureRecognizer(imgTap)
     
     // UI元素布局
-    
     avaImg.frame = CGRect(x: self.view.frame.width / 2 - 40, y: 20, width: 80, height: 80)
     
     let viewWidth = self.view.frame.width
+
     let rightGap = CGFloat(40);
     let eidtWidth = self.view.frame.width - rightGap*2;
     let eidtHigh=CGFloat(20);
@@ -100,19 +98,19 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                             y: emailTxt.frame.origin.y + topGap,
                             width: eidtWidth/2 - CGFloat(10),
                             height: eidtHigh)
-    parentPhoneTxt.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
+    studentPhoneTxt.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
                                   y: emailTxt.frame.origin.y + topGap,
                                   width: eidtWidth/2 - CGFloat(10),
                                   height: eidtHigh)
     
     
     fullnameTxt.frame = CGRect(x: rightGap,
-                               y: parentPhoneTxt.frame.origin.y + topGap,
+                               y: phoneTxt.frame.origin.y + topGap,
                                width: eidtWidth,
                                height: eidtHigh)
     
-
-
+    
+    
     signUpBtn.frame = CGRect(x: rightGap,
                              y: fullnameTxt.frame.origin.y + 50,
                              width: viewWidth / 4,
@@ -121,8 +119,6 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                              y: signUpBtn.frame.origin.y,
                              width: viewWidth / 4,
                              height: 30)
-    
-//       cancelBtn.frame = CGRect(x: viewWidth - viewWidth / 4 - 20, y: signUpBtn.frame.origin.y, width: viewWidth / 4, height: 30)
     
     //设置背景图
     let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
@@ -188,7 +184,7 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     // 隐藏keyboard
     self.view.endEditing(true)
     
-    if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || repeatPasswordTxt.text!.isEmpty || emailTxt.text!.isEmpty || fullnameTxt.text!.isEmpty   {
+    if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || repeatPasswordTxt.text!.isEmpty || emailTxt.text!.isEmpty || fullnameTxt.text!.isEmpty  {
       let alert = UIAlertController(title: "请注意", message: "请填写好所有的字段", preferredStyle: .alert)
       let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
       alert.addAction(ok)
@@ -243,7 +239,6 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         self.present(alert2, animated: true, completion: nil)
         
         return
-
       }
     }
   }

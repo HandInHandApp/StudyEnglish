@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37EE95BE1EC0C9EA00C98ACE /* selectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95BD1EC0C9EA00C98ACE /* selectVC.swift */; };
+		37EE95C01EC1F8BA00C98ACE /* SignUpVCteacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95BF1EC1F8BA00C98ACE /* SignUpVCteacher.swift */; };
+		37EE95C21EC1F8D200C98ACE /* SignUpVCparents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95C11EC1F8D200C98ACE /* SignUpVCparents.swift */; };
 		4727986F1D1E473D00627A1F /* pp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4727986E1D1E473D00627A1F /* pp.jpg */; };
 		473278F41D1B389B00176754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473278F31D1B389B00176754 /* AppDelegate.swift */; };
 		473278F91D1B389B00176754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473278F71D1B389B00176754 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37EE95BD1EC0C9EA00C98ACE /* selectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectVC.swift; sourceTree = "<group>"; };
+		37EE95BF1EC1F8BA00C98ACE /* SignUpVCteacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVCteacher.swift; sourceTree = "<group>"; };
+		37EE95C11EC1F8D200C98ACE /* SignUpVCparents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVCparents.swift; sourceTree = "<group>"; };
 		4727986E1D1E473D00627A1F /* pp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pp.jpg; sourceTree = "<group>"; };
 		473278F01D1B389B00176754 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		473278F31D1B389B00176754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,9 +97,12 @@
 				473278FF1D1B389B00176754 /* Info.plist */,
 				4732790B1D1B425C00176754 /* SignInVC.swift */,
 				4732790D1D1B428300176754 /* SignUpVC.swift */,
+				37EE95C11EC1F8D200C98ACE /* SignUpVCparents.swift */,
+				37EE95BF1EC1F8BA00C98ACE /* SignUpVCteacher.swift */,
 				4732790F1D1B429700176754 /* ResetPasswordVC.swift */,
 				478143BB1D2409DB003C4A1B /* Pacifico.ttf */,
 				478143BD1D247B65003C4A1B /* bg.jpg */,
+				37EE95BD1EC0C9EA00C98ACE /* selectVC.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -186,7 +195,10 @@
 			files = (
 				473278F41D1B389B00176754 /* AppDelegate.swift in Sources */,
 				4732790E1D1B428300176754 /* SignUpVC.swift in Sources */,
+				37EE95C21EC1F8D200C98ACE /* SignUpVCparents.swift in Sources */,
 				4732790C1D1B425C00176754 /* SignInVC.swift in Sources */,
+				37EE95C01EC1F8BA00C98ACE /* SignUpVCteacher.swift in Sources */,
+				37EE95BE1EC0C9EA00C98ACE /* selectVC.swift in Sources */,
 				473279101D1B429700176754 /* ResetPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
