@@ -170,6 +170,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpW-Fi-A82">
+                                        <rect key="frame" x="205" y="408" width="165" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzP-4z-LnU">
+                                        <rect key="frame" x="390" y="407" width="85" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="获取验证码"/>
+                                        <connections>
+                                            <action selector="getVerfiyCodeBtn_clicl:" destination="cRa-pm-dyo" eventType="touchUpInside" id="p8X-Eb-wTO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -180,6 +196,7 @@
                         <outlet property="cancelBtn" destination="gyJ-Nk-HYe" id="eGe-1a-AVx"/>
                         <outlet property="emailTxt" destination="ct5-GI-9B8" id="ot4-8i-X5b"/>
                         <outlet property="fullnameTxt" destination="Oup-Br-oDI" id="REl-SB-VPU"/>
+                        <outlet property="getVerfiyCode" destination="VzP-4z-LnU" id="Fed-xP-KVd"/>
                         <outlet property="parentPhoneTxt" destination="vUh-fE-4Fn" id="qyG-KP-vK6"/>
                         <outlet property="passwordTxt" destination="N4y-Gi-E5n" id="K9g-zF-jZc"/>
                         <outlet property="phoneTxt" destination="QbK-gT-h9X" id="vU5-iL-szW"/>
@@ -187,6 +204,7 @@
                         <outlet property="scrollView" destination="vQz-SK-eaF" id="IzS-hm-qYz"/>
                         <outlet property="signUpBtn" destination="bhV-vD-hhl" id="Ka3-Tz-7XB"/>
                         <outlet property="usernameTxt" destination="eiZ-11-Baz" id="149-9K-U3c"/>
+                        <outlet property="verifyCode" destination="gpW-Fi-A82" id="jci-gx-MJR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSc-vq-J96" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电子邮件" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3F-tU-keS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电话号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3F-tU-keS">
                                 <frame key="frameInset" minX="213" minY="194" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -244,30 +262,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3G-em-hz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-880" y="-951"/>
+            <point key="canvasLocation" x="-880.078125" y="-951.5625"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="Xuq-XO-ZVE">
+        <!--HomeVC-->
+        <scene sceneID="70P-6a-yob">
             <objects>
-                <viewController id="SOb-qm-OFX" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="40v-gx-YTZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="iC0-KZ-J7t"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ekD-dR-QuD">
+                <collectionViewController id="UPz-vO-Cv8" customClass="HomeVC" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Cjh-1p-RFO">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="TD9-O2-8b1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rxd-Of-qOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="raQ-h6-moe">
+                            <size key="itemSize" width="306" height="306"/>
+                            <size key="headerReferenceSize" width="50" height="250"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="i3P-e1-Knw">
+                                <rect key="frame" x="0.0" y="250" width="306" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="306" height="306"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="WvQ-mT-Wzr" customClass="HeaderView" customModule="Instagram" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="250"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kgh-7Z-Nfi">
+                                    <frame key="frameInset" minX="36" minY="61" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gy-BG-AXo">
+                                    <frame key="frameInset" minX="36" minY="197" width="240" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="UPz-vO-Cv8" id="miB-fR-rek"/>
+                            <outlet property="delegate" destination="UPz-vO-Cv8" id="ozV-Xj-lJf"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="ETw-r3-ty7"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aL6-ZP-l7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1217" y="137"/>
+            <point key="canvasLocation" x="1443.75" y="-649.21875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OFy-d5-gLF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Kn-GN-F4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="tabBar" id="0Tk-0n-2E7" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="6dt-74-tMa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -275,10 +327,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="SOb-qm-OFX" kind="relationship" relationship="viewControllers" id="UiK-9r-j5j"/>
+                        <segue destination="JT9-Ni-iwP" kind="relationship" relationship="viewControllers" id="4dZ-6i-f4w"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Kn-GN-F4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="175" y="137"/>
         </scene>
@@ -586,6 +637,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsw-pZ-8Ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-359.1796875" y="1190.625"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="OxG-zK-FgC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JT9-Ni-iwP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3lZ-ud-prD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kLg-xV-CDV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UPz-vO-Cv8" kind="relationship" relationship="rootViewController" id="sIj-XS-7dU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mH5-qA-jf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719.53125" y="-649.21875"/>
         </scene>
     </scenes>
     <resources>

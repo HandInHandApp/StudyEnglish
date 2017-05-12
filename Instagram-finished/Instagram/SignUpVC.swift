@@ -26,12 +26,16 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     
   @IBOutlet weak var fullnameTxt: UITextField!
 //  @IBOutlet weak var bioTxt: UITextField!
+    
+    @IBOutlet weak var verifyCode: UITextField!
+    
 
   @IBOutlet weak var scrollView: UIScrollView!
   
   @IBOutlet weak var signUpBtn: UIButton!
   @IBOutlet weak var cancelBtn: UIButton!
   
+    @IBOutlet weak var getVerfiyCode: UIButton!
   
   // 根据需要，设置滚动视图的高度
   var scrollViewHeight: CGFloat = 0
@@ -106,8 +110,17 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                                   height: eidtHigh)
     
     
+    verifyCode.frame = CGRect(x: rightGap,
+                            y: phoneTxt.frame.origin.y + topGap,
+                            width: eidtWidth/2 - CGFloat(10),
+                            height: eidtHigh)
+    getVerfiyCode.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
+                                  y: phoneTxt.frame.origin.y + topGap,
+                                  width: eidtWidth/2 - CGFloat(10),
+                                  height: eidtHigh)
+    
     fullnameTxt.frame = CGRect(x: rightGap,
-                               y: parentPhoneTxt.frame.origin.y + topGap,
+                               y: verifyCode.frame.origin.y + topGap,
                                width: eidtWidth,
                                height: eidtHigh)
     
@@ -180,7 +193,54 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
       self.scrollView.frame.size.height = self.view.frame.height
     }
   }
+    
+    func notify(title:String, meesage:String){
+        
+        let alert = UIAlertController(title: title, message: meesage, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
   
+    // 获取验证码按钮被点击
+    @IBAction func getVerfiyCodeBtn_clicl(_ sender: AnyObject) {
+        print(phoneTxt.text)
+        
+        AVOSCloud.requestSmsCode(withPhoneNumber: phoneTxt.text, callback: {(succeeded: Bool, error: Error?) in
+            if succeeded {
+                self.notify(title: "请注意",meesage: "验证码已发送，请输入验证码")
+            }
+            else{
+                
+                self.notify(title: "验证码发送失败",meesage: (error?.localizedDescription)!)
+                
+            }
+//            if self.filterError(error) {
+//                self.alertViewHelper.showInputView("验证码已发送，请输入验证码", block: { (smsCode) -> Void in
+//                    AVUser.signUpOrLoginWithMobilePhoneNumberInBackground(phoneNumber, smsCode: smsCode, block: {(user: AVUser?, error: NSError?) in
+//                        if self.filterError(error) {
+//                            self.log("注册或登录成功 phone:\(phoneNumber)\nuser:\(user)")
+//                        }
+//                    })
+//                })
+//            }
+        })
+        
+//        AVUser.requestLoginSmsCode(phoneTxt.text, with: {(succeeded: Bool, error: Error?) in
+//            if succeeded {
+//                self.notify(title: "请注意",meesage: "验证码已发送，请输入验证码")
+//                }
+//            else{
+//                
+//                self.notify(title: "验证码发送失败",meesage: (error?.localizedDescription)!)
+//
+//            }
+//            
+//        })
+        
+    }
+    
+    
   // 注册按钮被点击
   @IBAction func signUpBtn_click(_ sender: AnyObject) {
     print("注册按钮被按下！")
@@ -220,6 +280,24 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     let avaData = UIImageJPEGRepresentation(avaImg.image!, 0.5)
     let avaFile = AVFile(name: "ava.jpg", data: avaData)
     user["ava"] = avaFile
+    
+    
+//    let user = AVUser()
+//    user.username = self.randomString(6)
+//    user.password = self.testPassword
+    user.mobilePhoneNumber = phoneTxt.text;
+    // 保存信息到服务器
+//    user.signUpInBackground({(succeeded: Bool, error: Error?) in
+//        if succeeded {
+//        self.alertViewHelper.showInputView("验证短信已发送，请输入验证码", block: { (smsCode) -> Void in
+//                AVUser.verifyMobilePhone(smsCode, withBlock: {(succeeded: Bool, error: NSError?) in
+//                    if self.filterError(error) {
+//                        self.log("成功注册  手机号 \(phoneNumber) 密码 \(self.testPassword)")
+//                    }
+//                })
+//            })
+//        }
+//    })
     
     // 保存信息到服务器
     user.signUpInBackground { (success:Bool, error:Error?) in
