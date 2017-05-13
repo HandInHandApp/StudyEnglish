@@ -185,7 +185,7 @@
                   moduleName = "Instagram"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhuenqing/workspace/trainingApp/Instagram-finished/Instagram/ResetPasswordVC.swift"
-                  timestampString = "516334765.804218"
+                  timestampString = "516352151.691773"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -200,7 +200,7 @@
                   moduleName = "Instagram"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhuenqing/workspace/trainingApp/Instagram-finished/Instagram/ResetPasswordVC.swift"
-                  timestampString = "516334765.806269"
+                  timestampString = "516352151.694639"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -405,7 +405,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/HomeVC.swift"
