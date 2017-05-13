@@ -12,6 +12,9 @@
 		370DB7EC1EC4B85F00B8133E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7EB1EC4B85F00B8133E /* HomeVC.swift */; };
 		370DB7EE1EC4B89B00B8133E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7ED1EC4B89B00B8133E /* HeaderView.swift */; };
 		370DB7F01EC4BA9300B8133E /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7EF1EC4BA9300B8133E /* PictureCell.swift */; };
+		370DB7F41EC6902100B8133E /* FollowersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7F31EC6902100B8133E /* FollowersVC.swift */; };
+		370DB7F61EC6905B00B8133E /* FollowersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7F51EC6905B00B8133E /* FollowersCell.swift */; };
+		377943CD1EC6A3F9009A091C /* Home2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377943CC1EC6A3F9009A091C /* Home2VC.swift */; };
 		37EE95BE1EC0C9EA00C98ACE /* selectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95BD1EC0C9EA00C98ACE /* selectVC.swift */; };
 		37EE95C01EC1F8BA00C98ACE /* SignUpVCteacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95BF1EC1F8BA00C98ACE /* SignUpVCteacher.swift */; };
 		37EE95C21EC1F8D200C98ACE /* SignUpVCparents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95C11EC1F8D200C98ACE /* SignUpVCparents.swift */; };
@@ -49,6 +52,9 @@
 		370DB7EB1EC4B85F00B8133E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		370DB7ED1EC4B89B00B8133E /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		370DB7EF1EC4BA9300B8133E /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
+		370DB7F31EC6902100B8133E /* FollowersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersVC.swift; path = ../FollowersVC.swift; sourceTree = "<group>"; };
+		370DB7F51EC6905B00B8133E /* FollowersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersCell.swift; path = ../FollowersCell.swift; sourceTree = "<group>"; };
+		377943CC1EC6A3F9009A091C /* Home2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2VC.swift; sourceTree = "<group>"; };
 		37EE95BD1EC0C9EA00C98ACE /* selectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectVC.swift; sourceTree = "<group>"; };
 		37EE95BF1EC1F8BA00C98ACE /* SignUpVCteacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVCteacher.swift; sourceTree = "<group>"; };
 		37EE95C11EC1F8D200C98ACE /* SignUpVCparents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVCparents.swift; sourceTree = "<group>"; };
@@ -99,10 +105,13 @@
 		473278F21D1B389B00176754 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				370DB7F51EC6905B00B8133E /* FollowersCell.swift */,
+				370DB7F31EC6902100B8133E /* FollowersVC.swift */,
 				4727986E1D1E473D00627A1F /* pp.jpg */,
 				370DB7E71EC42B0100B8133E /* AlertViewHelper.swift */,
 				473278F31D1B389B00176754 /* AppDelegate.swift */,
 				473278F71D1B389B00176754 /* Main.storyboard */,
+				377943CC1EC6A3F9009A091C /* Home2VC.swift */,
 				473278FA1D1B389B00176754 /* Assets.xcassets */,
 				473278FC1D1B389B00176754 /* LaunchScreen.storyboard */,
 				473278FF1D1B389B00176754 /* Info.plist */,
@@ -208,10 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370DB7F41EC6902100B8133E /* FollowersVC.swift in Sources */,
+				377943CD1EC6A3F9009A091C /* Home2VC.swift in Sources */,
 				473278F41D1B389B00176754 /* AppDelegate.swift in Sources */,
 				370DB7EC1EC4B85F00B8133E /* HomeVC.swift in Sources */,
 				4732790E1D1B428300176754 /* SignUpVC.swift in Sources */,
 				37EE95C21EC1F8D200C98ACE /* SignUpVCparents.swift in Sources */,
+				370DB7F61EC6905B00B8133E /* FollowersCell.swift in Sources */,
 				370DB7E81EC42B0100B8133E /* AlertViewHelper.swift in Sources */,
 				4732790C1D1B425C00176754 /* SignInVC.swift in Sources */,
 				37EE95C01EC1F8BA00C98ACE /* SignUpVCteacher.swift in Sources */,

@@ -80,7 +80,17 @@ class SignInVC: UIViewController {
         // 调用AppDelegate类的login方法
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.login()
-      }
+      }else{
+        print(error?.localizedDescription)
+        
+        let alert2 = UIAlertController(title: "请注意", message: error?.localizedDescription, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert2.addAction(ok)
+        self.present(alert2, animated: true, completion: nil)
+        
+        return
+
+        }
     }
   }
   

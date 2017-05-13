@@ -12,6 +12,10 @@ private let reuseIdentifier = "Cell"
 
 class HomeVC: UICollectionViewController {
 
+//    @IBOutlet weak var myImg: UIImageView!
+    
+    @IBOutlet weak var myName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +26,42 @@ class HomeVC: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        
+        // label的字体设置
+//        myName.font = UIFont(name: "Pacifico", size: 25)
+//        
+//        myName.frame = CGRect(x: 10, y: 80, width: self.view.frame.width - 20, height: 50)
+        
+//        studentBut.frame = CGRect(x: 20, y: selectLab.frame.origin.y + 70, width: self.view.frame.width - 40, height: 30)
+//        parentsBut.frame = CGRect(x: 20, y: studentBut.frame.origin.y + 40, width: self.view.frame.width - 40, height: 30)
+//        
+//        teacherBut.frame = CGRect(x: 20, y: parentsBut.frame.origin.y + 40, width: self.view.frame.width - 40, height: 30)
+//        
+        
+//        cancelBtn.frame = CGRect(x: 20 ,
+//                                 y: teacherBut.frame.origin.y + 50,
+//                                 width: self.view.frame.width - 40,
+//                                 height: 30)
+        
+        let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
+        
+        
+        //设置背景图
+        let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        
+        bg.image = UIImage(named: "bg.jpg")
+        bg.layer.zPosition = -1
+        self.view.addSubview(bg)
+
     }
 
+    func hideKeyboard(recognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
