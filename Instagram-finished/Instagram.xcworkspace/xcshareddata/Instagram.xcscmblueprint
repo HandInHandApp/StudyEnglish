@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D43B06780FA0F001C3045F20F7EA7E3ECB9AD559" : 9223372036854775807,
+    "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "61121B32-B3D2-4820-9545-7E70B67C2B18",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D43B06780FA0F001C3045F20F7EA7E3ECB9AD559" : "LeanStorageDemo-iOS\/",
+    "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69" : "trainingApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Instagram",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Instagram-finished\/Instagram.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:zhu04303661\/trainingApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2013C5728BA94E34C77E1F6ED99BCC9C8E548E69"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/leancloud\/LeanStorageDemo-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D43B06780FA0F001C3045F20F7EA7E3ECB9AD559"
+    }
+  ]
+}

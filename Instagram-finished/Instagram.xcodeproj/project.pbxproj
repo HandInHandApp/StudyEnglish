@@ -14,6 +14,17 @@
 		370DB7F01EC4BA9300B8133E /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7EF1EC4BA9300B8133E /* PictureCell.swift */; };
 		370DB7F41EC6902100B8133E /* FollowersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7F31EC6902100B8133E /* FollowersVC.swift */; };
 		370DB7F61EC6905B00B8133E /* FollowersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7F51EC6905B00B8133E /* FollowersCell.swift */; };
+		37390D521EC85DE000E7A456 /* PlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D511EC85DE000E7A456 /* PlanVC.swift */; };
+		37390D541EC87C0500E7A456 /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D531EC87C0500E7A456 /* DIYCalendarCell.swift */; };
+		37390D561EC87C0D00E7A456 /* DIYExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D551EC87C0D00E7A456 /* DIYExampleViewController.swift */; };
+		37390D5B1EC880ED00E7A456 /* CalendarConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D571EC880ED00E7A456 /* CalendarConfigViewController.swift */; };
+		37390D5C1EC880ED00E7A456 /* InterfaceBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D581EC880ED00E7A456 /* InterfaceBuilderViewController.swift */; };
+		37390D5D1EC880ED00E7A456 /* LoadViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D591EC880ED00E7A456 /* LoadViewExampleViewController.swift */; };
+		37390D5E1EC880ED00E7A456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D5A1EC880ED00E7A456 /* ViewController.swift */; };
+		37390D601EC881E500E7A456 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D5F1EC881E500E7A456 /* TableViewController.swift */; };
+		37390D621EC8824100E7A456 /* DelegateAppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D611EC8824100E7A456 /* DelegateAppearanceViewController.swift */; };
+		37390D6E1EC8842900E7A456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37390D6D1EC8842900E7A456 /* Images.xcassets */; };
+		37390D701EC8852800E7A456 /* FSCalendarScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37390D6F1EC8852800E7A456 /* FSCalendarScopeViewController.swift */; };
 		377943CD1EC6A3F9009A091C /* Home2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377943CC1EC6A3F9009A091C /* Home2VC.swift */; };
 		37EE95BE1EC0C9EA00C98ACE /* selectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95BD1EC0C9EA00C98ACE /* selectVC.swift */; };
 		37EE95C01EC1F8BA00C98ACE /* SignUpVCteacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE95BF1EC1F8BA00C98ACE /* SignUpVCteacher.swift */; };
@@ -30,6 +41,7 @@
 		473279101D1B429700176754 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4732790F1D1B429700176754 /* ResetPasswordVC.swift */; };
 		478143BC1D2409DB003C4A1B /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 478143BB1D2409DB003C4A1B /* Pacifico.ttf */; };
 		478143BE1D247B65003C4A1B /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 478143BD1D247B65003C4A1B /* bg.jpg */; };
+		E0A7B35BD2C6CDB433559D7E /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C045292FED05C8662FE8D97 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C045292FED05C8662FE8D97 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2001C927CB583DEAA2DE2EDE /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
+		2018106C744ED7197F31ECE1 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		370DB7E71EC42B0100B8133E /* AlertViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertViewHelper.swift; path = "../../../LeanStorageDemo-iOS/LeanStorageDemoSwift/LeanStorageDemoSwift/AlertViewHelper.swift"; sourceTree = "<group>"; };
 		370DB7E91EC4534E00B8133E /* MainPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageVC.swift; sourceTree = "<group>"; };
 		370DB7EB1EC4B85F00B8133E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -54,6 +69,17 @@
 		370DB7EF1EC4BA9300B8133E /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		370DB7F31EC6902100B8133E /* FollowersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersVC.swift; path = ../FollowersVC.swift; sourceTree = "<group>"; };
 		370DB7F51EC6905B00B8133E /* FollowersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersCell.swift; path = ../FollowersCell.swift; sourceTree = "<group>"; };
+		37390D511EC85DE000E7A456 /* PlanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanVC.swift; path = ../PlanVC.swift; sourceTree = "<group>"; };
+		37390D531EC87C0500E7A456 /* DIYCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
+		37390D551EC87C0D00E7A456 /* DIYExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIYExampleViewController.swift; sourceTree = "<group>"; };
+		37390D571EC880ED00E7A456 /* CalendarConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarConfigViewController.swift; sourceTree = "<group>"; };
+		37390D581EC880ED00E7A456 /* InterfaceBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderViewController.swift; sourceTree = "<group>"; };
+		37390D591EC880ED00E7A456 /* LoadViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewExampleViewController.swift; sourceTree = "<group>"; };
+		37390D5A1EC880ED00E7A456 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37390D5F1EC881E500E7A456 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		37390D611EC8824100E7A456 /* DelegateAppearanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateAppearanceViewController.swift; sourceTree = "<group>"; };
+		37390D6D1EC8842900E7A456 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37390D6F1EC8852800E7A456 /* FSCalendarScopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSCalendarScopeViewController.swift; sourceTree = "<group>"; };
 		377943CC1EC6A3F9009A091C /* Home2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2VC.swift; sourceTree = "<group>"; };
 		37EE95BD1EC0C9EA00C98ACE /* selectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectVC.swift; sourceTree = "<group>"; };
 		37EE95BF1EC1F8BA00C98ACE /* SignUpVCteacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVCteacher.swift; sourceTree = "<group>"; };
@@ -79,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				473279071D1B393C00176754 /* AVOSCloud.framework in Frameworks */,
+				E0A7B35BD2C6CDB433559D7E /* Pods_Instagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +118,7 @@
 				473279051D1B38DC00176754 /* Frameworks */,
 				473278F21D1B389B00176754 /* Instagram */,
 				473278F11D1B389B00176754 /* Products */,
+				DE832EEEBB64C1CA7D3DF515 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +133,17 @@
 		473278F21D1B389B00176754 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				37390D6F1EC8852800E7A456 /* FSCalendarScopeViewController.swift */,
+				37390D6D1EC8842900E7A456 /* Images.xcassets */,
+				37390D611EC8824100E7A456 /* DelegateAppearanceViewController.swift */,
+				37390D5F1EC881E500E7A456 /* TableViewController.swift */,
+				37390D571EC880ED00E7A456 /* CalendarConfigViewController.swift */,
+				37390D581EC880ED00E7A456 /* InterfaceBuilderViewController.swift */,
+				37390D591EC880ED00E7A456 /* LoadViewExampleViewController.swift */,
+				37390D5A1EC880ED00E7A456 /* ViewController.swift */,
+				37390D551EC87C0D00E7A456 /* DIYExampleViewController.swift */,
+				37390D531EC87C0500E7A456 /* DIYCalendarCell.swift */,
+				37390D511EC85DE000E7A456 /* PlanVC.swift */,
 				370DB7F51EC6905B00B8133E /* FollowersCell.swift */,
 				370DB7F31EC6902100B8133E /* FollowersVC.swift */,
 				4727986E1D1E473D00627A1F /* pp.jpg */,
@@ -135,8 +174,18 @@
 			isa = PBXGroup;
 			children = (
 				473279061D1B393C00176754 /* AVOSCloud.framework */,
+				0C045292FED05C8662FE8D97 /* Pods_Instagram.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE832EEEBB64C1CA7D3DF515 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2001C927CB583DEAA2DE2EDE /* Pods-Instagram.debug.xcconfig */,
+				2018106C744ED7197F31ECE1 /* Pods-Instagram.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +195,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473279021D1B389B00176754 /* Build configuration list for PBXNativeTarget "Instagram" */;
 			buildPhases = (
+				A99097CC96793C97BC475BAA /* [CP] Check Pods Manifest.lock */,
 				473278EC1D1B389B00176754 /* Sources */,
 				473278ED1D1B389B00176754 /* Frameworks */,
 				473278EE1D1B389B00176754 /* Resources */,
 				4732790A1D1B395000176754 /* Embed Frameworks */,
+				7A94AED9A7DCFFAB671EE512 /* [CP] Embed Pods Frameworks */,
+				807C265E0CA34377F9D7D1B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +255,7 @@
 			files = (
 				473278FE1D1B389B00176754 /* LaunchScreen.storyboard in Resources */,
 				478143BC1D2409DB003C4A1B /* Pacifico.ttf in Resources */,
+				37390D6E1EC8842900E7A456 /* Images.xcassets in Resources */,
 				4727986F1D1E473D00627A1F /* pp.jpg in Resources */,
 				473278FB1D1B389B00176754 /* Assets.xcassets in Resources */,
 				478143BE1D247B65003C4A1B /* bg.jpg in Resources */,
@@ -212,26 +265,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A94AED9A7DCFFAB671EE512 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		807C265E0CA34377F9D7D1B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instagram/Pods-Instagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A99097CC96793C97BC475BAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		473278EC1D1B389B00176754 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37390D601EC881E500E7A456 /* TableViewController.swift in Sources */,
 				370DB7F41EC6902100B8133E /* FollowersVC.swift in Sources */,
 				377943CD1EC6A3F9009A091C /* Home2VC.swift in Sources */,
+				37390D701EC8852800E7A456 /* FSCalendarScopeViewController.swift in Sources */,
 				473278F41D1B389B00176754 /* AppDelegate.swift in Sources */,
 				370DB7EC1EC4B85F00B8133E /* HomeVC.swift in Sources */,
+				37390D5E1EC880ED00E7A456 /* ViewController.swift in Sources */,
 				4732790E1D1B428300176754 /* SignUpVC.swift in Sources */,
 				37EE95C21EC1F8D200C98ACE /* SignUpVCparents.swift in Sources */,
 				370DB7F61EC6905B00B8133E /* FollowersCell.swift in Sources */,
+				37390D5D1EC880ED00E7A456 /* LoadViewExampleViewController.swift in Sources */,
 				370DB7E81EC42B0100B8133E /* AlertViewHelper.swift in Sources */,
+				37390D621EC8824100E7A456 /* DelegateAppearanceViewController.swift in Sources */,
 				4732790C1D1B425C00176754 /* SignInVC.swift in Sources */,
 				37EE95C01EC1F8BA00C98ACE /* SignUpVCteacher.swift in Sources */,
 				370DB7EE1EC4B89B00B8133E /* HeaderView.swift in Sources */,
+				37390D541EC87C0500E7A456 /* DIYCalendarCell.swift in Sources */,
+				37390D561EC87C0D00E7A456 /* DIYExampleViewController.swift in Sources */,
+				37390D521EC85DE000E7A456 /* PlanVC.swift in Sources */,
+				37390D5C1EC880ED00E7A456 /* InterfaceBuilderViewController.swift in Sources */,
 				370DB7F01EC4BA9300B8133E /* PictureCell.swift in Sources */,
 				37EE95BE1EC0C9EA00C98ACE /* selectVC.swift in Sources */,
 				370DB7EA1EC4534E00B8133E /* MainPageVC.swift in Sources */,
 				473279101D1B429700176754 /* ResetPasswordVC.swift in Sources */,
+				37390D5B1EC880ED00E7A456 /* CalendarConfigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +457,7 @@
 		};
 		473279031D1B389B00176754 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2001C927CB583DEAA2DE2EDE /* Pods-Instagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -362,6 +474,7 @@
 		};
 		473279041D1B389B00176754 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2018106C744ED7197F31ECE1 /* Pods-Instagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
