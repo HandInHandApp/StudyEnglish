@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'FSCalendarSwiftExample' do
+  pod 'FSCalendar'
+  pod 'LeanCloud'
+  pod 'AVOSCloud'
+  pod 'AVOSCloudIM'
+  pod 'AVOSCloudCrashReporting'
+end

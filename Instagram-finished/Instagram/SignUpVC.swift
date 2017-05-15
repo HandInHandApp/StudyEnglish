@@ -71,69 +71,69 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     
     // UI元素布局
     
-    avaImg.frame = CGRect(x: self.view.frame.width / 2 - 40, y: 20, width: 80, height: 80)
-    
-    let viewWidth = self.view.frame.width
-    let rightGap = CGFloat(40);
-    let eidtWidth = self.view.frame.width - rightGap*2;
-    let eidtHigh=CGFloat(20);
-    
-    let topGap=CGFloat(30);
-    
-    usernameTxt.frame = CGRect(x: rightGap,
-                               y: avaImg.frame.origin.y + 90,
-                               width: eidtWidth,
-                               height: eidtHigh)
-    
-    passwordTxt.frame = CGRect(x: rightGap,
-                               y: usernameTxt.frame.origin.y + topGap,
-                               width: eidtWidth/2 - CGFloat(10),
-                               height: eidtHigh)
-    
-    repeatPasswordTxt.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
-                                     y: usernameTxt.frame.origin.y + topGap,
-                                     width: eidtWidth/2 - CGFloat(10),
-                                     height: CGFloat(eidtHigh))
-    
-    emailTxt.frame = CGRect(x: rightGap,
-                            y: repeatPasswordTxt.frame.origin.y + topGap,
-                            width: eidtWidth,
-                            height: eidtHigh)
-    
-    phoneTxt.frame = CGRect(x: rightGap,
-                            y: emailTxt.frame.origin.y + topGap,
-                            width: eidtWidth/2 - CGFloat(10),
-                            height: eidtHigh)
-    parentPhoneTxt.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
-                                  y: emailTxt.frame.origin.y + topGap,
-                                  width: eidtWidth/2 - CGFloat(10),
-                                  height: eidtHigh)
-    
-    
-    verifyCode.frame = CGRect(x: rightGap,
-                            y: phoneTxt.frame.origin.y + topGap,
-                            width: eidtWidth/2 - CGFloat(10),
-                            height: eidtHigh)
-    getVerfiyCode.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
-                                  y: phoneTxt.frame.origin.y + topGap,
-                                  width: eidtWidth/2 - CGFloat(10),
-                                  height: eidtHigh)
-    
-    fullnameTxt.frame = CGRect(x: rightGap,
-                               y: verifyCode.frame.origin.y + topGap,
-                               width: eidtWidth,
-                               height: eidtHigh)
-    
-
-
-    signUpBtn.frame = CGRect(x: rightGap,
-                             y: fullnameTxt.frame.origin.y + 50,
-                             width: viewWidth / 4,
-                             height: 30)
-    cancelBtn.frame = CGRect(x: rightGap + eidtWidth - viewWidth / 4,
-                             y: signUpBtn.frame.origin.y,
-                             width: viewWidth / 4,
-                             height: 30)
+//    avaImg.frame = CGRect(x: self.view.frame.width / 2 - 40, y: 20, width: 80, height: 80)
+//    
+//    let viewWidth = self.view.frame.width
+//    let rightGap = CGFloat(40);
+//    let eidtWidth = self.view.frame.width - rightGap*2;
+//    let eidtHigh=CGFloat(20);
+//    
+//    let topGap=CGFloat(30);
+//    
+//    usernameTxt.frame = CGRect(x: rightGap,
+//                               y: avaImg.frame.origin.y + 90,
+//                               width: eidtWidth,
+//                               height: eidtHigh)
+//    
+//    passwordTxt.frame = CGRect(x: rightGap,
+//                               y: usernameTxt.frame.origin.y + topGap,
+//                               width: eidtWidth/2 - CGFloat(10),
+//                               height: eidtHigh)
+//    
+//    repeatPasswordTxt.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
+//                                     y: usernameTxt.frame.origin.y + topGap,
+//                                     width: eidtWidth/2 - CGFloat(10),
+//                                     height: CGFloat(eidtHigh))
+//    
+//    emailTxt.frame = CGRect(x: rightGap,
+//                            y: repeatPasswordTxt.frame.origin.y + topGap,
+//                            width: eidtWidth,
+//                            height: eidtHigh)
+//    
+//    phoneTxt.frame = CGRect(x: rightGap,
+//                            y: emailTxt.frame.origin.y + topGap,
+//                            width: eidtWidth/2 - CGFloat(10),
+//                            height: eidtHigh)
+//    parentPhoneTxt.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
+//                                  y: emailTxt.frame.origin.y + topGap,
+//                                  width: eidtWidth/2 - CGFloat(10),
+//                                  height: eidtHigh)
+//    
+//    
+//    verifyCode.frame = CGRect(x: rightGap,
+//                            y: phoneTxt.frame.origin.y + topGap,
+//                            width: eidtWidth/2 - CGFloat(10),
+//                            height: eidtHigh)
+//    getVerfiyCode.frame = CGRect(x: rightGap + eidtWidth/2 + CGFloat(10),
+//                                  y: phoneTxt.frame.origin.y + topGap,
+//                                  width: eidtWidth/2 - CGFloat(10),
+//                                  height: eidtHigh)
+//    
+//    fullnameTxt.frame = CGRect(x: rightGap,
+//                               y: verifyCode.frame.origin.y + topGap,
+//                               width: eidtWidth,
+//                               height: eidtHigh)
+//    
+//
+//
+//    signUpBtn.frame = CGRect(x: rightGap,
+//                             y: fullnameTxt.frame.origin.y + 50,
+//                             width: viewWidth / 4,
+//                             height: 30)
+//    cancelBtn.frame = CGRect(x: rightGap + eidtWidth - viewWidth / 4,
+//                             y: signUpBtn.frame.origin.y,
+//                             width: viewWidth / 4,
+//                             height: 30)
     
 //       cancelBtn.frame = CGRect(x: viewWidth - viewWidth / 4 - 20, y: signUpBtn.frame.origin.y, width: viewWidth / 4, height: 30)
     

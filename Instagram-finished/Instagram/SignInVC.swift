@@ -24,18 +24,18 @@ class SignInVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // label的字体设置
-    label.font = UIFont(name: "Pacifico", size: 25)
-    
-    label.frame = CGRect(x: 10, y: 80, width: self.view.frame.width - 20, height: 50)
-    
-    usernameTxt.frame = CGRect(x: 10, y: label.frame.origin.y + 70, width: self.view.frame.width - 20, height: 30)
-    passwordTxt.frame = CGRect(x: 10, y: usernameTxt.frame.origin.y + 40, width: self.view.frame.width - 20, height: 30)
-    
-    forgotBtn.frame = CGRect(x: 10, y: passwordTxt.frame.origin.y + 30, width: self.view.frame.width - 20, height: 30)
-    signInBtn.frame = CGRect(x: 20, y: forgotBtn.frame.origin.y + 40, width: self.view.frame.width / 4, height: 30)
-    signUpBtn.frame = CGRect(x: self.view.frame.width - signInBtn.frame.width - 20, y: signInBtn.frame.origin.y, width: signInBtn.frame.width, height: 30)
-    
+//    // label的字体设置
+//    label.font = UIFont(name: "Pacifico", size: 25)
+//    
+//    label.frame = CGRect(x: 10, y: 80, width: self.view.frame.width - 20, height: 50)
+//    
+//    usernameTxt.frame = CGRect(x: 10, y: label.frame.origin.y + 70, width: self.view.frame.width - 20, height: 30)
+//    passwordTxt.frame = CGRect(x: 10, y: usernameTxt.frame.origin.y + 40, width: self.view.frame.width - 20, height: 30)
+//    
+//    forgotBtn.frame = CGRect(x: 10, y: passwordTxt.frame.origin.y + 30, width: self.view.frame.width - 20, height: 30)
+//    signInBtn.frame = CGRect(x: 20, y: forgotBtn.frame.origin.y + 40, width: self.view.frame.width / 4, height: 30)
+//    signUpBtn.frame = CGRect(x: self.view.frame.width - signInBtn.frame.width - 20, y: signInBtn.frame.origin.y, width: signInBtn.frame.width, height: 30)
+//    
     let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
     hideTap.numberOfTapsRequired = 1
     self.view.isUserInteractionEnabled = true

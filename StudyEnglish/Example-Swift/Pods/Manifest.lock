@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (4.2.0)
+  - AVOSCloud (4.4.0)
+  - AVOSCloudCrashReporting (4.4.0):
+    - AVOSCloud (= 4.4.0)
+    - AVOSCloudCrashReporting/_ARC (= 4.4.0)
+    - AVOSCloudCrashReporting/_NOARC (= 4.4.0)
+  - AVOSCloudCrashReporting/_ARC (4.4.0):
+    - AVOSCloud (= 4.4.0)
+    - AVOSCloudCrashReporting/_NOARC (= 4.4.0)
+  - AVOSCloudCrashReporting/_NOARC (4.4.0):
+    - AVOSCloud (= 4.4.0)
+  - AVOSCloudIM (4.4.0):
+    - AVOSCloud (= 4.4.0)
+    - AVOSCloudIM/_ARC (= 4.4.0)
+    - AVOSCloudIM/_NOARC (= 4.4.0)
+  - AVOSCloudIM/_ARC (4.4.0):
+    - AVOSCloud (= 4.4.0)
+    - AVOSCloudIM/_NOARC (= 4.4.0)
+  - AVOSCloudIM/_NOARC (4.4.0):
+    - AVOSCloud (= 4.4.0)
+  - FSCalendar (2.7.4)
+  - LeanCloud (10.0.1):
+    - LeanCloud/Storage (= 10.0.1)
+  - LeanCloud/Storage (10.0.1):
+    - Alamofire (~> 4.2.0)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudCrashReporting
+  - AVOSCloudIM
+  - FSCalendar
+  - LeanCloud
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  AVOSCloud: c2cbba727f10776c995108d7e8fd3142d703ebaa
+  AVOSCloudCrashReporting: 40167db5dede2f103e3232154ac8b83f40629bb0
+  AVOSCloudIM: c7fff11ce3cc0333cb2f7b3e41370d6b36a7c78b
+  FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
+  LeanCloud: 92b302e1a67df962ea09b18f5cf1081c11f5bbce
+
+PODFILE CHECKSUM: 8d17c6581adc798aea127446eda0aa609782e95f
+
+COCOAPODS: 1.2.1

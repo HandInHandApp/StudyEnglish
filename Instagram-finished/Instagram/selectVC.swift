@@ -36,21 +36,21 @@ class selectVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // label的字体设置
-        selectLab.font = UIFont(name: "Pacifico", size: 25)
-        
-        selectLab.frame = CGRect(x: 10, y: 80, width: self.view.frame.width - 20, height: 50)
-        
-        studentBut.frame = CGRect(x: 20, y: selectLab.frame.origin.y + 70, width: self.view.frame.width - 40, height: 30)
-        parentsBut.frame = CGRect(x: 20, y: studentBut.frame.origin.y + 40, width: self.view.frame.width - 40, height: 30)
-        
-        teacherBut.frame = CGRect(x: 20, y: parentsBut.frame.origin.y + 40, width: self.view.frame.width - 40, height: 30)
-
-        
-        cancelBtn.frame = CGRect(x: 20 ,
-                                 y: teacherBut.frame.origin.y + 50,
-                                 width: self.view.frame.width - 40,
-                                 height: 30)
+//        // label的字体设置
+//        selectLab.font = UIFont(name: "Pacifico", size: 25)
+//        
+//        selectLab.frame = CGRect(x: 10, y: 80, width: self.view.frame.width - 20, height: 50)
+//        
+//        studentBut.frame = CGRect(x: 20, y: selectLab.frame.origin.y + 70, width: self.view.frame.width - 40, height: 30)
+//        parentsBut.frame = CGRect(x: 20, y: studentBut.frame.origin.y + 40, width: self.view.frame.width - 40, height: 30)
+//        
+//        teacherBut.frame = CGRect(x: 20, y: parentsBut.frame.origin.y + 40, width: self.view.frame.width - 40, height: 30)
+//
+//        
+//        cancelBtn.frame = CGRect(x: 20 ,
+//                                 y: teacherBut.frame.origin.y + 50,
+//                                 width: self.view.frame.width - 40,
+//                                 height: 30)
         
         let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         hideTap.numberOfTapsRequired = 1
