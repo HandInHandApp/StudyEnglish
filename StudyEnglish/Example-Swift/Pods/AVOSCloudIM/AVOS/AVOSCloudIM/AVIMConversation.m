@@ -670,9 +670,11 @@ static dispatch_queue_t messageCacheOperationQueue;
                 [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (succeeded) {
                         /* If uploading is success, bind file to message */
-                        [self fillTypedMessage:typedMessage withFile:file];
-                        [self fillTypedMessageForLocationIfNeeded:typedMessage];
-                        [self sendRealMessage:message option:option callback:callback];
+                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                            [self fillTypedMessage:typedMessage withFile:file];
+                            [self fillTypedMessageForLocationIfNeeded:typedMessage];
+                            [self sendRealMessage:message option:option callback:callback];
+                        });
                     } else {
                         message.status = AVIMMessageStatusFailed;
                         [AVIMBlockHelper callBooleanResultBlock:callback error:error];
@@ -1100,13 +1102,9 @@ static dispatch_queue_t messageCacheOperationQueue;
                                      callback:^(NSArray *messages, NSError *error)
          {
              if (!error) {
-                 /* Everything is OK, we cache messages and return */
+                 [AVIMBlockHelper callArrayResultBlock:callback array:messages error:nil];
                  dispatch_async(messageCacheOperationQueue, ^{
-                     BOOL truncated = [messages count] < limit;
-                     [self cacheContinuousMessages:messages withBreakpoint:!truncated];
-                     
-                     NSArray *cachedMessages = [self queryMessagesFromCacheWithLimit:limit];
-                     [AVIMBlockHelper callArrayResultBlock:callback array:cachedMessages error:nil];
+                     [self cacheContinuousMessages:messages withBreakpoint:YES];
                  });
              } else if ([error.domain isEqualToString:NSURLErrorDomain]) {
                  /* If network has an error, fallback to query from cache */
@@ -1215,9 +1213,10 @@ static dispatch_queue_t messageCacheOperationQueue;
                          [fetchedMessages addObjectsFromArray:continuousMessages];
                      }
                      
+                     [AVIMBlockHelper callArrayResultBlock:callback array:fetchedMessages error:nil];
+
                      dispatch_async(messageCacheOperationQueue, ^{
                          [self cacheContinuousMessages:fetchedMessages plusMessage:fromMessage];
-                         [AVIMBlockHelper callArrayResultBlock:callback array:fetchedMessages error:nil];
                      });
                  }];
             } else {
