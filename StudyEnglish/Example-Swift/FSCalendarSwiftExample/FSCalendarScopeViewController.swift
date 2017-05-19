@@ -38,6 +38,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         if UIDevice.current.model.hasPrefix("iPad") {
             self.calendarHeightConstraint.constant = 400
         }
+        self.calendar.allowsMultipleSelection = true
         
         self.calendar.select(Date())
         

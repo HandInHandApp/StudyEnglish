@@ -126,6 +126,17 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print("did select date \(self.formatter.string(from: date))")
+        
+        let attributedText = NSMutableAttributedString(string: "")
+        let attatchment = NSTextAttachment()
+        attatchment.image = UIImage(named: "icon_cat")!
+        attatchment.bounds = CGRect(x: 0, y: -3, width: attatchment.image!.size.width, height: attatchment.image!.size.height)
+        attributedText.append(NSAttributedString(attachment: attatchment))
+        attributedText.append(NSAttributedString(string: self.formatter.string(from: date)))
+        attributedText.append(NSAttributedString(attachment: attatchment))
+        self.eventLabel.attributedText = attributedText
+        
+        
         self.configureVisibleCells()
     }
     
