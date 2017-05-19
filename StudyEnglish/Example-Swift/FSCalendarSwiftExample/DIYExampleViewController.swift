@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import FSCalendar
 class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, FSCalendarDelegateAppearance {
     
     fileprivate let gregorian = Calendar(identifier: .gregorian)

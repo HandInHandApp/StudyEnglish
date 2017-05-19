@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbQ-QP-uhk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="cDW-c2-FFT">
+            <objects>
+                <viewController id="RQ2-Qn-IbR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c46-66-4nJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="p0c-r8-Ef4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePC-2B-PFK">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="测试" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIY-cc-QCk">
+                                <frame key="frameInset" minX="468" minY="246" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xkK-3H-T8B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7N-pM-WKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323.046875" y="473.4375"/>
+        </scene>
+        <!--测试-->
+        <scene sceneID="hUT-ZA-U6h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RbQ-QP-uhk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="测试" id="CPU-cM-w7x"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="ipad9_7.fullscreen"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bh3-CG-5Jd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RQ2-Qn-IbR" kind="relationship" relationship="rootViewController" id="SFw-QQ-w8G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fc-dh-X5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598.828125" y="473.4375"/>
+        </scene>
+    </scenes>
+</document>

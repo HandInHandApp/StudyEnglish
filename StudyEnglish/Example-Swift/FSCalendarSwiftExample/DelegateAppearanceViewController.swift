@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FSCalendar
 class DelegateAppearanceViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, FSCalendarDelegateAppearance {
     
     fileprivate weak var calendar: FSCalendar!

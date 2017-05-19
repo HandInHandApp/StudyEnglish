@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FSCalendar
 class CalendarConfigViewController: UITableViewController {
 
     var theme: Int = 0

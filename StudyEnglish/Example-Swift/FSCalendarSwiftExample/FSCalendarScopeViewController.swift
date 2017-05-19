@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+import FSCalendar
 class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var tableView: UITableView!

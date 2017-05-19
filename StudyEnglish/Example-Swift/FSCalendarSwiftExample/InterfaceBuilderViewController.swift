@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FSCalendar
 class InterfaceBuilderViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
     
     @IBOutlet
