@@ -1,6 +1,7 @@
 use_frameworks!
 
 target 'FSCalendarSwiftExample' do
+  pod 'SwiftDate', '~> 4.0'
   pod 'FSCalendar'
   pod 'LeanCloud'
   pod 'AVOSCloud'

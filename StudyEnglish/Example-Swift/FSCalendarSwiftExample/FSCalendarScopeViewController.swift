@@ -10,6 +10,19 @@ import UIKit
 
 
 import FSCalendar
+
+import SwiftDate
+
+
+
+public var st = Date();
+public var et = Date();
+public var curchangetimeIndex = 0;
+
+public var selectedDatesStr :Array<String> = []
+public var selectedStartDates :Array<Date> = [];
+public var selectedEndDates :Array<Date> = [];
+
 class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
     
 //    @IBOutlet weak var showLab: UILabel!
@@ -20,11 +33,34 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     
+    
+    selectedStartDates?{
+        willSet{
+            //变量将要被设置值
+            }
+        didSet{
+            //变量的值已经改变
+        }
+    }
+    
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         return formatter
     }()
+    
+    fileprivate lazy var timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter
+    }()
+    
+    fileprivate lazy var datetimeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = " yyyy/MM/dd HH:mm:ss"
+        return formatter
+    }()
+    
     fileprivate lazy var scopeGesture: UIPanGestureRecognizer = {
         [unowned self] in
         let panGesture = UIPanGestureRecognizer(target: self.calendar, action: #selector(self.calendar.handleScopeGesture(_:)))
@@ -42,7 +78,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         }
         self.calendar.allowsMultipleSelection = true
         
-        self.calendar.select(Date())
+//        self.calendar.select(Date())
         
         self.view.addGestureRecognizer(self.scopeGesture)
         self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
@@ -79,26 +115,145 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         self.view.layoutIfNeeded()
     }
     
-    var selectedDates :Array<String> = [""];
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("did select date \(self.dateFormatter.string(from: date))")
-        selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        print("selected dates is \(selectedDates)")
-//        [tableView, reloadData];
-        tableView.reloadData();
+    func setNewStartTime(orginDate : Date) ->Date {
+    
+        let calendarNew = Calendar.current
+        let dateComponents = calendarNew.dateComponents([.year,.month, .day], from: orginDate )
+        let stComponents = calendarNew.dateComponents([.hour,.minute,.second], from: st )
+        
+        print("dateComponents: \(dateComponents.year)");
+        var components = DateComponents()
+        
+        components.year = dateComponents.year
+        components.month = dateComponents.month
+        components.day = dateComponents.day
+        
+        components.hour = stComponents.hour
+        components.minute = stComponents.minute
+        components.second = stComponents.second
+        
+        components.timeZone = TimeZone(abbreviation: "UTC")
+        
+        var newStartDate = calendarNew.date(from: components)
+        print("\(self.datetimeFormatter.string(from: newStartDate!))")
 
+        
+        return newStartDate!;
+    }
+    
+    func setNewEndTime(orginDate : Date) ->Date {
+        
+        let calendarNew = Calendar.current
+        let dateComponents = calendarNew.dateComponents([.year,.month, .day], from: orginDate )
+        let stComponents = calendarNew.dateComponents([.hour,.minute,.second], from: et )
+        
+        print("dateComponents: \(dateComponents.year)");
+        var components = DateComponents()
+        
+        components.year = dateComponents.year
+        components.month = dateComponents.month
+        components.day = dateComponents.day
+        
+        components.hour = stComponents.hour
+        components.minute = stComponents.minute
+        components.second = stComponents.second
+        
+        components.timeZone = TimeZone(abbreviation: "UTC")
+        //        components.timeZone = TimeZone(abbreviation: "GMT")
+        
+        var newEndDate = calendarNew.date(from: components)
+        print("\(self.datetimeFormatter.string(from: newEndDate!))")
+        
+        
+        return newEndDate!;
+    }
+    
+    
+
+    
+    func  updateSelect(_ calendar: FSCalendar)  {
+        var selected :Array<String> = [];
+        var sd :Array<Date> = [];
+        var ed :Array<Date> = [];
+        
+        for (index,item) in calendar.selectedDates.enumerated() {
+            
+            sd.append(self.setNewStartTime(orginDate: item));
+            ed.append(self.setNewEndTime(orginDate: item));
+            let tmp="\(self.dateFormatter.string(from: item))"
+                + "    from: " + "\(self.timeFormatter.string(from: st))"
+                + "    to:   " + "\(self.timeFormatter.string(from: et))";
+            
+            selected.append(tmp)
+        };
+        selectedDatesStr = selected;
+        selectedStartDates = sd;
+        selectedEndDates = ed;
+        
+        print("selected dates is \(selectedDatesStr)")
+        
+        tableView.reloadData();
+    }
+    
+    func  updateAddSelect(_ calendar: FSCalendar,date: Date)  {
+
+        selectedStartDates.append(self.setNewStartTime(orginDate: date));
+        selectedEndDates.append(self.setNewEndTime(orginDate: date));
+        let tmp="\(self.dateFormatter.string(from: date))"
+                + "    from: " + "\(self.timeFormatter.string(from: st))"
+                + "    to:   " + "\(self.timeFormatter.string(from: et))";
+            
+        selectedDatesStr.append(tmp)
+        
+        print("selected dates is \(selectedDatesStr)")
+        
+        tableView.reloadData();
+    }
+
+    func  updateRemoveSelect(_ calendar: FSCalendar,date: Date)  {
+        
+        for (index,item) in calendar.selectedDates.enumerated() {
+            
+            if(item  == date){
+                selectedStartDates.remove(at: index);
+                selectedEndDates.remove(at: index);
+                selectedDatesStr.remove(at: index);
+            }
+        
+        };
+        
+        print("deselected dates is \(selectedDatesStr)")
+        
+        tableView.reloadData();
+    }
+
+    
+
+
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPositior3tn: FSCalendarMonthPosition) {
+        print("did select date \(self.dateFormatter.string(from: date))")
+        print("did select date \(self.timeFormatter.string(from: st))")
+        print("did select date \(self.timeFormatter.string(from: et))")
+        
+        
+//        updateAddSelect(calendar,date: date);
+        updateSelect(calendar);
         //selectDay.append
         calendarHeightConstraint.accessibilityLabel=self.dateFormatter.string(from: date);
         
-        if monthPosition == .next || monthPosition == .previous {
+        if monthPositior3tn == .next || monthPositior3tn == .previous {
             calendar.setCurrentPage(date, animated: true)
         }
     }
     
     func calendar(_ calendar: FSCalendar, didDeselect date: Date,at monthPosition: FSCalendarMonthPosition) {
         print("did deselect date \(self.dateFormatter.string(from: date))")
-        selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        print("selected dates is \(selectedDates)")
+//        selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+//        print("deselected dates is \(selectedDates)")
+        print("deselected dates is \(calendar.selectedDates)")
+        
+//        updateRemoveSelect(calendar,date: date);
+        updateSelect(calendar);
         tableView.reloadData();
 //        self.configureVisibleCells()
     }
@@ -129,11 +284,15 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
 
-            if(selectedDates.count > indexPath.row){
-                cell.textLabel?.text="第"+"\(indexPath.row+1)"+"天:"+"\(selectedDates[indexPath.row])";
+            if(selectedDatesStr.count > indexPath.row){
+                cell.textLabel?.text="第"+"\(indexPath.row+1)"+"天:"+"\(selectedDatesStr[indexPath.row])";
+                cell.detailTextLabel?.text = "修改"
             }else{
                 cell.textLabel?.text="";
+                
             }
+            
+//            cell.bu
             
 //            cell.detailTextLabel?.text="1234"
             return cell
@@ -152,44 +311,11 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
                 self.calendar.setScope(scope, animated: self.animationSwitch.isOn)
             }else{
                 
-                
-//                let alert2 = UIAlertController(title: "选择默认可用时间段", message: nil, preferredStyle: .actionSheet)
-//                let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//                alert2.addAction(ok)
-//                self.present(alert2, animated: true, completion: nil)
-                
-//            
-//                let alertController:UIAlertController=UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-                // 初始化 datePicker
-                let datePicker = UIDatePicker( )
-                //将日期选择器区域设置为中文，则选择器日期显示为中文
-                datePicker.locale = NSLocale(localeIdentifier: "zh_CN") as Locale
-                // 设置样式，当前设为同时显示日期和时间
-                datePicker.datePickerMode = UIDatePickerMode.date
-                // 设置默认时间
-                datePicker.date = NSDate() as Date
-                // 响应事件（只要滚轮变化就会触发）
-                // datePicker.addTarget(self, action:Selector("datePickerValueChange:"), forControlEvents: UIControlEvents.ValueChanged)
-//                alert2.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default,handler:nil)）,,;
-//                alert2.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default){
-//                    (alertAction)->Void in
-//                    print("date select: \(datePicker.date.description)")
-//                    //获取上一节中自定义的按钮外观DateButton类，设置DateButton类属性thedate
-//              
-//                    
-////                                    let myDateButton=self.Datebutt as? DateButton
-//                    //                myDateButton?.thedate=datePicker.date
-//                    //                //强制刷新
-//                    //                myDateButton?.setNeedsDisplay()
-//                })
-//                alert2.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel,handler:nil))
-                
-//                alert2.view.addSubview(datePicker)
-                
-//                self.present(alert2, animated: true, completion: nil)
             }
-            
-            
+        }
+        if indexPath.section == 1 {
+            print("change \(indexPath.row)")
+            curchangetimeIndex = indexPath.row;
         }
     }
     
@@ -209,5 +335,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
          
         }
     }
+
+
     
 }

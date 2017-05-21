@@ -29,11 +29,13 @@
 		37BEDD1C1EC9EDF2009B9B28 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDD191EC9EDF2009B9B28 /* ResetPasswordVC.swift */; };
 		37BEDD1D1EC9EDF2009B9B28 /* selectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDD1A1EC9EDF2009B9B28 /* selectVC.swift */; };
 		37BEDD211EC9F22A009B9B28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37BEDD201EC9F22A009B9B28 /* Images.xcassets */; };
+		37C4086D1ED186E2009E0709 /* ChangeTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4086C1ED186E2009E0709 /* ChangeTimeVC.swift */; };
 		37ED245D1ECE868800776636 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ED245C1ECE868800776636 /* My.storyboard */; };
 		37ED24601ECE87E500776636 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ED245E1ECE87E500776636 /* Plan.storyboard */; };
 		37ED24621ECE891600776636 /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ED24611ECE891600776636 /* Practice.storyboard */; };
 		37ED24651ECE892C00776636 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ED24631ECE892C00776636 /* Test.storyboard */; };
 		37ED24671ED0847600776636 /* DefaultTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED24661ED0847600776636 /* DefaultTimerVC.swift */; };
+		37ED24691ED142A800776636 /* TimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED24681ED142A800776636 /* TimeClass.swift */; };
 		710B1FBE55E5FDD8A59ABECD /* Pods_FSCalendarSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C80F5528CB17A6C7299ADA /* Pods_FSCalendarSwiftExample.framework */; };
 		EE0954AD1B97DDE0007F6964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0954AC1B97DDE0007F6964 /* AppDelegate.swift */; };
 		EE0954AF1B97DDE0007F6964 /* InterfaceBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0954AE1B97DDE0007F6964 /* InterfaceBuilderViewController.swift */; };
@@ -76,11 +78,13 @@
 		37BEDD191EC9EDF2009B9B28 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		37BEDD1A1EC9EDF2009B9B28 /* selectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectVC.swift; sourceTree = "<group>"; };
 		37BEDD201EC9F22A009B9B28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37C4086C1ED186E2009E0709 /* ChangeTimeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeTimeVC.swift; sourceTree = "<group>"; };
 		37ED245C1ECE868800776636 /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
 		37ED245F1ECE87E500776636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Plan.storyboard; sourceTree = "<group>"; };
 		37ED24611ECE891600776636 /* Practice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
 		37ED24641ECE892C00776636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Test.storyboard; sourceTree = "<group>"; };
 		37ED24661ED0847600776636 /* DefaultTimerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTimerVC.swift; sourceTree = "<group>"; };
+		37ED24681ED142A800776636 /* TimeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeClass.swift; sourceTree = "<group>"; };
 		47525502CD0D9E1FDAB98855 /* Pods-FSCalendarSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCalendarSwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSCalendarSwiftExample/Pods-FSCalendarSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
 		48B8768EAE97938C82279D68 /* Pods-FSCalendarSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCalendarSwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSCalendarSwiftExample/Pods-FSCalendarSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C80F5528CB17A6C7299ADA /* Pods_FSCalendarSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSCalendarSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +191,8 @@
 				EE0954B51B97DDE0007F6964 /* LaunchScreen.xib */,
 				EE0954AA1B97DDE0007F6964 /* Supporting Files */,
 				37ED24661ED0847600776636 /* DefaultTimerVC.swift */,
+				37C4086C1ED186E2009E0709 /* ChangeTimeVC.swift */,
+				37ED24681ED142A800776636 /* TimeClass.swift */,
 			);
 			path = FSCalendarSwiftExample;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 			files = (
 				37BEDD0C1EC9E4C0009B9B28 /* SignInVC.swift in Sources */,
 				F9DE053B1E3CCAE800902F7D /* CalendarConfigViewController.swift in Sources */,
+				37C4086D1ED186E2009E0709 /* ChangeTimeVC.swift in Sources */,
 				37BEDD0E1EC9E4C0009B9B28 /* SignUpVCparents.swift in Sources */,
 				30031AA81DCEA82200FC34FE /* DIYExampleViewController.swift in Sources */,
 				37BEDD1C1EC9EDF2009B9B28 /* ResetPasswordVC.swift in Sources */,
@@ -383,6 +390,7 @@
 				37BEDD1D1EC9EDF2009B9B28 /* selectVC.swift in Sources */,
 				EE0954AF1B97DDE0007F6964 /* InterfaceBuilderViewController.swift in Sources */,
 				37BEDD141EC9EA3B009B9B28 /* FollowersCell.swift in Sources */,
+				37ED24691ED142A800776636 /* TimeClass.swift in Sources */,
 				37BEDD0D1EC9E4C0009B9B28 /* SignUpVC.swift in Sources */,
 				37BEDD071EC9E4C0009B9B28 /* HeaderView.swift in Sources */,
 			);

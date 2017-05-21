@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class DefaultTimerVC: UITableViewController {
 
     
@@ -17,9 +19,12 @@ class DefaultTimerVC: UITableViewController {
 //    var scrollDirection: FSCalendarScrollDirection = .horizontal
 //    var selectedDate: Date?
     
-    @IBOutlet weak var datePicker: UIDatePicker!
+
     @IBOutlet weak var startTime: UIDatePicker!
     @IBOutlet weak var endTime: UIDatePicker!
+
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +107,26 @@ class DefaultTimerVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+        //日期选择器响应方法
+    @IBAction func DefaultStartTimeChange(_ sender: AnyObject) {
+        //更新提醒时间文本框
+        let formatter = DateFormatter()
+        //日期样式
+        formatter.dateFormat = "HH:mm:ss"
+        st = startTime.date;
+        print(formatter.string(from: startTime.date))
+
+    }
+
+    @IBAction func DefaultEndTimeChange(_ sender: AnyObject) {
+        //更新提醒时间文本框
+        let formatter = DateFormatter()
+        //日期样式
+        formatter.dateFormat = "HH:mm:ss"
+        et = endTime.date;
+        print(formatter.string(from: endTime.date))
+    }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
