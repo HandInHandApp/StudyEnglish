@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370DB7E81EC42B0100B8133E /* AlertViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7E71EC42B0100B8133E /* AlertViewHelper.swift */; };
 		370DB7EA1EC4534E00B8133E /* MainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7E91EC4534E00B8133E /* MainPageVC.swift */; };
 		370DB7EC1EC4B85F00B8133E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7EB1EC4B85F00B8133E /* HomeVC.swift */; };
 		370DB7EE1EC4B89B00B8133E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DB7ED1EC4B89B00B8133E /* HeaderView.swift */; };
@@ -62,7 +61,6 @@
 		0C045292FED05C8662FE8D97 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2001C927CB583DEAA2DE2EDE /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		2018106C744ED7197F31ECE1 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
-		370DB7E71EC42B0100B8133E /* AlertViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertViewHelper.swift; path = "../../../LeanStorageDemo-iOS/LeanStorageDemoSwift/LeanStorageDemoSwift/AlertViewHelper.swift"; sourceTree = "<group>"; };
 		370DB7E91EC4534E00B8133E /* MainPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageVC.swift; sourceTree = "<group>"; };
 		370DB7EB1EC4B85F00B8133E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		370DB7ED1EC4B89B00B8133E /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				370DB7F51EC6905B00B8133E /* FollowersCell.swift */,
 				370DB7F31EC6902100B8133E /* FollowersVC.swift */,
 				4727986E1D1E473D00627A1F /* pp.jpg */,
-				370DB7E71EC42B0100B8133E /* AlertViewHelper.swift */,
 				473278F31D1B389B00176754 /* AppDelegate.swift */,
 				473278F71D1B389B00176754 /* Main.storyboard */,
 				377943CC1EC6A3F9009A091C /* Home2VC.swift */,
@@ -329,7 +326,6 @@
 				37EE95C21EC1F8D200C98ACE /* SignUpVCparents.swift in Sources */,
 				370DB7F61EC6905B00B8133E /* FollowersCell.swift in Sources */,
 				37390D5D1EC880ED00E7A456 /* LoadViewExampleViewController.swift in Sources */,
-				370DB7E81EC42B0100B8133E /* AlertViewHelper.swift in Sources */,
 				37390D621EC8824100E7A456 /* DelegateAppearanceViewController.swift in Sources */,
 				4732790C1D1B425C00176754 /* SignInVC.swift in Sources */,
 				37EE95C01EC1F8BA00C98ACE /* SignUpVCteacher.swift in Sources */,
