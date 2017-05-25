@@ -20,6 +20,7 @@ public var et = Date();
 public var curchangetimeIndex = 0;
 
 public var selectedDatesStr :Array<String> = []
+public var selectedDates :Array<Date> = [];
 public var selectedStartDates :Array<Date> = [];
 public var selectedEndDates :Array<Date> = [];
 
@@ -32,16 +33,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     @IBOutlet weak var animationSwitch: UISwitch!
     
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
-    
-    
-    selectedStartDates?{
-        willSet{
-            //变量将要被设置值
-            }
-        didSet{
-            //变量的值已经改变
-        }
-    }
+
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -87,10 +79,36 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         // For UITest
         self.calendar.accessibilityIdentifier = "calendar"
         
+        
+        let notificationName = Notification.Name(rawValue: "DownloadImageNotification")
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(timechanged(notification:)),
+                                               name: notificationName, object: nil)
+        
+        
+        
+    }
+    
+    func timechanged(notification: Notification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let value1 = userInfo["value1"] as! String
+        let value2 = userInfo["value2"] as! Int
+        
+        print(" 获取到通知，用户数据是［\(value1),\(value2)］")
+        
+//        sleep(1)
+        updateSelectStrCur()
+        tableView.reloadData();
+        print("selected dates is \(selectedDatesStr)")
+        
+        print("执行完毕")
     }
     
     deinit {
         print("\(#function)")
+        //记得移除通知监听
+        NotificationCenter.default.removeObserver(self)
+        
     }
     //public var selectDay;
     
@@ -168,7 +186,13 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         return newEndDate!;
     }
     
-    
+    func  updateSelectStrCur()  {
+        var std=selectedStartDates[curchangetimeIndex]
+        var etd=selectedEndDates[curchangetimeIndex]
+        selectedDatesStr[curchangetimeIndex]="\(self.dateFormatter.string(from: std))"
+            + "    from: " + "\(self.timeFormatter.string(from: std))"
+            + "    to:   " + "\(self.timeFormatter.string(from: etd))";
+    }
 
     
     func  updateSelect(_ calendar: FSCalendar)  {
@@ -196,6 +220,8 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     }
     
     func  updateAddSelect(_ calendar: FSCalendar,date: Date)  {
+        
+        selectedDates.append(date)
 
         selectedStartDates.append(self.setNewStartTime(orginDate: date));
         selectedEndDates.append(self.setNewEndTime(orginDate: date));
@@ -212,9 +238,10 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
 
     func  updateRemoveSelect(_ calendar: FSCalendar,date: Date)  {
         
-        for (index,item) in calendar.selectedDates.enumerated() {
+        for (index,item) in selectedDates.enumerated() {
             
             if(item  == date){
+                selectedDates.remove(at: index)
                 selectedStartDates.remove(at: index);
                 selectedEndDates.remove(at: index);
                 selectedDatesStr.remove(at: index);
@@ -236,8 +263,8 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         print("did select date \(self.timeFormatter.string(from: et))")
         
         
-//        updateAddSelect(calendar,date: date);
-        updateSelect(calendar);
+        updateAddSelect(calendar,date: date);
+//        updateSelect(calendar);
         //selectDay.append
         calendarHeightConstraint.accessibilityLabel=self.dateFormatter.string(from: date);
         
@@ -252,8 +279,8 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
 //        print("deselected dates is \(selectedDates)")
         print("deselected dates is \(calendar.selectedDates)")
         
-//        updateRemoveSelect(calendar,date: date);
-        updateSelect(calendar);
+        updateRemoveSelect(calendar,date: date);
+//        updateSelect(calendar);
         tableView.reloadData();
 //        self.configureVisibleCells()
     }
@@ -326,6 +353,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     // MARK:- Target actions
     
     @IBAction func toggleClicked(sender: AnyObject) {
+        tableView.reloadData();
         if self.calendar.scope == .month {
             self.calendar.setScope(.week, animated: self.animationSwitch.isOn)
         } else if self.calendar.scope == .week {
