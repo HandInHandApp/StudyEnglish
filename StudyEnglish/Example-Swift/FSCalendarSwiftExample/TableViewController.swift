@@ -11,16 +11,16 @@ import FSCalendar
 class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let objects = [
-            DIYExampleViewController.self,
-            NSObject.self,
-            DelegateAppearanceViewController.self,
-            NSObject.self,
-            LoadViewExampleViewController.self
-        ]
-        if let ViewControllerClass = objects[indexPath.row] as? UIViewController.Type {
-            self.navigationController?.pushViewController(ViewControllerClass.init(), animated: true)
-        }
+//        let objects = [
+//            DIYExampleViewController.self,
+//            NSObject.self,
+//            DelegateAppearanceViewController.self,
+//            NSObject.self,
+//            LoadViewExampleViewController.self
+//        ]
+//        if let ViewControllerClass = objects[indexPath.row] as? UIViewController.Type {
+//            self.navigationController?.pushViewController(ViewControllerClass.init(), animated: true)
+//        }
     }
 
 }
