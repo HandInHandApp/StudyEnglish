@@ -116,6 +116,9 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="3. 复杂句"/>
+                                <connections>
+                                    <segue destination="yiK-83-iUp" kind="show" id="JkS-MC-sWU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,7 +143,15 @@
                 <viewControllerPlaceholder storyboardName="PracticeSentenceMult" id="wxP-x5-HBt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJT-N8-evu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531.640625" y="2429.6875"/>
+            <point key="canvasLocation" x="2179" y="1785"/>
+        </scene>
+        <!--PracticeSentenceComplex-->
+        <scene sceneID="Ibb-75-p8u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PracticeSentenceComplex" id="yiK-83-iUp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qrg-eh-2ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="3034"/>
         </scene>
     </scenes>
     <resources>

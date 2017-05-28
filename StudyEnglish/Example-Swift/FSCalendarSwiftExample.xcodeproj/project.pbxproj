@@ -17,6 +17,7 @@
 		37776B901EDA8D44005A1C6F /* UserHistoryVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */; };
 		37776B921EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B911EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard */; };
 		37776B941EDB2764005A1C6F /* PracticeSentenceMult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B931EDB2764005A1C6F /* PracticeSentenceMult.storyboard */; };
+		37776B961EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B951EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard */; };
 		379E05021ECE85740083EDE9 /* signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E05001ECE85740083EDE9 /* signup.storyboard */; };
 		37BEDD071EC9E4C0009B9B28 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */; };
 		37BEDD081EC9E4C0009B9B28 /* Home2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */; };
@@ -67,6 +68,7 @@
 		37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryVC2.swift; sourceTree = "<group>"; };
 		37776B911EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeSentenceSimple.storyboard; sourceTree = "<group>"; };
 		37776B931EDB2764005A1C6F /* PracticeSentenceMult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeSentenceMult.storyboard; sourceTree = "<group>"; };
+		37776B951EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeSentenceComplex.storyboard; sourceTree = "<group>"; };
 		379E05011ECE85740083EDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signup.storyboard; sourceTree = "<group>"; };
 		37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2VC.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				EE0954B01B97DDE0007F6964 /* Main.storyboard */,
 				37ED24631ECE892C00776636 /* Test.storyboard */,
 				37ED24611ECE891600776636 /* Practice.storyboard */,
+				37776B951EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard */,
 				37776B931EDB2764005A1C6F /* PracticeSentenceMult.storyboard */,
 				37776B911EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard */,
 				37ED245E1ECE87E500776636 /* Plan.storyboard */,
@@ -303,6 +306,7 @@
 				37ED24621ECE891600776636 /* Practice.storyboard in Resources */,
 				37BEDD211EC9F22A009B9B28 /* Images.xcassets in Resources */,
 				37776B921EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard in Resources */,
+				37776B961EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard in Resources */,
 				37BEDD0A1EC9E4C0009B9B28 /* Pacifico.ttf in Resources */,
 				37ED24601ECE87E500776636 /* Plan.storyboard in Resources */,
 				37ED245D1ECE868800776636 /* My.storyboard in Resources */,
