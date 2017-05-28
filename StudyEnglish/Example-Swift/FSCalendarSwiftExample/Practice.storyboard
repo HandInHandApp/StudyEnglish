@@ -18,13 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="练习" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgX-wL-Cr1">
-                                <frame key="frameInset" minX="304" minY="453" width="35" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT5-28-odf">
+                                <frame key="frameInset" minX="347" minY="144" width="332" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="一、句子训练"/>
+                                <connections>
+                                    <segue destination="PAs-XP-Emg" kind="show" id="Tw7-Ru-84K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKQ-jb-V0R">
+                                <frame key="frameInset" minX="347" minY="276" width="332" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="二、逻辑训练"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kav-ml-L9N">
+                                <frame key="frameInset" minX="347" minY="422" width="332" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="三、段落训练"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUX-YB-1Fs">
+                                <frame key="frameInset" minX="346" minY="559" width="332" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="四、题型训练"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -32,13 +56,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icz-6L-snv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="1684"/>
+            <point key="canvasLocation" x="874.8046875" y="1683.59375"/>
         </scene>
         <!--练习-->
         <scene sceneID="rFK-vM-9L6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oVU-eh-gtJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="练习" id="XB7-Za-JkL"/>
+                    <tabBarItem key="tabBarItem" title="练习" image="icon_setting" id="XB7-Za-JkL"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RIS-ho-wH7">
@@ -54,5 +78,72 @@
             </objects>
             <point key="canvasLocation" x="151" y="1684"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Izc-Ph-fep">
+            <objects>
+                <viewController id="PAs-XP-Emg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ww-YJ-nCz"/>
+                        <viewControllerLayoutGuide type="bottom" id="T0O-fL-b03"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nxO-Lc-NCw">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-AT-btT">
+                                <frame key="frameInset" minX="347" minY="144" width="332" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="1. 简单句"/>
+                                <connections>
+                                    <segue destination="xbA-Iw-sha" kind="show" id="qF7-Am-6OK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndY-2k-fhk">
+                                <frame key="frameInset" minX="347" minY="277" width="332" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="2. 复合句"/>
+                                <connections>
+                                    <segue destination="wxP-x5-HBt" kind="show" id="tlF-1d-baT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJS-G6-FU7">
+                                <frame key="frameInset" minX="347" minY="404" width="332" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="3. 复杂句"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aUd-oT-atV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hi-3V-o6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531.640625" y="1683.59375"/>
+        </scene>
+        <!--PracticeSentenceSimple-->
+        <scene sceneID="pk0-Td-a1u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PracticeSentenceSimple" id="xbA-Iw-sha" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLe-Og-KLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183.7890625" y="1683.59375"/>
+        </scene>
+        <!--PracticeSentenceMult-->
+        <scene sceneID="2s6-7c-a6B">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PracticeSentenceMult" id="wxP-x5-HBt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJT-N8-evu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531.640625" y="2429.6875"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icon_setting" width="24" height="24"/>
+    </resources>
 </document>

@@ -1,25 +1,26 @@
 PODS:
   - Alamofire (4.2.0)
-  - AVOSCloud (4.8.0)
-  - AVOSCloudCrashReporting (4.8.0):
-    - AVOSCloud (= 4.8.0)
-    - AVOSCloudCrashReporting/_ARC (= 4.8.0)
-    - AVOSCloudCrashReporting/_NOARC (= 4.8.0)
-  - AVOSCloudCrashReporting/_ARC (4.8.0):
-    - AVOSCloud (= 4.8.0)
-    - AVOSCloudCrashReporting/_NOARC (= 4.8.0)
-  - AVOSCloudCrashReporting/_NOARC (4.8.0):
-    - AVOSCloud (= 4.8.0)
-  - AVOSCloudIM (4.8.0):
-    - AVOSCloud (= 4.8.0)
-    - AVOSCloudIM/_ARC (= 4.8.0)
-    - AVOSCloudIM/_NOARC (= 4.8.0)
-  - AVOSCloudIM/_ARC (4.8.0):
-    - AVOSCloud (= 4.8.0)
-    - AVOSCloudIM/_NOARC (= 4.8.0)
-  - AVOSCloudIM/_NOARC (4.8.0):
-    - AVOSCloud (= 4.8.0)
+  - AVOSCloud (5.0.1)
+  - AVOSCloudCrashReporting (5.0.1):
+    - AVOSCloud (= 5.0.1)
+    - AVOSCloudCrashReporting/_ARC (= 5.0.1)
+    - AVOSCloudCrashReporting/_NOARC (= 5.0.1)
+  - AVOSCloudCrashReporting/_ARC (5.0.1):
+    - AVOSCloud (= 5.0.1)
+    - AVOSCloudCrashReporting/_NOARC (= 5.0.1)
+  - AVOSCloudCrashReporting/_NOARC (5.0.1):
+    - AVOSCloud (= 5.0.1)
+  - AVOSCloudIM (5.0.1):
+    - AVOSCloud (= 5.0.1)
+    - AVOSCloudIM/_ARC (= 5.0.1)
+    - AVOSCloudIM/_NOARC (= 5.0.1)
+  - AVOSCloudIM/_ARC (5.0.1):
+    - AVOSCloud (= 5.0.1)
+    - AVOSCloudIM/_NOARC (= 5.0.1)
+  - AVOSCloudIM/_NOARC (5.0.1):
+    - AVOSCloud (= 5.0.1)
   - FSCalendar (2.7.7)
+  - Iconic (1.3)
   - LeanCloud (10.0.1):
     - LeanCloud/Storage (= 10.0.1)
   - LeanCloud/Storage (10.0.1):
@@ -31,18 +32,20 @@ DEPENDENCIES:
   - AVOSCloudCrashReporting
   - AVOSCloudIM
   - FSCalendar
+  - Iconic
   - LeanCloud
   - SwiftDate (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  AVOSCloud: 2f0cc98a61ee8c8c3c1bc4447129147468e49efa
-  AVOSCloudCrashReporting: ed69665a300e3640238d9ec07ac4c4d96f88e0e6
-  AVOSCloudIM: 0fed0cdb6a94976aeb53be72f37725178000d970
+  AVOSCloud: 3e0a9813852d923966a8af59d6e6d42517d3abe5
+  AVOSCloudCrashReporting: 9bc336b7e333892f0408dab7ee7197490790aebf
+  AVOSCloudIM: ecdc45197df9dcb3d1b7e7569dbc904ac5233afc
   FSCalendar: 8bda3534e8590b87124af9a236887314e0359a27
+  Iconic: 5bff125cf3bb6e3f2dd79c31016e0bd9856716a6
   LeanCloud: 92b302e1a67df962ea09b18f5cf1081c11f5bbce
   SwiftDate: 2dfdebd4f67ae71c9c3e2413ee3c56947f302858
 
-PODFILE CHECKSUM: 44fbf0e7b4ece6c02600cd3d0205e379f8623076
+PODFILE CHECKSUM: 9ba8b1f987cb61b0a9284b74c17e7bb44596ddc4
 
 COCOAPODS: 1.2.1

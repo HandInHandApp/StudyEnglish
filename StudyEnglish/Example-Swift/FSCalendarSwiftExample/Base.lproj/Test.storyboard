@@ -61,7 +61,7 @@
         <scene sceneID="hUT-ZA-U6h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RbQ-QP-uhk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="测试" id="CPU-cM-w7x"/>
+                    <tabBarItem key="tabBarItem" title="测试" image="icon_setting" id="CPU-cM-w7x"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bh3-CG-5Jd">
@@ -168,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bzA-IV-d5u">
-                                <frame key="frameInset" minX="296.5" minY="468" height="216" maxX="78"/>
+                                <frame key="frameInset" minX="297.5" minY="468" height="216" maxX="76.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="517590387.78276902">
                                     <!--2017-05-27 15:06:27 +0000-->
@@ -378,7 +378,10 @@
             <point key="canvasLocation" x="1966" y="1301"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_setting" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7aH-T2-Ugz"/>
+        <segue reference="c0t-lw-oKI"/>
     </inferredMetricsTieBreakers>
 </document>

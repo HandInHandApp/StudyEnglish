@@ -6,11 +6,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Plan-->
+        <!--计划-->
         <scene sceneID="jso-8p-JRy">
             <objects>
                 <navigationController id="bbA-qa-ov9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Plan" id="hgK-ps-h6k"/>
+                    <tabBarItem key="tabBarItem" title="计划" image="icon_setting" id="hgK-ps-h6k"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9XR-PA-LDj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -561,5 +561,6 @@
     </scenes>
     <resources>
         <image name="icon_cat" width="18" height="15"/>
+        <image name="icon_setting" width="24" height="24"/>
     </resources>
 </document>

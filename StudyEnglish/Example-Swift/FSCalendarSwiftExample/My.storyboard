@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,8 +10,8 @@
         <scene sceneID="2wR-6r-mA8">
             <objects>
                 <collectionViewController storyboardIdentifier="Home2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m70-sb-JdJ" customClass="Home2VC" customModule="FSCalendarSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="cn4-Y5-hUM">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cn4-Y5-hUM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NEO-54-cQu">
@@ -39,7 +40,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header2" id="d1e-sI-HfX" customClass="HeaderView" customModule="FSCalendarSwiftExample" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="1024" height="240"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-ak-lmk">
@@ -141,23 +142,19 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="ADZ-xg-rcd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="ipad9_7.fullscreen"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQW-9I-E8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1529" y="-952"/>
         </scene>
-        <!--我2-->
+        <!--我-->
         <scene sceneID="xxz-jd-7h2">
             <objects>
                 <navigationController storyboardIdentifier="UINavigationController-QcO-29-2cN" automaticallyAdjustsScrollViewInsets="NO" id="QcO-29-2cN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我2" id="vHg-dI-i95"/>
+                    <tabBarItem key="tabBarItem" title="我" image="icon_setting" id="vHg-dI-i95"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="ipad9_7.fullscreen"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBT-29-JkZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBT-29-JkZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -175,15 +172,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="FollowersVC" id="9IO-Pf-qjf" customClass="FollowersVC" customModule="FSCalendarSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="UNI-XV-5zj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="GaO-Df-kGL" customClass="FollowersCell" customModule="FSCalendarSwiftExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GaO-Df-kGL" id="RZ0-Ba-Njm">
-                                    <frame key="frameInset" width="1024" height="79.5"/>
+                                    <frame key="frameInset" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ceS-kT-LaI">
@@ -223,8 +220,6 @@
                             <outlet property="delegate" destination="9IO-Pf-qjf" id="aD4-ta-opB"/>
                         </connections>
                     </tableView>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="ipad9_7.fullscreen"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnE-fB-NbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,6 +227,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_setting" width="24" height="24"/>
         <image name="pp.jpg" width="96" height="96"/>
     </resources>
 </document>

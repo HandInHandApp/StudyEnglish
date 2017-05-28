@@ -1,6 +1,8 @@
 use_frameworks!
 
+
 target 'FSCalendarSwiftExample' do
+  pod 'Iconic' 
   pod 'SwiftDate', '~> 4.0'
   pod 'FSCalendar'
   pod 'LeanCloud'

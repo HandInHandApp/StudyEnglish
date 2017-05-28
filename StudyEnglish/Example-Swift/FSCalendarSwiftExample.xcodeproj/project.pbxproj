@@ -12,10 +12,11 @@
 		3024AF171E164F8C008B6001 /* DelegateAppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024AF161E164F8C008B6001 /* DelegateAppearanceViewController.swift */; };
 		303478391DB520C8007BBD2E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303478381DB520C8007BBD2E /* TableViewController.swift */; };
 		305282C91E1608A100CC2877 /* FSCalendarScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305282C81E1608A100CC2877 /* FSCalendarScopeViewController.swift */; };
-		30D458E91DB4E2DB00B163C7 /* LoadViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D458E81DB4E2DB00B163C7 /* LoadViewExampleViewController.swift */; };
 		37776B881ED879CA005A1C6F /* StudyContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776B871ED879CA005A1C6F /* StudyContentVC.swift */; };
 		37776B8E1EDA7BD3005A1C6F /* UserHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776B8D1EDA7BD3005A1C6F /* UserHistoryVC.swift */; };
 		37776B901EDA8D44005A1C6F /* UserHistoryVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */; };
+		37776B921EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B911EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard */; };
+		37776B941EDB2764005A1C6F /* PracticeSentenceMult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B931EDB2764005A1C6F /* PracticeSentenceMult.storyboard */; };
 		379E05021ECE85740083EDE9 /* signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E05001ECE85740083EDE9 /* signup.storyboard */; };
 		37BEDD071EC9E4C0009B9B28 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */; };
 		37BEDD081EC9E4C0009B9B28 /* Home2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */; };
@@ -41,10 +42,8 @@
 		37ED24691ED142A800776636 /* TimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED24681ED142A800776636 /* TimeClass.swift */; };
 		710B1FBE55E5FDD8A59ABECD /* Pods_FSCalendarSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C80F5528CB17A6C7299ADA /* Pods_FSCalendarSwiftExample.framework */; };
 		EE0954AD1B97DDE0007F6964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0954AC1B97DDE0007F6964 /* AppDelegate.swift */; };
-		EE0954AF1B97DDE0007F6964 /* InterfaceBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0954AE1B97DDE0007F6964 /* InterfaceBuilderViewController.swift */; };
 		EE0954B21B97DDE0007F6964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0954B01B97DDE0007F6964 /* Main.storyboard */; };
 		EE0954B71B97DDE0007F6964 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0954B51B97DDE0007F6964 /* LaunchScreen.xib */; };
-		F9DE053B1E3CCAE800902F7D /* CalendarConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DE053A1E3CCAE800902F7D /* CalendarConfigViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +62,11 @@
 		3024AF161E164F8C008B6001 /* DelegateAppearanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateAppearanceViewController.swift; sourceTree = "<group>"; };
 		303478381DB520C8007BBD2E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		305282C81E1608A100CC2877 /* FSCalendarScopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSCalendarScopeViewController.swift; sourceTree = "<group>"; };
-		30D458E81DB4E2DB00B163C7 /* LoadViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewExampleViewController.swift; sourceTree = "<group>"; };
 		37776B871ED879CA005A1C6F /* StudyContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyContentVC.swift; sourceTree = "<group>"; };
 		37776B8D1EDA7BD3005A1C6F /* UserHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHistoryVC.swift; path = ../UserHistoryVC.swift; sourceTree = "<group>"; };
 		37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryVC2.swift; sourceTree = "<group>"; };
+		37776B911EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeSentenceSimple.storyboard; sourceTree = "<group>"; };
+		37776B931EDB2764005A1C6F /* PracticeSentenceMult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeSentenceMult.storyboard; sourceTree = "<group>"; };
 		379E05011ECE85740083EDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signup.storyboard; sourceTree = "<group>"; };
 		37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2VC.swift; sourceTree = "<group>"; };
@@ -97,12 +97,10 @@
 		EE0954A71B97DDE0007F6964 /* FSCalendarSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSCalendarSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0954AB1B97DDE0007F6964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE0954AC1B97DDE0007F6964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE0954AE1B97DDE0007F6964 /* InterfaceBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderViewController.swift; sourceTree = "<group>"; };
 		EE0954B11B97DDE0007F6964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE0954B61B97DDE0007F6964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EE0954EE1B97DE08007F6964 /* Objc-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-Bridge-Header.h"; sourceTree = "<group>"; };
 		F9CB483D1E406A9200C92065 /* FSCalendarSwiftExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSCalendarSwiftExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9DE053A1E3CCAE800902F7D /* CalendarConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarConfigViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,12 +184,11 @@
 				30031AA91DCEA83200FC34FE /* DIYCalendarCell.swift */,
 				3024AF161E164F8C008B6001 /* DelegateAppearanceViewController.swift */,
 				305282C81E1608A100CC2877 /* FSCalendarScopeViewController.swift */,
-				EE0954AE1B97DDE0007F6964 /* InterfaceBuilderViewController.swift */,
-				F9DE053A1E3CCAE800902F7D /* CalendarConfigViewController.swift */,
-				30D458E81DB4E2DB00B163C7 /* LoadViewExampleViewController.swift */,
 				EE0954B01B97DDE0007F6964 /* Main.storyboard */,
 				37ED24631ECE892C00776636 /* Test.storyboard */,
 				37ED24611ECE891600776636 /* Practice.storyboard */,
+				37776B931EDB2764005A1C6F /* PracticeSentenceMult.storyboard */,
+				37776B911EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard */,
 				37ED245E1ECE87E500776636 /* Plan.storyboard */,
 				37ED245C1ECE868800776636 /* My.storyboard */,
 				379E05001ECE85740083EDE9 /* signup.storyboard */,
@@ -305,6 +302,7 @@
 			files = (
 				37ED24621ECE891600776636 /* Practice.storyboard in Resources */,
 				37BEDD211EC9F22A009B9B28 /* Images.xcassets in Resources */,
+				37776B921EDB1DCE005A1C6F /* PracticeSentenceSimple.storyboard in Resources */,
 				37BEDD0A1EC9E4C0009B9B28 /* Pacifico.ttf in Resources */,
 				37ED24601ECE87E500776636 /* Plan.storyboard in Resources */,
 				37ED245D1ECE868800776636 /* My.storyboard in Resources */,
@@ -314,6 +312,7 @@
 				37BEDD1B1EC9EDF2009B9B28 /* pp.jpg in Resources */,
 				379E05021ECE85740083EDE9 /* signup.storyboard in Resources */,
 				EE0954B71B97DDE0007F6964 /* LaunchScreen.xib in Resources */,
+				37776B941EDB2764005A1C6F /* PracticeSentenceMult.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37BEDD0C1EC9E4C0009B9B28 /* SignInVC.swift in Sources */,
-				F9DE053B1E3CCAE800902F7D /* CalendarConfigViewController.swift in Sources */,
 				37C4086D1ED186E2009E0709 /* ChangeTimeVC.swift in Sources */,
 				37BEDD0E1EC9E4C0009B9B28 /* SignUpVCparents.swift in Sources */,
 				37776B8E1EDA7BD3005A1C6F /* UserHistoryVC.swift in Sources */,
@@ -394,13 +392,11 @@
 				3024AF171E164F8C008B6001 /* DelegateAppearanceViewController.swift in Sources */,
 				305282C91E1608A100CC2877 /* FSCalendarScopeViewController.swift in Sources */,
 				37BEDD151EC9EA3B009B9B28 /* FollowersVC.swift in Sources */,
-				30D458E91DB4E2DB00B163C7 /* LoadViewExampleViewController.swift in Sources */,
 				30031AAA1DCEA83200FC34FE /* DIYCalendarCell.swift in Sources */,
 				EE0954AD1B97DDE0007F6964 /* AppDelegate.swift in Sources */,
 				37BEDD0F1EC9E4C0009B9B28 /* SignUpVCteacher.swift in Sources */,
 				37776B901EDA8D44005A1C6F /* UserHistoryVC2.swift in Sources */,
 				37BEDD1D1EC9EDF2009B9B28 /* selectVC.swift in Sources */,
-				EE0954AF1B97DDE0007F6964 /* InterfaceBuilderViewController.swift in Sources */,
 				37BEDD141EC9EA3B009B9B28 /* FollowersCell.swift in Sources */,
 				37ED24691ED142A800776636 /* TimeClass.swift in Sources */,
 				37BEDD0D1EC9E4C0009B9B28 /* SignUpVC.swift in Sources */,
