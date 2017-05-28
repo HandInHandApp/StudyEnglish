@@ -14,6 +14,8 @@
 		305282C91E1608A100CC2877 /* FSCalendarScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305282C81E1608A100CC2877 /* FSCalendarScopeViewController.swift */; };
 		30D458E91DB4E2DB00B163C7 /* LoadViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D458E81DB4E2DB00B163C7 /* LoadViewExampleViewController.swift */; };
 		37776B881ED879CA005A1C6F /* StudyContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776B871ED879CA005A1C6F /* StudyContentVC.swift */; };
+		37776B8E1EDA7BD3005A1C6F /* UserHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776B8D1EDA7BD3005A1C6F /* UserHistoryVC.swift */; };
+		37776B901EDA8D44005A1C6F /* UserHistoryVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */; };
 		379E05021ECE85740083EDE9 /* signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E05001ECE85740083EDE9 /* signup.storyboard */; };
 		37BEDD071EC9E4C0009B9B28 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */; };
 		37BEDD081EC9E4C0009B9B28 /* Home2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */; };
@@ -63,6 +65,8 @@
 		305282C81E1608A100CC2877 /* FSCalendarScopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSCalendarScopeViewController.swift; sourceTree = "<group>"; };
 		30D458E81DB4E2DB00B163C7 /* LoadViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewExampleViewController.swift; sourceTree = "<group>"; };
 		37776B871ED879CA005A1C6F /* StudyContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyContentVC.swift; sourceTree = "<group>"; };
+		37776B8D1EDA7BD3005A1C6F /* UserHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHistoryVC.swift; path = ../UserHistoryVC.swift; sourceTree = "<group>"; };
+		37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryVC2.swift; sourceTree = "<group>"; };
 		379E05011ECE85740083EDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signup.storyboard; sourceTree = "<group>"; };
 		37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2VC.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		EE0954A91B97DDE0007F6964 /* FSCalendarSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				37776B8D1EDA7BD3005A1C6F /* UserHistoryVC.swift */,
 				37BEDD201EC9F22A009B9B28 /* Images.xcassets */,
 				37BEDD181EC9EDF2009B9B28 /* pp.jpg */,
 				37BEDD191EC9EDF2009B9B28 /* ResetPasswordVC.swift */,
@@ -196,6 +201,7 @@
 				37C4086C1ED186E2009E0709 /* ChangeTimeVC.swift */,
 				37776B871ED879CA005A1C6F /* StudyContentVC.swift */,
 				37ED24681ED142A800776636 /* TimeClass.swift */,
+				37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */,
 			);
 			path = FSCalendarSwiftExample;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				F9DE053B1E3CCAE800902F7D /* CalendarConfigViewController.swift in Sources */,
 				37C4086D1ED186E2009E0709 /* ChangeTimeVC.swift in Sources */,
 				37BEDD0E1EC9E4C0009B9B28 /* SignUpVCparents.swift in Sources */,
+				37776B8E1EDA7BD3005A1C6F /* UserHistoryVC.swift in Sources */,
 				37776B881ED879CA005A1C6F /* StudyContentVC.swift in Sources */,
 				30031AA81DCEA82200FC34FE /* DIYExampleViewController.swift in Sources */,
 				37BEDD1C1EC9EDF2009B9B28 /* ResetPasswordVC.swift in Sources */,
@@ -391,6 +398,7 @@
 				30031AAA1DCEA83200FC34FE /* DIYCalendarCell.swift in Sources */,
 				EE0954AD1B97DDE0007F6964 /* AppDelegate.swift in Sources */,
 				37BEDD0F1EC9E4C0009B9B28 /* SignUpVCteacher.swift in Sources */,
+				37776B901EDA8D44005A1C6F /* UserHistoryVC2.swift in Sources */,
 				37BEDD1D1EC9EDF2009B9B28 /* selectVC.swift in Sources */,
 				EE0954AF1B97DDE0007F6964 /* InterfaceBuilderViewController.swift in Sources */,
 				37BEDD141EC9EA3B009B9B28 /* FollowersCell.swift in Sources */,
