@@ -36,6 +36,9 @@
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="划分句子"/>
+                                <connections>
+                                    <segue destination="iui-UX-0aM" kind="show" id="c8l-Bj-tsa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zx-ra-KjN">
                                 <frame key="frameInset" minX="346" minY="586" width="332" height="50"/>
@@ -161,6 +164,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="下一题"/>
+                                <connections>
+                                    <segue destination="5dq-nY-LeD" kind="show" id="yln-5N-YD3"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qt1-Gx-M56">
                                 <frame key="frameInset" minX="66" minY="181" width="861" height="235"/>
@@ -177,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbm-s6-lJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="3034"/>
+            <point key="canvasLocation" x="2838" y="3034"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hbm-yK-BN1">
@@ -269,6 +275,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="下一题"/>
+                                <connections>
+                                    <segue destination="h0J-Ky-hC1" kind="show" id="8Er-K4-cq4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -277,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KE-Jh-fK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2192" y="3034"/>
+            <point key="canvasLocation" x="2183" y="3034"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ah2-Km-uz5">
@@ -495,6 +504,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="下一题"/>
+                                <connections>
+                                    <segue destination="iui-UX-0aM" kind="show" id="c1A-FN-8Gb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -503,7 +515,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Due-Y3-dOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2841" y="3034"/>
+            <point key="canvasLocation" x="3521" y="3034"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yln-5N-YD3"/>
+        <segue reference="c1A-FN-8Gb"/>
+        <segue reference="dWv-tU-wQS"/>
+    </inferredMetricsTieBreakers>
 </document>
