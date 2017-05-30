@@ -20,6 +20,8 @@
 		37776B961EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B951EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard */; };
 		37776B981EDC4833005A1C6F /* PracticeLogic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B971EDC4833005A1C6F /* PracticeLogic.storyboard */; };
 		37776B9A1EDC4DE6005A1C6F /* PracticeChapter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B991EDC4DE6005A1C6F /* PracticeChapter.storyboard */; };
+		37776BCD1EDDC2C0005A1C6F /* practice1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776BCC1EDDC2C0005A1C6F /* practice1VC.swift */; };
+		37776BCF1EDDC3DF005A1C6F /* practice2VCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776BCE1EDDC3DF005A1C6F /* practice2VCViewController.swift */; };
 		379E05021ECE85740083EDE9 /* signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E05001ECE85740083EDE9 /* signup.storyboard */; };
 		37BEDD071EC9E4C0009B9B28 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */; };
 		37BEDD081EC9E4C0009B9B28 /* Home2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */; };
@@ -73,6 +75,8 @@
 		37776B951EDB2D63005A1C6F /* PracticeSentenceComplex.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeSentenceComplex.storyboard; sourceTree = "<group>"; };
 		37776B971EDC4833005A1C6F /* PracticeLogic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeLogic.storyboard; sourceTree = "<group>"; };
 		37776B991EDC4DE6005A1C6F /* PracticeChapter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeChapter.storyboard; sourceTree = "<group>"; };
+		37776BCC1EDDC2C0005A1C6F /* practice1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = practice1VC.swift; sourceTree = "<group>"; };
+		37776BCE1EDDC3DF005A1C6F /* practice2VCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = practice2VCViewController.swift; sourceTree = "<group>"; };
 		379E05011ECE85740083EDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signup.storyboard; sourceTree = "<group>"; };
 		37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2VC.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				37776B871ED879CA005A1C6F /* StudyContentVC.swift */,
 				37ED24681ED142A800776636 /* TimeClass.swift */,
 				37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */,
+				37776BCC1EDDC2C0005A1C6F /* practice1VC.swift */,
+				37776BCE1EDDC3DF005A1C6F /* practice2VCViewController.swift */,
 			);
 			path = FSCalendarSwiftExample;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37BEDD0C1EC9E4C0009B9B28 /* SignInVC.swift in Sources */,
+				37776BCD1EDDC2C0005A1C6F /* practice1VC.swift in Sources */,
 				37C4086D1ED186E2009E0709 /* ChangeTimeVC.swift in Sources */,
 				37BEDD0E1EC9E4C0009B9B28 /* SignUpVCparents.swift in Sources */,
 				37776B8E1EDA7BD3005A1C6F /* UserHistoryVC.swift in Sources */,
@@ -407,6 +414,7 @@
 				30031AAA1DCEA83200FC34FE /* DIYCalendarCell.swift in Sources */,
 				EE0954AD1B97DDE0007F6964 /* AppDelegate.swift in Sources */,
 				37BEDD0F1EC9E4C0009B9B28 /* SignUpVCteacher.swift in Sources */,
+				37776BCF1EDDC3DF005A1C6F /* practice2VCViewController.swift in Sources */,
 				37776B901EDA8D44005A1C6F /* UserHistoryVC2.swift in Sources */,
 				37BEDD1D1EC9EDF2009B9B28 /* selectVC.swift in Sources */,
 				37BEDD141EC9EA3B009B9B28 /* FollowersCell.swift in Sources */,

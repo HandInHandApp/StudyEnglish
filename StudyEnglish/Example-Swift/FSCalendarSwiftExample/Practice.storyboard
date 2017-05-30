@@ -54,6 +54,9 @@
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="四、题型训练"/>
+                                <connections>
+                                    <segue destination="5lK-XR-RRW" kind="show" id="6hh-0U-x9h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +74,7 @@
                     <tabBarItem key="tabBarItem" title="练习" image="icon_setting" id="XB7-Za-JkL"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RIS-ho-wH7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RIS-ho-wH7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -193,16 +196,19 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="1.事实信息题，否定事实信息题，推断题，修辞目的题，配对题"/>
+                                <connections>
+                                    <segue destination="R3D-jY-ZtG" kind="show" id="Pbv-Lu-sER"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnB-d9-Hfn">
-                                <frame key="frameInset" minX="347" minY="277" width="332" height="79"/>
+                                <frame key="frameInset" minX="186" minY="276" width="690" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="2.指代题，词汇题"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrN-0X-ZBd">
-                                <frame key="frameInset" minX="347" minY="404" width="332" height="82"/>
+                                <frame key="frameInset" minX="186" minY="412" width="690" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -216,6 +222,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWE-Qa-HVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1531.640625" y="2480.46875"/>
+        </scene>
+        <!--Practice2VC View Controller-->
+        <scene sceneID="TQh-u4-S8T">
+            <objects>
+                <viewController id="R3D-jY-ZtG" customClass="practice2VCViewController" customModule="FSCalendarSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ozs-vd-uk0"/>
+                        <viewControllerLayoutGuide type="bottom" id="XHo-Lo-Bsn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B86-h5-YjH" customClass="practice1VC" customModule="FSCalendarSwiftExample" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" indicatorStyle="black" editable="NO" text="rrrr" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r5q-VF-sg1">
+                                <frame key="frameInset" minX="49" minY="20" width="472" height="2497"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSW-hS-EGq">
+                                <frame key="frameInset" minX="471" width="553" height="2448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="R3D-jY-ZtG" id="wgU-2j-c58"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Eox-sB-azB"/>
+                    <connections>
+                        <outlet property="scrollView" destination="SSW-hS-EGq" id="Vg8-bf-7FE"/>
+                        <outlet property="sentence" destination="r5q-VF-sg1" id="LUf-F9-VKo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c12-aI-jxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2245.8984375" y="2479.6875"/>
         </scene>
     </scenes>
     <resources>
