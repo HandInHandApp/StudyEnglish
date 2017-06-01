@@ -9,24 +9,25 @@ target 'FSCalendarSwiftExample' do
   pod 'AVOSCloud'
   pod 'AVOSCloudIM'
   pod 'AVOSCloudCrashReporting'
+  pod 'M13Checkbox'
 #  pod 'WeexSDK'
   #pod 'WeexSDK', :path=>'./sdk/'
-  react_path = './react/node_modules/react-native'
-  yoga_path = File.join(react_path, 'ReactCommon/yoga')
-  pod 'Yoga', :path => yoga_path
-  pod 'React', :path => ‘./react/node_modules/react-native', :subspecs => [
-  'Core',
-  'ART',
-  'RCTActionSheet',
-  'RCTAdSupport',
-  'RCTGeolocation',
-  'RCTImage',
-  'RCTNetwork',
-  'RCTPushNotification',
-  'RCTSettings',
-  'RCTText',
-  'RCTVibration',
-  'RCTWebSocket',
-  'RCTLinkingIOS',
-  ]
+#  react_path = './react/node_modules/react-native'
+#  yoga_path = File.join(react_path, 'ReactCommon/yoga')
+#  pod 'Yoga', :path => yoga_path
+#  pod 'React', :path => ‘./react/node_modules/react-native', :subspecs => [
+#  'Core',
+#  'ART',
+#  'RCTActionSheet',
+#  'RCTAdSupport',
+#  'RCTGeolocation',
+#  'RCTImage',
+#  'RCTNetwork',
+#  'RCTPushNotification',
+#  'RCTSettings',
+#  'RCTText',
+#  'RCTVibration',
+#  'RCTWebSocket',
+#  'RCTLinkingIOS',
+#  ]
 end
