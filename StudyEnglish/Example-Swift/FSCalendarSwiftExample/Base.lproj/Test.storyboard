@@ -64,7 +64,7 @@
                     <tabBarItem key="tabBarItem" title="测试" image="icon_setting" id="CPU-cM-w7x"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bh3-CG-5Jd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bh3-CG-5Jd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -92,7 +92,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK6-lO-nZL">
                                 <frame key="frameInset" minX="188" minY="111" width="569" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">请填写你最近一次的考试成绩即日期， 表示大约数值</string>
+                                <string key="text">请填写你最近一次的考试成绩即日期， 表示大约数值
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -260,7 +261,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="scroe" translatesAutoresizingMaskIntoConstraints="NO" id="y12-r8-yOb">
-                                <frame key="frameInset" minX="297" minY="272" height="216" maxX="32"/>
+                                <frame key="frameInset" minX="297" minY="272" height="216" maxX="32.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="NEg-sE-1BY" id="158-Sr-N2G"/>
@@ -268,7 +269,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="scoreReason" translatesAutoresizingMaskIntoConstraints="NO" id="5bQ-k6-W9p">
-                                <frame key="frameInset" minX="306.5" minY="447" height="216" maxX="21"/>
+                                <frame key="frameInset" minX="306.5" minY="447" height="216" maxX="21.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="NEg-sE-1BY" id="KeC-oG-Epa"/>
@@ -278,7 +279,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-Bp-Ljt">
                                 <frame key="frameInset" minX="45" minY="349" width="209" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">选择你的目标成绩</string>
+                                <string key="text">选择你的目标成绩
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -286,7 +288,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-kO-Kh4">
                                 <frame key="frameInset" minX="15" minY="524" width="268" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">你选择这个目标成绩的原因</string>
+                                <string key="text">你选择这个目标成绩的原因
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
