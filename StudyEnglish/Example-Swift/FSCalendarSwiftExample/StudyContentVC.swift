@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AIFlatSwitch
 
 class StudyContentVC: UIViewController {
 //    @IBOutlet weak var tableView: UITableView!
@@ -15,6 +16,10 @@ class StudyContentVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var flatSwitch = AIFlatSwitch(frame: CGRect(x:100,y:100,width:50,height:50))
+        self.view.addSubview(flatSwitch)
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

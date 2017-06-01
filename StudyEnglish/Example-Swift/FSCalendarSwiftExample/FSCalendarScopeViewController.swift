@@ -300,12 +300,13 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return [3,20][section]
+        return [2,20][section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let identifier = ["cell_month", "cell_week", "cell_time"][indexPath.row]
+//            let identifier = ["cell_month", "cell_week", "cell_time"][indexPath.row]
+            let identifier = ["cell_weekend_time", "cell_time"][indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
             return cell
         } else {
@@ -333,12 +334,12 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 {
             
-            if(indexPath.row == 0 || indexPath.row == 1){
-                let scope: FSCalendarScope = (indexPath.row == 0) ? .month : .week
-                self.calendar.setScope(scope, animated: self.animationSwitch.isOn)
-            }else{
-                
-            }
+//            if(indexPath.row == 0 || indexPath.row == 1){
+//                let scope: FSCalendarScope = (indexPath.row == 0) ? .month : .week
+//                self.calendar.setScope(scope, animated: self.animationSwitch.isOn)
+//            }else{
+//                
+//            }
         }
         if indexPath.section == 1 {
             print("change \(indexPath.row)")

@@ -10,8 +10,8 @@
         <scene sceneID="2wR-6r-mA8">
             <objects>
                 <collectionViewController storyboardIdentifier="Home2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m70-sb-JdJ" customClass="Home2VC" customModule="FSCalendarSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cn4-Y5-hUM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="cn4-Y5-hUM">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NEO-54-cQu">
@@ -40,7 +40,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header2" id="d1e-sI-HfX" customClass="HeaderView" customModule="FSCalendarSwiftExample" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="240"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-ak-lmk">
@@ -154,7 +154,7 @@
                     <tabBarItem key="tabBarItem" title="我" image="icon_setting" id="vHg-dI-i95"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBT-29-JkZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBT-29-JkZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -172,15 +172,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="FollowersVC" id="9IO-Pf-qjf" customClass="FollowersVC" customModule="FSCalendarSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="UNI-XV-5zj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="GaO-Df-kGL" customClass="FollowersCell" customModule="FSCalendarSwiftExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="1024" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GaO-Df-kGL" id="RZ0-Ba-Njm">
-                                    <frame key="frameInset" width="375" height="79"/>
+                                    <frame key="frameInset" width="1024" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ceS-kT-LaI">

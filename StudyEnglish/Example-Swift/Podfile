@@ -10,6 +10,7 @@ target 'FSCalendarSwiftExample' do
   pod 'AVOSCloudIM'
   pod 'AVOSCloudCrashReporting'
   pod 'M13Checkbox'
+  pod 'AIFlatSwitch'
 #  pod 'WeexSDK'
   #pod 'WeexSDK', :path=>'./sdk/'
 #  react_path = './react/node_modules/react-native'
