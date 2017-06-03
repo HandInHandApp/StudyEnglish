@@ -11,7 +11,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQW-9I-E8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController storyboardIdentifier="Home2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m70-sb-JdJ" customClass="Home2VC" customModule="FSCalendarSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cn4-Y5-hUM">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="cn4-Y5-hUM">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,10 +151,10 @@
         <scene sceneID="xxz-jd-7h2">
             <objects>
                 <navigationController storyboardIdentifier="UINavigationController-QcO-29-2cN" automaticallyAdjustsScrollViewInsets="NO" id="QcO-29-2cN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" image="icon_setting" id="vHg-dI-i95"/>
+                    <tabBarItem key="tabBarItem" title="我" image="icons8-Street View-40.png" id="vHg-dI-i95"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBT-29-JkZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBT-29-JkZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -435,7 +435,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_setting" width="24" height="24"/>
+        <image name="icons8-Street View-40.png" width="40" height="40"/>
         <image name="pp.jpg" width="96" height="96"/>
     </resources>
 </document>
