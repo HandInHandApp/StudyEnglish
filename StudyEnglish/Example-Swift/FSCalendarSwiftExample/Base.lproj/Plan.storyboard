@@ -12,7 +12,7 @@
                 <navigationController id="bbA-qa-ov9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="计划" image="icon_setting" id="hgK-ps-h6k"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9XR-PA-LDj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9XR-PA-LDj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

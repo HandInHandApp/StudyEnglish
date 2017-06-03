@@ -11,6 +11,8 @@ target 'FSCalendarSwiftExample' do
   pod 'AVOSCloudCrashReporting'
   pod 'M13Checkbox'
   pod 'AIFlatSwitch'
+  pod 'PNChart'
+#  pod 'PNChartSwift',:git => 'https://github.com/kevinzhow/PNChart-Swift.git'
 #  pod 'WeexSDK'
   #pod 'WeexSDK', :path=>'./sdk/'
 #  react_path = './react/node_modules/react-native'

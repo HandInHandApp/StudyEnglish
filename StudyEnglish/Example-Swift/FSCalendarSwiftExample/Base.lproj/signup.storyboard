@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="O1T-1z-3d7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ha7-ev-OfK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPp-yh-9QM">
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcO-IH-RA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2051" y="1417"/>
+            <point key="canvasLocation" x="-1003" y="-260"/>
         </scene>
         <!--SelectVC-->
         <scene sceneID="UM3-K6-Bas">
@@ -140,7 +140,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YVQ-uM-B6d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7R9-SC-HrW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1w-xO-KUA">
@@ -210,7 +210,7 @@
                         <viewControllerLayoutGuide type="bottom" id="u4P-Z8-GRp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NXN-vv-lL1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RvL-5q-Co6">
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYb-Y3-vzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2051" y="2984"/>
+            <point key="canvasLocation" x="-1003" y="1316"/>
         </scene>
         <!--Sign UpV Cparents-->
         <scene sceneID="nht-mv-NWV">
@@ -333,7 +333,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YnQ-x9-GPD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fnd-MI-byW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wu6-vP-HK0">
@@ -431,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSo-oS-igB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2096" y="2216"/>
+            <point key="canvasLocation" x="-1003" y="570"/>
         </scene>
     </scenes>
     <resources>

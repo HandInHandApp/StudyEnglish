@@ -22,6 +22,8 @@
 		37776B9A1EDC4DE6005A1C6F /* PracticeChapter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37776B991EDC4DE6005A1C6F /* PracticeChapter.storyboard */; };
 		37776BCD1EDDC2C0005A1C6F /* practice1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776BCC1EDDC2C0005A1C6F /* practice1VC.swift */; };
 		37776BCF1EDDC3DF005A1C6F /* practice2VCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776BCE1EDDC3DF005A1C6F /* practice2VCViewController.swift */; };
+		37776BD11EE22776005A1C6F /* myVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37776BD01EE22776005A1C6F /* myVC.swift */; };
+		37776BD31EE24185005A1C6F /* deep.png in Resources */ = {isa = PBXBuildFile; fileRef = 37776BD21EE24185005A1C6F /* deep.png */; };
 		379E05021ECE85740083EDE9 /* signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E05001ECE85740083EDE9 /* signup.storyboard */; };
 		37BEDD071EC9E4C0009B9B28 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */; };
 		37BEDD081EC9E4C0009B9B28 /* Home2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */; };
@@ -77,6 +79,8 @@
 		37776B991EDC4DE6005A1C6F /* PracticeChapter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PracticeChapter.storyboard; sourceTree = "<group>"; };
 		37776BCC1EDDC2C0005A1C6F /* practice1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = practice1VC.swift; sourceTree = "<group>"; };
 		37776BCE1EDDC3DF005A1C6F /* practice2VCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = practice2VCViewController.swift; sourceTree = "<group>"; };
+		37776BD01EE22776005A1C6F /* myVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myVC.swift; sourceTree = "<group>"; };
+		37776BD21EE24185005A1C6F /* deep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deep.png; sourceTree = "<group>"; };
 		379E05011ECE85740083EDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signup.storyboard; sourceTree = "<group>"; };
 		37BEDCFE1EC9E4C0009B9B28 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37BEDCFF1EC9E4C0009B9B28 /* Home2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2VC.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		EE0954A91B97DDE0007F6964 /* FSCalendarSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				37776BD21EE24185005A1C6F /* deep.png */,
 				37776B8D1EDA7BD3005A1C6F /* UserHistoryVC.swift */,
 				37BEDD201EC9F22A009B9B28 /* Images.xcassets */,
 				37BEDD181EC9EDF2009B9B28 /* pp.jpg */,
@@ -214,6 +219,7 @@
 				37776B8F1EDA8D44005A1C6F /* UserHistoryVC2.swift */,
 				37776BCC1EDDC2C0005A1C6F /* practice1VC.swift */,
 				37776BCE1EDDC3DF005A1C6F /* practice2VCViewController.swift */,
+				37776BD01EE22776005A1C6F /* myVC.swift */,
 			);
 			path = FSCalendarSwiftExample;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				37BEDD0A1EC9E4C0009B9B28 /* Pacifico.ttf in Resources */,
 				37ED24601ECE87E500776636 /* Plan.storyboard in Resources */,
 				37ED245D1ECE868800776636 /* My.storyboard in Resources */,
+				37776BD31EE24185005A1C6F /* deep.png in Resources */,
 				37ED24651ECE892C00776636 /* Test.storyboard in Resources */,
 				EE0954B21B97DDE0007F6964 /* Main.storyboard in Resources */,
 				37BEDD171EC9EDDF009B9B28 /* bg.jpg in Resources */,
@@ -404,6 +411,7 @@
 				37776B881ED879CA005A1C6F /* StudyContentVC.swift in Sources */,
 				30031AA81DCEA82200FC34FE /* DIYExampleViewController.swift in Sources */,
 				37BEDD1C1EC9EDF2009B9B28 /* ResetPasswordVC.swift in Sources */,
+				37776BD11EE22776005A1C6F /* myVC.swift in Sources */,
 				37ED24671ED0847600776636 /* DefaultTimerVC.swift in Sources */,
 				37BEDD081EC9E4C0009B9B28 /* Home2VC.swift in Sources */,
 				303478391DB520C8007BBD2E /* TableViewController.swift in Sources */,
