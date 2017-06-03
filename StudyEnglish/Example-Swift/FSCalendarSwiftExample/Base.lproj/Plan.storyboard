@@ -12,7 +12,7 @@
                 <navigationController id="bbA-qa-ov9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="计划" image="icons8-Lighthouse-48.png" id="hgK-ps-h6k"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9XR-PA-LDj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9XR-PA-LDj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -120,7 +120,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bCm-4M-7dl">
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="G2N-TP-wuW" userLabel="Footer">
+                                <view key="tableFooterView" contentMode="scaleToFill" id="G2N-TP-wuW" userLabel="Footer">
                                     <rect key="frame" x="0.0" y="198" width="1024" height="69"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
@@ -140,7 +140,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_weekend_time" textLabel="KBM-YD-I33" style="IBUITableViewCellStyleDefault" id="4Df-up-Ou1" userLabel="cell_time">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_weekend_time" textLabel="KBM-YD-I33" style="IBUITableViewCellStyleDefault" id="4Df-up-Ou1" userLabel="cell_time">
                                         <rect key="frame" x="0.0" y="56" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Df-up-Ou1" id="p11-CR-1tX">
@@ -160,7 +160,7 @@
                                             <segue destination="a6h-Tx-Vgr" kind="show" id="dK6-rr-7dA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_time" textLabel="TgR-dN-U2t" style="IBUITableViewCellStyleDefault" id="bFU-ER-6Ds" userLabel="cell_time">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_time" textLabel="TgR-dN-U2t" style="IBUITableViewCellStyleDefault" id="bFU-ER-6Ds" userLabel="cell_time">
                                         <rect key="frame" x="0.0" y="100" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bFU-ER-6Ds" id="vwP-Er-jwm">
@@ -180,7 +180,7 @@
                                             <segue destination="9a4-I6-6hV" kind="show" id="r5B-CH-giT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="n6j-E2-yBd" detailTextLabel="fq1-ED-zem" imageView="biX-eh-l3Y" style="IBUITableViewCellStyleValue1" id="cIp-qz-G80">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="n6j-E2-yBd" detailTextLabel="fq1-ED-zem" imageView="biX-eh-l3Y" style="IBUITableViewCellStyleValue1" id="cIp-qz-G80">
                                         <rect key="frame" x="0.0" y="144" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cIp-qz-G80" id="YyR-c5-T6a">
@@ -259,7 +259,7 @@
                             <tableViewSection headerTitle="选择默认每日空闲时间段-起始时间" id="Syk-h3-HUx">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="163" id="APv-tk-Ww0">
-                                        <rect key="frame" x="0.0" y="119.5" width="1024" height="163"/>
+                                        <rect key="frame" x="0.0" y="120" width="1024" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="APv-tk-Ww0" id="lMU-Td-1D9">
                                             <frame key="frameInset" width="1024" height="162"/>
@@ -294,7 +294,7 @@
                             <tableViewSection headerTitle="选择默认每日空闲时间段-结束时间" id="LdY-cc-R0x">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="163" id="2ia-Uk-xwV">
-                                        <rect key="frame" x="0.0" y="330.5" width="1024" height="163"/>
+                                        <rect key="frame" x="0.0" y="332" width="1024" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ia-Uk-xwV" id="75A-9w-TTS">
                                             <frame key="frameInset" width="1024" height="162"/>
@@ -325,7 +325,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="8S3-FH-SKx" style="IBUITableViewCellStyleDefault" id="mFe-EV-Y2K">
-                                        <rect key="frame" x="0.0" y="493.5" width="1024" height="44"/>
+                                        <rect key="frame" x="0.0" y="495" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mFe-EV-Y2K" id="Jvi-OX-Ylv">
                                             <frame key="frameInset" width="1024" height="43"/>
@@ -372,7 +372,7 @@
                             <tableViewSection headerTitle="选择当天空闲时间段-起始时间" id="0Y3-1y-1yl">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="163" id="Res-Kx-d1l">
-                                        <rect key="frame" x="0.0" y="119.5" width="1024" height="163"/>
+                                        <rect key="frame" x="0.0" y="120" width="1024" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Res-Kx-d1l" id="u5V-vF-IF8">
                                             <frame key="frameInset" width="1024" height="162"/>
@@ -407,7 +407,7 @@
                             <tableViewSection headerTitle="选择当天空闲时间段-结束时间" id="fJA-fj-QtU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="163" id="K8q-9e-hav">
-                                        <rect key="frame" x="0.0" y="330.5" width="1024" height="163"/>
+                                        <rect key="frame" x="0.0" y="332" width="1024" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K8q-9e-hav" id="aQe-SI-kcl">
                                             <frame key="frameInset" width="1024" height="162"/>
@@ -438,7 +438,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="tLs-bB-FOf" style="IBUITableViewCellStyleDefault" id="cMp-hK-TjK">
-                                        <rect key="frame" x="0.0" y="493.5" width="1024" height="44"/>
+                                        <rect key="frame" x="0.0" y="495" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMp-hK-TjK" id="xg7-af-i0k">
                                             <frame key="frameInset" width="1024" height="43"/>
@@ -526,19 +526,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEu-rB-NBR">
-                                <frame key="frameInset" minX="264" minY="130" height="119" maxX="111"/>
+                                <frame key="frameInset" minX="261" minY="130" height="119" maxX="112.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-9e-STr">
-                                <frame key="frameInset" minX="264" minY="253" height="119" maxX="111"/>
+                                <frame key="frameInset" minX="261" minY="253" height="119" maxX="112.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bc4-Ou-wmp">
-                                <frame key="frameInset" minX="264" minY="380" height="119" maxX="111"/>
+                                <frame key="frameInset" minX="261" minY="380" height="119" maxX="112.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cug-v5-Ssl">
-                                <frame key="frameInset" minX="264" minY="525" height="119" maxX="111"/>
+                                <frame key="frameInset" minX="261" minY="525" height="119" maxX="112.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hca-vp-e08">
@@ -572,7 +572,7 @@
                             <tableViewSection headerTitle="选择休假日当天空闲时间段-起始时间" id="U9c-ud-Wlo">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="163" id="15k-ou-wn3">
-                                        <rect key="frame" x="0.0" y="119.5" width="1024" height="163"/>
+                                        <rect key="frame" x="0.0" y="120" width="1024" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="15k-ou-wn3" id="moo-MR-65f">
                                             <frame key="frameInset" width="1024" height="162"/>
@@ -607,7 +607,7 @@
                             <tableViewSection headerTitle="选择休假日当天空闲时间段-结束时间" id="uSD-kX-xlL">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="163" id="Wdm-PV-6bh">
-                                        <rect key="frame" x="0.0" y="330.5" width="1024" height="163"/>
+                                        <rect key="frame" x="0.0" y="332" width="1024" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wdm-PV-6bh" id="Fpy-j9-YbG">
                                             <frame key="frameInset" width="1024" height="162"/>
@@ -638,7 +638,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Mq2-Fu-lbz" style="IBUITableViewCellStyleDefault" id="jBk-hb-KDb">
-                                        <rect key="frame" x="0.0" y="493.5" width="1024" height="44"/>
+                                        <rect key="frame" x="0.0" y="495" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jBk-hb-KDb" id="R9o-Vl-Lia">
                                             <frame key="frameInset" width="1024" height="43"/>

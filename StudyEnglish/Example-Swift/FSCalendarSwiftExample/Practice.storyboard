@@ -74,7 +74,7 @@
                     <tabBarItem key="tabBarItem" title="练习" image="icons8-Horseback Riding-40.png" id="XB7-Za-JkL"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RIS-ho-wH7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RIS-ho-wH7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

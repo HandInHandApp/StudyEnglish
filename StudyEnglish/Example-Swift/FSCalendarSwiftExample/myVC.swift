@@ -54,13 +54,13 @@ class myVC:  UIViewController {
         
 
         
-        //设置背景图
-        let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        
-        bg.image = UIImage(named: "deep.png")
-        //    bg.image = UIImage(named: "bg.jpg")
-        bg.layer.zPosition = -1
-        self.view.addSubview(bg)
+//        //设置背景图
+//        let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+//        
+//        bg.image = UIImage(named: "deep.png")
+//        //    bg.image = UIImage(named: "bg.jpg")
+//        bg.layer.zPosition = -1
+//        self.view.addSubview(bg)
 
         // Do any additional setup after loading the view.
     }

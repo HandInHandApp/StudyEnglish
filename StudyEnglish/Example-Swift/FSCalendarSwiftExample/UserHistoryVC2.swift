@@ -9,7 +9,7 @@
 import UIKit
 
 class UserHistoryVC2: UIView,UIPickerViewDataSource,UIPickerViewDelegate {
-    var scorelist = ["0~59","60~74","75~89","90~99"]
+    var scorelist = ["0~59","60~74","75~89","90~99","100～120"]
     var scoreresonlist = ["申请学校要求","父母意见","老师意见","自己感觉"]
 
     
