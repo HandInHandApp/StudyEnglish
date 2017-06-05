@@ -270,7 +270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5g5-3q-GYd">
-                                <frame key="frameInset" minX="309.5" minY="96" height="216" maxX="65.5"/>
+                                <frame key="frameInset" minX="309" minY="96" height="216" maxX="66"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="517590387.78276902">
                                     <!--2017-05-27 15:06:27 +0000-->
@@ -285,7 +285,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="scroe" translatesAutoresizingMaskIntoConstraints="NO" id="y12-r8-yOb">
-                                <frame key="frameInset" minX="297" minY="272" height="216" maxX="32.5"/>
+                                <frame key="frameInset" minX="297" minY="272" height="216" maxX="33"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="NEg-sE-1BY" id="158-Sr-N2G"/>
@@ -293,7 +293,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="scoreReason" translatesAutoresizingMaskIntoConstraints="NO" id="5bQ-k6-W9p">
-                                <frame key="frameInset" minX="306.5" minY="447" height="216" maxX="21.5"/>
+                                <frame key="frameInset" minX="306" minY="447" height="216" maxX="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="NEg-sE-1BY" id="KeC-oG-Epa"/>
