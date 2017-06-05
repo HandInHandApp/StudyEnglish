@@ -7,9 +7,9 @@ BuilderIdent ProcessPCH\ /Users/zhuenqing/workspace/StudyEnglish/StudyEnglish/ha
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.0.sdk/SDKSettings.plist 0 1472076198 1604 33204
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.0.sdk/System/Library/CoreServices/SystemVersion.plist 0 1471482880 415 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include/module.modulemap 0 1470348330 3690 33188
-InputFile    /Users/zhuenqing/workspace/StudyEnglish/StudyEnglish/handinhand-ionic/platforms/ios/MyApp/MyApp-Prefix.pch 0 1496648123 953 33188
+InputFile    /Users/zhuenqing/workspace/StudyEnglish/StudyEnglish/handinhand-ionic/platforms/ios/MyApp/MyApp-Prefix.pch 0 1496656896 953 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.0.sdk/SDKSettings.plist 0 1472076198 1604 33204
-InputFile    /Users/zhuenqing/workspace/StudyEnglish/StudyEnglish/handinhand-ionic/platforms/ios/MyApp/MyApp-Prefix.pch 0 1496648123 953 33188
+InputFile    /Users/zhuenqing/workspace/StudyEnglish/StudyEnglish/handinhand-ionic/platforms/ios/MyApp/MyApp-Prefix.pch 0 1496656896 953 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.0.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap 0 1470371753 145 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include/module.modulemap 0 1470348330 3690 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.0.sdk/usr/include/module.modulemap 0 1469614341 21009 33188

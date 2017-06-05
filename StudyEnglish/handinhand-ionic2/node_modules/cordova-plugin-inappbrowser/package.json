@@ -1,0 +1,138 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-inappbrowser@~1.4.0",
+        "scope": null,
+        "escapedName": "cordova-plugin-inappbrowser",
+        "name": "cordova-plugin-inappbrowser",
+        "rawSpec": "~1.4.0",
+        "spec": ">=1.4.0 <1.5.0",
+        "type": "range"
+      },
+      "/Users/zhuenqing/workspace/StudyEnglish/StudyEnglish/handinhand-ionic2/node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-inappbrowser@>=1.4.0 <1.5.0",
+  "_id": "cordova-plugin-inappbrowser@1.4.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-inappbrowser",
+  "_nodeVersion": "5.4.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-inappbrowser-1.4.0.tgz_1461189871708_0.3941488752607256"
+  },
+  "_npmUser": {
+    "name": "stevegill",
+    "email": "stevengill97@gmail.com"
+  },
+  "_npmVersion": "3.5.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-inappbrowser@~1.4.0",
+    "scope": null,
+    "escapedName": "cordova-plugin-inappbrowser",
+    "name": "cordova-plugin-inappbrowser",
+    "rawSpec": "~1.4.0",
+    "spec": ">=1.4.0 <1.5.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-inappbrowser/-/cordova-plugin-inappbrowser-1.4.0.tgz",
+  "_shasum": "b031f68e3c224ff15774a18711e962837125dce7",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-inappbrowser@~1.4.0",
+  "_where": "/Users/zhuenqing/workspace/StudyEnglish/StudyEnglish/handinhand-ionic2/node_modules",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-inappbrowser/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-inappbrowser",
+    "platforms": [
+      "android",
+      "amazon-fireos",
+      "ubuntu",
+      "ios",
+      "wp7",
+      "wp8",
+      "windows8",
+      "windows",
+      "firefoxos"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova InAppBrowser Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "b031f68e3c224ff15774a18711e962837125dce7",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-inappbrowser/-/cordova-plugin-inappbrowser-1.4.0.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.1.0"
+    }
+  ],
+  "homepage": "https://github.com/apache/cordova-plugin-inappbrowser#readme",
+  "keywords": [
+    "cordova",
+    "in",
+    "app",
+    "browser",
+    "inappbrowser",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-amazon-fireos",
+    "cordova-ubuntu",
+    "cordova-ios",
+    "cordova-wp7",
+    "cordova-wp8",
+    "cordova-windows8",
+    "cordova-windows",
+    "cordova-firefoxos"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "kotikov.vladimir",
+      "email": "kotikov.vladimir@gmail.com"
+    },
+    {
+      "name": "sgrebnov",
+      "email": "sergei.grebnov@gmail.com"
+    },
+    {
+      "name": "shazron",
+      "email": "shazron@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-inappbrowser",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-inappbrowser.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "version": "1.4.0"
+}

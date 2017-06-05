@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		acACJPCJquo0HD/I8WPSTdZJuL4=
+		h0yDih6frChyo01Lqvg4oYw3TII=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		oclaRhi0JPc+vyavOexQMnPXw9M=
+		uou7/JqqJ5nAGCh6uqyuK+bqgPk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		iMs8P3X4dFaJboumPmZA22Lmk5E=
+		47pTrsTAIkv4nqKx3J5blM0XuRg=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		E0mBgar0NGw6sb4+GNiNNuD1SDg=
+		aBSpSN/BPoR5WQO7IajhbRA+kVo=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -186,7 +186,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		RqTiEE1CwrtQSADESil2HYtNjTw=
+		yLZC735PIeGY4CN9lTYE8Rj0WhE=
 		</data>
 		<key>www/css/style.css</key>
 		<data>
@@ -823,11 +823,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			acACJPCJquo0HD/I8WPSTdZJuL4=
+			h0yDih6frChyo01Lqvg4oYw3TII=
 			</data>
 			<key>hash2</key>
 			<data>
-			M6qtjiQji+70WCbUFz+XWNCs4C4Y3xxtrXHI7RPlFXY=
+			jjIChArTeP6iotJ0mexPgoCMX1hzSX++va1p0UTNQKE=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -845,11 +845,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oclaRhi0JPc+vyavOexQMnPXw9M=
+			uou7/JqqJ5nAGCh6uqyuK+bqgPk=
 			</data>
 			<key>hash2</key>
 			<data>
-			l3LBd6ViuY09D13i4m4E07gEsjba9ZSX1qJtzBssmyc=
+			TU1AqREvP75F+TIFffrz6akzNhA0QB6xgG1dTsUgS/0=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -1010,11 +1010,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E0mBgar0NGw6sb4+GNiNNuD1SDg=
+			aBSpSN/BPoR5WQO7IajhbRA+kVo=
 			</data>
 			<key>hash2</key>
 			<data>
-			XX34R3mCy3/yoFDJUuPnVmD59sp4JzizQ3f5ennAZQ0=
+			xeLCOFMOCM31FCFWbnhBg5WR76PJeMQVcg6GNN3nWhw=
 			</data>
 		</dict>
 		<key>config.xml</key>
@@ -1076,11 +1076,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RqTiEE1CwrtQSADESil2HYtNjTw=
+			yLZC735PIeGY4CN9lTYE8Rj0WhE=
 			</data>
 			<key>hash2</key>
 			<data>
-			KXrZo42datV7adEozSp/AjkW3/sPXMRLotk4bZjntu4=
+			FtR3g4Jc1IlYB/H8l4w73A073Bhy0b+bT5kTKerdmo4=
 			</data>
 		</dict>
 		<key>www/css/style.css</key>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-calendars-usage-description"
+        version="0.0.3">
+
+    <name>PhoneGap Calendar Usage Description plugin</name>
+    <description>Cordova/PhoneGap plugin to provide a reason to the user for Calendar access on iOS 10+</description>
+    <license>Apache 2.0 License</license>
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="NSCalendarsUsageDescription">
+            <string>Some ad content may access calendar</string>
+        </config-file>
+    </platform>
+</plugin>

@@ -46,5 +46,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-calendars-usage-description": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-calendars-usage-description"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
