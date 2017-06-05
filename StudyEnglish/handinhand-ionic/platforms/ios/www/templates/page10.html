@@ -1,0 +1,58 @@
+<ion-view title="我的考试报名" id="page10">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="page10-list9">
+      <label class="item item-select" id="page10-select1">
+        <span class="input-label">我的目标分数</span>
+        <select>
+          <option>0~59</option>
+          <option>60~74</option>
+          <option>75~89</option>
+          <option>90~99</option>
+          <option>100～120</option>
+        </select>
+      </label>
+      <ion-item class="item-divider" id="page10-list-item-divider4"> 选择这个目标分数的原因</ion-item>
+      <ion-checkbox id="page10-checkbox1">申请学校要求</ion-checkbox>
+      <ion-checkbox id="page10-checkbox2">父母意见</ion-checkbox>
+      <ion-checkbox id="page10-checkbox3">老师意见</ion-checkbox>
+      <ion-checkbox id="page10-checkbox4">自己感觉</ion-checkbox>
+    </ion-list>
+    <div>
+      <ion-item>
+        <ion-label>Daenerys Targaryen</ion-label>
+        <ion-checkbox color="dark" checked="true"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Arya Stark</ion-label>
+        <ion-checkbox disabled="true"></ion-checkbox>
+      </ion-item>
+
+
+      <div class="list card">
+        <ion-item class="item-divider"> （4）请选择句子的含义</ion-item>
+        <form class="list">
+          <ion-radio>简单句</ion-radio>
+          <ion-radio>复杂句</ion-radio>
+          <ion-radio>复合句</ion-radio>
+        </form>
+        <ion-item class="item-icon-left assertive">
+          <i class="icon ion-mouse"></i>解答</ion-item>
+      </div>
+
+      <div class="list card">
+        <ion-item>
+          <ion-label>Start Time</ion-label>
+          <ion-datetime displayformat="h:mm A" pickerformat="h mm A" [(ngmodel)]="event.timeStarts"></ion-datetime>
+        </ion-item>
+
+      </div>
+    </div>
+    <form id="page10-form5" class="list">
+      <label class="item item-input" id="page10-input8">
+        <span class="input-label">Input</span>
+        <input type="time" placeholder="">
+      </label>
+    </form>
+  </ion-content>
+</ion-view>
