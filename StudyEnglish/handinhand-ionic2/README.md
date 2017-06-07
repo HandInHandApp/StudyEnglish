@@ -59,7 +59,7 @@ All app preview screenshots were taken by running `ionic serve --lab` on a retin
 
 - [Schedule Page](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/schedule/schedule.html)
 
-  <img src="resources/screenshots/SchedulePage.png" alt="Schedule">
+  <img src="resources/screenshots/TrainingPage.png" alt="Schedule">
 
 
 - [About Page](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/about/about.html)
@@ -122,9 +122,9 @@ ionic-conference-app/
 │    │    │    └── map.scss              * MapPage stylesheet
 │    │    │
 │    │    │── schedule/                  * Schedule tab page
-│    │    │    ├── schedule.html         * SchedulePage template
-│    │    │    └── schedule.ts           * SchedulePage code
-│    │    │    └── schedule.scss         * SchedulePage stylesheet
+│    │    │    ├── schedule.html         * TrainingPage template
+│    │    │    └── schedule.ts           * TrainingPage code
+│    │    │    └── schedule.scss         * TrainingPage stylesheet
 │    │    │
 │    │    │── schedule-filter/            * Schedule Filter page
 │    │    │    ├── schedule-filter.html   * ScheduleFilterPage template
@@ -145,9 +145,9 @@ ionic-conference-app/
 │    │    │    └── speaker-detail.scss   * SpeakerDetailPage stylesheet
 │    │    │
 │    │    │── speaker-list/              * Speakers tab page
-│    │    │    ├── speaker-list.html     * SpeakerListPage template
-│    │    │    └── speaker-list.ts       * SpeakerListPage code
-│    │    │    └── speaker-list.scss     * SpeakerListPage stylesheet
+│    │    │    ├── speaker-list.html     * TestListPage template
+│    │    │    └── speaker-list.ts       * TestListPage code
+│    │    │    └── speaker-list.scss     * TestListPage stylesheet
 |    |    |
 │    │    │── support/                   * Support page
 │    │    │    ├── support.html          * SupportPage template
