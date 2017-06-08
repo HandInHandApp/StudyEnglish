@@ -13,7 +13,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { TrainingPage } from '../pages/schedule/schedule';
-import { TestListPage } from '../pages/speaker-list/speaker-list';
+import { TestListPage } from '../pages/test-list/test-list';
 import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';

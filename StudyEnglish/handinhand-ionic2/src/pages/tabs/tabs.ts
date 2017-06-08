@@ -5,7 +5,7 @@ import { NavParams } from 'ionic-angular';
 import { AboutPage } from '../about/about';
 import { MapPage } from '../map/map';
 import { TrainingPage } from '../schedule/schedule';
-import { TestListPage } from '../speaker-list/speaker-list';
+import { TestListPage } from '../test-list/test-list';
 
 @Component({
   templateUrl: 'tabs.html'
