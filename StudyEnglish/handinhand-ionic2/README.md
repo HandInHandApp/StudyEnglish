@@ -33,9 +33,9 @@ See [CONTRIBUTING.md](https://github.com/ionic-team/ionic-conference-app/blob/ma
 
 ## Use Cases
 
-* Action Sheet - [ [template](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/test-list/test-list.html) | [code](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/test-list/test-list.ts) ]
+* Action Sheet - [ [template](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/speaker-list/speaker-list.html) | [code](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/speaker-list/speaker-list.ts) ]
 * Alert - [ [code](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/schedule/schedule.ts) ]
-* Cards - [ [template](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/test-list/test-list.html) ]
+* Cards - [ [template](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/speaker-list/speaker-list.html) ]
 * Datetime - [ [template](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/about/about.html) ]
 * Grid - [ [template](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/login/login.html) ]
 * Inputs - [ [template](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/login/login.html) ]
@@ -59,7 +59,7 @@ All app preview screenshots were taken by running `ionic serve --lab` on a retin
 
 - [Schedule Page](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/schedule/schedule.html)
 
-  <img src="resources/screenshots/TrainingPage.png" alt="Schedule">
+  <img src="resources/screenshots/SchedulePage.png" alt="Schedule">
 
 
 - [About Page](https://github.com/ionic-team/ionic-conference-app/blob/master/src/pages/about/about.html)
@@ -122,9 +122,9 @@ ionic-conference-app/
 │    │    │    └── map.scss              * MapPage stylesheet
 │    │    │
 │    │    │── schedule/                  * Schedule tab page
-│    │    │    ├── schedule.html         * TrainingPage template
-│    │    │    └── schedule.ts           * TrainingPage code
-│    │    │    └── schedule.scss         * TrainingPage stylesheet
+│    │    │    ├── schedule.html         * SchedulePage template
+│    │    │    └── schedule.ts           * SchedulePage code
+│    │    │    └── schedule.scss         * SchedulePage stylesheet
 │    │    │
 │    │    │── schedule-filter/            * Schedule Filter page
 │    │    │    ├── schedule-filter.html   * ScheduleFilterPage template
@@ -144,10 +144,10 @@ ionic-conference-app/
 │    │    │    └── speaker-detail.ts     * SpeakerDetailPage code
 │    │    │    └── speaker-detail.scss   * SpeakerDetailPage stylesheet
 │    │    │
-│    │    │── test-list/              * Speakers tab page
-│    │    │    ├── test-list.html     * TestListPage template
-│    │    │    └── test-list.ts       * TestListPage code
-│    │    │    └── test-list.scss     * TestListPage stylesheet
+│    │    │── speaker-list/              * Speakers tab page
+│    │    │    ├── speaker-list.html     * SpeakerListPage template
+│    │    │    └── speaker-list.ts       * SpeakerListPage code
+│    │    │    └── speaker-list.scss     * SpeakerListPage stylesheet
 |    |    |
 │    │    │── support/                   * Support page
 │    │    │    ├── support.html          * SupportPage template

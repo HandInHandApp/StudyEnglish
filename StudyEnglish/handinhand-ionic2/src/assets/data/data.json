@@ -2,17 +2,15 @@
 
   "schedule": [{
     "date": "2047-05-17",
-    "groups": [
-      {
+    "groups": [{
       "time": "8:00 am",
-      "sessions": [
-        {
-        "name": "阅读--简单句",
+      "sessions": [{
+        "name": "Breakfast",
         "timeStart": "8:00 am",
         "timeEnd": "9:00 am",
         "location": "Main hallway",
         "tracks": ["Food"]
-        }, {
+      }, {
         "name": "Meet and Greet",
         "timeStart": "9:00 am",
         "timeEnd": "9:15 am",
@@ -21,12 +19,11 @@
       }]
     }, {
       "time": "9:15 am",
-      "sessions": [
-        {
+      "sessions": [{
         "name": "Introduction to Appcamp.io",
         "location": "Room 2203",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--二阶测试"],
+        "speakerNames": ["Ellie Elephant"],
         "timeStart": "9:15 am",
         "timeEnd": "9:30 am",
         "tracks": ["Ionic"]
@@ -34,7 +31,7 @@
         "name": "Getting started with Ionic",
         "location": "Room 2202",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--二阶写作测试"],
+        "speakerNames": ["Ted Turtle"],
         "timeStart": "9:30 am",
         "timeEnd": "9:45 am",
         "tracks": ["Ionic"]
@@ -42,19 +39,18 @@
         "name": "Tooling for Ionic",
         "location": "Room 2201",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶写作测试"],
+        "speakerNames": ["Rachel Rabbit"],
         "timeStart": "9:45 am",
         "timeEnd": "10:00 am",
         "tracks": ["Tooling"]
-      }
-      ]
+      }]
     }, {
       "time": "10:00 am",
       "sessions": [{
         "name": "Migrating to Ionic2",
         "location": "Room 2201",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶测试", "阶段测试--二阶阅读测试"],
+        "speakerNames": ["Eva Eagle", "Lionel Lion"],
         "timeStart": "10:00 am",
         "timeEnd": "10:15 am",
         "tracks": ["Ionic"]
@@ -62,7 +58,7 @@
         "name": "Whats new in Angular",
         "location": "Room 2203",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶写作测试"],
+        "speakerNames": ["Rachel Rabbit"],
         "timeStart": "10:15 am",
         "timeEnd": "10:30 am",
         "tracks": ["Angular"]
@@ -70,7 +66,7 @@
         "name": "The evolution of Ionicons",
         "location": "Room 2202",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶听力测试", "阶段测试--一阶测试"],
+        "speakerNames": ["Isabella Iguana", "Eva Eagle"],
         "timeStart": "10:30 am",
         "timeEnd": "10:45 am",
         "tracks": ["Design"]
@@ -78,7 +74,7 @@
         "name": "Ionic.io Services",
         "location": "Room 2202",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["入学测试--全真测试"],
+        "speakerNames": ["Charlie Cheetah"],
         "timeStart": "10:45 am",
         "timeEnd": "11:00 am",
         "tracks": ["Services"]
@@ -89,7 +85,7 @@
         "name": "Ionic Workshop",
         "location": "Room 2201",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶阅读测试", "阶段测试--二阶阅读测试"],
+        "speakerNames": ["Karl Kitten", "Lionel Lion"],
         "timeStart": "11:00 am",
         "timeEnd": "11:45 am",
         "tracks": ["Workshop"]
@@ -97,7 +93,7 @@
         "name": "Community Interaction",
         "location": "Room 2203",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--二阶阅读测试", "阶段测试--三阶测试"],
+        "speakerNames": ["Lionel Lion", "Gino Giraffe"],
         "timeStart": "11:30 am",
         "timeEnd": "11:50 am",
         "tracks": ["Communication"]
@@ -105,7 +101,7 @@
         "name": "Navigation in Ionic",
         "location": "Room 2203",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶写作测试", "阶段测试--一阶测试"],
+        "speakerNames": ["Rachel Rabbit", "Eva Eagle"],
         "timeStart": "11:30 am",
         "timeEnd": "12:00 pm",
         "tracks": ["Navigation"]
@@ -126,7 +122,7 @@
         "name": "Ionic in the Enterprise",
         "location": "Room 2201",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--三阶听力测试"],
+        "speakerNames": ["Paul Puppy"],
         "timeStart": "1:00 pm",
         "timeEnd": "1:15 pm",
         "tracks": ["Communication"]
@@ -134,7 +130,7 @@
         "name": "Ionic Worldwide",
         "location": "Room 2201",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--三阶测试"],
+        "speakerNames": ["Gino Giraffe"],
         "timeStart": "1:15 pm",
         "timeEnd": "1:30 pm",
         "tracks": ["Communication"]
@@ -142,7 +138,7 @@
         "name": "The Ionic package service",
         "location": "Room 2203",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--二阶听力测试", "Burt Bear"],
+        "speakerNames": ["Molly Mouse", "Burt Bear"],
         "timeStart": "1:30 pm",
         "timeEnd": "2:00 pm",
         "tracks": ["Services"]
@@ -153,7 +149,7 @@
         "name": "Push Notifications in Ionic",
         "location": "Room 2202",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["Burt Bear", "入学测试--全真测试"],
+        "speakerNames": ["Burt Bear", "Charlie Cheetah"],
         "timeStart": "2:00 pm",
         "timeEnd": "2:30 pm",
         "tracks": ["Services"]
@@ -161,7 +157,7 @@
         "name": "Ionic Documentation",
         "location": "Room 2202",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--全面测试"],
+        "speakerNames": ["Donald Duck"],
         "timeStart": "2:30 pm",
         "timeEnd": "2:45 pm",
         "tracks": ["Documentation"]
@@ -169,7 +165,7 @@
         "name": "UX planning in Ionic",
         "location": "Room 2203",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶听力测试", "阶段测试--二阶测试"],
+        "speakerNames": ["Isabella Iguana", "Ellie Elephant"],
         "timeStart": "2:45 pm",
         "timeEnd": "3:00 pm",
         "tracks": ["Design"]
@@ -180,7 +176,7 @@
         "name": "Directives in Ionic",
         "location": "Room 2201",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--二阶写作测试"],
+        "speakerNames": ["Ted Turtle"],
         "timeStart": "3:00 pm",
         "timeEnd": "3:30 pm",
         "tracks": ["Angular"]
@@ -188,7 +184,7 @@
         "name": "Mobile States",
         "location": "Room 2202",
         "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-        "speakerNames": ["阶段测试--一阶写作测试"],
+        "speakerNames": ["Rachel Rabbit"],
         "timeStart": "3:30 pm",
         "timeEnd": "3:45 pm",
         "tracks": ["Navigation"]
@@ -204,7 +200,7 @@
         "name": "Observables",
         "location": "Room 2204",
         "description": "Observables allow for a new reactive programming paradigm. In this talk we will discuss the basics of using observables and some awesome use cases for them",
-        "speakerNames": ["阶段测试--一阶听力测试", "阶段测试--二阶测试"],
+        "speakerNames": ["Isabella Iguana", "Ellie Elephant"],
         "timeStart": "4:15 pm",
         "timeEnd": "4:45 pm",
         "tracks": ["Workshop"]
@@ -214,7 +210,7 @@
 
 
   "speakers": [{
-    "name": "入学测试-迷你测试",
+    "name": "Burt Bear",
     "profilePic": "assets/img/speakers/bear.jpg",
     "twitter": "ionicframework",
     "about": "Burt is a Bear.",
@@ -222,7 +218,7 @@
     "email": "burt@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "入学测试--全真测试",
+    "name": "Charlie Cheetah",
     "profilePic": "assets/img/speakers/cheetah.jpg",
     "twitter": "ionicframework",
     "about": "Charlie is a Cheetah.",
@@ -230,7 +226,7 @@
     "email": "charlie@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--全面测试",
+    "name": "Donald Duck",
     "profilePic": "assets/img/speakers/duck.jpg",
     "twitter": "ionicframework",
     "about": "Donald is a Duck.",
@@ -238,7 +234,7 @@
     "email": "donald@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--一阶测试",
+    "name": "Eva Eagle",
     "profilePic": "assets/img/speakers/eagle.jpg",
     "twitter": "ionicframework",
     "about": "Eva is an Eagle.",
@@ -246,7 +242,7 @@
     "email": "eva@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--二阶测试",
+    "name": "Ellie Elephant",
     "profilePic": "assets/img/speakers/elephant.jpg",
     "twitter": "ionicframework",
     "about": "Ellie is an Elephant.",
@@ -254,7 +250,7 @@
     "email": "ellie@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--三阶测试",
+    "name": "Gino Giraffe",
     "profilePic": "assets/img/speakers/giraffe.jpg",
     "twitter": "ionicframework",
     "about": "Gino is a Giraffe.",
@@ -262,7 +258,7 @@
     "email": "gino@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--一阶听力测试",
+    "name": "Isabella Iguana",
     "profilePic": "assets/img/speakers/iguana.jpg",
     "twitter": "ionicframework",
     "about": "Isabella is an Iguana.",
@@ -270,7 +266,7 @@
     "email": "isabella@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--一阶阅读测试",
+    "name": "Karl Kitten",
     "profilePic": "assets/img/speakers/kitten.jpg",
     "twitter": "ionicframework",
     "about": "Karl is a Kitten.",
@@ -278,7 +274,7 @@
     "email": "karl@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--二阶阅读测试",
+    "name": "Lionel Lion",
     "profilePic": "assets/img/speakers/lion.jpg",
     "twitter": "ionicframework",
     "about": "Lionel is a Lion.",
@@ -286,7 +282,7 @@
     "email": "lionel@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--二阶听力测试",
+    "name": "Molly Mouse",
     "profilePic": "assets/img/speakers/mouse.jpg",
     "twitter": "ionicframework",
     "about": "Molly is a Mouse.",
@@ -294,7 +290,7 @@
     "email": "molly@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--三阶听力测试",
+    "name": "Paul Puppy",
     "profilePic": "assets/img/speakers/puppy.jpg",
     "twitter": "ionicframework",
     "about": "Paul is a Puppy.",
@@ -302,7 +298,7 @@
     "email": "paul@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--一阶写作测试",
+    "name": "Rachel Rabbit",
     "profilePic": "assets/img/speakers/rabbit.jpg",
     "twitter": "ionicframework",
     "about": "Rachel is a Rabbit.",
@@ -310,7 +306,7 @@
     "email": "rachel@example.com",
     "phone": "+1-541-754-3010"
   }, {
-    "name": "阶段测试--二阶写作测试",
+    "name": "Ted Turtle",
     "profilePic": "assets/img/speakers/turtle.jpg",
     "twitter": "ionicframework",
     "about": "Ted is a Turtle.",
@@ -333,29 +329,6 @@
     "name": "Afterparty - Brocach Irish Pub",
     "lat": 43.07336,
     "lng": -89.38335
-  }],
-
-
-  "tests":[{
-    "title":"迷你测试",
-    "subtitle":"52分钟",
-    "profileminPic":"assets/img/speakers/mouse.jpg",
-    "profilePic":"assets/img/advance-card-bttf.png",
-    "desc1":"优点：用时短；全程52分钟",
-    "desc2":"缺点：不如全真模考考察细致",
-    "desc3":"适用人群：已经考过或者时间紧张的考生"
-  },{
-    "title":"全真测试",
-    "subtitle":"225分钟",
-    "profileminPic":"assets/img/speakers/lion.jpg",
-    "profilePic":"assets/img/advance-card-jp.jpg",
-    "desc1":"优点：考察细致，接近实考",
-    "desc2":"缺点：耗时长；全程3小时45分钟左右",
-    "desc3":"适用人群：未考过或希望细致评估的考生"
   }]
-
-
-
-
 
 }

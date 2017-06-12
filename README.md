@@ -20,6 +20,13 @@ Syntax highlighted code block
 
 1. Numbered
 2. List
+  676  ionic serve
+  677  ionic cordova platform add ios
+  678  ionic cordova build ios
+  679  ionic emulate ios --list
+  680  ionic cordova  emulate ios --list
+  681  ionic cordova  emulate ios 
+
 
 **Bold** and _Italic_ and `Code` text
 
