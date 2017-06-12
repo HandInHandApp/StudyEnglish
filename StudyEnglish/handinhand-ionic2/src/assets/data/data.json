@@ -333,6 +333,29 @@
     "name": "Afterparty - Brocach Irish Pub",
     "lat": 43.07336,
     "lng": -89.38335
+  }],
+
+
+  "tests":[{
+    "title":"迷你测试",
+    "subtitle":"52分钟",
+    "profileminPic":"assets/img/speakers/mouse.jpg",
+    "profilePic":"assets/img/advance-card-bttf.png",
+    "desc1":"优点：用时短；全程52分钟",
+    "desc2":"缺点：不如全真模考考察细致",
+    "desc3":"适用人群：已经考过或者时间紧张的考生"
+  },{
+    "title":"全真测试",
+    "subtitle":"225分钟",
+    "profileminPic":"assets/img/speakers/lion.jpg",
+    "profilePic":"assets/img/advance-card-jp.jpg",
+    "desc1":"优点：考察细致，接近实考",
+    "desc2":"缺点：耗时长；全程3小时45分钟左右",
+    "desc3":"适用人群：未考过或希望细致评估的考生"
   }]
+
+
+
+
 
 }

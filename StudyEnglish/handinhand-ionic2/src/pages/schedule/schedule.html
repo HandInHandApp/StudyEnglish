@@ -5,11 +5,11 @@
     </button>
 
     <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
-      <ion-segment-button value="myPractices">
-        我的练习
-      </ion-segment-button>
-      <ion-segment-button value="allPractices">
+      <ion-segment-button value="all">
         全部练习
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        我的练习
       </ion-segment-button>
     </ion-segment>
 

@@ -28,7 +28,7 @@ export class TrainingPage {
 
   dayIndex = 0;
   queryText = '';
-  segment = 'myPractices';
+  segment = 'all';
   excludeTracks: any = [];
   shownSessions: any = [];
   groups: any = [];

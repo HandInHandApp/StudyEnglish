@@ -152,4 +152,10 @@ export class ConferenceData {
     });
   }
 
+    getTest() {
+    return this.load().map((data: any) => {
+      return data.tests;
+    });
+  }
+
 }
