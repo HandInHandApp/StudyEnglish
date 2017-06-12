@@ -29,6 +29,9 @@ import { SupportPage } from '../pages/support/support';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
+import { DayPilot } from 'daypilot-pro-angular';
+
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,15 @@ import { UserData } from '../providers/user-data';
     TestListPage,
     TabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+
+
+    DayPilot.Angular.Scheduler,
+    DayPilot.Angular.Gantt,
+    DayPilot.Angular.Calendar,
+    DayPilot.Angular.Month
+
+
   ],
   imports: [
     BrowserModule,

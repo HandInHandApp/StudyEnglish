@@ -52,8 +52,8 @@
     
   </ion-list>
 
-  <!--<ion-list #steptestList [virtualScroll]="steptests" *ngSwitchCase="'starttest'">-->
-    <ion-list #steptestList >
+  <ion-list #steptestList [virtualScroll]="steptests" *ngSwitchCase="'starttest'">
+    <!--<ion-list #steptestList >-->
     <ion-grid fixed>
       <ion-row align-items-stretch>
         <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let test" approxItemHeight="457px">
