@@ -31,11 +31,13 @@ import { UserData } from '../providers/user-data';
 
 import { DayPilot } from 'daypilot-pro-angular';
 
+// import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
 
-
+import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @NgModule({
   declarations: [
     ConferenceApp,
+    ExaminationinfoPage,
     AboutPage,
     AccountPage,
     LoginPage,
@@ -50,7 +52,7 @@ import { DayPilot } from 'daypilot-pro-angular';
     TabsPage,
     TutorialPage,
     SupportPage,
-
+    
 
     DayPilot.Angular.Scheduler,
     DayPilot.Angular.Gantt,
@@ -67,6 +69,7 @@ import { DayPilot } from 'daypilot-pro-angular';
         { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
         { component: TrainingPage, name: 'Schedule', segment: 'schedule' },
         { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:name' },
+        { component: ExaminationinfoPage, name: 'Examinationinfo', segment: 'Examinationinfo/:name' },
         { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
         { component: TestListPage, name: 'SpeakerList', segment: 'speakerList' },
         { component: SpeakerDetailPage, name: 'SpeakerDetail', segment: 'speakerDetail/:name' },
@@ -97,7 +100,8 @@ import { DayPilot } from 'daypilot-pro-angular';
     TestListPage,
     TabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    ExaminationinfoPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

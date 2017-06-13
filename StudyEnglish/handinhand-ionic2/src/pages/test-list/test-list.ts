@@ -8,6 +8,8 @@ import { ConferenceData } from '../../providers/conference-data';
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
 
+// import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
+import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @Component({
   selector: 'page-test-list',
   templateUrl: 'test-list.html'
@@ -18,7 +20,7 @@ export class TestListPage {
 
   actionSheet: ActionSheet;
   speakers: any[] = [];
-  steptests: any[] = [{
+  starttests: any[] = [{
     "title":"迷你测试",
     "subtitle":"52分钟",
     "profileminPic":"assets/img/speakers/mouse.jpg",
@@ -28,6 +30,24 @@ export class TestListPage {
     "desc3":"适用人群：已经考过或者时间紧张的考生"
   },{
     "title":"全真测试",
+    "subtitle":"225分钟",
+    "profileminPic":"assets/img/speakers/lion.jpg",
+    "profilePic":"assets/img/advance-card-jp.jpg",
+    "desc1":"优点：考察细致，接近实考",
+    "desc2":"缺点：耗时长；全程3小时45分钟左右",
+    "desc3":"适用人群：未考过或希望细致评估的考生"
+  }]
+
+  steptests: any[] = [{
+    "title":"阶段一测试",
+    "subtitle":"52分钟",
+    "profileminPic":"assets/img/speakers/mouse.jpg",
+    "profilePic":"assets/img/advance-card-bttf.png",
+    "desc1":"优点：用时短；全程52分钟",
+    "desc2":"缺点：不如全真模考考察细致",
+    "desc3":"适用人群：已经考过或者时间紧张的考生"
+  },{
+    "title":"阶段一测试",
     "subtitle":"225分钟",
     "profileminPic":"assets/img/speakers/lion.jpg",
     "profilePic":"assets/img/advance-card-jp.jpg",

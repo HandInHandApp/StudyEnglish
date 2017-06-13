@@ -16,6 +16,7 @@ import { TrainingPage } from '../pages/schedule/schedule';
 import { TestListPage } from '../pages/test-list/test-list';
 import { SupportPage } from '../pages/support/support';
 
+
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
