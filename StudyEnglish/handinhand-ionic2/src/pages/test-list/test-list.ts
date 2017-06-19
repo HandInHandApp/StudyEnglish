@@ -8,8 +8,8 @@ import { ConferenceData } from '../../providers/conference-data';
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
 
-// import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
-import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
+import { ExaminationDetailPage } from '../examination-detail/examination-detail';
+// import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @Component({
   selector: 'page-test-list',
   templateUrl: 'test-list.html'
@@ -92,9 +92,9 @@ export class TestListPage {
     // });
   }
 
-  goToSessionDetail(session: any) {
-    this.navCtrl.push(SessionDetailPage, {
-      name: session.name,
+  goToSessionDetail(session: any,type: any) {
+    this.navCtrl.push(ExaminationDetailPage, {
+      type: type,
       session: session
     });
   }

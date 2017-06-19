@@ -31,13 +31,18 @@ import { UserData } from '../providers/user-data';
 
 import { DayPilot } from 'daypilot-pro-angular';
 
-// import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
+import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
+import { TrainingDetailPage } from '../pages/training-detail/training-detail';
 
-import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
+
+
+// import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @NgModule({
   declarations: [
     ConferenceApp,
-    ExaminationinfoPage,
+    ExaminationDetailPage,
+    TrainingDetailPage,
+
     AboutPage,
     AccountPage,
     LoginPage,
@@ -69,7 +74,9 @@ import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
         { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
         { component: TrainingPage, name: 'Schedule', segment: 'schedule' },
         { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:name' },
-        { component: ExaminationinfoPage, name: 'Examinationinfo', segment: 'Examinationinfo/:name' },
+        { component: ExaminationDetailPage, name: 'ExaminationDetail', segment: 'ExaminationDetail/:name' },
+        { component: TrainingDetailPage, name: 'TrainingDetail', segment: 'TrainingDetail/:name' },
+        
         { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
         { component: TestListPage, name: 'SpeakerList', segment: 'speakerList' },
         { component: SpeakerDetailPage, name: 'SpeakerDetail', segment: 'speakerDetail/:name' },
@@ -101,7 +108,8 @@ import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
     TabsPage,
     TutorialPage,
     SupportPage,
-    ExaminationinfoPage
+    ExaminationDetailPage,
+    TrainingDetailPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

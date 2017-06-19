@@ -26,6 +26,8 @@ Syntax highlighted code block
   679  ionic emulate ios --list
   680  ionic cordova  emulate ios --list
   681  ionic cordova  emulate ios 
+ionic cordova  emulate ios  --target="iPad-Air"
+
 
 
 **Bold** and _Italic_ and `Code` text

@@ -43,25 +43,25 @@
   <!--<ion-list #mystatus [hidden]="shownSegment === 0">-->
 <div [ngSwitch]="segment">
   <ion-list *ngSwitchCase="'my'">
-    <ion-item (click)="goToSessionDetail(segment)">
+    <ion-item (click)="goToSessionDetail(segment,'have')">
       <ion-thumbnail item-start>
         <img src="assets/img/advance-card-tmntr.jpg">
       </ion-thumbnail>
       <h2>已经参加过托福考试</h2>
     </ion-item>
-     <ion-item (click)="goToSessionDetail(segment)">
+     <ion-item (click)="goToSessionDetail(segment,'will')">
       <ion-thumbnail item-start>
         <img src="assets/img/speakers/rabbit.jpg">
       </ion-thumbnail>
       <h2>未参加过托福考试，但已报名</h2>
     </ion-item>
      
-     <ion-item (click)="goToSessionDetail(segment)">
+     <!--<ion-item (click)="goToSessionDetail(segment)">
       <ion-thumbnail item-start>
         <img src="assets/img/speakers/turtle.jpg">
       </ion-thumbnail>
       <h2>未参加过托福考试，也未报名</h2>
-    </ion-item>
+    </ion-item>-->
     
   </ion-list>
 

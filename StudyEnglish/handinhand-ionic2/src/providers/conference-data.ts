@@ -90,6 +90,109 @@ export class ConferenceData {
       return day;
     });
   }
+  readingSession: any[] = [{
+        "id":1,
+        "name": "句子训练-简单句",
+        "nmbuer": "2201",
+        "description": "简单的句子结构",
+        "costtine": "24个小时",
+        "havefinished": 10,
+        "speakerNames": ["Eva Eagle", "Lionel Lion"],
+        "tracks": ["Ionic"]
+      },{
+        "id":2,
+        "name": "句子训练-复杂句",
+        "nmbuer": "2201",
+        "description": "简单的句子结构",
+        "costtine": "24个小时",
+        "havefinished": 10,
+        "speakerNames": ["Eva Eagle", "Lionel Lion"],
+        "tracks": ["Ionic"]
+      },{
+        "id":3,
+        "name": "句子训练-复合句",
+        "nmbuer": "2201",
+        "description": "简单的句子结构",
+        "costtine": "24个小时",
+        "havefinished": 10,
+        "speakerNames": ["Eva Eagle", "Lionel Lion"],
+        "tracks": ["Ionic"]
+      },{
+        "id":4,
+        "name": "逻辑训练",
+        "nmbuer": "2201",
+        "description": "简单的句子结构",
+        "costtine": "24个小时",
+        "havefinished": 10,
+        "speakerNames": ["Eva Eagle", "Lionel Lion"],
+        "tracks": ["Ionic"]
+      },{
+        "id":5,
+        "name": "段路训练",
+        "nmbuer": "2201",
+        "description": "简单的句子结构",
+        "costtine": "24个小时",
+        "havefinished": 10,
+        "speakerNames": ["Eva Eagle", "Lionel Lion"],
+        "tracks": ["Ionic"]
+      },{
+        "id":6,
+        "name": "题型训练",
+        "nmbuer": "2201",
+        "description": "简单的句子结构",
+        "costtine": "24个小时",
+        "havefinished": 10,
+        "speakerNames": ["Eva Eagle", "Lionel Lion"],
+        "tracks": ["Ionic"]
+      }]
+
+  training : any[] = [{
+    "title":"阅读训练",
+    "subtitle":"52分钟",
+    "profileminPic":"assets/img/speakers/mouse.jpg",
+    "profilePic":"assets/img/advance-card-bttf.png",
+    "desc1":"优点：用时短；全程52分钟",
+    "desc2":"缺点：不如全真模考考察细致",
+    "desc3":"适用人群：已经考过或者时间紧张的考生",
+    "sessions": this.readingSession
+  },{
+    "title":"听力训练",
+    "subtitle":"225分钟",
+    "profileminPic":"assets/img/speakers/lion.jpg",
+    "profilePic":"assets/img/advance-card-jp.jpg",
+    "desc1":"优点：考察细致，接近实考",
+    "desc2":"缺点：耗时长；全程3小时45分钟左右",
+    "desc3":"适用人群：未考过或希望细致评估的考生"
+  },{
+    "title":"写作训练",
+    "subtitle":"225分钟",
+    "profileminPic":"assets/img/speakers/lion.jpg",
+    "profilePic":"assets/img/advance-card-jp.jpg",
+    "desc1":"优点：考察细致，接近实考",
+    "desc2":"缺点：耗时长；全程3小时45分钟左右",
+    "desc3":"适用人群：未考过或希望细致评估的考生"
+  },{
+    "title":"口语训练",
+    "subtitle":"225分钟",
+    "profileminPic":"assets/img/speakers/lion.jpg",
+    "profilePic":"assets/img/advance-card-jp.jpg",
+    "desc1":"优点：考察细致，接近实考",
+    "desc2":"缺点：耗时长；全程3小时45分钟左右",
+    "desc3":"适用人群：未考过或希望细致评估的考生"
+  }]
+  getTraining(queryText = '', excludeTracks: any[] = [], segment = 'all') {
+    return this.load().map((data: any) => {
+      let list = this.training;
+      
+
+      queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
+      let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
+
+    
+
+      return list;
+    });
+  }
 
   filterSession(session: any, queryWords: string[], excludeTracks: any[], segment: string) {
 

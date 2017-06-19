@@ -6,10 +6,10 @@
 
     <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
       <ion-segment-button value="all">
-        全部练习
+        练习
       </ion-segment-button>
       <ion-segment-button value="favorites">
-        我的练习
+        quanzhen练习
       </ion-segment-button>
     </ion-segment>
 
@@ -40,6 +40,42 @@
 
       <ion-item-divider sticky>
         <ion-label>
+          {{group.title}}
+        </ion-label>
+      </ion-item-divider>
+
+      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
+
+        <button ion-item (click)="goToSessionDetail(session)">
+          <h3>{{session.name}}</h3>
+          <p>
+             例句个数：{{session.nmbuer}} &mdash;
+          </p>
+          <p>
+             训练目的：{{session.description}}
+          </p>
+          <p>
+             完成度：{{session.havefinished}}%
+          </p>
+        </button>
+
+        <ion-item-options>
+          <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'myPractices'">
+            Favorite
+          </button>
+          <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'allPractices'">
+            Remove
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+    </ion-item-group>
+
+    <!--<ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
+
+      <ion-item-divider sticky>
+        <ion-label>
           {{group.time}}
         </ion-label>
       </ion-item-divider>
@@ -66,7 +102,7 @@
 
       </ion-item-sliding>
 
-    </ion-item-group>
+    </ion-item-group>-->
 
   </ion-list>
 
