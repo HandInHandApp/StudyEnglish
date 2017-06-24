@@ -451,8 +451,8 @@ callbackError : function(result, context) {
 timeRangeSelectedHandling :'Bind',
 onTimeRangeSelected : function(args) {
   // alert(start + '\n' + end);
-  this.calendarconfig
-  startDate = args.day;
+  // this.calendarconfig
+  // startDate = args.day;
 },
 visibleRangeChangedHandling : 'CallBack',
 onVisibleRangeChanged : function(start, end) {
