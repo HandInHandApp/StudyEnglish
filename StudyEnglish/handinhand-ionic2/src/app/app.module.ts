@@ -58,7 +58,7 @@ import { TrainingDetailPage } from '../pages/training-detail/training-detail';
     TutorialPage,
     SupportPage,
     
-
+    DayPilot.Angular.Navigator,
     DayPilot.Angular.Scheduler,
     DayPilot.Angular.Gantt,
     DayPilot.Angular.Calendar,

@@ -12,8 +12,15 @@
 </ion-content>-->
 
 <ion-content padding>
+  <div style="float:left; width: 160px">
+    <daypilot-navigator [config]="navigatorconfig" #navigator></daypilot-navigator>
+  </div>
+
+  <div  style="margin-left: 160px">
+    <daypilot-calendar [events]="events" [config]="calendarconfig" #calendar></daypilot-calendar>
+  </div>
+   
   
-  <daypilot-scheduler [events]="events" [config]="config" #scheduler></daypilot-scheduler>
   <button (click)="add()">Add event</button>
 
 </ion-content>
