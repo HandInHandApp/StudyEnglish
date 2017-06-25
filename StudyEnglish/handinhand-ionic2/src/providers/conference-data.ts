@@ -1,6 +1,7 @@
+import { Events } from 'ionic-angular';
 import { Injectable } from '@angular/core';
 
-import { Http } from '@angular/http';
+import { Http,Headers,RequestOptions } from '@angular/http';
 
 import { UserData } from './user-data';
 
@@ -8,12 +9,17 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
+import {DayPilot} from "daypilot-pro-angular";
+import EventData = DayPilot.EventData;
+
+declare var firebase: any;
 
 @Injectable()
 export class ConferenceData {
   data: any;
 
-  constructor(public http: Http, public user: UserData) { }
+
+  constructor(public http: Http, public user: UserData) {}
 
   load(): any {
     if (this.data) {
@@ -255,4 +261,129 @@ export class ConferenceData {
     });
   }
 
+  // getEvents(start: DayPilot.Date, end: DayPilot.Date){
+  //   //  return this.http.get('assets/data/events.json')
+  //   return this.http.get('https://handinhand-11eed.firebaseio.com/.json')
+  //                    .map((response) => response.json())
+                     
+  // }
+
+  // getEvents(start: DayPilot.Date, end: DayPilot.Date): EventData[] {
+
+  //    return firebase.database()
+  //           .ref('/')
+  //           .on('child_added',(snpshort) =>snpshort.val())
+
+  //   // return this.http.post("/api/backend_events.php", {start: start, end: end}).map((response:Response) => response.json());
+  // }
+
+ getHeaders(){
+      var myheaders = new Headers();
+
+      myheaders.append("Content-Type" ,"application/json");
+      myheaders.append("X-LC-Id", "Eul6rG90rOjIO5imP853JOmn-gzGzoHsz");
+      myheaders.append("X-LC-Key" , "XdmDTh1MQGHCYrJjp1B5Jyh1");
+      
+      return  myheaders;
+ }
+
+
+  getEvents(start: DayPilot.Date, end: DayPilot.Date): Observable<EventData[]> {
+
+     
+
+    var url="https://api.leancloud.cn/1.1/classes/Event?limit=100&&order=-updatedAt&&";
+    return this.http.get(url, {headers:this.getHeaders()})
+                    .map((response) => {
+                      var ne : QueryResult;
+                      ne = response.json();
+                      return ne.results;
+                    }
+                    
+                    );
+  }
+
+  createEvent(params: Event): Observable<BackendResult> {
+    var url ="https://api.leancloud.cn/1.1/classes/Event"
+    return this.http.post(url, params, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+
+  deleteEvent(id: string): Observable<BackendResult> {
+    id="594f7b770ce46300576ab053"
+    var url = "https://api.leancloud.cn/1.1/classes/Event/"+id;
+
+    return this.http.delete(url, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+
+  updateEvent(params: MoveEventParams): Observable<BackendResult> {
+    var id="594f7b770ce46300576ab053"
+    var url = "https://api.leancloud.cn/1.1/classes/Event/"+id;
+    return this.http.put(url, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+
+  // events : EventData[] = [
+    // {
+    //   id: 1,
+    //   start: "2017/06/01",
+    //   end: "2017/06/02",
+    //   text: "string"
+    // },{
+    //   id: 2,
+    //   start: "2017/06/03",
+    //   end: "2017/06/04",
+    //   text: "string"
+    // },{
+    //   id: 3,
+    //   start: "2017/06/06",
+    //   end: "2017/06/07",
+    //   text: "string"
+    // }
+  // ]
+  // getEvents(start: DayPilot.Date, end: DayPilot.Date) {
+  //   var x = this.events;
+  //   return x;
+
+  // }
+
+  // createEvent(params: CreateEventParams){
+  //   return "ok";
+  // }
+
+  // deleteEvent(id: string) {
+  //    return "ok";
+  // }
+
+  // moveEvent(params: MoveEventParams) {
+  //    return "ok";
+  // }
+
+  // fbGetData(){
+  //   firebase.database()
+  // }
+
+}
+export interface QueryResult {
+  results: any[];
+}
+
+export interface CreateEventParams {
+  id?: string | number;
+  start: string;
+  end: string;
+  text: string;
+}
+
+export interface MoveEventParams {
+  id: string | number;
+  newStart: string;
+  newEnd: string;
+}
+
+export interface BackendResult {
+  id: string | number;
+  result: string;
+  message: string;
 }

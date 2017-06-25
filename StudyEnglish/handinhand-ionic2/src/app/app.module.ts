@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { NgModule, ErrorHandler } from '@angular/core';
 
@@ -29,11 +30,15 @@ import { SupportPage } from '../pages/support/support';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
+// import { DayPilotCalendarComponent,DayPilotModule} from 'daypilot-pro-angular';
 import { DayPilot } from 'daypilot-pro-angular';
 
 import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
 import { TrainingDetailPage } from '../pages/training-detail/training-detail';
 
+
+import { AngularFireModule } from "angularfire2";
+import {EventDetailPage} from "../pages/map/create.component";
 
 
 // import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
@@ -62,13 +67,21 @@ import { TrainingDetailPage } from '../pages/training-detail/training-detail';
     DayPilot.Angular.Scheduler,
     DayPilot.Angular.Gantt,
     DayPilot.Angular.Calendar,
-    DayPilot.Angular.Month
+    DayPilot.Angular.Month,
+    DayPilot.Angular.Modal,
+    // DayPilotCalendarComponent,
+    // DayPilotModule,
+
+    EventDetailPage
+    // AngularFireModule
 
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    AngularFireModule,
+    // BrowserAnimationsModule,
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
@@ -76,6 +89,8 @@ import { TrainingDetailPage } from '../pages/training-detail/training-detail';
         { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:name' },
         { component: ExaminationDetailPage, name: 'ExaminationDetail', segment: 'ExaminationDetail/:name' },
         { component: TrainingDetailPage, name: 'TrainingDetail', segment: 'TrainingDetail/:name' },
+        { component: EventDetailPage, name: 'EventDetail', segment: 'EventDetail/:id' },
+        
         
         { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
         { component: TestListPage, name: 'SpeakerList', segment: 'speakerList' },
@@ -109,7 +124,8 @@ import { TrainingDetailPage } from '../pages/training-detail/training-detail';
     TutorialPage,
     SupportPage,
     ExaminationDetailPage,
-    TrainingDetailPage
+    TrainingDetailPage,
+    EventDetailPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
