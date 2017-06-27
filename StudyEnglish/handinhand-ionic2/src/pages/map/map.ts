@@ -81,7 +81,10 @@ export class MapPage {
   }
 
   navigatorConfig = {
-    selectMode: "week"
+    selectMode: "week",
+     showMonths :  2,
+      showWeekNumbers :  true,
+      skipMonths :  2,
   
   };
 
@@ -92,7 +95,7 @@ export class MapPage {
     dayBeginsHour : 5,
     dayEndsHour : 24,
     onEventDeleted: args => {
-      this.ds.deleteEvent(args.e.id()).subscribe(result => this.calendar.control.message("Deleted"));
+      this.ds.deleteEvent(args.e.data.objectId).subscribe(result => this.calendar.control.message("Deleted"));
     },
     onEventMoved: args => {
       let params : MoveEventParams = {
@@ -116,6 +119,11 @@ export class MapPage {
       this.goToEventDetail(args, "create" )
     }
   };
+
+  deleteEvent(evet){
+    
+     this.ds.deleteEvent(evet.objectId).subscribe(result => this.calendar.control.message("Deleted"));
+  }
 
   
 //  modal = new DayPilot.Angular.Modal();
@@ -259,13 +267,7 @@ export class MapPage {
 // };
 
   constructor(public navCtrl: NavController, private ds: ConferenceData) {
-      // ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd()).subscribe(result => this.events = result);
 
-      // ds.getEvents().subscribe(
-      //   result => this.events = result
-      //   );
-        // this.ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd())
-        //   .subscribe(resulte => this.events.push(resulte));
   }
 
 
@@ -292,9 +294,6 @@ export class MapPage {
             text: "test2345",
             objectId: ""
         };
-        // this.fbPostData(ev);
-        // this.ds.createEvent(ev).subscribe(resulte => console.log(resulte))
-
         this.last += 1;
         this.events.push(ev);
         this.calendar.control.message("Added");
@@ -308,10 +307,10 @@ export class MapPage {
   
 
 
-  // @ViewChild('mapCanvas') mapElement: ElementRef;
-  // constructor(public confData: ConferenceData, public platform: Platform) {
-  // }
+  ionViewDidEnter() {
+    this.viewChange()
 
+  }
   // ionViewDidLoad() {
 
   //     this.confData.getMap().subscribe((mapData: any) => {

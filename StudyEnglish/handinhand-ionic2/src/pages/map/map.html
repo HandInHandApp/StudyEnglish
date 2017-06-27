@@ -23,44 +23,53 @@
   <div  style="margin-left: 160px">
     <daypilot-calendar #calendar [events]="events" [config]="calendarConfig" (viewChange)="viewChange()"></daypilot-calendar>
   </div>
-  <!--<create-dialog #create (close)="createClosed($event)"></create-dialog>-->
+  <!--<create-dialog></create-dialog>-->
+  <!--<create-dialog #create (close)="createClosed()"></create-dialog>-->
 
   
-  <button (click)="add()">Add event</button>
+  <!--<button (click)="add()">Add event</button>-->
 
 <ion-list  >
     <ion-item-group >
-      <ion-item-divider sticky>
-        <ion-label>
+      <ion-list-header >
           我的计划--{{events.length}}条
-        </ion-label>
-      </ion-item-divider>
+      </ion-list-header>
 
-      <ion-item-sliding *ngFor="let session of events" #slidingItem [hidden]="session.hide">
+      <ion-item *ngFor="let event of events" >
+       
 
-        <button ion-item (click)="goToSessionDetail(session)">
-          <h3>{{session.name}}</h3>
-          <p>
-             开始时间：{{session.start}} &mdash;
-          </p>
-          <p>
-             结束时间：{{session.end}}
-          </p>
-          <p>
-             任务：{{session.text}}%
-          </p>
-        </button>
+          
+          <h2>  <ion-icon name = 'planet'></ion-icon> {{event.text}}</h2>
+          <ion-row>
 
-        <ion-item-options>
+          <ion-col col-10>
+             <p>
+                时间段：{{event.start}} - {{event.end}}
+             </p>
+             
+          </ion-col>
+          <ion-col col-2>
+            <button ion-button color="favorite" small  (click)="goToEventDetail(event, 'update')"> 修改 </button>
+          <!--</ion-col>
+          <ion-col col-2>-->
+            <button ion-button color="danger" small  (click)="deleteEvent(event)"> 删除 </button>
+          </ion-col>
+
+          </ion-row>
+
+   
+
+        <!--<ion-item-options>
           <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'myPractices'">
             Favorite
           </button>
           <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'allPractices'">
             Remove
           </button>
-        </ion-item-options>
+        </ion-item-options>-->
+        
 
-      </ion-item-sliding>
+      </ion-item>
 
     </ion-item-group>
   </ion-list>

@@ -289,18 +289,13 @@ export class ConferenceData {
 
 
   getEvents(start: DayPilot.Date, end: DayPilot.Date): Observable<EventData[]> {
-
-     
-
     var url="https://api.leancloud.cn/1.1/classes/Event?limit=100&&order=-updatedAt&&";
     return this.http.get(url, {headers:this.getHeaders()})
                     .map((response) => {
                       var ne : QueryResult;
                       ne = response.json();
                       return ne.results;
-                    }
-                    
-                    );
+                    });
   }
 
   createEvent(params: CreateEventParams): Observable<BackendResult> {
@@ -309,9 +304,9 @@ export class ConferenceData {
                     .map((response) => response.json());
   }
 
-  deleteEvent(id: string): Observable<BackendResult> {
-    id="594f7b770ce46300576ab053"
-    var url = "https://api.leancloud.cn/1.1/classes/Event/"+id;
+  deleteEvent(objectId: string): Observable<BackendResult> {
+    // id="594f7b770ce46300576ab053"
+    var url = "https://api.leancloud.cn/1.1/classes/Event/"+objectId ;
 
     return this.http.delete(url, {headers:this.getHeaders()})
                     .map((response) => response.json());

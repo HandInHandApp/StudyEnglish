@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavParams } from 'ionic-angular';
+import { NavParams, NavController } from 'ionic-angular';
 
 import { ViewChild, Output, EventEmitter} from "@angular/core";
 import {DayPilot} from "daypilot-pro-angular";
@@ -98,7 +98,7 @@ export class EventDetailPage {
   event: CreateEventParams;
   type: any;
 
-  constructor(public navParams: NavParams, private ds: ConferenceData) {
+  constructor(public navParams: NavParams, public navCtrl: NavController, private ds: ConferenceData) {
     this.event = navParams.data.event;
     this.type = navParams.data.type;
   }
@@ -155,9 +155,15 @@ export class EventDetailPage {
 
           this.ds.updateEvent(this.event).subscribe(result => {
             console.log(result)
+            // this.modal.hide();
+            this.navCtrl.pop();
+
+            
+            // this.close.emit();
+            
           })
 
-           this.modal.hide();
+           
       // params.id = result.id;
       // this.modal.hide();
       // this.close.emit(params);
