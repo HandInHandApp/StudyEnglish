@@ -303,7 +303,7 @@ export class ConferenceData {
                     );
   }
 
-  createEvent(params: Event): Observable<BackendResult> {
+  createEvent(params: CreateEventParams): Observable<BackendResult> {
     var url ="https://api.leancloud.cn/1.1/classes/Event"
     return this.http.post(url, params, {headers:this.getHeaders()})
                     .map((response) => response.json());
@@ -317,10 +317,17 @@ export class ConferenceData {
                     .map((response) => response.json());
   }
 
-  updateEvent(params: MoveEventParams): Observable<BackendResult> {
+  moveEvent(params: MoveEventParams): Observable<BackendResult> {
     var id="594f7b770ce46300576ab053"
     var url = "https://api.leancloud.cn/1.1/classes/Event/"+id;
     return this.http.put(url, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+  updateEvent(params: CreateEventParams): Observable<BackendResult> {
+    var objectId=params.objectId;
+  
+    var url = "https://api.leancloud.cn/1.1/classes/Event/"+objectId;
+    return this.http.put(url, params,{headers:this.getHeaders()})
                     .map((response) => response.json());
   }
 
@@ -374,6 +381,7 @@ export interface CreateEventParams {
   start: string;
   end: string;
   text: string;
+  objectId:string;
 }
 
 export interface MoveEventParams {
@@ -386,4 +394,6 @@ export interface BackendResult {
   id: string | number;
   result: string;
   message: string;
+  objectId: string;
+  createdAt: string;
 }

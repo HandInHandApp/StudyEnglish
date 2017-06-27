@@ -26,7 +26,7 @@ import { ConferenceData, CreateEventParams } from './../../providers/conference-
 	<form #eventForm="ngForm" novalidate>
 		<ion-list no-lines>
 			<ion-item>
-				<ion-label stacked color="primary">start</ion-label>
+				<ion-label stacked color="primary">开始时间</ion-label>
 				<ion-input [(ngModel)]="event.start" name="start" type="text" #start="ngModel" spellcheck="false" autocapitalize="off"
 					required>
 				</ion-input>
@@ -34,13 +34,13 @@ import { ConferenceData, CreateEventParams } from './../../providers/conference-
 
 
 			<ion-item>
-				<ion-label stacked color="primary">end</ion-label>
+				<ion-label stacked color="primary">结束时间</ion-label>
 				<ion-input [(ngModel)]="event.end" name="end" type="text" #end="ngModel" required>
 				</ion-input>
 			</ion-item>
 
       <ion-item>
-				<ion-label stacked color="primary">end</ion-label>
+				<ion-label stacked color="primary"> 任务</ion-label>
 				<ion-input [(ngModel)]="event.text" name="text" type="text" #text="ngModel" required>
 				</ion-input>
 			</ion-item>
@@ -53,7 +53,10 @@ import { ConferenceData, CreateEventParams } from './../../providers/conference-
 			</ion-col>
 	
 		</ion-row>
+
 	</form>
+
+
 
 </ion-content>
   `,
@@ -141,10 +144,20 @@ export class EventDetailPage {
     //   this.modal.hide();
     //   this.close.emit(params);
     // });
-    let params: Event  = event;
-    
-    this.ds.createEvent(params).subscribe(result => {
-      console.log(result)
+    // let params: Event  = event;
+
+    this.ds.createEvent(this.event).subscribe(result => {
+          console.log(result)
+          this.event.objectId = result.objectId;
+          // this.event.id = parseInt(result.objectId);
+          var time =new Date();
+          this.event.id = time.getTime() ;
+
+          this.ds.updateEvent(this.event).subscribe(result => {
+            console.log(result)
+          })
+
+           this.modal.hide();
       // params.id = result.id;
       // this.modal.hide();
       // this.close.emit(params);

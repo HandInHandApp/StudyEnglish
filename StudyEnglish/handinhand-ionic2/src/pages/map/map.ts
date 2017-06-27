@@ -82,12 +82,15 @@ export class MapPage {
 
   navigatorConfig = {
     selectMode: "week"
+  
   };
 
   calendarConfig = {
     startDate: DayPilot.Date.today(),
     viewType: "Week",
     eventDeleteHandling: "Update",
+    dayBeginsHour : 5,
+    dayEndsHour : 24,
     onEventDeleted: args => {
       this.ds.deleteEvent(args.e.id()).subscribe(result => this.calendar.control.message("Deleted"));
     },
@@ -97,7 +100,7 @@ export class MapPage {
         newStart: args.newStart,
         newEnd: args.newEnd
       };
-      this.ds.updateEvent(params).subscribe(result => this.calendar.control.message("Moved"));
+      this.ds.moveEvent(params).subscribe(result => this.calendar.control.message("Moved"));
     },
     onEventResized: args => {
       let params : MoveEventParams = {
@@ -105,7 +108,8 @@ export class MapPage {
         newStart: args.newStart,
         newEnd: args.newEnd
       };
-      this.ds.updateEvent(params).subscribe(result => this.calendar.control.message("Resized"));
+
+      this.ds.moveEvent(params).subscribe(result => this.calendar.control.message("Resized"));
     },
     onTimeRangeSelected: args => {
       // this.create.show(args);
@@ -285,7 +289,8 @@ export class MapPage {
             id: 10,
             start: "2017-06-09",
             end: "2017-06-19",
-            text: "test2345"
+            text: "test2345",
+            objectId: ""
         };
         // this.fbPostData(ev);
         // this.ds.createEvent(ev).subscribe(resulte => console.log(resulte))
