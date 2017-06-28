@@ -39,7 +39,7 @@ import { TrainingDetailPage } from '../pages/training-detail/training-detail';
 
 import { AngularFireModule } from "angularfire2";
 import {EventDetailPage} from "../pages/map/create.component";
-
+import { FormsModule }   from '@angular/forms';
 
 // import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @NgModule({
@@ -81,6 +81,7 @@ import {EventDetailPage} from "../pages/map/create.component";
     BrowserModule,
     HttpModule,
     AngularFireModule,
+    FormsModule,
     // BrowserAnimationsModule,
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [

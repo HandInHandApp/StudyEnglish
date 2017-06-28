@@ -326,6 +326,13 @@ export class ConferenceData {
                     .map((response) => response.json());
   }
 
+
+  createUser(params: any): Observable<BackendResult> {
+    var url ="https://api.leancloud.cn/1.1/users"
+    return this.http.post(url, params, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+
   // events : EventData[] = [
     // {
     //   id: 1,

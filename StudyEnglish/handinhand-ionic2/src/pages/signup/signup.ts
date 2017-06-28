@@ -12,7 +12,7 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'signup.html'
 })
 export class SignupPage {
-  signup: {username?: string, password?: string} = {};
+  signup: {username?: string, password?: string,mobilePhone?:number, smsCode?:number, who?:string} = {};
   submitted = false;
 
   constructor(public navCtrl: NavController, public userData: UserData) {}
@@ -22,7 +22,16 @@ export class SignupPage {
 
     if (form.valid) {
       this.userData.signup(this.signup.username);
+      
+      this.userData.createUser(this.signup).subscribe(result => console.log( result));
+
       this.navCtrl.push(TabsPage);
     }
   }
+sendVerfiyMessage(form: NgForm){
+
+      this.userData.requestMobilePhoneVerify({"mobilePhoneNumber": this.signup.mobilePhone}).subscribe(result => console.log( result));
+
+    
+}
 }

@@ -49,14 +49,14 @@ export class ConferenceApp {
     { title: '我', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'person-add' }
   ];
   loggedInPages: PageInterface[] = [
-    { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
-    { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
-    { title: 'Logout', name: 'TabsPage', component: TabsPage, icon: 'log-out', logsOut: true }
+    { title: '账号', name: 'AccountPage', component: AccountPage, icon: 'person' },
+    { title: '支持', name: 'SupportPage', component: SupportPage, icon: 'help' },
+    { title: '登出', name: 'TabsPage', component: TabsPage, icon: 'log-out', logsOut: true }
   ];
   loggedOutPages: PageInterface[] = [
-    { title: 'Login', name: 'LoginPage', component: LoginPage, icon: 'log-in' },
-    { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
-    { title: 'Signup', name: 'SignupPage', component: SignupPage, icon: 'person-add' }
+    { title: '登录', name: 'LoginPage', component: LoginPage, icon: 'log-in' },
+    { title: '创建账号', name: 'SignupPage', component: SignupPage, icon: 'person-add' },
+    { title: '支持', name: 'SupportPage', component: SupportPage, icon: 'help' }
   ];
   rootPage: any;
 

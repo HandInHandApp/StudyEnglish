@@ -3,6 +3,13 @@ import { Injectable } from '@angular/core';
 import { Events } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
+import { Http,Headers,RequestOptions } from '@angular/http';
+
+
+
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/observable/of';
 
 @Injectable()
 export class UserData {
@@ -12,8 +19,36 @@ export class UserData {
 
   constructor(
     public events: Events,
-    public storage: Storage
+    public storage: Storage,
+    public http: Http
   ) {}
+
+//use lean clould
+
+ getHeaders(){
+      var myheaders = new Headers();
+
+      myheaders.append("Content-Type" ,"application/json");
+      myheaders.append("X-LC-Id", "Eul6rG90rOjIO5imP853JOmn-gzGzoHsz");
+      myheaders.append("X-LC-Key" , "XdmDTh1MQGHCYrJjp1B5Jyh1");
+      
+      return  myheaders;
+ }
+
+  createUser(params: any): Observable<any> {
+    var url ="https://api.leancloud.cn/1.1/users"
+    return this.http.post(url, params, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+  
+  requestMobilePhoneVerify(params: any): Observable<any> {
+    var url ="https://api.leancloud.cn/1.1/requestMobilePhoneVerify"
+    return this.http.post(url, params, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+  ////old
+
+
 
   hasFavorite(sessionName: string): boolean {
     return (this._favorites.indexOf(sessionName) > -1);
@@ -69,4 +104,7 @@ export class UserData {
       return value;
     });
   };
+
+
+
 }

@@ -8,6 +8,7 @@ import {Validators, FormBuilder, FormGroup, FormControl} from "@angular/forms";
 // import {CreateEventParams, DataService} from "./data.service";
 import { ConferenceData, CreateEventParams } from './../../providers/conference-data';
 
+import { FormsModule }   from '@angular/forms';
 
 @Component({
   selector: 'create-dialog',
@@ -46,6 +47,18 @@ import { ConferenceData, CreateEventParams } from './../../providers/conference-
 			</ion-item>
 		
 		</ion-list>
+
+     <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
 
 		<ion-row responsive-sm>
 			<ion-col>

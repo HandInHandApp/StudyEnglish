@@ -3,7 +3,7 @@
 		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-		<ion-title>Signup</ion-title>
+		<ion-title>创建账号</ion-title>
 	</ion-navbar>
 </ion-header>
 
@@ -13,10 +13,12 @@
 		<img src="assets/img/appicon.svg" alt="Ionic Logo">
 	</div>
 
+	<ion-card>
 	<form #signupForm="ngForm" novalidate>
 		<ion-list no-lines>
 			<ion-item>
-				<ion-label stacked color="primary">Username</ion-label>
+				 <ion-icon name="contact" item-start></ion-icon>
+				<ion-label  >请输入用户名</ion-label>
 				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
 				</ion-input>
 			</ion-item>
@@ -25,18 +27,69 @@
 			</p>
 
 			<ion-item>
-				<ion-label stacked color="primary">Password</ion-label>
+				 <ion-icon name="call" item-start></ion-icon>
+				<ion-label  >请输入手机号码</ion-label>
+				<ion-input [(ngModel)]="signup.mobilePhone" name="mobilePhone" type="number" #mobilePhone="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="mobilePhone.valid || submitted == false" color="danger" padding-left>
+				phone is required
+			</p>
+
+
+			<ion-item>
+				 <ion-icon name="eye-off" item-start></ion-icon>
+				<ion-label  >请输入密码</ion-label>
 				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
 				Password is required
 			</p>
+
+			<ion-item>
+				<ion-icon name="pin" item-start></ion-icon>
+				<ion-label>请选择角色</ion-label>
+				<ion-select  [(ngModel)]="signup.who" name="who" type="text" #who="ngModel"  >
+				<ion-option value="student" selected>我是学生</ion-option>
+				<ion-option value="parent">我是家长</ion-option>
+				<ion-option value="teacher">我是老师</ion-option>
+				</ion-select>
+			</ion-item>
+
+<ion-row>
+    <ion-col col-6>
+		
+			<ion-item>
+				 <ion-icon name="eye-off" item-start></ion-icon>
+				<ion-label  >请输入验证码</ion-label>
+				<ion-input [(ngModel)]="signup.smsCode" name="smsCode" type="text" #smsCode="ngModel" required>
+				</ion-input>
+
+				
+			</ion-item>
+					<p ion-text [hidden]="smsCode.valid || submitted == false" color="danger" padding-left>
+				smsCode is required
+			</p>
+
+	</ion-col>
+	<ion-col col-2></ion-col>
+	<ion-col col-4>
+		<button ion-button (click)="sendVerfiyMessage(signupForm)" type="submit" block>发送短信验证码</button>
+		</ion-col>
+  </ion-row>
+
+		
+
+	
+
 		</ion-list>
 
+		
+
 		<div padding>
-			<button ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block>创建</button>
 		</div>
 	</form>
-
+</ion-card>
 </ion-content>
