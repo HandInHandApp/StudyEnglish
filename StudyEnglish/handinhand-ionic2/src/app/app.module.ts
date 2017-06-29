@@ -35,6 +35,7 @@ import { DayPilot } from 'daypilot-pro-angular';
 
 import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
 import { TrainingDetailPage } from '../pages/training-detail/training-detail';
+import { AllTestPage } from '../pages/alltest/alltest'
 
 
 import { AngularFireModule } from "angularfire2";
@@ -47,6 +48,8 @@ import { FormsModule }   from '@angular/forms';
     ConferenceApp,
     ExaminationDetailPage,
     TrainingDetailPage,
+    AllTestPage,
+    
 
     AboutPage,
     AccountPage,
@@ -94,7 +97,7 @@ import { FormsModule }   from '@angular/forms';
         
         
         { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
-        { component: TestListPage, name: 'SpeakerList', segment: 'speakerList' },
+        { component: TestListPage, name: 'TestList', segment: 'testList' },
         { component: SpeakerDetailPage, name: 'SpeakerDetail', segment: 'speakerDetail/:name' },
         { component: MapPage, name: 'Map', segment: 'map' },
         { component: AboutPage, name: 'About', segment: 'about' },
@@ -126,7 +129,8 @@ import { FormsModule }   from '@angular/forms';
     SupportPage,
     ExaminationDetailPage,
     TrainingDetailPage,
-    EventDetailPage
+    EventDetailPage,
+    AllTestPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

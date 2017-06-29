@@ -9,6 +9,7 @@ import { SessionDetailPage } from '../session-detail/session-detail';
 import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
 
 import { ExaminationDetailPage } from '../examination-detail/examination-detail';
+import { AllTestPage } from '../alltest/alltest';
 // import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @Component({
   selector: 'page-test-list',
@@ -69,6 +70,9 @@ export class TestListPage {
     public inAppBrowser: InAppBrowser
   ) { }
 
+  goToAllTest() {
+    this.navCtrl.push(AllTestPage);
+  }
 
   updateList() {
     // Close any open sliding items when the schedule updates
@@ -99,15 +103,13 @@ export class TestListPage {
     });
   }
 
+  
+
   goToSpeakerDetail(speakerName: any) {
     this.navCtrl.push(SpeakerDetailPage, {
       speaker: speakerName,
       name: speakerName.name
     });
-  }
-
-  goToSpeakerTwitter(speaker: any) {
-    this.inAppBrowser.create(`https://twitter.com/${speaker.twitter}`, '_blank');
   }
 
   openSpeakerShare(speaker: any) {
