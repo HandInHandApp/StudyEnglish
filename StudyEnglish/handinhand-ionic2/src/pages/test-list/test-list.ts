@@ -10,6 +10,7 @@ import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
 
 import { ExaminationDetailPage } from '../examination-detail/examination-detail';
 import { AllTestPage } from '../alltest/alltest';
+import { TopListPage } from '../top-list/top-list';
 // import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @Component({
   selector: 'page-test-list',
@@ -72,6 +73,9 @@ export class TestListPage {
 
   goToAllTest() {
     this.navCtrl.push(AllTestPage);
+  }
+  goToTopList(){
+     this.navCtrl.push(TopListPage);
   }
 
   updateList() {

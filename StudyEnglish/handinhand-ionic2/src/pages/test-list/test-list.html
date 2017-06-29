@@ -11,9 +11,9 @@
       <ion-segment-button value="starttest">
         入学测试{{shownSessions}}
       </ion-segment-button>
-      <ion-segment-button value="steptest">
+      <!--<ion-segment-button value="steptest">
         阶段测试{{shownSessions}}
-      </ion-segment-button>
+      </ion-segment-button>-->
     </ion-segment>
 
     <ion-buttons end>
@@ -99,6 +99,9 @@
             <ion-col>
               <button ion-button icon-left clear  (click)="goToAllTest()">
                 开始
+              </button>
+              <button ion-button icon-left clear  (click)="goToTopList()">
+                全部列表
               </button>
             </ion-col>
           </ion-row>
