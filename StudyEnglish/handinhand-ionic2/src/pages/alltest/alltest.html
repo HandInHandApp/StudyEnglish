@@ -34,25 +34,25 @@
           <h6>{{ para.title }}</h6>
           <p>{{ para.content }}</p>
           <div *ngFor="let ques of para.questions">
-            <ion-list>
+            <ion-list radio-group>
               <ion-list-header>
                 {{ ques.question }}
               </ion-list-header>
               <ion-item >
-                <ion-label>{{ ques.choices.A }}</ion-label>
-                <ion-checkbox checked="true" value="a"></ion-checkbox>
+                <ion-label>A.{{ ques.choices.A }}</ion-label>
+                <ion-radio checked="true" value="a"></ion-radio>
               </ion-item>
               <ion-item >
-                <ion-label>{{ ques.choices.B }}</ion-label>
-                <ion-checkbox  value=b></ion-checkbox>
+                <ion-label>B.{{ ques.choices.B }}</ion-label>
+                <ion-radio  value=b></ion-radio>
               </ion-item>
               <ion-item >
-                <ion-label>{{ ques.choices.C}}</ion-label>
-                <ion-checkbox  value="c"></ion-checkbox>
+                <ion-label>C.{{ ques.choices.C}}</ion-label>
+                <ion-radio  value="c"></ion-radio>
               </ion-item>
               <ion-item >
-                <ion-label>{{ ques.choices.D }}</ion-label>
-                <ion-checkbox checked="true" value="d"></ion-checkbox>
+                <ion-label>D.{{ ques.choices.D }}</ion-label>
+                <ion-radio  value="d"></ion-radio>
               </ion-item>
               
               </ion-list>
