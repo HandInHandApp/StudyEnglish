@@ -36,6 +36,7 @@ import { DayPilot } from 'daypilot-pro-angular';
 import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
 import { TrainingDetailPage } from '../pages/training-detail/training-detail';
 import { AllTestPage } from '../pages/alltest/alltest'
+import { MiniTestPage } from '../pages/minitest/minitest'
 import { TopListPage } from '../pages/top-list/top-list'
 import { ListeningTestPage } from '../pages/listening-test/listening-test'
 
@@ -54,6 +55,7 @@ import { FormsModule }   from '@angular/forms';
     ExaminationDetailPage,
     TrainingDetailPage,
     AllTestPage,
+    MiniTestPage,
     TopListPage,
     ListeningTestPage,
     
@@ -138,6 +140,7 @@ import { FormsModule }   from '@angular/forms';
     TrainingDetailPage,
     EventDetailPage,
     AllTestPage,
+    MiniTestPage,
     TopListPage,
     ListeningTestPage
   ],

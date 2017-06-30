@@ -10,6 +10,7 @@ import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
 
 import { ExaminationDetailPage } from '../examination-detail/examination-detail';
 import { AllTestPage } from '../alltest/alltest';
+import { MiniTestPage } from '../minitest/minitest';
 import { TopListPage } from '../top-list/top-list';
 // import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @Component({
@@ -29,7 +30,8 @@ export class TestListPage {
     "profilePic":"assets/img/advance-card-bttf.png",
     "desc1":"优点：用时短；全程52分钟",
     "desc2":"缺点：不如全真模考考察细致",
-    "desc3":"适用人群：已经考过或者时间紧张的考生"
+    "desc3":"适用人群：已经考过或者时间紧张的考生",
+    "type":"minitest"
   },{
     "title":"全真测试",
     "subtitle":"225分钟",
@@ -37,7 +39,8 @@ export class TestListPage {
     "profilePic":"assets/img/advance-card-jp.jpg",
     "desc1":"优点：考察细致，接近实考",
     "desc2":"缺点：耗时长；全程3小时45分钟左右",
-    "desc3":"适用人群：未考过或希望细致评估的考生"
+    "desc3":"适用人群：未考过或希望细致评估的考生",
+    "type":"alltest"
   }]
 
   steptests: any[] = [{
@@ -71,8 +74,13 @@ export class TestListPage {
     public inAppBrowser: InAppBrowser
   ) { }
 
-  goToAllTest() {
-    this.navCtrl.push(AllTestPage);
+  goToAllTest(type: any) {
+    if(type == "alltest"){
+      this.navCtrl.push(AllTestPage);
+    }else{
+      this.navCtrl.push(MiniTestPage);
+    }
+    
   }
   goToTopList(){
      this.navCtrl.push(TopListPage);

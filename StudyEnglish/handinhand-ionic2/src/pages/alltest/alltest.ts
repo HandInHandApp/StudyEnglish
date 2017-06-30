@@ -20,7 +20,7 @@ export class AllTestPage{
     },{
       "question":"2,The word “sponsored” in the passage is closest in meaning to",
       "choices":{
-        "A":"visited ",
+        "A":"visited",
         "B":"owned ",
         "C":"praised ",
         "D":"supported "
