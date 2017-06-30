@@ -55,7 +55,7 @@ toplist: any[] = [
     this.type = navParams.data.type;
   }
 
-  topitem(topitem){
+  goToTest(topitem){
     this.navCtrl.push(ListeningTestPage, {
       type: "type",
       session: topitem

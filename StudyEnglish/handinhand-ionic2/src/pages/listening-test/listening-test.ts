@@ -26,7 +26,7 @@ toplist: any[] = [
     this.type = navParams.data.type;
   }
 
-  topitem(){
+  gotoNext(){
       
   }
 }
