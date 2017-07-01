@@ -3,6 +3,9 @@ import { Component } from '@angular/core';
 import { NavParams,NavController } from 'ionic-angular';
 
 import { ListeningTestPage } from '../listening-test/listening-test'
+import { WritingTestPage } from   '../writing-test/writing-test'
+import { SpeakingTestPage } from  '../speaking-test/speaking-test'
+import { ReadingTestPage } from   '../reading-test/reading-test'
 
 import { ConferenceData } from '../../../providers/conference-data';
 
@@ -55,10 +58,19 @@ toplist: any[] = [
     this.type = navParams.data.type;
   }
 
-  goToTest(topitem){
-    this.navCtrl.push(ListeningTestPage, {
-      type: "type",
-      session: topitem
-    });
+  itemPages= [
+      ListeningTestPage,
+      ReadingTestPage,
+      SpeakingTestPage,
+      WritingTestPage
+  ]
+  goToTest(topitem,index){
+
+        this.navCtrl.push(this.itemPages[index], {
+            type: "type",
+            session: topitem
+        });
+ 
+   
   }
 }

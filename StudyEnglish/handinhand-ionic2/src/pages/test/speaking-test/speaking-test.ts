@@ -7,10 +7,10 @@ import { NavParams,NavController } from 'ionic-angular';
 import { ConferenceData } from '../../../providers/conference-data';
 
 @Component({
-  selector: 'page-listening-page',
-  templateUrl: 'listening-test.html'
+  selector: 'page-speaking-page',
+  templateUrl: 'speaking-test.html'
 })
-export class ListeningTestPage {
+export class SpeakingTestPage {
   session: any;
   type: any;
   step=0;

@@ -40,6 +40,9 @@ import { AllTestPage } from '../pages/test/alltest/alltest'
 import { MiniTestPage } from '../pages/test/minitest/minitest'
 import { TopListPage } from '../pages/test/top-list/top-list'
 import { ListeningTestPage } from '../pages/test/listening-test/listening-test'
+import { WritingTestPage   } from '../pages/test/writing-test/writing-test'
+import { SpeakingTestPage  } from '../pages/test/speaking-test/speaking-test'
+import { ReadingTestPage   } from '../pages/test/reading-test/reading-test'
 
 
 
@@ -58,8 +61,11 @@ import { FormsModule }   from '@angular/forms';
     AllTestPage,
     MiniTestPage,
     TopListPage,
+
     ListeningTestPage,
-    
+    WritingTestPage, 
+    SpeakingTestPage, 
+    ReadingTestPage,
 
     AboutPage,
     AccountPage,
@@ -143,7 +149,10 @@ import { FormsModule }   from '@angular/forms';
     AllTestPage,
     MiniTestPage,
     TopListPage,
-    ListeningTestPage
+    ListeningTestPage,
+    WritingTestPage, 
+    SpeakingTestPage, 
+    ReadingTestPage,
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
