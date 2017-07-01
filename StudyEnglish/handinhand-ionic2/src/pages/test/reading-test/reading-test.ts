@@ -73,12 +73,6 @@ export class ReadingTestPage {
   ]
 
 
-
-
-5.   
-
-
-
   testNmae : any[] = [
    
   ]
