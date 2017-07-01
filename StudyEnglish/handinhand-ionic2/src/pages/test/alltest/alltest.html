@@ -30,36 +30,9 @@
       </ion-grid>
     </div>
     <div>
-      <div *ngFor="let para of paper">
-          <h6>{{ para.title }}</h6>
-          <p>{{ para.content }}</p>
-          <div *ngFor="let ques of para.questions">
-            <ion-list radio-group>
-              <ion-list-header>
-                {{ ques.question }}
-              </ion-list-header>
-              <ion-item >
-                <ion-label>A.{{ ques.choices.A }}</ion-label>
-                <ion-radio checked="true" value="a"></ion-radio>
-              </ion-item>
-              <ion-item >
-                <ion-label>B.{{ ques.choices.B }}</ion-label>
-                <ion-radio  value=b></ion-radio>
-              </ion-item>
-              <ion-item >
-                <ion-label>C.{{ ques.choices.C}}</ion-label>
-                <ion-radio  value="c"></ion-radio>
-              </ion-item>
-              <ion-item >
-                <ion-label>D.{{ ques.choices.D }}</ion-label>
-                <ion-radio  value="d"></ion-radio>
-              </ion-item>
-              
-              </ion-list>
-          </div>
-          
-
-       
+      <div *ngFor="let pa of passages">
+          <h6>{{ pa.title }}</h6>
+          <p *ngFor="let con of pa.contents">{{ con }}</p>
       </div>
     </div>
    </ion-content>
