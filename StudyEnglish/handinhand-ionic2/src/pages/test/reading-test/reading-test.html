@@ -6,10 +6,13 @@
     <ion-title>TOP Test</ion-title>
     <ion-buttons end>
         
-
+      <button ion-button (click)="gotoBack()" type="submit" block>
+        
+        BACK
+      </button>
       <button ion-button (click)="gotoNext()" type="submit" block>
         
-        CONTINUE
+        NEXT
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -18,34 +21,43 @@
 <ion-content #popoverContent padding class="popover-page  ">
      <ion-row>
             <ion-col col-6>
+                <div *ngFor="let item of items;  let i = index;"  >
+                    <div *ngIf="step === item.id">>
+                         <ion-list radio-group>
 
-<ion-list radio-group>
+                        <ion-list-header>
+                            <div #popoverText class="text-to-change">
+                                {{item.title}}
+                            <!--1.  Paragraph 1 makes all of the following points about Islamic books EXCEPT:-->
+                            </div>
+                        </ion-list-header>
 
-      <ion-list-header>
-          <div #popoverText class="text-to-change">
+                        <ion-item>
+                            <ion-label>{{item.options[0]}}</ion-label>
+                            <ion-radio value="A" ></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>{{item.options[1]}}</ion-label>
+                            <ion-radio value="B"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>{{item.options[2]}} </ion-label>
+                            <ion-radio value="C"></ion-radio>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label>{{item.options[3]}} </ion-label>
+                            <ion-radio value="C"></ion-radio>
+                        </ion-item>
+                        </ion-list>
+                    </div>
+                       
+                </div>
+
               
-        1.  Paragraph 1 makes all of the following points about Islamic books EXCEPT:
-         </div>
-      </ion-list-header>
 
-      <ion-item>
-        <ion-label>A) Books were an important form of artistic expression.</ion-label>
-        <ion-radio value="A" ></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label>B)  A wide variety of books with different styles and topics became available. </ion-label>
-        <ion-radio value="B"></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label>C)  They were sold primarily near mosques. </ion-label>
-        <ion-radio value="C"></ion-radio>
-      </ion-item>
 
-      <ion-item>
-        <ion-label>D)  Most books were intended for sale on the open market.  </ion-label>
-        <ion-radio value="C"></ion-radio>
-      </ion-item>
-    </ion-list>
+
 
 
         
