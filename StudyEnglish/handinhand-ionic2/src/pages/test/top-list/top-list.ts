@@ -18,9 +18,10 @@ export class TopListPage {
   type: any;
 
   testNmae : any[] = [
+      "阅读",
       "听力",
       "口语",
-      "阅读",
+      
       "写作"
   ]
 
@@ -59,8 +60,8 @@ toplist: any[] = [
   }
 
   itemPages= [
-      ListeningTestPage,
       ReadingTestPage,
+      ListeningTestPage,
       SpeakingTestPage,
       WritingTestPage
   ]

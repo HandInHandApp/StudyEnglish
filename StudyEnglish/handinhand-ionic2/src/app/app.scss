@@ -69,6 +69,30 @@
 }
 
 
+        .area
+        {
+
+            // background-color: green;
+            height: auto;
+            border: 2px solid;
+            margin: auto;
+        }
+        .rightarea
+        {
+            float: left;
+            width: 50%;
+            height: auto;
+            // background-color: red;
+        }
+        .leftarea
+        {
+            float: left;
+            width: 50%;
+            height: auto;
+            // background-color: yellow;
+        }
+
+
 .bootstrap-iso {
   /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)

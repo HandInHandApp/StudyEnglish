@@ -70,7 +70,7 @@ export class ConferenceApp {
     public storage: Storage,
     public splashScreen: SplashScreen
   ) {
-
+    this.menu.swipeEnable(true); 
     // Check if the user has already seen the tutorial
     this.storage.get('hasSeenTutorial')
       .then((hasSeenTutorial) => {
@@ -93,6 +93,9 @@ export class ConferenceApp {
 
     this.listenToLoginEvents();
   }
+ closeMenu() {
+   this.menu.close();
+ }
 
   openPage(page: PageInterface) {
     let params = {};
