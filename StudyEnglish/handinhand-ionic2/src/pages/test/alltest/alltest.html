@@ -1,0 +1,65 @@
+ <ion-header>
+    <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>全真测试</ion-title>
+  </ion-navbar>
+   </ion-header>
+   <ion-content>
+    <div class="alltest-header" >
+      <ion-grid>
+      <ion-row>
+          <ion-col col-6>
+            <ion-buttons start>
+              <button ion-button color="light">
+                首页
+              </button>
+              <button ion-button color="light">
+                暂停
+              </button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col col-6>
+            <ion-buttons end>
+              <button ion-button color="light">Continue
+              </button>
+            </ion-buttons>
+          </ion-col>
+      </ion-row>
+      </ion-grid>
+    </div>
+    <div>
+      <div *ngFor="let para of paper">
+          <h6>{{ para.title }}</h6>
+          <p>{{ para.content }}</p>
+          <div *ngFor="let ques of para.questions">
+            <ion-list radio-group>
+              <ion-list-header>
+                {{ ques.question }}
+              </ion-list-header>
+              <ion-item >
+                <ion-label>A.{{ ques.choices.A }}</ion-label>
+                <ion-radio checked="true" value="a"></ion-radio>
+              </ion-item>
+              <ion-item >
+                <ion-label>B.{{ ques.choices.B }}</ion-label>
+                <ion-radio  value=b></ion-radio>
+              </ion-item>
+              <ion-item >
+                <ion-label>C.{{ ques.choices.C}}</ion-label>
+                <ion-radio  value="c"></ion-radio>
+              </ion-item>
+              <ion-item >
+                <ion-label>D.{{ ques.choices.D }}</ion-label>
+                <ion-radio  value="d"></ion-radio>
+              </ion-item>
+              
+              </ion-list>
+          </div>
+          
+
+       
+      </div>
+    </div>
+   </ion-content>

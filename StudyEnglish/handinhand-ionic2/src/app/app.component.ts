@@ -13,7 +13,8 @@ import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { TrainingPage } from '../pages/schedule/schedule';
-import { TestListPage } from '../pages/test-list/test-list';
+
+import { TestListPage } from '../pages/test/test-list/test-list';
 import { SupportPage } from '../pages/support/support';
 
 

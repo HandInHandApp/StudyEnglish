@@ -22,7 +22,7 @@ import { ScheduleFilterPage } from '../pages/schedule-filter/schedule-filter';
 import { SessionDetailPage } from '../pages/session-detail/session-detail';
 import { SignupPage } from '../pages/signup/signup';
 import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
-import { TestListPage } from '../pages/test-list/test-list';
+
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
@@ -33,12 +33,13 @@ import { UserData } from '../providers/user-data';
 // import { DayPilotCalendarComponent,DayPilotModule} from 'daypilot-pro-angular';
 import { DayPilot } from 'daypilot-pro-angular';
 
+import { TestListPage } from '../pages/test/test-list/test-list';
 import { ExaminationDetailPage } from '../pages/examination-detail/examination-detail';
 import { TrainingDetailPage } from '../pages/training-detail/training-detail';
-import { AllTestPage } from '../pages/alltest/alltest'
-import { MiniTestPage } from '../pages/minitest/minitest'
-import { TopListPage } from '../pages/top-list/top-list'
-import { ListeningTestPage } from '../pages/listening-test/listening-test'
+import { AllTestPage } from '../pages/test/alltest/alltest'
+import { MiniTestPage } from '../pages/test/minitest/minitest'
+import { TopListPage } from '../pages/test/top-list/top-list'
+import { ListeningTestPage } from '../pages/test/listening-test/listening-test'
 
 
 

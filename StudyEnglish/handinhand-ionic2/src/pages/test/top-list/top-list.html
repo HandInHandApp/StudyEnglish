@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>TOP Test</ion-title>
+    <!--<ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ <ion-card>
+  <ion-card-header>
+    Explore Nearby
+  </ion-card-header>
+
+  <ion-list>
+      <div class = "bootstrap-iso">
+          <table class="table table-striped">
+
+            <thead>
+                <!--<tr>
+                <th>名称</th>
+                <th>城市</th>
+                </tr>-->
+            </thead>
+            <tbody>
+                <tr *ngFor="let top of toplist" >
+                <td>
+                    <h4>
+                        {{top.title}}
+                    </h4>
+                      <!--<button >
+                        <ion-icon name="cart" item-start></ion-icon>
+                        {{top.title}}
+                     </button>-->
+                </td>
+                <td *ngFor="let topitem of top.item">
+                  
+             
+                    <!--<div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            60%
+                        </div>
+                    </div>-->
+
+                    <button type="button" class="btn   btn-primary"  (click)="goToTest(topitem)">  {{topitem}}
+                    </button>
+
+                </td>
+                <!--<td>
+                   
+                    <button type="button" class="btn btn-primary" 
+                        data-toggle="button">  {{top.item[1]}}
+                    </button>
+                </td>
+                <td>    
+                    <button type="button" class="btn btn-primary" 
+                        data-toggle="button">  {{top.item[2]}}
+                    </button>
+                </td>
+                <td>
+               
+                    <button type="button" class="btn btn-primary" 
+                        data-toggle="button">  {{top.item[3]}}
+                    </button>
+                </td>-->
+                </tr>
+
+            </tbody>
+            </table>
+      </div>
+      <!--<div *ngFor="let top of toplist" (click)="goToSessionDetail(session)">
+          
+      </div>
+    
+    <button ion-item *ngFor="let top of toplist">
+      <ion-icon name="cart" item-start></ion-icon>
+      {{top.title}}
+    </button>-->
+
+
+  </ion-list>
+</ion-card>
+</ion-content>
+
+
