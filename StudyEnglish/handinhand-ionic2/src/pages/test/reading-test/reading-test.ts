@@ -13,13 +13,17 @@ import { ConferenceData } from '../../../providers/conference-data';
 export class ReadingTestPage {
   session: any;
   type: any;
-  step=0;
+  passages: any;
+  first_step: any;
+  last_step: any;
+  stepindex=0;
+  step: any;
+  steps: any[];
+  last_stepindex: any;
+  total_question: number = 0;
+  total_passage: number = 0;
 
   items=[
-    //  {id:0,
-    //       title:"",
-    //       options:[]
-    //  },
      {    id:1,
           title:"1.  Paragraph 1 makes all of the following points about Islamic books EXCEPT: ",
           options:[
@@ -42,7 +46,7 @@ export class ReadingTestPage {
       },
      
       {
-           id:3,
+          id:3,
           title:"3.  The word “adjacent” in the passage is closest in meaning to ",
           options:[
               "A)  major", 
@@ -51,7 +55,7 @@ export class ReadingTestPage {
               "D)  well-known"
               ]
       } ,{
-           id:4,
+          id:4,
           title:"4. According to paragraph 1, before A.D. 900, books in the Islamic world  ",
           options:[
               "A)  included a wide range of subjects ", 
@@ -60,16 +64,15 @@ export class ReadingTestPage {
               "D)  were usually written on parchment"
               ]
       }, {
-           id:5,
+          id:5,
           title:"5. In paragraph 1, why does the author mention the fact that the mosque in Marrakech, Morocco, is known as the Booksellers’ Mosque",
           options:[
             "A)  To cast doubt on the importance of souks in making books available to common people", 
             "B)  To provide an example of a place where books were made at the order of a particular prince", 
             "C)  To emphasize how influential and well known the book markets were ",
             "D)  To demonstrate the need for religious texts in Islamic lands "
-              ]
-      }
-      
+          ]
+      } 
   ]
 
 
@@ -80,17 +83,37 @@ export class ReadingTestPage {
 toplist: any[] = [
   
 ]
-  constructor(public navParams: NavParams) {
+  constructor(public navParams: NavParams, public confData: ConferenceData) {
     this.session = navParams.data.session;
     this.type = navParams.data.type;
+    this.passages = confData.getReadingTestData();
+    this.steps = this.passages["steps"];
+    this.first_step =  this.steps[this.stepindex];
+    this.step = this.first_step;
+    this.last_step =  this.steps[this.passages["steps"].length-1];
+    this.last_stepindex = this.passages["steps"].length-1;
+    this.get_total_graph(this.steps);
   }
 
+  private get_total_graph(steps: any[]){
+    for(let step of steps){
+      if(step.indexOf("p")!=-1){
+        this.total_passage=this.total_passage+1
+      }else{
+        this.total_question=this.total_question+1
+      }
+    }
+  }
   gotoNext(){
-      this.step =this.step +1;
+      if(this.stepindex != this.last_stepindex){
+        this.stepindex = this.stepindex+1
+        this.step =  this.steps[this.stepindex]
+      }
   }
   gotoBack(){
-      if(this.step >0){
-        this.step =this.step -1;
+      if( this.stepindex != 0){
+        this.stepindex = this.stepindex-1
+        this.step =  this.steps[this.stepindex]
       }
       
   }
