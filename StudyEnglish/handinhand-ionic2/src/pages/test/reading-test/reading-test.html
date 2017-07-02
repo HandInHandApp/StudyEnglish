@@ -13,8 +13,8 @@
       </button>
     </ion-buttons>
     <div style="text-align:center;">
-        <label *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of 3</label>
-        <label *ngIf="step.indexOf('q')!=-1">Question{{passages.question[step].seq}} of 12</label>
+        <label *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
+        <label *ngIf="step.indexOf('q')!=-1">Question{{passages.question[step].seq}} of {{total_question}}</label>
     </div>
   </ion-navbar>
 </ion-header>

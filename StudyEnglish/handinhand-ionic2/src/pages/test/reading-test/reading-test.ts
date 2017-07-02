@@ -20,6 +20,8 @@ export class ReadingTestPage {
   step: any;
   steps: any[];
   last_stepindex: any;
+  total_question: number = 0;
+  total_passage: number = 0;
 
   items=[
      {    id:1,
@@ -90,8 +92,18 @@ toplist: any[] = [
     this.step = this.first_step;
     this.last_step =  this.steps[this.passages["steps"].length-1];
     this.last_stepindex = this.passages["steps"].length-1;
+    this.get_total_graph(this.steps);
   }
 
+  private get_total_graph(steps: any[]){
+    for(let step of steps){
+      if(step.indexOf("p")!=-1){
+        this.total_passage=this.total_passage+1
+      }else{
+        this.total_question=this.total_question+1
+      }
+    }
+  }
   gotoNext(){
       if(this.stepindex != this.last_stepindex){
         this.stepindex = this.stepindex+1

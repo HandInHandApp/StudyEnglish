@@ -336,7 +336,7 @@ export class ConferenceData {
 
   getReadingTestData(){
     var readdata = {
-      "steps":["p1","q1","q2","p2"],
+      "steps":["p1","q1","q2","q3","p2"],
       "passage":{
         "p1":{
           "seq": 1,
@@ -382,6 +382,17 @@ export class ConferenceData {
                 "D":"supported "
               },
             "answer":["A"]
+          },
+          "q3":{
+            "seq": 3,
+            "title":"The word “adjacent” in the passage is closest in meaning to ",
+            "choices":{
+                "A":"major  ",
+                "B":"nearby  ",
+                "C":"ancient  ",
+                "D":"well-known "
+              },
+            "answer":["B"]
           }
       }
     }
