@@ -44,7 +44,10 @@ import { WritingTestPage   } from '../pages/test/writing-test/writing-test'
 import { SpeakingTestPage  } from '../pages/test/speaking-test/speaking-test'
 import { ReadingTestPage   } from '../pages/test/reading-test/reading-test'
 
-
+import { ExercisePage } from '../pages/exercise/exercise';
+import { ExerciseTypePage } from '../pages/exercise-type/exercise-type';
+import { ExerciseItemPage } from '../pages/exercise-item/exercise-item';
+import { ExerciseAnswerPage } from '../pages/exercise-answer/exercise-answer';
 
 import { AngularFireModule } from "angularfire2";
 import {EventDetailPage} from "../pages/map/create.component";
@@ -69,6 +72,10 @@ import { FormsModule }   from '@angular/forms';
 
     AboutPage,
     AccountPage,
+    ExercisePage,
+    ExerciseTypePage,
+    ExerciseItemPage,
+    ExerciseAnswerPage,
     LoginPage,
     MapPage,
     PopoverPage,
@@ -131,6 +138,10 @@ import { FormsModule }   from '@angular/forms';
     ConferenceApp,
     AboutPage,
     AccountPage,
+    ExercisePage,
+    ExerciseTypePage,
+    ExerciseItemPage,
+    ExerciseAnswerPage,
     LoginPage,
     MapPage,
     PopoverPage,

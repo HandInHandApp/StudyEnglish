@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>习题</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openAnswerSheet()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <p>
+    <button ion-button color="light" icon-start (click)="goPrevious()">
+      <ion-icon name='arrow-back' ></ion-icon>
+      Back
+    </button>
+
+    <span>{{currentIndex+1}}</span>
+
+    <button ion-button color="light" icon-end (click)="goNext()">
+      Next
+      <ion-icon name='arrow-forward'></ion-icon>
+    </button>
+  </p>
+
+  
+</ion-content>

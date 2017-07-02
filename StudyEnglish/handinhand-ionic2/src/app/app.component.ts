@@ -17,6 +17,10 @@ import { TrainingPage } from '../pages/schedule/schedule';
 import { TestListPage } from '../pages/test/test-list/test-list';
 import { SupportPage } from '../pages/support/support';
 
+import { ExercisePage } from '../pages/exercise/exercise';
+import { ExerciseTypePage } from '../pages/exercise-type/exercise-type';
+import { ExerciseItemPage } from '../pages/exercise-item/exercise-item';
+import { ExerciseAnswerPage } from '../pages/exercise-answer/exercise-answer';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -47,7 +51,8 @@ export class ConferenceApp {
     { title: '测试', name: 'TabsPage', component: TabsPage, tabComponent: TestListPage, index: 0, icon: 'flask' },
     { title: '训练', name: 'TabsPage', component: TabsPage, tabComponent: TrainingPage, index: 1, icon: 'bicycle' },
     { title: '计划', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'calendar' },
-    { title: '我', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'person-add' }
+    { title: '习题', name: 'TabsPage', component: TabsPage, tabComponent: ExercisePage, index: 3, icon: 'paper' },
+    { title: '我', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 4, icon: 'person-add' }
   ];
   loggedInPages: PageInterface[] = [
     { title: '账号', name: 'AccountPage', component: AccountPage, icon: 'person' },

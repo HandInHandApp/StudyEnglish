@@ -262,6 +262,24 @@ export class ConferenceData {
     });
   }
 
+  getCategories() {
+    return this.load().map((data: any) => {
+      return data.categories;
+    })
+  }
+
+  getCategorytypes() {
+    return this.load().map((data: any) => {
+      return data.categorytypes;
+    })
+  }
+
+  getExercises() {
+    return this.load().map((data: any) => {
+      return data.exercises;
+    })
+  }
+
   // getEvents(start: DayPilot.Date, end: DayPilot.Date){
   //   //  return this.http.get('assets/data/events.json')
   //   return this.http.get('https://handinhand-11eed.firebaseio.com/.json')
