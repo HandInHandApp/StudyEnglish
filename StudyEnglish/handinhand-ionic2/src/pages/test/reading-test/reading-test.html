@@ -58,6 +58,9 @@
                     <h2>{{passages.passage[step].title}} </h2>
                     <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
                 </div>
+                <div *ngIf="step.indexOf('q')!=-1">
+                    <p>{{passages.question[step].para}}</p>
+                </div>
             </div>      
         </ion-col>
         </ion-row>  
