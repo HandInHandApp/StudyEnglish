@@ -3,8 +3,11 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>TOP Test</ion-title>
+    <ion-title>TOP 1 Reading</ion-title>
     <ion-buttons end>
+      <button ion-button (click)="gotoReview()" type="submit" block>
+        Review
+      </button>
       <button ion-button (click)="gotoBack()" type="submit" block>
         BACK
       </button>
@@ -12,11 +15,26 @@
         NEXT
       </button>
     </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar>
+   <ion-buttons left>
+      <button ion-button  (click)="gotoBack()" type="submit" block>
+        首页
+      </button>
+      <button ion-button (click)="gotoNext()" type="submit" block>
+        暂停
+      </button>
+    </ion-buttons>
     <div style="text-align:center;">
         <label *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
         <label *ngIf="step.indexOf('q')!=-1">Question{{passages.question[step].seq}} of {{total_question}}</label>
     </div>
-  </ion-navbar>
+    <ion-buttons right>
+      <button ion-button (click)="gotoBack()" type="submit" block>
+         HideTime
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content #popoverContent padding class="popover-page  ">
