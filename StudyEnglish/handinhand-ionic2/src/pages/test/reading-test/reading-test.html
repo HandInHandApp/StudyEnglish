@@ -18,7 +18,7 @@
   </ion-navbar>
   <ion-toolbar>
    <ion-buttons left>
-      <button ion-button  (click)="gotoBack()" type="submit" block>
+      <button ion-button  (click)="gotoHome()" type="submit" block>
         首页
       </button>
       <button ion-button (click)="gotoNext()" type="submit" block>
@@ -39,7 +39,7 @@
 
 <ion-content #popoverContent padding class="popover-page  ">
      <ion-row>
-            <ion-col col-6>
+            <ion-col col-12 col-md-6>
                 <div *ngFor="let item of steps;  let i = index;"  >
                     <div *ngIf="step === item && step.indexOf('p')==-1">
                         <ion-list radio-group>
@@ -70,7 +70,7 @@
                     </div>      
                 </div>
             </ion-col>
-            <ion-col col-6>
+            <ion-col col-12 col-md-6>
             <div #popoverText class="text-to-change">
                 <div *ngIf="step.indexOf('p')!=-1">
                     <h2>{{passages.passage[step].title}} </h2>

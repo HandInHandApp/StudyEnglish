@@ -114,7 +114,9 @@ toplist: any[] = [
       if( this.stepindex != 0){
         this.stepindex = this.stepindex-1
         this.step =  this.steps[this.stepindex]
-      }
+      } 
+  }
+  gotoHome(){
       
   }
 }
