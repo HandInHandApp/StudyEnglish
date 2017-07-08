@@ -38,7 +38,7 @@
 </ion-header>
 
 <ion-content #popoverContent padding class="popover-page  ">
-     <ion-row>
+    <ion-row>
             <ion-col col-12 col-md-6>
                 <div *ngFor="let item of steps;  let i = index;"  >
                     <div *ngIf="step === item && step.indexOf('p')==-1">
@@ -71,24 +71,22 @@
                 </div>
             </ion-col>
             <ion-col col-12 col-md-6>
-            <div #popoverText class="text-to-change">
-                <div *ngIf="step.indexOf('p')!=-1">
-                    <h2>{{passages.passage[step].title}} </h2>
-                    <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
-                </div>
-                <div *ngIf="step.indexOf('q')!=-1">
-                    <p>{{passages.question[step].para}}</p>
-                </div>
-            </div>      
-        </ion-col>
-        </ion-row>  
-        </ion-content>
+                <div #popoverText class="text-to-change">
+                    <div *ngIf="step.indexOf('p')!=-1">
+                        <h2>{{passages.passage[step].title}} </h2>
+                        <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
+                    </div>
+                    <div *ngIf="step.indexOf('q')!=-1">
+                        <p>{{passages.question[step].para}}</p>
+                    </div>
+                </div>      
+            </ion-col>
+    </ion-row>  
+</ion-content>
 
-        <div class="area">
-                <div class="leftarea">   
-        </div>    
-        <div class="rightarea">    
-        </div>
+<div class="area">
+    <div class="leftarea">   </div>    
+    <div class="rightarea">    </div>
 
 </div>
 

@@ -27,27 +27,27 @@ export class TopListPage {
 
 toplist: any[] = [
     {
-        title:"TOP1",
+        title:"TPO1",
         item: this.testNmae
     },
     {
-        title:"TOP2",
+        title:"TPO2",
         item: this.testNmae
     },
     {
-        title:"TOP3",
+        title:"TPO3",
         item: this.testNmae
     },
     {
-        title:"TOP4",
+        title:"TPO4",
         item: this.testNmae
     },
     {
-        title:"TOP5",
+        title:"TPO5",
         item: this.testNmae
     },
     {
-        title:"TOP6",
+        title:"TPO=6",
         item: this.testNmae
     },
 ]
