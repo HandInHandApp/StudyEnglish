@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>TOP 1 
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+   <ion-buttons left>
+      <button ion-button  (click)="gotoHome()" type="submit" block>
+        首页
+      </button>
+      <button ion-button (click)="stopClocking()" type="submit" block>
+        暂停
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button (click)="continue()" type="submit" block>
+        CONTINUE
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #popoverContent padding class="popover-page">
+    <h3 class="directions-header">{{directionData.title}}</h3>
+   <p *ngFor="let para of directionData.content">{{para}}</p>
+</ion-content>
