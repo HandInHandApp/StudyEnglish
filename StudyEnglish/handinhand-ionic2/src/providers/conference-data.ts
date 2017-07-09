@@ -322,13 +322,13 @@ export class ConferenceData {
       "name": "paper2",
       "passage":["pass3"]
     }
-    this.createReadingPaper(params)
+    // this.createReadingPaper(params)
     var url="https://api.leancloud.cn/1.1/classes/ReadingPaper?limit=100&&order=-updatedAt&&";
     return this.http.get(url, {headers:this.getHeaders()})
                     .map((response) => {
                       var ne : QueryResult;
                       ne = response.json();
-                      alert(ne.results);
+                      // alert(ne.results);
                       return ne.results;
                     });
   }

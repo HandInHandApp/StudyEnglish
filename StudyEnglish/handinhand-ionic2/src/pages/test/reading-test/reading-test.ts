@@ -79,6 +79,7 @@ export class ReadingTestPage {
   testNmae : any[] = [
    
   ]
+  datas: any;
 
 toplist: any[] = [
   
@@ -93,6 +94,13 @@ toplist: any[] = [
     this.last_step =  this.steps[this.passages["steps"].length-1];
     this.last_stepindex = this.passages["steps"].length-1;
     this.get_total_graph(this.steps);
+
+    //get data from leanclould
+    this.datas = confData.getReadingPaper().subscribe(
+      resulte => 
+            {
+                console.log(resulte)
+            });
   }
 
   private get_total_graph(steps: any[]){
@@ -119,4 +127,5 @@ toplist: any[] = [
   gotoHome(){
       
   }
+  
 }
