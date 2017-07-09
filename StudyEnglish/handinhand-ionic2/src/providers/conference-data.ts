@@ -317,6 +317,27 @@ export class ConferenceData {
                     });
   }
 
+  getReadingPaper(): Observable<ReadingPaper[]> {
+    var params={
+      "name": "paper2",
+      "passage":["pass3"]
+    }
+    this.createReadingPaper(params)
+    var url="https://api.leancloud.cn/1.1/classes/ReadingPaper?limit=100&&order=-updatedAt&&";
+    return this.http.get(url, {headers:this.getHeaders()})
+                    .map((response) => {
+                      var ne : QueryResult;
+                      ne = response.json();
+                      alert(ne.results);
+                      return ne.results;
+                    });
+  }
+  createReadingPaper(params: CreateReadingPaperParams):Observable<BackendResult>{
+    var url ="https://api.leancloud.cn/1.1/classes/ReadingPaper"
+    return this.http.post(url, params, {headers:this.getHeaders()})
+                    .map((response) => response.json());
+  }
+
   createEvent(params: CreateEventParams): Observable<BackendResult> {
     var url ="https://api.leancloud.cn/1.1/classes/Event"
     return this.http.post(url, params, {headers:this.getHeaders()})
@@ -352,7 +373,9 @@ export class ConferenceData {
                     .map((response) => response.json());
   }
 
-  getReadingTestData(){
+  getReadingTestData() {
+    var rp = this.getReadingPaper()
+    alert(JSON.stringify(rp))
     var readdata = {
       "steps":["p1","q1","q2","q3","p2","p3"],
       "passage":{
@@ -431,6 +454,7 @@ export class ConferenceData {
     }
     return readdata
   }
+
   getAllTestPassage(){
     var passages = [
       {
@@ -1049,4 +1073,15 @@ export interface BackendResult {
   message: string;
   objectId: string;
   createdAt: string;
+}
+
+export interface CreateReadingPaperParams{
+  name: string;
+  passage: string[];
+}
+
+export interface ReadingPaper {
+  name: string;
+  passage: string[];
+  updatedAt: string;
 }
