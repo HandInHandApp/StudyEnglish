@@ -318,18 +318,14 @@ export class ConferenceData {
   }
 
   getDirectionData(directionType: string){
-    if(directionType=="reading"){
-      return {
-        "title":"Reading Directions",
-        "content":[
-          "In this part of the Reading section, you will read 3 passages.. You will have 60 minutes to read the passages and answer the questions. ",
-          "Most questions in the Reading section are worth 1 point, but the last question for each passage is worth more than 1 point. The directions indicate how many points you may receive.",
-          "Some passages will include a word or phrase that is underlined in blue. Click on the word or phrase to see its definition or an explanation. ",
-          "When you want to move to the next question, click on Next.You may skip questions and go back to them later .If you want to go back to previous questions, click on Back.You can click the Review at any time and the  review screen will show you which questions you have answered and which you have not answered. From this review screen, you may go directly to any question you have already seen in the Reading section",
-          "Click on Continue to go on"
-        ]
-      }
-    }
+    var url='https://api.leancloud.cn/1.1/classes/Directions?where={"type":"'+directionType+'"}&limit=1&&order=-updatedAt&&';
+    alert(url)
+    return this.http.get(url, {headers:this.getHeaders()})
+                    .map((response) => {
+                      var ne : QueryResult;
+                      ne = response.json();
+                      return ne.results[0];
+                    });
   }
 
   getReadingPaper(): Observable<ReadingPaper[]> {

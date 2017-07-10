@@ -21,7 +21,12 @@ export class DirectionPage {
         public confData: ConferenceData) {
     this.session = navParams.data.session;
     this.directionType = "reading"
-    this.directionData = confData.getDirectionData(this.directionType);
+    confData.getDirectionData(this.directionType).subscribe(
+        result=>{
+            console.log(result);
+            this.directionData = result;
+        }
+    );
   }
 
   itemPages = {
