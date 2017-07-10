@@ -319,7 +319,6 @@ export class ConferenceData {
 
   getDirectionData(directionType: string){
     var url='https://api.leancloud.cn/1.1/classes/Directions?where={"type":"'+directionType+'"}&limit=1&&order=-updatedAt&&';
-    alert(url)
     return this.http.get(url, {headers:this.getHeaders()})
                     .map((response) => {
                       var ne : QueryResult;
@@ -334,7 +333,6 @@ export class ConferenceData {
                     .map((response) => {
                       var ne : QueryResult;
                       ne = response.json();
-                      alert(JSON.stringify(ne))
                       return ne.results;
                     });
   }
