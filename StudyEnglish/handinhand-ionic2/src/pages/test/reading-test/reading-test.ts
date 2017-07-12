@@ -14,29 +14,30 @@ export class ReadingTestPage {
   passages: any;
   first_step: any;
   last_step: any;
-  stepindex=0;
+  stepindex: number = 0;
   step: any;
-  steps: any[];
-  last_stepindex: any;
+  steps: any[] = [];
+  last_stepindex: number = 0;
   total_question: number = 0;
   total_passage: number = 0;
   datas: any;
+  currentPassage: any;
 
   constructor(public navParams: NavParams, public confData: ConferenceData) {
-    this.passages = confData.getReadingTestData();
-    this.steps = this.passages["steps"];
-    this.first_step =  this.steps[this.stepindex];
-    this.step = this.first_step;
-    this.last_step =  this.steps[this.passages["steps"].length-1];
-    this.last_stepindex = this.passages["steps"].length-1;
-    this.get_total_graph(this.steps);
-
-    //get data from leanclould
-    this.datas = confData.getReadingPaper().subscribe(
+    confData.getReadingTestData("tpo34").subscribe(
       resulte => 
             {
                 console.log(resulte)
-            });
+                this.passages = resulte
+                this.steps = this.passages["steps"];
+                this.first_step =  this.steps[this.stepindex];
+                this.step = this.first_step;
+                this.last_step =  this.steps[this.passages["steps"].length-1];
+                this.last_stepindex = this.passages["steps"].length-1;
+                this.get_total_graph(this.steps);
+                this.currentPassage = this.passages[this.step]
+            }
+    );
   }
 
   private get_total_graph(steps: any[]){
@@ -48,20 +49,38 @@ export class ReadingTestPage {
       }
     }
   }
+
   gotoNext(){
       if(this.stepindex != this.last_stepindex){
         this.stepindex = this.stepindex+1
         this.step =  this.steps[this.stepindex]
       }
+      if(this.step.indexOf("q")!=-1){
+        let passageStep = this.passages.questions[this.step].passage
+        this.currentPassage = this.passages.passage[passageStep]
+      }else{
+        this.currentPassage = this.passages[this.step]
+      }
+
   }
   gotoBack(){
       if( this.stepindex != 0){
         this.stepindex = this.stepindex-1
         this.step =  this.steps[this.stepindex]
       } 
+      if(this.step.indexOf("q")!=-1){
+        let passageStep = this.passages.questions[this.step].passage
+        this.currentPassage = this.passages.passage[passageStep]
+      }else{
+        this.currentPassage = this.passages.passage[this.step]
+      }
   }
   gotoHome(){
       
+  }
+
+  stopTiming(){
+    
   }
   
 }

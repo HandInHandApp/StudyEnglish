@@ -21,13 +21,13 @@
       <button ion-button  (click)="gotoHome()" type="submit" block>
         首页
       </button>
-      <button ion-button (click)="gotoNext()" type="submit" block>
+      <button ion-button (click)="stopTiming()" type="submit" block>
         暂停
       </button>
     </ion-buttons>
-    <div style="text-align:center;">
+    <div style="text-align:center;" *ngIf="passages != undefined">
         <label *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
-        <label *ngIf="step.indexOf('q')!=-1">Question{{passages.question[step].seq}} of {{total_question}}</label>
+        <label *ngIf="step.indexOf('q')!=-1">Question{{passages.questions[step].seq}} of {{total_question}}</label>
     </div>
     <ion-buttons right>
       <button ion-button (click)="gotoBack()" type="submit" block>
@@ -39,31 +39,31 @@
 
 <ion-content #popoverContent padding class="popover-page">
     <ion-row>
-            <ion-col col-12 col-md-6>
+            <ion-col col-12 col-md-6 *ngIf="passages != undefined">
                 <div *ngFor="let item of steps;  let i = index;"  >
                     <div *ngIf="step === item && step.indexOf('p')==-1">
                         <ion-list radio-group>
                             <ion-list-header>
                                 <div #popoverText class="text-to-change">
-                                    {{passages.question[item].seq}}. {{passages.question[item].title}}
+                                    {{passages.questions[item].seq}}. {{passages.questions[item].title}}
                                 <!--1.  Paragraph 1 makes all of the following points about Islamic books EXCEPT:-->
                                 </div>
                             </ion-list-header>
                         <ion-item>
-                            <ion-label>{{passages.question[item].choices.A}} </ion-label>
+                            <ion-label>{{passages.questions[item].choices.A}} </ion-label>
                             <ion-radio value="A" ></ion-radio>
                         </ion-item>
                         <ion-item>
-                            <ion-label>{{passages.question[item].choices.B}}</ion-label>
+                            <ion-label>{{passages.questions[item].choices.B}}</ion-label>
                             <ion-radio value="B"></ion-radio>
                         </ion-item>
                         <ion-item>
-                            <ion-label>{{passages.question[item].choices.C}} </ion-label>
+                            <ion-label>{{passages.questions[item].choices.C}} </ion-label>
                             <ion-radio value="C"></ion-radio>
                         </ion-item>
 
                         <ion-item>
-                            <ion-label>{{passages.question[item].choices.D}} </ion-label>
+                            <ion-label>{{passages.questions[item].choices.D}} </ion-label>
                             <ion-radio value="D"></ion-radio>
                         </ion-item>
                         </ion-list>
@@ -71,13 +71,21 @@
                 </div>
             </ion-col>
             <ion-col col-12 col-md-6>
-                <div #popoverText class="text-to-change">
+                <div #popoverText class="text-to-change" *ngIf="passages != undefined">
                     <div *ngIf="step.indexOf('p')!=-1">
                         <h2>{{passages.passage[step].title}} </h2>
                         <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
                     </div>
                     <div *ngIf="step.indexOf('q')!=-1">
-                        <p>{{passages.question[step].para}}</p>
+                        <h2>{{currentPassage.title}} </h2>
+                         <p *ngFor="let para of currentPassage.contents;  let idx=index">
+                             <span *ngIf="passages.questions[step].replace_para_index == (idx+1) ">
+                                 {{passages.questions[step].replace_para}}
+                             </span>
+                             <span *ngIf="passages.questions[step].replace_para_index != (idx+1) ">
+                                 {{para}}
+                             </span>
+                        </p>
                     </div>
                 </div>      
             </ion-col>
