@@ -23,7 +23,7 @@ import { ConferenceData } from '../../providers/conference-data';
 })
 export class ExerciseItemPage {
   
-  catetorytype: any = null;
+  categorytype: any = null;
   currentIndex: Number = 0;
   exercises: any[] = [];
   answer: any[] = [];
@@ -37,14 +37,16 @@ export class ExerciseItemPage {
 
   ionViewDidLoad() {
 
-    this.catetorytype = this.navParams.data.catetorytype;
+    this.categorytype = this.navParams.data.categorytype;
+    this.currentIndex = 0;
     
-    console.log("input categorytype is " + this.catetorytype);
+    console.log("input categorytype is " + this.categorytype);
 
     // QUERY 10 questions
     this.confData.getExercises().subscribe((exercisesData: any[]) => {
       this.exercises = exercisesData;
-      console.log("exercises size: "+this.exercises.length);
+      console.log("exercises size: "+this.exercises.length +" Index: " + this.currentIndex);
+      console.log("item: %o", this.exercises[0]);
     });
 
   }
