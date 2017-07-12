@@ -43,7 +43,7 @@ toplist: any[] = [
   constructor(public navParams: NavParams, public confData: ConferenceData) {
     this.session = navParams.data.session;
     this.type = navParams.data.type;
-    this.passages = confData.getReadingTestData();
+    this.passages = confData.getReadingTestData("tpo34");
     this.steps = this.passages["steps"];
     this.first_step =  this.steps[this.stepindex];
     this.step = this.first_step;
