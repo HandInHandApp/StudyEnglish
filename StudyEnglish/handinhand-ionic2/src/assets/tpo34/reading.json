@@ -1,5 +1,5 @@
 {
-    "steps":["p1","q1","q2","q3","q4","q5","q6","q7","p2","p3"],
+    "steps":["p1","q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","p2","p3"],
     "passage":{
         "p1":{
             "seq": 1,
@@ -41,7 +41,7 @@
             "passage":"p1",
             "type":"choice",
             "replace_para_index":1,
-            "replace_para":"Test Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant. ",
+            "replace_para":"The arts of the Islamic book, such as calligraphy and decorative drawing, developed during A.D. 900 to 1500, and luxury books are some of the most characteristic examples of Islamic art produced in this period. This came about from two major developments: paper became common, replacing parchment as the major medium for writing, and rounded scripts were regularized and perfected so that they replaced the angular scripts of the previous period, which because of their angularity were uneven in height. Books became major vehicles for artistic expression, and the artists who produced them, notably calligraphers and painters, enjoyed high status, and their workshops were often sponsored by princes and their courts. Before A.D. 900, manuscripts of the Koran (the book containing the teachings of the Islamic religion) seem to have been the most common type of book produced and decorated, but after that date a wide range of books were produced for a broad spectrum of patrons. These continued to include, of course, manuscripts of the Koran, which every Muslim wanted to read, but scientific works, histories, romances, and epic and lyric poetry were also copied in fine handwriting and decorated with beautiful illustrations. Most were made for sale on the open market, and cities boasted special souks (markets) where books were bought and sold. The mosque of Marrakech in Morocco is known as the Kutubiyya, or Booksellers’ Mosque, after the adjacent market. Some of the most luxurious books were specific commissions made at the order of a particular prince and signed by the calligrapher and decorator. ",
             "title":"Paragraph 1 makes all of the following points about Islamic books EXCEPT",
             "choices":{
                 "A":"Books were an important form of artistic expression",
@@ -56,7 +56,7 @@
             "passage":"p1",
             "type":"choice",
             "replace_para_index":1,
-            "replace_para":"The arts of the Islamic book, such as calligraphy and decorative drawing, developed during A.D. 900 to 1500, and luxury books are some of the most characteristic examples of Islamic art produced in this period. This came about from two major developments: paper became common, replacing parchment as the major medium for writing, and rounded scripts were regularized and perfected so that they replaced the angular scripts of the previous period, which because of their angularity were uneven in height. Books became major vehicles for artistic expression, and the artists who produced them, notably calligraphers and painters, enjoyed high status, and their workshops were often &lt;h3&gt;sponsored &lt;/h3&gt; by princes and their courts. Before A.D. 900, manuscripts of the Koran (the book containing the teachings of the Islamic religion) seem to have been the most common type of book produced and decorated, but after that date a wide range of books were produced for a broad spectrum of patrons. These continued to include, of course, manuscripts of the Koran, which every Muslim wanted to read, but scientific works, histories, romances, and epic and lyric poetry were also copied in fine handwriting and decorated with beautiful illustrations. Most were made for sale on the open market, and cities boasted special souks (markets) where books were bought and sold. The mosque of Marrakech in Morocco is known as the Kutubiyya, or Booksellers’ Mosque, after the adjacent market. Some of the most luxurious books were specific commissions made at the order of a particular prince and signed by the calligrapher and decorator.",
+            "replace_para":"The arts of the Islamic book, such as calligraphy and decorative drawing, developed during A.D. 900 to 1500, and luxury books are some of the most characteristic examples of Islamic art produced in this period. This came about from two major developments: paper became common, replacing parchment as the major medium for writing, and rounded scripts were regularized and perfected so that they replaced the angular scripts of the previous period, which because of their angularity were uneven in height. Books became major vehicles for artistic expression, and the artists who produced them, notably calligraphers and painters, enjoyed high status, and their workshops were often sponsored by princes and their courts. Before A.D. 900, manuscripts of the Koran (the book containing the teachings of the Islamic religion) seem to have been the most common type of book produced and decorated, but after that date a wide range of books were produced for a broad spectrum of patrons. These continued to include, of course, manuscripts of the Koran, which every Muslim wanted to read, but scientific works, histories, romances, and epic and lyric poetry were also copied in fine handwriting and decorated with beautiful illustrations. Most were made for sale on the open market, and cities boasted special souks (markets) where books were bought and sold. The mosque of Marrakech in Morocco is known as the Kutubiyya, or Booksellers’ Mosque, after the adjacent market. Some of the most luxurious books were specific commissions made at the order of a particular prince and signed by the calligrapher and decorator. ",
             "title":"The word “sponsored” in the passage is closest in meaning to ",
             "choices":{
                 "A":"visited ",
@@ -71,8 +71,8 @@
             "passage":"p1",
             "type":"choice",
             "replace_para_index":1,
+            "replace_para":"The arts of the Islamic book, such as calligraphy and decorative drawing, developed during A.D. 900 to 1500, and luxury books are some of the most characteristic examples of Islamic art produced in this period. This came about from two major developments: paper became common, replacing parchment as the major medium for writing, and rounded scripts were regularized and perfected so that they replaced the angular scripts of the previous period, which because of their angularity were uneven in height. Books became major vehicles for artistic expression, and the artists who produced them, notably calligraphers and painters, enjoyed high status, and their workshops were often sponsored by princes and their courts. Before A.D. 900, manuscripts of the Koran (the book containing the teachings of the Islamic religion) seem to have been the most common type of book produced and decorated, but after that date a wide range of books were produced for a broad spectrum of patrons. These continued to include, of course, manuscripts of the Koran, which every Muslim wanted to read, but scientific works, histories, romances, and epic and lyric poetry were also copied in fine handwriting and decorated with beautiful illustrations. Most were made for sale on the open market, and cities boasted special souks (markets) where books were bought and sold. The mosque of Marrakech in Morocco is known as the Kutubiyya, or Booksellers’ Mosque, after the adjacent market. Some of the most luxurious books were specific commissions made at the order of a particular prince and signed by the calligrapher and decorator. ",
             "title":"The word “adjacent” in the passage is closest in meaning to ",
-            "replace_para":"Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant. ",
             "choices":{
                 "A":"major  ",
                 "B":"nearby  ",
@@ -86,8 +86,8 @@
             "passage":"p1",
             "type":"choice",
             "replace_para_index":1,
+            "replace_para":"The arts of the Islamic book, such as calligraphy and decorative drawing, developed during A.D. 900 to 1500, and luxury books are some of the most characteristic examples of Islamic art produced in this period. This came about from two major developments: paper became common, replacing parchment as the major medium for writing, and rounded scripts were regularized and perfected so that they replaced the angular scripts of the previous period, which because of their angularity were uneven in height. Books became major vehicles for artistic expression, and the artists who produced them, notably calligraphers and painters, enjoyed high status, and their workshops were often sponsored by princes and their courts. Before A.D. 900, manuscripts of the Koran (the book containing the teachings of the Islamic religion) seem to have been the most common type of book produced and decorated, but after that date a wide range of books were produced for a broad spectrum of patrons. These continued to include, of course, manuscripts of the Koran, which every Muslim wanted to read, but scientific works, histories, romances, and epic and lyric poetry were also copied in fine handwriting and decorated with beautiful illustrations. Most were made for sale on the open market, and cities boasted special souks (markets) where books were bought and sold. The mosque of Marrakech in Morocco is known as the Kutubiyya, or Booksellers’ Mosque, after the adjacent market. Some of the most luxurious books were specific commissions made at the order of a particular prince and signed by the calligrapher and decorator. ",
             "title":"According to paragraph 1, before A.D. 900, books in the Islamic world",
-            "replace_para":"Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant. ",
             "choices":{
                 "A":"included a wide range of subjects",
                 "B":"did not contain any calligraphy or decoration",
@@ -101,8 +101,8 @@
             "passage":"p1",
             "type":"choice",
             "replace_para_index":1,
+            "replace_para":"The arts of the Islamic book, such as calligraphy and decorative drawing, developed during A.D. 900 to 1500, and luxury books are some of the most characteristic examples of Islamic art produced in this period. This came about from two major developments: paper became common, replacing parchment as the major medium for writing, and rounded scripts were regularized and perfected so that they replaced the angular scripts of the previous period, which because of their angularity were uneven in height. Books became major vehicles for artistic expression, and the artists who produced them, notably calligraphers and painters, enjoyed high status, and their workshops were often sponsored by princes and their courts. Before A.D. 900, manuscripts of the Koran (the book containing the teachings of the Islamic religion) seem to have been the most common type of book produced and decorated, but after that date a wide range of books were produced for a broad spectrum of patrons. These continued to include, of course, manuscripts of the Koran, which every Muslim wanted to read, but scientific works, histories, romances, and epic and lyric poetry were also copied in fine handwriting and decorated with beautiful illustrations. Most were made for sale on the open market, and cities boasted special souks (markets) where books were bought and sold. The mosque of Marrakech in Morocco is known as the Kutubiyya, or Booksellers’ Mosque, after the adjacent market. Some of the most luxurious books were specific commissions made at the order of a particular prince and signed by the calligrapher and decorator. ",
             "title":"In paragraph 1, why does the author mention the fact that the mosque in Marrakech, Morocco, is known as the Booksellers’ Mosque",
-            "replace_para":"Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant. ",
             "choices":{
                 "A":"To cast doubt on the importance of souks in making books available to common people",
                 "B":"To provide an example of a place where books were made at the order of a particular prince",
@@ -115,9 +115,9 @@
             "seq": 6,
             "passage":"p1",
             "type":"choice",
-            "replace_para_index":1,
+            "replace_para_index": 2,
+            "replace_para":"Papermaking had been introduced to the Islamic lands from China in the eighth century.  It has been said that Chinese papermakers were among the prisoners captured in a battle fought near Samarqand between the Chinese and the Muslims in 751, and the technique of  papermaking – in which cellulose pulp extracted from any of several plants is first suspended  in water, caught on a fine screen, and then dried into flexible sheets – slowly spread  westward. Within fifty years, the government in Baghdad was using paper for documents. Writing in ink on paper, unlike parchment, could not easily be erased, and therefore paper had the advantage that it was difficult to alter what was written on it. Papermaking spread quickly to Egypt – and eventually to Sicily and Spain – but it was several centuries before paper supplanted parchment for copies of the Koran, probably because of the conservative nature of religious art and its practitioners. In western Islamic lands, parchment continued to be used for manuscripts of the Koran throughout this period.",
             "title":"The phrase “extracted from” in the passage is closest in meaning to",
-            "replace_para": "Papermaking had been introduced to the Islamic lands from China in the eighth century.  【】It has been said that Chinese papermakers were among the prisoners captured in a battle fought near Samarqand between the Chinese and the Muslims in 751, and the technique of  papermaking – in which cellulose pulp extracted from any of several plants is first suspended  in water, caught on a fine screen, and then dried into flexible sheets – slowly spread  westward. 【】Within fifty years, the government in Baghdad was using paper for documents. 【】Writing in ink on paper, unlike parchment, could not easily be erased, and therefore paper had the advantage that it was difficult to alter what was written on it. 【】Papermaking spread quickly to Egypt – and eventually to Sicily and Spain – but it was several centuries before paper supplanted parchment for copies of the Koran, probably because of the conservative nature of religious art and its practitioners. In western Islamic lands, parchment continued to be used for manuscripts of the Koran throughout this period. ",
             "choices":{
                 "A":"taken out of",
                 "B":"produced using",
@@ -130,8 +130,8 @@
             "seq": 7,
             "passage":"p1",
             "type":"choice",
-            "replace_para_index":1,
-            "replace_para": "Papermaking had been introduced to the Islamic lands from China in the eighth century.  【】It has been said that Chinese papermakers were among the prisoners captured in a battle fought near Samarqand between the Chinese and the Muslims in 751, and the technique of  papermaking – in which cellulose pulp extracted from any of several plants is first suspended  in water, caught on a fine screen, and then dried into flexible sheets – slowly spread  westward. 【】Within fifty years, the government in Baghdad was using paper for documents. 【】Writing in ink on paper, unlike parchment, could not easily be erased, and therefore paper had the advantage that it was difficult to alter what was written on it. 【】Papermaking spread quickly to Egypt – and eventually to Sicily and Spain – but it was several centuries before paper supplanted parchment for copies of the Koran, probably because of the conservative nature of religious art and its practitioners. In western Islamic lands, parchment continued to be used for manuscripts of the Koran throughout this period. ",
+            "replace_para_index":2,
+            "replace_para":"Papermaking had been introduced to the Islamic lands from China in the eighth century.  It has been said that Chinese papermakers were among the prisoners captured in a battle fought near Samarqand between the Chinese and the Muslims in 751, and the technique of  papermaking – in which cellulose pulp extracted from any of several plants is first suspended  in water, caught on a fine screen, and then dried into flexible sheets – slowly spread  westward. Within fifty years, the government in Baghdad was using paper for documents. Writing in ink on paper, unlike parchment, could not easily be erased, and therefore paper had the advantage that it was difficult to alter what was written on it. Papermaking spread quickly to Egypt – and eventually to Sicily and Spain – but it was several centuries before paper supplanted parchment for copies of the Koran, probably because of the conservative nature of religious art and its practitioners. In western Islamic lands, parchment continued to be used for manuscripts of the Koran throughout this period.",
             "title":"Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or lea",
             "choices":{
                 "A":"It was several centuries before papermaking techniques spread to faraway areas where parchment was popular and used widely in art.",
@@ -140,6 +140,92 @@
                 "D":"Paper replaced parchment in copies of the Koran, probably at the request of conservative practitioners in areas like Egypt, Sicily, and Spain."
             },
             "answer":["B"]
+        },
+        "q8":{
+            "seq": 8,
+            "passage":"p1",
+            "type":"choice",
+            "replace_para_index":3,
+            "replace_para":"The introduction of paper spurred a conceptual revolution whose consequences have barely been explored. Although paper was never as cheap as it has become today, it was far less expensive than parchment, and therefore more people could afford to buy books, Paper is thinner than parchment, so more pages could be enclosed within a single volume. At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available. These large sheets meant that calligraphers and artists had more space on which to work.  Paintings became more complicated, giving the artist greater opportunities to depict space or emotion. The increased availability of paper, particularly after 1250, encouraged people to develop systems of representation, such as architectural plans and drawings. This in turn allowed the easy transfer of artistic ideas and motifs over great distances from one medium to another, and in a different scale in ways that had been difficult, if not impossible, in the previous period. ",
+            "title":"In paragraphs 2 and 3, which of the following is NOT mentioned as an advantage of paper over parchment?",
+            "choices":{
+                "A":"It was harder to erase or change what was written on paper.",
+                "B":"More pages of paper could be bound in a single volume.",
+                "C":"Paper could be produced in sheets of varying weights and thicknesses",
+                "D":"More people could buy books made of paper because it was cheaper."
+            },
+            "answer":["B"]
+        },
+        "q9":{
+            "seq": 9,
+            "passage":"p1",
+            "type":"choice",
+            "replace_para_index":3,
+            "replace_para":"The introduction of paper spurred a conceptual revolution whose consequences have barely been explored. Although paper was never as cheap as it has become today, it was far less expensive than parchment, and therefore more people could afford to buy books, Paper is thinner than parchment, so more pages could be enclosed within a single volume. At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available. These large sheets meant that calligraphers and artists had more space on which to work.  Paintings became more complicated, giving the artist greater opportunities to depict space or emotion. The increased availability of paper, particularly after 1250, encouraged people to develop systems of representation, such as architectural plans and drawings. This in turn allowed the easy transfer of artistic ideas and motifs over great distances from one medium to another, and in a different scale in ways that had been difficult, if not impossible, in the previous period. ",
+            "title":"Why does the author include the following information: “At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available.”?",
+            "choices":{
+                "A":"To provide evidence that the development of papermaking techniques was very slow ",
+                "B":"To explain why paper was never as cheap as it has become today ",
+                "C":"To make the point that paper allowed artists to develop paintings that were more expressive and complex",
+                "D":"To prove that paper was more popular with artists who used large sheets, than it was with book printers, who used smaller sheets"
+            },
+            "answer":["B"]
+        },
+        "q10":{
+            "seq": 10,
+            "passage":"p1",
+            "type":"choice",
+            "replace_para_index":3,
+            "replace_para":"The introduction of paper spurred a conceptual revolution whose consequences have barely been explored. Although paper was never as cheap as it has become today, it was far less expensive than parchment, and therefore more people could afford to buy books, Paper is thinner than parchment, so more pages could be enclosed within a single volume. At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available. These large sheets meant that calligraphers and artists had more space on which to work.  Paintings became more complicated, giving the artist greater opportunities to depict space or emotion. The increased availability of paper, particularly after 1250, encouraged people to develop systems of representation, such as architectural plans and drawings. This in turn allowed the easy transfer of artistic ideas and motifs over great distances from one medium to another, and in a different scale in ways that had been difficult, if not impossible, in the previous period. ",
+            "title":"According to paragraph 3, the increased availability of paper and the development of systems of representation",
+            "choices":{
+                "A":" encourage more people to make their own drawings ",
+                "B":"made the transfer of artistic ideas to distant people and places much easier",
+                "C":"made architectural plans more complex and therefore harder to read ",
+                "D":"allowed artists to create paintings that were smaller in scale"
+            },
+            "answer":["B"]
+        },
+        "q11":{
+            "seq": 11,
+            "passage":"p1",
+            "type":"choice",
+            "replace_para_index":4,
+            "replace_para":"Rounded styles of Arabic handwriting had long been used for correspondence and documents alongside the formal angular scripts used for inscriptions and manuscripts of the Koran. Around the year 900, Ibn Muqla, who was a secretary and vizier at the Abbasid court in Baghdad, developed a system of proportioned writing. He standardized the length of alif, the first letter of the Arabic alphabet, and then determined what the size and shape of all other letters should be, based on the alif. Eventually, six round forms of handwriting, composed of three pairs of big and little scripts known collectively as the Six Pens, became the standard repertory of every calligrapher.",
+            "title":"According to paragraph 4, what did Ibn Muqla achieve around the year 900?",
+            "choices":{
+                "A":"He modified a set of formal scripts known as the Six Pens into rounded scripts appropriate for correspondence. ",
+                "B":"He created a standardized set of rounded scripts proportional to the size of the first letter of the alphabet. ",
+                "C":"He promoted calligraphy as an art form and encouraged the use of rounded letters in religious texts.",
+                "D":"He persuaded the court in Baghdad to use rounded styles instead of more angular scripts in their documents."
+            },
+            "answer":["B"]
+        },
+        "q12":{
+            "seq": 12,
+            "passage":"p1",
+            "type":"choice",
+            "replace_para_index":4,
+            "replace_para":"Rounded styles of Arabic handwriting had long been used for correspondence and documents alongside the formal angular scripts used for inscriptions and manuscripts of the Koran. Around the year 900, Ibn Muqla, who was a secretary and vizier at the Abbasid court in Baghdad, developed a system of proportioned writing. He standardized the length of alif, the first letter of the Arabic alphabet, and then determined what the size and shape of all other letters should be, based on the alif. Eventually, six round forms of handwriting, composed of three pairs of big and little scripts known collectively as the Six Pens, became the standard repertory of every calligrapher.",
+            "title":"The phrase “composed of” in the passage is closest in meaning to",
+            "choices":{
+                "A":"made up of ",
+                "B":"developed from",
+                "C":"in addition to",
+                "D":"similar to"
+            },
+            "answer":["B"]
+        },
+        "q13":{
+            "seq": 13,
+            "passage":"p1",
+            "type":"drag",
+            "replace_para_index":2,
+            "replace_para":"Papermaking had been introduced to the Islamic lands from China in the eighth century.  【】It has been said that Chinese papermakers were among the prisoners captured in a battle fought near Samarqand between the Chinese and the Muslims in 751, and the technique of  papermaking – in which cellulose pulp extracted from any of several plants is first suspended  in water, caught on a fine screen, and then dried into flexible sheets – slowly spread  westward. 【】Within fifty years, the government in Baghdad was using paper for documents. 【】Writing in ink on paper, unlike parchment, could not easily be erased, and therefore paper had the advantage that it was difficult to alter what was written on it. 【】Papermaking spread quickly to Egypt – and eventually to Sicily and Spain – but it was several centuries before paper supplanted parchment for copies of the Koran, probably because of the conservative nature of religious art and its practitioners. In western Islamic lands, parchment continued to be used for manuscripts of the Koran throughout this period.",
+            "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage.",
+            "dragcontent":"This change occurred for good reason.",
+            "answer":["B"]
         }
+
     }
 }

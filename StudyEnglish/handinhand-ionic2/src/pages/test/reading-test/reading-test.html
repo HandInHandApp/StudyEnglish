@@ -41,7 +41,7 @@
     <ion-row>
             <ion-col col-12 col-md-6 *ngIf="passages != undefined">
                 <div *ngFor="let item of steps;  let i = index;"  >
-                    <div *ngIf="step === item && step.indexOf('p')==-1">
+                    <div *ngIf="step === item && step.indexOf('p')==-1 && passages.questions[step].type == 'choice'">
                         <ion-list radio-group>
                             <ion-list-header>
                                 <div #popoverText class="text-to-change">
@@ -68,6 +68,10 @@
                         </ion-item>
                         </ion-list>
                     </div>      
+                    <div *ngIf="step === item && step.indexOf('p')==-1 && passages.questions[step].type == 'drag'">
+                             {{passages.questions[item].title}}<br/>
+                            <strong>{{passages.questions[step].dragcontent}}</strong>
+                    </div>
                 </div>
             </ion-col>
             <ion-col col-12 col-md-6>
