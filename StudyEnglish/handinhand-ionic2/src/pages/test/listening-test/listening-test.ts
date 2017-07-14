@@ -5,6 +5,7 @@ import { NavParams,NavController } from 'ionic-angular';
 
 
 import { ConferenceData } from '../../../providers/conference-data';
+import { TimerPage   } from '../timer/timer'
 
 @Component({
   selector: 'page-listening-page',
@@ -18,6 +19,14 @@ export class ListeningTestPage {
   testNmae : any[] = [
    
   ]
+  // curDate = new Date();
+
+  // endDate : number ;
+  endDate =  601*1000 ;
+  // (new Date( (new Date()).getTime()  +  600*1000 ))
+
+  // endDate= 600 + new Date();
+
 
 toplist: any[] = [
   
@@ -70,6 +79,9 @@ session: any;
       if(this.stepindex != this.last_stepindex){
         this.stepindex = this.stepindex+1
         this.step =  this.steps[this.stepindex]
+
+        this.endDate = 601*1000
+        //  (new Date( (new Date()).getTime()  +  600*1000 ))
       }
       console.log(this.step)
   }
@@ -83,4 +95,47 @@ session: any;
   gotoHome(){
       
   }
+
+  // 小时差
+ private hour: number;
+ // 分钟差
+ private minute: number;
+ private minutestr: any;
+ // 秒数差
+ private second: number;
+ private secondstr: any;
+ // 时间差
+ private _diff: number;
+ private get diff() {
+  return this._diff;
+ }
+ private set diff(val) {
+  this._diff = Math.floor(val / 1000);
+  this.hour = Math.floor(this._diff / 3600);
+  this.minute = Math.floor((this._diff % 3600) / 60);
+  this.second = (this._diff % 3600) % 60;
+    
+  this.minutestr = (this.minute<10)?  ("0"+this.minute.toString()): this.minute.toString() ;
+  this.secondstr = (this.second<10)?  ("0"+this.second.toString()): this.second.toString() ;
+ }
+ // 定时器
+ private timer;
+
+ // 每一秒更新时间差
+ ngAfterViewInit() {
+  this.timer = setInterval(() => {
+   this.endDate = this.endDate - 1000;
+   this.diff = this.endDate
+   console.log(this.endDate)
+   console.log(this.diff)
+  }, 1000);
+ }
+
+ // 销毁组件时清除定时器
+ ngOnDestroy() {
+  if (this.timer) {
+   clearInterval(this.timer);
+  }
+ }
+
 }

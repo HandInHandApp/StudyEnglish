@@ -54,6 +54,8 @@ import { AngularFireModule } from "angularfire2";
 import {EventDetailPage} from "../pages/map/create.component";
 import { FormsModule }   from '@angular/forms';
 
+import { TimerPage   } from '../pages/test/timer/timer'
+
 
 
 // import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
@@ -100,7 +102,8 @@ import { FormsModule }   from '@angular/forms';
     // DayPilotCalendarComponent,
     // DayPilotModule,
 
-    EventDetailPage
+    EventDetailPage,
+    TimerPage
     // AngularFireModule
 
 
@@ -167,6 +170,7 @@ import { FormsModule }   from '@angular/forms';
     SpeakingTestPage, 
     ReadingTestPage,
     DirectionPage,
+    TimerPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

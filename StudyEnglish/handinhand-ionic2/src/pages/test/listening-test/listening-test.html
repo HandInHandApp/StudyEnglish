@@ -29,11 +29,28 @@
         <label *ngIf="step.indexOf('p')!=-1">{{passages.passage[step].title}} </label>
         <label *ngIf="step.indexOf('q')!=-1">{{passages.question[step].title}}</label>
     </div>
-    <ion-buttons right>
+       <!-- <ion-buttons end>
+      <button ion-button  (click)="gotoHome()" type="submit" block>
+        首页
+      </button>
+      <button ion-button (click)="gotoNext()" type="submit" block>
+        暂停
+      </button>
+    </ion-buttons> -->
+     <ion-buttons end>
+<span class="button-inner">
       <button ion-button (click)="gotoBack()" type="submit" block>
          HideTime
-      </button>
-    </ion-buttons>
+      </button> 
+      <button ion-button  >
+           {{minutestr}} : {{secondstr}} 
+      </button> 
+         
+</span>
+
+       <!-- <roy-countdown title="" [endDate]="endDate"></roy-countdown>  -->
+
+    </ion-buttons> 
   </ion-toolbar>
 </ion-header>
 
