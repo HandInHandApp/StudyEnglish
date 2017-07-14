@@ -128,6 +128,9 @@ session: any;
    this.diff = this.endDate
    console.log(this.endDate)
    console.log(this.diff)
+   if(this.diff  <= 0){
+     this.gotoNext()
+   }
   }, 1000);
  }
 
