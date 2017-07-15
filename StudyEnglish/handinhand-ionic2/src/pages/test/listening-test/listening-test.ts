@@ -12,27 +12,14 @@ import { TimerPage   } from '../timer/timer'
   templateUrl: 'listening-test.html'
 })
 export class ListeningTestPage {
-  // session: any;
-  // type: any;
-  // step=0;
 
-  testNmae : any[] = [
-   
-  ]
-  // curDate = new Date();
-
-  // endDate : number ;
   endDate =  601*1000 ;
-  // (new Date( (new Date()).getTime()  +  600*1000 ))
-
-  // endDate= 600 + new Date();
-
-
-toplist: any[] = [
-  
-]
-session: any;
+  toplist: any[] = []
+  session: any;
   type: any;
+  tpourl:any;
+  headername:any;
+
   passages: any;
   first_step: any;
   last_step: any;
@@ -47,7 +34,9 @@ session: any;
   constructor(public navParams: NavParams, public confData: ConferenceData) {
     this.session = navParams.data.session;
     this.type = navParams.data.type;
-    confData.getListeningTestData()
+    this.tpourl = navParams.data.url;
+    this.headername = navParams.data.headername;
+    confData.getListeningTestData(this.tpourl)
       .subscribe(resulte => 
               {
                 this.passages =resulte;

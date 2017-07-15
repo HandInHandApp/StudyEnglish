@@ -400,9 +400,20 @@ export class ConferenceData {
     return passages
   }
 
-  getListeningTestData(){
+  getListeningTestData(index){
+
+    let listenurl = 'assets/data/tpo34_listenting_json.json'
     // return readdata
-    return this.http.get('assets/data/tpo34_listenting_json.json')
+    return this.http.get(listenurl)
+        .map((response) => response.json());
+  }
+  
+
+  getTestListData(){
+
+    let listenurl = 'assets/data/testlist.json'
+    // return readdata
+    return this.http.get(listenurl)
         .map((response) => response.json());
   }
 

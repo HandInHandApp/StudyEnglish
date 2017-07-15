@@ -17,58 +17,41 @@ export class TopListPage {
   session: any;
   type: any;
 
-  testNmae : any[] = [
-      "阅读",
-      "听力",
-      "口语",
-      
-      "写作"
-  ]
 
-toplist: any[] = [
-    {
-        title:"TPO1",
-        item: this.testNmae
-    },
-    {
-        title:"TPO2",
-        item: this.testNmae
-    },
-    {
-        title:"TPO3",
-        item: this.testNmae
-    },
-    {
-        title:"TPO4",
-        item: this.testNmae
-    },
-    {
-        title:"TPO5",
-        item: this.testNmae
-    },
-    {
-        title:"TPO=6",
-        item: this.testNmae
-    },
-]
+toplist: any[]
+
   constructor(public navParams: NavParams,
               public navCtrl: NavController,
               public confData: ConferenceData
     ) {
     this.session = navParams.data.session;
     this.type = navParams.data.type;
+    this.confData.getTestListData()
+      .subscribe(resulte => 
+              {
+                this.toplist =resulte.tpolist;
+                console.log(resulte)
+              }
+           );
   }
 
-  itemPages= [
-      DirectionPage,
-      ListeningTestPage,
-      SpeakingTestPage,
-      WritingTestPage
-  ]
-  goToTest(topitem,index){
+  itemPages= {
+      "Reading":DirectionPage,
+      "Listening":ListeningTestPage,
+      "Speaking":SpeakingTestPage,
+      "Writing":WritingTestPage
 
-        this.navCtrl.push(this.itemPages[index], {
+  }
+
+  
+  goToTest(topitem,top){
+       
+
+        this.navCtrl.push(this.itemPages[topitem.pagetype], {
+            
             type: "type",
+            url:topitem.url,
+            headername:top.title+" "+topitem.pagetype,
             session: topitem
         });
  
