@@ -22,6 +22,7 @@ export class ReadingTestPage {
   total_passage: number = 0;
   datas: any;
   currentPassage: any;
+  dragAnswer: string="";
 
   constructor(public navParams: NavParams, public confData: ConferenceData) {
     confData.getReadingTestData("tpo34").subscribe(
@@ -82,5 +83,12 @@ export class ReadingTestPage {
   stopTiming(){
     
   }
-  
+  insertDragContent(event: any){
+    console.log(event)
+    let htmlCollections = document.getElementsByClassName("click-choice")
+    for(let i=0; i<htmlCollections.length;i++){
+      htmlCollections[i].children[0].innerHTML="";
+    }
+    event.target.children[0].innerHTML=this.passages.questions[this.step].dragContent;
+  }
 }

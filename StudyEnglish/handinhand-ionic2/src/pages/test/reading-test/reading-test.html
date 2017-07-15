@@ -70,7 +70,7 @@
                     </div>      
                     <div *ngIf="step === item && step.indexOf('p')==-1 && passages.questions[step].type == 'drag'">
                              {{passages.questions[item].title}}<br/>
-                            <strong>{{passages.questions[step].dragcontent}}</strong>
+                            <strong>{{passages.questions[step].dragContent}}</strong>
                     </div>
                 </div>
             </ion-col>
@@ -83,8 +83,20 @@
                     <div *ngIf="step.indexOf('q')!=-1">
                         <h2>{{currentPassage.title}} </h2>
                          <p *ngFor="let para of currentPassage.contents;  let idx=index">
-                             <span *ngIf="passages.questions[step].replace_para_index == (idx+1) ">
+                             <span *ngIf="passages.questions[step].replace_para_index == (idx+1) && passages.questions[step].type =='choice'">
                                  {{passages.questions[step].replace_para}}
+                             </span>
+                             <span *ngIf="passages.questions[step].replace_para_index == (idx+1) && passages.questions[step].type =='drag'">
+                                 <span *ngFor="let parastr of passages.questions[step].replace_para; let didx=index">
+                                     <span *ngIf="parastr.indexOf('@#')!=-1">
+                                        <strong class="click-choice" id="cli-choice-{{didx}}" (click)=insertDragContent($event)>【
+                                            <span></span>
+                                            】</strong>
+                                     </span>
+                                     <span *ngIf="parastr.indexOf('@#')==-1">
+                                        {{ parastr }}
+                                     </span>
+                                 </span>
                              </span>
                              <span *ngIf="passages.questions[step].replace_para_index != (idx+1) ">
                                  {{para}}
