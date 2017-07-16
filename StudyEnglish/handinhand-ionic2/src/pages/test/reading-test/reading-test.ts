@@ -110,7 +110,7 @@ export class ReadingTestPage {
 
   rollbackDrag(event: any) {
     if (event.target.tagName == "P") {
-      let targetEle = document.getElementById("div"+event.target.id);
+      let targetEle = document.getElementById("div-"+event.target.id);
       if(targetEle != null){
         targetEle.appendChild(event.target)
       }
