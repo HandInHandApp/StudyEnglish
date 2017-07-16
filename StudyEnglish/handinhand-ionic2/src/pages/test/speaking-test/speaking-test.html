@@ -56,8 +56,33 @@
 
 
 
-
 <ion-content #popoverContent padding class="popover-page  ">
+
+  	<!-- <input type="button" value="Start Record" onclick="startRecord();"/> 
+		<br/>
+		<input type="button" value="Stop Record" onclick="stopRecord();"/> -->
+ 
+  	<!-- <input type="button" value="Start Record" (click)="startRecord();"/> 
+		<br/>
+    <input type="button" value="Stop Record" (click)="stopRecord();"/> -->
+
+     <!--调用手机的拍照功能和直接打开系统文件目录。-->
+    <input type="file" accept="image/*" capture="camera">
+
+
+    <!--调用手机的录像功能和直接打开系统文件目录。-->
+    <input type="file" accept="video/*" capture="camcorder">
+
+
+   <!--调用手机的录像功能和直接打开系统文件目录。苹果手机调出来的是拍照和录像安卓手机调出来的录音功能-->
+   <input type="file" accept="audio/*" capture="microphone"> 
+
+
+    <!--nput:file标签还支持一个multiple属性，表示可以支持多选,capture就没啥用了，因为multiple是专门用来支持多选的。-->
+   <input type="file" accept="audio/*" multiple>
+   <!--上传文件-->
+   <input type="file" name="">
+     
 
                 <div *ngFor="let item of steps;  let i = index;"  >
                     <div *ngIf="step === item && step.indexOf('p')==-1">

@@ -3,7 +3,7 @@
 
 <head>
   <script data-ionic="inject">
-    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.3.0';i.angular='4.1.2';i.staticDir='build/';})(window);
+    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.5.3';i.angular='4.1.3';i.staticDir='build/';})(window);
   </script>
   <meta charset="UTF-8">
   <title>Ionic Conference App</title>
@@ -54,6 +54,18 @@
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 
+
+  <!-- The polyfills js is generated during the build process -->
+  <!-- <script src="build/polyfills.js"></script> -->
+
+  <script src="build/vendor.js"></script>
+
+  <!-- The bundle js is generated during the build process -->
+  <!-- <script src="build/main.js"></script> -->
+  
+
+
+
   <script src="cordova.js"></script>
 
   <!-- The polyfills js is generated during the build process -->
@@ -65,6 +77,7 @@
   <!-- google maps script is loaded last as to not block rendering -->
   <script async defer src="https://maps.googleapis.com/maps/api/js"></script>
 
+  
 </body>
 
 </html>

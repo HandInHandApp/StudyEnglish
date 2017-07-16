@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 
-import { NavParams,NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 
 
-import { ConferenceData } from '../../../providers/conference-data';
+// import { ConferenceData } from '../../../providers/conference-data';
 
 @Component({
   selector: 'page-writing-page',

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 
-import { NavParams,NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 
 
 import { ConferenceData } from '../../../providers/conference-data';
-import { TimerPage   } from '../timer/timer'
+// import { TimerPage   } from '../timer/timer'
 
 @Component({
   selector: 'page-listening-page',

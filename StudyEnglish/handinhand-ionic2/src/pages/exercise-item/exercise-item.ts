@@ -1,17 +1,17 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 import {
-  ActionSheet,
-  ActionSheetController,
+  // ActionSheet,
+  // ActionSheetController,
   ModalController,
-  Platform,
+  // Platform,
   NavParams,
   NavController,
-  ViewController
+  // ViewController
 } from 'ionic-angular';
 
-import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { ExerciseTypePage } from '../exercise-type/exercise-type';
+// import { InAppBrowser } from '@ionic-native/in-app-browser';
+// import { ExerciseTypePage } from '../exercise-type/exercise-type';
 import { ExerciseAnswerPage } from '../exercise-answer/exercise-answer';
 
 import { ConferenceData } from '../../providers/conference-data';

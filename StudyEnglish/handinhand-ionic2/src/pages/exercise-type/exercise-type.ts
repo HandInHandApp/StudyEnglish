@@ -1,14 +1,14 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 import {
-  ActionSheet,
+  // ActionSheet,
   ActionSheetController,
   NavParams,
   NavController
 } from 'ionic-angular';
 
 
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+// import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ExerciseItemPage } from '../exercise-item/exercise-item';
 
 import { ConferenceData } from '../../providers/conference-data';

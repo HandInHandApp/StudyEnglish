@@ -12,7 +12,7 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'signup.html'
 })
 export class SignupPage {
-  signup: {username?: string, password?: string,mobilePhone?:number, smsCode?:number, who?:string} = {};
+  signup: {username: string, password?: string,mobilePhone?:number, smsCode?:number, who?:string} = {username:""};
   submitted = false;
 
   constructor(public navCtrl: NavController, public userData: UserData) {}
@@ -29,7 +29,7 @@ export class SignupPage {
     }
   }
 sendVerfiyMessage(form: NgForm){
-
+      console.log(form)
       this.userData.requestMobilePhoneVerify({"mobilePhoneNumber": this.signup.mobilePhone}).subscribe(result => console.log( result));
 
     

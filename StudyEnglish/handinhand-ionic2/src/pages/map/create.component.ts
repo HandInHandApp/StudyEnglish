@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 
 import { NavParams, NavController } from 'ionic-angular';
 
-import { ViewChild, Output, EventEmitter} from "@angular/core";
+import { ViewChild} from "@angular/core";
 import {DayPilot} from "daypilot-pro-angular";
-import {Validators, FormBuilder, FormGroup, FormControl} from "@angular/forms";
+import { FormGroup, FormControl} from "@angular/forms";
 // import {CreateEventParams, DataService} from "./data.service";
 import { ConferenceData, CreateEventParams } from './../../providers/conference-data';
 
-import { FormsModule }   from '@angular/forms';
+// import { FormsModule }   from '@angular/forms';
 
 @Component({
   selector: 'create-dialog',

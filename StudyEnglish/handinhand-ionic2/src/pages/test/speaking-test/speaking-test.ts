@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 
-import { NavParams,NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 
 
 import { ConferenceData } from '../../../providers/conference-data';
-import { TimerPage   } from '../timer/timer'
+// import { TimerPage   } from '../timer/timer'
 
 @Component({
   selector: 'page-speaking-page',
@@ -129,5 +129,27 @@ export class SpeakingTestPage {
    clearInterval(this.timer);
   }
  }
+
+// AudioRecorder plus.audio.getRecorder();
+// x= document.addEventListener( "plusready", onPlusReady, false );
+// r = null; 
+// // 扩展API加载完毕，现在可以正常调用扩展API 
+// onPlusReady() { 
+// 	r = plus.audio.getRecorder(); 
+// }
+// startRecord() {
+// 	if ( r == null ) {
+// 		alert( "Device not ready!" );
+// 		return; 
+// 	} 
+// 	r.record( {filename:"_doc/audio/"}, function () {
+// 		alert( "Audio record success!" );
+// 	}, function ( e ) {
+// 		alert( "Audio record failed: " + e.message );
+// 	} );
+// }
+// stopRecord() {
+// 	r.stop(); 
+// }
 
 }

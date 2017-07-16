@@ -75,26 +75,27 @@ export class SpeakerListPage {
   }
 
   openContact(speaker: any) {
-    let mode = this.config.get('mode');
+    console.log(speaker)
+    // let mode = this.config.get('mode');
 
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Contact ' + speaker.name,
-      buttons: [
-        {
-          text: `Email ( ${speaker.email} )`,
-          icon: mode !== 'ios' ? 'mail' : null,
-          handler: () => {
-            window.open('mailto:' + speaker.email);
-          }
-        },
-        {
-          text: `Call ( ${speaker.phone} )`,
-          icon: mode !== 'ios' ? 'call' : null,
-          handler: () => {
-            window.open('tel:' + speaker.phone);
-          }
-        }
-      ]
+      // title: 'Contact ' + speaker.name,
+      // buttons: [
+      //   {
+      //     text: `Email ( ${speaker.email} )`,
+      //     icon: mode !== 'ios' ? 'mail' : null,
+      //     handler: () => {
+      //       window.open('mailto:' + speaker.email);
+      //     }
+      //   },
+      //   {
+      //     text: `Call ( ${speaker.phone} )`,
+      //     icon: mode !== 'ios' ? 'call' : null,
+      //     handler: () => {
+      //       window.open('tel:' + speaker.phone);
+      //     }
+      //   }
+      // ]
     });
 
     actionSheet.present();

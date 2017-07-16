@@ -1,9 +1,9 @@
 import { ConferenceData } from './../../providers/conference-data';
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 // import { ConferenceData } from '../../providers/conference-data';
 
-import { Platform, Config } from 'ionic-angular';
+// import { Platform, Config } from 'ionic-angular';
 import { DayPilot } from 'daypilot-pro-angular';
 import { NavController } from 'ionic-angular';
 
@@ -11,9 +11,9 @@ import { MoveEventParams,CreateEventParams } from './../../providers/conference-
 
 import {EventDetailPage} from "./create.component";
 
-declare var google: any;
+// declare var google: any;
 
-declare var firebase: any;
+// declare var firebase: any;
 
 @Component({
   selector: 'page-map',
@@ -95,7 +95,10 @@ export class MapPage {
     dayBeginsHour : 5,
     dayEndsHour : 24,
     onEventDeleted: args => {
-      this.ds.deleteEvent(args.e.data.objectId).subscribe(result => this.calendar.control.message("Deleted"));
+      this.ds.deleteEvent(args.e.data.objectId).subscribe(result => {
+        console.log(result);
+        this.calendar.control.message("Deleted")
+      });
     },
     onEventMoved: args => {
       let params : MoveEventParams = {
@@ -103,7 +106,10 @@ export class MapPage {
         newStart: args.newStart,
         newEnd: args.newEnd
       };
-      this.ds.moveEvent(params).subscribe(result => this.calendar.control.message("Moved"));
+      this.ds.moveEvent(params).subscribe(result => {
+        console.log(result);
+        this.calendar.control.message("Moved")
+      });
     },
     onEventResized: args => {
       let params : MoveEventParams = {
@@ -112,7 +118,9 @@ export class MapPage {
         newEnd: args.newEnd
       };
 
-      this.ds.moveEvent(params).subscribe(result => this.calendar.control.message("Resized"));
+      this.ds.moveEvent(params).subscribe(result => {
+        console.log(result);
+        this.calendar.control.message("Resized")});
     },
     onTimeRangeSelected: args => {
       // this.create.show(args);
@@ -122,7 +130,9 @@ export class MapPage {
 
   deleteEvent(evet){
     
-     this.ds.deleteEvent(evet.objectId).subscribe(result => this.calendar.control.message("Deleted"));
+     this.ds.deleteEvent(evet.objectId).subscribe(result => {
+      console.log(result); 
+      this.calendar.control.message("Deleted")});
   }
 
   

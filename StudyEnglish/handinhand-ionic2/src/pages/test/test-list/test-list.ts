@@ -5,7 +5,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { ConferenceData } from '../../../providers/conference-data';
 
-import { SessionDetailPage } from '../../session-detail/session-detail';
+// import { SessionDetailPage } from '../../session-detail/session-detail';
 import { SpeakerDetailPage } from '../../speaker-detail/speaker-detail';
 
 import { ExaminationDetailPage } from '../../examination-detail/examination-detail';
@@ -151,26 +151,27 @@ export class TestListPage {
   }
 
   openContact(speaker: any) {
-    let mode = this.config.get('mode');
+    console.log(speaker)
+    // let mode = this.config.get('mode');
 
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Contact ' + speaker.name,
-      buttons: [
-        {
-          text: `Email ( ${speaker.email} )`,
-          icon: mode !== 'ios' ? 'mail' : null,
-          handler: () => {
-            window.open('mailto:' + speaker.email);
-          }
-        },
-        {
-          text: `Call ( ${speaker.phone} )`,
-          icon: mode !== 'ios' ? 'call' : null,
-          handler: () => {
-            window.open('tel:' + speaker.phone);
-          }
-        }
-      ]
+      // title: 'Contact ' + speaker.name,
+      // buttons: [
+      //   {
+      //     text: `Email ( ${speaker.email} )`,
+      //     icon: mode !== 'ios' ? 'mail' : null,
+      //     handler: () => {
+      //       window.open('mailto:' + speaker.email);
+      //     }
+      //   },
+      //   {
+      //     text: `Call ( ${speaker.phone} )`,
+      //     icon: mode !== 'ios' ? 'call' : null,
+      //     handler: () => {
+      //       window.open('tel:' + speaker.phone);
+      //     }
+      //   }
+      // ]
     });
 
     actionSheet.present();

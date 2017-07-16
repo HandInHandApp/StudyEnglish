@@ -1,15 +1,15 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 import {
-  ModalController,
+  // ModalController,
   Platform,
   NavParams,
   ViewController
 } from 'ionic-angular';
 
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+// import { InAppBrowser } from '@ionic-native/in-app-browser';
 
-import { ConferenceData } from '../../providers/conference-data';
+// import { ConferenceData } from '../../providers/conference-data';
 
 
 @Component({

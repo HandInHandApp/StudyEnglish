@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Events } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
-import { Http,Headers,RequestOptions } from '@angular/http';
+import { Http,Headers } from '@angular/http';
 
 
 

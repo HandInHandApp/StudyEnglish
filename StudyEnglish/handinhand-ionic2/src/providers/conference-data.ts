@@ -1,7 +1,8 @@
-import { Events } from 'ionic-angular';
+// import { Events } from 'ionic-angular';
 import { Injectable } from '@angular/core';
 
-import { Http,Headers,RequestOptions } from '@angular/http';
+import { Http,Headers } from '@angular/http';
+  // RequestOptions } from '@angular/http';
 
 import { UserData } from './user-data';
 
@@ -12,7 +13,7 @@ import 'rxjs/add/observable/of';
 import {DayPilot} from "daypilot-pro-angular";
 import EventData = DayPilot.EventData;
 
-declare var firebase: any;
+// declare var firebase: any;
 
 @Injectable()
 export class ConferenceData {
@@ -188,12 +189,14 @@ export class ConferenceData {
     "desc3":"适用人群：未考过或希望细致评估的考生"
   }]
   getTraining(queryText = '', excludeTracks: any[] = [], segment = 'all') {
+    console.log(excludeTracks,segment)
     return this.load().map((data: any) => {
+      console.log(data)
       let list = this.training;
       
 
       queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
-      let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
+      // let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
 
     
 
@@ -308,6 +311,8 @@ export class ConferenceData {
 
 
   getEvents(start: DayPilot.Date, end: DayPilot.Date): Observable<EventData[]> {
+    console.log(start)
+    console.log(end)
     var url="https://api.leancloud.cn/1.1/classes/Event?limit=100&&order=-updatedAt&&";
     return this.http.get(url, {headers:this.getHeaders()})
                     .map((response) => {
@@ -357,6 +362,7 @@ export class ConferenceData {
   }
 
   moveEvent(params: MoveEventParams): Observable<BackendResult> {
+    console.log(params)
     var id="594f7b770ce46300576ab053"
     var url = "https://api.leancloud.cn/1.1/classes/Event/"+id;
     return this.http.put(url, {headers:this.getHeaders()})
@@ -401,6 +407,7 @@ export class ConferenceData {
   }
 
   getListeningTestData(index){
+    console.log(index)
 
     let listenurl = 'assets/data/tpo34_listenting_json.json'
     // return readdata
