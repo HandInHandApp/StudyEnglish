@@ -1,3 +1,24 @@
 .click-choice {
     cursor:pointer;
 }
+.drag-choice-source ion-col div{
+    text-align: left;
+    border: 1px solid #000000;
+    font-weight: 12px;
+    height:70px;
+    padding:3px 1px;
+    border-radius: 4px;
+    cursor: default;
+}
+.drag-choice-answer ion-col div{
+    text-align: left;
+    border: 1px solid #000000;
+    font-weight: 12px;
+    height:70px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.drag-choice-answer ion-col div p{
+    margin: 0px;
+    height: 70px;
+}
