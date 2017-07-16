@@ -1,0 +1,56 @@
+{
+  "_from": "git+https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git",
+  "_id": "cordova-plugin-wkwebview-engine@1.1.4-dev",
+  "_inBundle": false,
+  "_integrity": "sha1-wWGMQQtH+lsvnPS0uMGXej28EEI=",
+  "_location": "/cordova-plugin-wkwebview-engine",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "cordova-plugin-wkwebview-engine@https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git",
+    "name": "cordova-plugin-wkwebview-engine",
+    "escapedName": "cordova-plugin-wkwebview-engine",
+    "rawSpec": "https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git",
+    "saveSpec": "git+https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git",
+    "fetchSpec": "https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git#3f6be80ecd34ee67a230390f95de8eaf60fdca83",
+  "_spec": "cordova-plugin-wkwebview-engine@https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git",
+  "_where": "/Users/zhuenqing/workspace/handinhand/node_modules",
+  "author": {
+    "name": "Apache Cordova"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/cordova-plugin-wkwebview-engine/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "The official Apache Cordova WKWebView Engine Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "homepage": "https://github.com/ionic-team/cordova-plugin-wkwebview-engine#readme",
+  "keywords": [
+    "cordova",
+    "wkwebview"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "cordova-plugin-wkwebview-engine",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git"
+  },
+  "scripts": {
+    "jshint": "jshint src",
+    "objc-tests": "cd tests/ios && npm test",
+    "preobjc-tests": "cd tests/ios && npm install",
+    "test": "npm run jshint && npm run objc-tests"
+  },
+  "version": "1.1.4-dev"
+}
