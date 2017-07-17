@@ -1,0 +1,15 @@
+<!-- Copyright (c) 2017 Tracktunes Inc -->
+
+<!--ion-range color="light" [(ngModel)]="gainRangeSliderValue" (ionChange)="onGainChange($event.value)" debounce="50" (touchend)="onRangeTouchEnd()"
+    [max]="maxGainSliderValue">
+</ion-range-->
+
+<div id="progress-slider-container" (touchstart)="onSliderTouchStart($event)" (touchmove)="onSliderTouchMove($event)" (touchend)="onSliderTouchEnd($event)" (mousedown)="onSliderMouseDown($event)">
+    <div class="track">
+        <div class="track-inner-left" [style.width]="progressPercent()"></div>
+        <div class="track-inner-right" [style.left]="progressPercent()" [style.width]="remainingPercent()"></div>
+        <div class="track-inner-full">
+            <div class="handle" [style.left]="progressPercent()"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+// Copyright (c) 2017 Tracktunes Inc
+#tabpanel-t0-1 {
+    ion-header ion-navbar ion-buttons ion-badge {
+        background-color: color($colors, button-on-dark-bg, base);
+        color: color($colors, button-on-dark-bg, contrast);
+    }
+    ion-content {
+        background-color: color($colors, dark, base);
+        p.gain-item-label {
+            line-height: 2em;
+            margin-bottom: 0.2em;
+            font-size: 1.2em;
+            color: color($colors, button-on-dark-bg, contrast);
+            button {
+                float: right;
+                background-color: color($colors, button-on-dark-bg, base);
+                color: color($colors, button-on-dark-bg, contrast);
+                font-weight: 600;
+            }
+            ion-range {
+                padding: 0;
+                width: 100%;
+            }
+        }
+        div.recording-time {
+            text-align: center;
+            font-size: 2.3em;
+            font-family: "Courier New", Courier, monospace;
+            padding-bottom: 0.4em;
+            color: color($colors, light);
+        }
+        div.record-upload-buttons {
+            // center-justify the two buttons in the page
+            text-align: center;
+            button:first-child {
+                border-radius: 50%;
+            }
+            button {
+                font-size: 1.3em;
+                width: 5.8em;
+                height: 5.8em;
+            }
+        }
+    }
+}

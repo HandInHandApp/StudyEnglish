@@ -1,0 +1,10 @@
+<!-- Copyright (c) 2017 Tracktunes Inc -->
+
+<progress-slider [progress]="player.relativeTime" (changeEnd)="player.relativeTimeSeek($event)"></progress-slider>
+<button ion-button clear (click)="player.togglePlayPause()">
+    <ion-icon *ngIf="player.isPlaying" name="pause"></ion-icon>
+    <ion-icon *ngIf="!player.isPlaying" name="play"></ion-icon>
+</button>
+<button ion-button clear>
+    {{player.displayTime}} / {{player.displayDuration}}
+</button>

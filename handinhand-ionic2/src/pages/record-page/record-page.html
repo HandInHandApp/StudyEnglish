@@ -1,0 +1,43 @@
+<!-- Copyright (c) 2017 Tracktunes Inc -->
+
+<ion-header>
+    <ion-navbar no-border-bottom color="dark">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Record</ion-title>
+        <ion-buttons end *ngIf="recorderIsReady() && gainFactor !== 0">
+            <button ion-button small (click)="webAudioRecord.resetPeaks()">
+            <ion-badge item-right button-on-dark-bg text-lowercase>
+                {{webAudioRecord.percentPeaksAtMax}}% peaks
+            </ion-badge>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <vu-gauge height="2.5em" nbars="55" [value]="webAudioRecord.currentVolume" [max]="webAudioRecord.maxVolumeSinceReset">
+    </vu-gauge>
+    <p class="gain-item-label">
+        Gain: {{percentGain}}% ({{decibels}})
+        <button ion-button small text-uppercase (click)="onResetGain()">
+            Reset Gain
+        </button>
+        <ion-range color="light" [(ngModel)]="gainRangeSliderValue" (ionChange)="onGainChange($event.value)" debounce="50" (touchend)="onRangeTouchEnd()" [max]="maxGainSliderValue">
+        </ion-range>
+    </p>
+    <div class="recording-time">
+        {{webAudioRecord.currentTime}}
+    </div>
+    <div class="record-upload-buttons">
+        <button ion-button color="logo-red" [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
+            <ion-icon [name]="recordButtonIcon">
+            </ion-icon>
+        </button>
+        <button ion-button color="logo-orange" [disabled]="!recorderIsReady() || webAudioRecord.isInactive" (click)="onClickStopButton()">
+            <ion-icon name="square">
+            </ion-icon>
+        </button>
+    </div>
+</ion-content>
