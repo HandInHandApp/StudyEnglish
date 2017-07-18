@@ -1,0 +1,60 @@
+<!-- Copyright (c) 2017 Tracktunes Inc -->
+
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title *ngIf="folderNode">
+            Library
+        </ion-title>
+
+        <ion-buttons end *ngIf="nSelectedNodes()">
+            <button ion-button small (click)="onClickTotalSelected()">
+                <ion-badge item-right>
+                    {{nSelectedNodes()}} selected
+                </ion-badge>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar no-border-top>
+        <p *ngIf="folderNode" text-center>
+            {{getPath()}}
+        </p>
+        <button-bar [buttons]="headerButtons">
+        </button-bar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="folderNode">
+        <ion-item clear *ngFor="let i of folderNode.childOrder" class="library-item">
+            <ion-label ion-button clear (click)="onClickListItem(folderItems[i])">
+                <span *ngIf="folderItems[i].data">
+                    <ion-icon name="play">
+                    </ion-icon>
+                    &nbsp;
+                </span>
+                <ion-icon *ngIf="!folderItems[i].data" name="folder">
+                </ion-icon>
+                &nbsp; {{folderItems[i].name}}
+            </ion-label>
+            <!--ion-checkbox item-left [ngModel]="isSelected(folderItems[i])" checked="isSelected(folderItems[i])" (click)="onClickCheckbox(folderItems[i])"-->
+            <ion-checkbox item-left [ngModel]="isSelected(folderItems[i])" (click)="onClickCheckbox(folderItems[i])">
+            </ion-checkbox>
+        </ion-item>
+        <ion-item class="library-empty-folder-message" *ngIf="!folderNode.childOrder.length">
+            <h2>
+                This folder contains nothing!
+            </h2>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer [hidden]="nSelectedNodes() === 0">
+    <ion-toolbar>
+        <button-bar [buttons]="footerButtons">
+        </button-bar>
+    </ion-toolbar>
+</ion-footer>

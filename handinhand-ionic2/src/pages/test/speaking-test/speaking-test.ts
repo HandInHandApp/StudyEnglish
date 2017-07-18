@@ -24,6 +24,7 @@ import { WebAudioRecordWav } from '../../../providers/web-audio/record-wav';
 import { RecordStatus } from '../../../providers/web-audio/record';
 import { RecordingInfo } from '../../../providers/web-audio/common';
 import { IdbAppFS, UNFILED_FOLDER_KEY } from '../../../providers/idb-app-fs/idb-app-fs';
+import { WebAudioSaveWav } from '../../../providers/web-audio/save-wav';
 
 const START_RESUME_ICON: string = 'mic';
 const PAUSE_ICON: string = 'pause';
@@ -33,12 +34,13 @@ const MAX_GAIN_SLIDER_VALUE: number = 1000;
 
 @Component({
   selector: 'page-speaking-page',
-  providers: [WebAudioRecordWav],
+  providers: [WebAudioRecordWav,WebAudioSaveWav],
   templateUrl: 'speaking-test.html'
 })
 export class SpeakingTestPage {
   
     @ViewChild(Content) public content: Content;
+    private webAudioSaveWav: WebAudioSaveWav;
     private appState: AppState;
     private idbAppFS: IdbAppFS;
     // recordButtonIcon referenced by template
@@ -81,6 +83,7 @@ export class SpeakingTestPage {
     public file: File,
     public alertCtrl: AlertController,
     
+    webAudioSaveWav: WebAudioSaveWav,
     appState: AppState,
     idbAppFS: IdbAppFS,
     webAudioRecord: WebAudioRecordWav
@@ -106,6 +109,7 @@ export class SpeakingTestPage {
 
         console.log('constructor():RecordPage');
 
+        this.webAudioSaveWav = webAudioSaveWav;
         this.appState = appState;
         this.idbAppFS = idbAppFS;
         this.webAudioRecord = webAudioRecord;
@@ -446,6 +450,7 @@ export class SpeakingTestPage {
                     recordingInfo
                 ).subscribe(
                     ()=>{
+                        this.webAudioSaveWav.save(recordingInfo, fileName + '.wav');
                         console.log("createNode success:"+fileName)
                     }
                 );

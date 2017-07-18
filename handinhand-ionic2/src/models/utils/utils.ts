@@ -186,20 +186,49 @@ export function prependArray(value: any, arr: any[]): any[] {
 //     download anyway on mobile...
 
 // save data into a local file
+// export function downloadBlob(blob: Blob, fileName: string): void {
+//     'use strict';
+//     const url: string = window.URL.createObjectURL(blob);
+//     let anchorElement: HTMLAnchorElement = document.createElement('a');
+//     anchorElement.style.display = 'none';
+//     anchorElement.href = url;
+//     anchorElement.setAttribute('download', fileName);
+//     document.body.appendChild(anchorElement);
+//     anchorElement.click();
+//     setTimeout(
+//         () => {
+//             document.body.removeChild(anchorElement);
+//             window.URL.revokeObjectURL(url);
+//         },
+//         100);
+//     console.log('saveBlob(): finished!');
+// }
 export function downloadBlob(blob: Blob, fileName: string): void {
     'use strict';
     const url: string = window.URL.createObjectURL(blob);
+    // let anchorElement: HTMLAnchorElement = document.createElement('a');
     let anchorElement: HTMLAnchorElement = document.createElement('a');
-    anchorElement.style.display = 'none';
+    // anchorElement.style.display = 'none';
     anchorElement.href = url;
-    anchorElement.setAttribute('download', fileName);
-    document.body.appendChild(anchorElement);
-    anchorElement.click();
+    // anchorElement.setAttribute('download', fileName);
+    anchorElement.download=url;
+
+    //  anchorElement.type = "button";
+    
+
+     var t =document.createTextNode("test");
+     anchorElement.appendChild(t);
+
+    var board=document.getElementById("myurl")
+    board.appendChild(anchorElement);
+
+    // document.body.appendChild(anchorElement);
+    // anchorElement.click();
     setTimeout(
         () => {
-            document.body.removeChild(anchorElement);
+            // document.body.removeChild(anchorElement);
             window.URL.revokeObjectURL(url);
         },
-        100);
-    console.log('saveBlob(): finished!');
+        1000000);
+    console.log('saveBlob(): finished! url:'+url);
 }

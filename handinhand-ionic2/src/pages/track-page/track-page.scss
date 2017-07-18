@@ -1,0 +1,16 @@
+// Copyright (c) 2017 Tracktunes Inc
+track-page {
+    ion-toolbar p {
+        margin-top: 0.1em;
+        margin-bottom: 0.5em;
+        color: color($colors, primary, base);
+    }
+    ion-footer {
+        ion-toolbar .toolbar-background {
+            background: color($colors, dark);
+        }
+        audio-player button span {
+            color: white;
+        }
+    }
+}

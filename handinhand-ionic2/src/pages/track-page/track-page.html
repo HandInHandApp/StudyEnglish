@@ -1,0 +1,75 @@
+<!-- Copyright (c) 2017 Tracktunes Inc -->
+
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <ion-title>
+            Track
+        </ion-title>
+    </ion-navbar>
+    <ion-toolbar no-border-top>
+        <p text-center>
+            {{fileName}}
+        </p>
+        <button-bar [buttons]="headerButtons">
+        </button-bar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item text-wrap>
+            <p>
+                <span style="float: left;">Parent folder:</span>
+                <span style="float:right;"> {{folderPath}}</span>
+            </p>
+        </ion-item>
+        <ion-item>
+            <p>
+                <span style="float: left;">Created on:</span>
+                <span style="float:right;"> {{dateCreated}}</span>
+            </p>
+        </ion-item>
+        <ion-item>
+            <p>
+                <span style="float: left;">Encoding:</span>
+                <span style="float:right;"> {{recordingInfo.encoding}}</span>
+            </p>
+        </ion-item>
+        <ion-item>
+            <p>
+                <span style="float: left;">Duration:</span>
+                <span style="float:right;"> {{displayDuration}}</span>
+            </p>
+        </ion-item>
+        <ion-item>
+            <p>
+                <span style="float: left;">File size:</span>
+                <span style="float:right;"> {{recordingInfo.size + 44}} bytes</span>
+            </p>
+        </ion-item>
+        <ion-item>
+            <p>
+                <span style="float: left;">Sample rate:</span>
+                <span style="float:right;"> {{recordingInfo.sampleRate}} Hz</span>
+            </p>
+        </ion-item>
+        <ion-item>
+            <p >
+                <span style="float: left;"># of samples:</span>
+                <span style="float:right;"> {{recordingInfo.nSamples}}</span>
+            </p>
+            <div id="myurl">
+                show xxx
+            </div>
+        </ion-item>
+
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar border-top>
+        <audio-player [recordingInfo]="recordingInfo">
+        </audio-player>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,42 @@
+// Copyright (c) 2017 Tracktunes Inc
+
+$content-text-color: color($colors, almost-dark);
+// library-page {
+#tabpanel-t0-2 {
+    ion-toolbar p {
+        margin-top: 0.1em;
+        margin-bottom: 0.5em;
+        color: color($colors, primary, base);
+    }
+    // control appearance of the text that says a folder is empty
+    ion-content ion-list {
+        ion-item.library-item {
+            ion-checkbox {
+                // margin-right was too large by default, creating
+                // too much of a space between checkbox and item text
+                margin-right: .5em;
+                button.item-cover {
+                    // if we do not set the width then the button cover that
+                    // checkbox creates spans entire item
+                    width: 50px;
+                }
+            }
+            ion-label.button span.button-inner {
+                color: $content-text-color;
+                // text-transform: : none; is needed to remove uppercase transform
+                text-transform: none;
+                // justify-content: unset is needed for label
+                // text to not be centered and go to the left
+                justify-content: unset;
+                ion-icon {
+                    font-size: 1.4em;
+                }
+            }
+        }
+        // control appearance of the text that says a folder is empty
+        ion-item.library-empty-folder-message {
+            text-align: center;
+            color: map-get($colors, logo-orange);
+        }
+    }
+}
