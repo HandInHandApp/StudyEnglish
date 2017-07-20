@@ -58,6 +58,7 @@ export class SpeakingTestPage {
     public maxGainSliderValue: number;
     // private gainSliderLeftIcon: string;
 
+    myfiles:any;
 
   endDate =  601*1000 ;
   toplist: any[] = []
@@ -93,6 +94,8 @@ export class SpeakingTestPage {
         this.type = navParams.data.type;
         this.tpourl = navParams.data.url;
         this.headername = navParams.data.headername;
+          getSpeakingTestData(index){
+
         confData.getListeningTestData(this.tpourl)
           .subscribe(resulte => 
                   {
@@ -450,8 +453,16 @@ export class SpeakingTestPage {
                     recordingInfo
                 ).subscribe(
                     ()=>{
-                        this.webAudioSaveWav.save(recordingInfo, fileName + '.wav');
-                        console.log("createNode success:"+fileName)
+                        var url =this.webAudioSaveWav.save(recordingInfo, fileName + '.wav');
+                        
+                        // var url =this.webAudioSaveWav.savepost(recordingInfo, fileName + '.wav').subscribe(
+                        //     (audioBuffer1: AudioBuffer) => {
+                        //         console.log("createNode success:"+fileName +" url:"+ url)
+                        //          this.confData.postuserRecoder("fileName", url);
+                        //     }
+                        // )
+                        
+                        
                     }
                 );
             });

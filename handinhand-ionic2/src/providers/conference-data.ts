@@ -13,11 +13,23 @@ import 'rxjs/add/observable/of';
 import {DayPilot} from "daypilot-pro-angular";
 import EventData = DayPilot.EventData;
 
+// import { AV } from "leancloud-storage";
+import AV from 'leancloud-storage'; 
 // declare var firebase: any;
+
+const appId = 'Eul6rG90rOjIO5imP853JOmn-gzGzoHsz';
+const appKey = 'XdmDTh1MQGHCYrJjp1B5Jyh1';
+AV.init({ appId, appKey });
 
 @Injectable()
 export class ConferenceData {
   data: any;
+
+  // APP_ID : "Eul6rG90rOjIO5imP853JOmn-gzGzoHsz";
+  // APP_KEY : "XdmDTh1MQGHCYrJjp1B5Jyh1";
+// const APP_ID = 'Eul6rG90rOjIO5imP853JOmn-gzGzoHsz';
+// const APP_KEY = 'XdmDTh1MQGHCYrJjp1B5Jyh1';
+// AV.init({ appId, appKey });
 
 
   constructor(public http: Http, public user: UserData) {}
@@ -406,12 +418,20 @@ export class ConferenceData {
     return passages
   }
 
-  getListeningTestData(index){
-    console.log(index)
+  getListeningTestData(url){
+    console.log(url)
 
-    let listenurl = 'assets/data/tpo34_listenting_json.json'
+    // let listenurl = 'assets/data/tpo34_listenting_json.json'
     // return readdata
-    return this.http.get(listenurl)
+    return this.http.get(url)
+        .map((response) => response.json());
+  }
+  getSpeakingTestData(url){
+    console.log(url)
+
+    // let url = 'assets/data/tpo34_speaking_json.json'
+    // return readdata
+    return this.http.get(url)
         .map((response) => response.json());
   }
   
@@ -424,45 +444,34 @@ export class ConferenceData {
         .map((response) => response.json());
   }
 
-  // events : EventData[] = [
-    // {
-    //   id: 1,
-    //   start: "2017/06/01",
-    //   end: "2017/06/02",
-    //   text: "string"
-    // },{
-    //   id: 2,
-    //   start: "2017/06/03",
-    //   end: "2017/06/04",
-    //   text: "string"
-    // },{
-    //   id: 3,
-    //   start: "2017/06/06",
-    //   end: "2017/06/07",
-    //   text: "string"
-    // }
-  // ]
-  // getEvents(start: DayPilot.Date, end: DayPilot.Date) {
-  //   var x = this.events;
-  //   return x;
+  postuserRecoder(filename,blobfile){
+    // AV.init(this.APP_ID, this.APP_KEY);
+    console.log(blobfile)
+    //  var file = AV.File.withURL(filename, 'http://ww3.sinaimg.cn/bmiddle/596b0666gw1ed70eavm5tg20bq06m7wi.gif');
+    //  var file = AV.File.withURL(filename, url);
+    //  var bytes = [0xBE, 0xEF, 0xCA, 0xFE];
+     var file = new AV.File(filename, {blob: blobfile} );
+      file.save().then(function(file) {
+        // 文件保存成功
+        console.log(file.url());
+      }, function(error) {
+        // 异常处理
+        console.error(error);
+      });
 
-  // }
 
-  // createEvent(params: CreateEventParams){
-  //   return "ok";
-  // }
+    // var url ="https://api.leancloud.cn/1.1/files/"+filename
+    //   var myheaders = new Headers();
 
-  // deleteEvent(id: string) {
-  //    return "ok";
-  // }
+    //   myheaders.append("Content-Type" ,"multipart/form-data");
+    //   myheaders.append("X-LC-Id", "Eul6rG90rOjIO5imP853JOmn-gzGzoHsz");
+    //   myheaders.append("X-LC-Key" , "XdmDTh1MQGHCYrJjp1B5Jyh1");
+  
 
-  // moveEvent(params: MoveEventParams) {
-  //    return "ok";
-  // }
+    // return this.http.post(url, params, {headers:myheaders})
+    //                 .map((response) => response.json());
 
-  // fbGetData(){
-  //   firebase.database()
-  // }
+  }
 
 }
 export interface QueryResult {

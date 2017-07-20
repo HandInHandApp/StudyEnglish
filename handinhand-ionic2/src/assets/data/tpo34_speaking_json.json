@@ -1,0 +1,238 @@
+{
+      // "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
+      "steps":["p1","p2",
+              "p_question1",
+              "q1",
+              "p_question2",
+              "q2",
+              "p_question3","p_question3_1","p_question3_2",
+              "q3",
+              "p_question4","p_question4_1","p_question4_2",
+              "q4",
+              "p_question5","p_question5_2",
+              "q5",
+              "p_question6","p_question6_2",
+              "q6"],
+      "passage":{
+        "p1":{
+          "seq": 1,
+          "title":"", 
+          "img":"assets/img/listening1.png",
+          "mp3":"",
+          "contents": []
+        },
+        "p2":{
+          "seq": 2,
+          "title":"", 
+          "img":"",
+          "mp3":"assets/tpo34/speaking_direction.mp3",
+          "contents": [
+           "Speaking Section Direction \n........."
+          ]
+        },
+        "p_question1":{
+          "seq": 3,
+          "title":"Question 1 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question1_qd.mp3",
+          "contents": [ ]
+        },
+        "p_question2":{
+          "seq": 4,
+          "title":"Question 2 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question2_qd.mp3",
+          "contents": [ ]
+        },
+        "p_question3":{
+          "seq": 4,
+          "title":"Question 3 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question3_qd.mp3",
+          "contents": [ ]
+        },
+        "p_question3_1":{
+          "seq": 5,
+          "title":"Question 3 of 6", 
+          "img":"",
+          "mp3":"assets/tpo34/tpo34_speaking_question3_beforeread.mp3",
+          "contents": [ "Reading time: 00:45 second"],
+          "readingtime":45,
+          "origin1":["Read an article in the campus newspaper. You will have 45 seconds to read the article. Begin reading now. "],
+          "origin2":[
+            "Program to Provide Free Tutoring ",
+            "The university has announced that starting with the fall semester, free tutoring will be available to all new students for their entire first year. The academic dean, James Maxwell, commented, “The university is aware of the academic problems that many first-year students face when making the transition from high school to college.” The new tutoring program, he said, is designed to assist first-year students who want or need additional support with their academic course work. The program will also be organized so that individual students can arrange to work with tutors majoring in their own chosen field of study. "
+          ]
+        },
+        "p_question3_2":{
+          "seq": 6,
+          "title":"Question 3 of 6", 
+          "img":"assets/tpo34/tpo34_question3.jpg",
+          "mp3":"assets/tpo34/tpo34_speaking_question3_dialog.mp3",
+          "contents": [ ],
+          "origin1": [
+            "Now listen to two students discussing the article. ",
+            "(man) Hey, did you read about this plan? ",
+            "(woman) Yeah, and I think it’s really a great idea. ",
+            "(man) Why’s that? ",
+            "(woman) Well, a lot of new students really need this, I mean, it’s not just about getting extra help with the course material, they’ll probably also get information about things like taking notes or the best way to study for exams. ",
+            "(man) Yeah, I barely even knew how to do those things when I first came here.",
+            "(woman) Neither did I. So these are things most students wind up having to learn on their own at first. That’s why so many of them have a hard time. ",
+            "(man) And it’s probably good that they can work with somebody who has the same interests. ",
+            "(woman) Right, that will be a real advantage: to get information about the classes you’re gonna need to take from somebody who’s already taken those classes. And they could recommend professors and tell you who the best advisers in the department are, things like that. ",
+            "(man) I see what you mean, so new students could get access to information about the program from another student’s point of view. ",
+            "(woman) Exactly! "
+            
+   
+          ]
+        },
+        "p_question4":{
+          "seq": 7,
+          "title":"Question 4 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question4_qd.mp3",
+          "contents": [ ]
+
+        },
+        "p_question4_1":{
+          "seq": 8,
+          "title":"Question 4 of 6", 
+          "img":"",
+          "mp3":"assets/tpo34/tpo34_speaking_question4_beforeread.mp3",
+          "contents": [ "Reading time: 00:45 second"],
+          "readingtime":45,
+          "origin1":["Read a passage about the familiarity principle from a Psychology textbook. You will have 50 seconds to read the passage. Begin reading now.  "],
+          "origin2":[
+            "The Familiarity Principle ",
+            "People tend to develop a preference for this they have previously encountered, things they are familiar with. Social psychologists refer to this tendency as the familiarity principle. Given a choice between two similar items, one they have experienced before and another that is new, most people will choose the familiar item. This principle operates even when people are not conscious of their previous experience with an item. Once people have been exposed to an item – even if they do not recall having been exposed to it – they will tend to prefer that item over other items to which they have not been previously exposed. "
+          ]
+        },
+        "p_question4_2":{
+          "seq": 9,
+          "title":"Question 4 of 6", 
+          "img":"assets/tpo34/tpo34_question4.jpg",
+          "mp3":"assets/tpo34/tpo34_speaking_question4_dialog.mp3",
+          "contents": [ ],
+          "origin1": [
+            "Now listen to part of a lecture on this topic in a Psychology class. ",
+            "",
+            "(male professor) Some researchers did an experiment related to this. What they did was they assembled a group of subjects, a group of students, and they showed these students a series of geometrical shapes. These were very distinctive shapes, a little unusual, not the kind of shapes students often see. But they only showed the students the shapes for a very short period of time, about a second. They also lowered the light in the room to make it even more difficult for the students to see the shapes. So the shapes were there for a split second in dim light and then they were gone. ",
+            "",
+            "In the next step of the experiment, the researchers again showed the students some shapes, but this time they gave the students a longer time to look at them. And this time they showed the images in pairs, two at a time. In each pair, one shape was a shape the students had already seen for just a split second in dim light. And the other was some other shape that hadn’t been shown to them before. After presenting each pair, the researchers asked the students to say which of the two shapes they liked better. ",
+            "",
+            "Most of the time, the students preferred the shape they’d already seen earlier in the experiment. Now, if you asked them if they’d already seen that shape, they probably wouldn’t know for sure. But that didn’t matter. They still tended to prefer the shapes they’d already seen. ",
+            ""        
+          ]
+        },
+        "p_question5":{
+          "seq": 10,
+          "title":"Question 5 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question5_qd.mp3",
+          "contents": [ ]
+        },
+        "p_question5_2":{
+          "seq": 11,
+          "title":"Question 5 of 6", 
+          "img":"assets/tpo34/tpo34_question5.jpg",
+          "mp3":"assets/tpo34/tpo34_speaking_question5_dialog.mp3",
+          "contents": [ ],
+          "origin1": [
+            "Listen to a conversation between two students. ",
+            "",
+            "",
+            "(woman) Hey, Mike, how’s it going? ",
+            "(man) OK ",
+            "(woman) Something’s the matter? ",
+            "(man) Well, sort of, I’m taking this French class ",
+            "(woman) OK? ",
+            "(man) And one of the class requirements is a weekend trip to Canada to Montreal which is in the French-speaking part of Canada. It’s only like five hours from here. So the next weekend the whole class’s going on a bus. We’re supposed to practice French, you know, talk to people and we’re going to a play. ",
+            "(woman) Sounds like fun. ",
+            "(man) Yeah, I’d love to go. ",
+            "(woman) But? ",
+            "(man) Well, we’ll be crossing an international boarder so in order to go you need a passport. The professor told us a while ago to be sure to get a passport but I completely forgot to apply for one. ",
+            "(woman) What are you gonna do? ",
+            "(man) Well, I talked to my professor and she said I could fulfill the requirement a different way if I want. Instead of going on the trip, I could stay here and write a short paper about Montreal. ",
+            "(woman) In French? ",
+            "(man) Yeah, I’d have to do a little research and write about three pages. Talk about Montreal, its history or whatever, in French. It wouldn’t be too hard. ",
+            "(woman) But then you’d miss out on a great trip to Montreal. ",
+            "(man) I know. ",
+            "(woman) Well, you know there’s another option. You can probably still get a passport in time if you go directly to US Passport Office and pay extra. Then you could go. ",
+            "(man) Yeah, actually, I looked into that. I can still get a passport in time, but to get it at the last minute is expensive, like, 150 dollars. And I don’t know if I want to spend that much. ",
+            "(woman) That is a lot of money. ",
+            ""
+          ]
+        },
+        "p_question6":{
+          "seq": 9,
+          "title":"Question 6 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question6_qd.mp3",
+          "contents": [ ]
+        },        
+        "p_question6_2":{
+          "seq": 11,
+          "title":"Question 6 of 6", 
+          "img":"assets/tpo34/tpo34_question6.jpg",
+          "mp3":"assets/tpo34/tpo34_speaking_question6_dialog.mp3",
+          "contents": [ ],
+          "origin1": [
+            "Listen to part of a lecture in a Biology class. ",
+            "",
+            "(female professor) So, OK, we’ve been talking about frogs, and like all amphibians, frog has thin skin, which means they lose moisture through their skin easily. Now, typically, we think of frogs as living in wet environments. But for frogs who live in dry places, with desert-like conditions, this can be a problem. Frogs have been able to survive in such areas by having different physical features, special dry-climate features that help them maintain an adequate level of moisture in their cells and avoid drying out. ",
+            "",
+            "Some frogs do this by preventing water loss through their skin. By creating a sort of covering over their skin, they greatly reduce their skin’s exposure to the dry air. The covering acts like a barrier that locks in moisture. For example, some frogs secrete a substance through their skin, a fatty substance that they rub off over their skin using their hands and feet, which creates a waxy layer all around their bodies that’s almost completely water-tight. ",
+            "",
+            "Other frogs maintain an adequate level of moisture through a different physical feature, one that allows them to store water inside their bodies for later use. A specially modified internal organ inside their bodies enables them to have a high water-storage capacity. So the frogs are able to absorb and store moisture during wet rainy times which they can rely on to get through dry periods. The aptly named water-holding frog, for example, has a bladder that is highly elastic and stretchable. When it does rain, the frog absorbs water through its skin and its bladder stretches to hold this extra water. The water is then slowly released from the special bladder into the frog’s internal tissues until the next rain which might not be for several months. ",
+            ""
+
+          ]
+        }
+      },
+      "question":{
+        "q1":{
+          "seq": 1,
+          "title":"Question 1 of 6",
+          "mp3":"assets/tpo34/tpo34_speaking_question1.mp3",
+          "para":"Your university plans to open a café inside the campus library. Do you think this is a good idea? Explain why or why not.  ",
+          "answer":[]
+          },
+          "q2":{
+            "seq": 2,
+            "title":"Question 2 of 6",
+            "mp3":"assets/tpo34/tpo34_speaking_question2.mp3",
+            "para":"Do you agree or disagree with the following statement?  Private car should not be allowed in the city centers of large cities.  Use details and examples to explain your opinion. ",
+            "answer":[]
+          },
+          "q3":{
+            "seq": 3,
+             "title":"Question 3 of 6",
+            "mp3":"assets/tpo34/tpo34_listening_question1_3.mp3",
+            "para":"The woman expresses her opinion about the university’s plan. Briefly summarize the plan. Then state her opinion about the plan and explain the reasons she gives for holding that opinion. ",
+            "answer":[]
+  
+          },
+          "q4":{
+            "seq": 4,
+             "title":"Question 4 of 6",
+            "mp3":"assets/tpo34/tpo34_listening_question1_4.mp3",
+            "para":"Explain how the experiment described by the professor illustrates the familiarity principle. ",
+            "answer":[]
+          },
+          "q5":{
+            "seq": 5,
+             "title":"Question 5 of 6",
+            "mp3":"assets/tpo34/tpo34_listening_question1_5.mp3",
+            "para":"Briefly summarize the problem the speakers are discussing. Then state which of the two solutions from the conversation you would recommend. Explain the reasons for your recommendation. ",
+            "answer":[]
+          },
+          "q6":{
+            "seq": 6,
+             "title":"Question 6 of 6",
+            "mp3":"assets/tpo34/tpo34_listening_question1_6.mp3",
+            "para":"Using points and examples from the lecture, explain two dry-climate features of frogs.",
+            "answer":["B"]
+          }
+      }
+
+    }

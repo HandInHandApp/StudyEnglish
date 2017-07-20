@@ -203,7 +203,7 @@ export function prependArray(value: any, arr: any[]): any[] {
 //         100);
 //     console.log('saveBlob(): finished!');
 // }
-export function downloadBlob(blob: Blob, fileName: string): void {
+export function downloadBlob(blob: Blob, fileName: string): string {
     'use strict';
     const url: string = window.URL.createObjectURL(blob);
     // let anchorElement: HTMLAnchorElement = document.createElement('a');
@@ -231,4 +231,5 @@ export function downloadBlob(blob: Blob, fileName: string): void {
         },
         1000000);
     console.log('saveBlob(): finished! url:'+url);
+    return url
 }

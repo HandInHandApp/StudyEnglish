@@ -13,7 +13,7 @@
                      "pagetype":"Listening"
                 },{
                     "testNmae":"口语",
-                    "url": "assets/data/tpo34_listenting_json.json",
+                    "url": "assets/data/tpo34_speaking_json.json",
                      "pagetype":"Speaking"
                 },{
                     "testNmae":"写作",
