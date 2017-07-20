@@ -94,9 +94,9 @@ export class SpeakingTestPage {
         this.type = navParams.data.type;
         this.tpourl = navParams.data.url;
         this.headername = navParams.data.headername;
-          getSpeakingTestData(index){
 
-        confData.getListeningTestData(this.tpourl)
+        
+        confData.getSpeakingTestData(this.tpourl)
           .subscribe(resulte => 
                   {
                     this.passages =resulte;
