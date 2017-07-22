@@ -47,9 +47,9 @@ import { ReadingTestPage   } from '../pages/test/reading-test/reading-test'
 import { DirectionPage } from   '../pages/directions/directions'
 
 import { ExerciseIndexPage } from '../pages/exercise/index/index';
-// import { ExerciseTypePage } from '../pages/exercise-type/exercise-type';
-// import { ExerciseItemPage } from '../pages/exercise-item/exercise-item';
-// import { ExerciseAnswerPage } from '../pages/exercise-answer/exercise-answer';
+import { ExerciseTypePage } from '../pages/exercise/exercise-type/exercise-type';
+import { ExerciseItemPage } from '../pages/exercise/exercise-item/exercise-item';
+import { ExerciseAnswerPage } from '../pages/exercise/exercise-answer/exercise-answer';
 
 // import { AngularFireModule } from "angularfire2";
 import {EventDetailPage} from "../pages/map/create.component";
@@ -90,9 +90,9 @@ import { MasterClock } from '../providers/master-clock/master-clock';
     AboutPage,
     AccountPage,
     ExerciseIndexPage,
-    // ExerciseTypePage,
-    // ExerciseItemPage,
-    // ExerciseAnswerPage,
+    ExerciseTypePage,
+    ExerciseItemPage,
+    ExerciseAnswerPage,
     LoginPage,
     MapPage,
     PopoverPage,
@@ -162,9 +162,9 @@ import { MasterClock } from '../providers/master-clock/master-clock';
     AboutPage,
     AccountPage,
     ExerciseIndexPage,
-    // ExerciseTypePage,
-    // ExerciseItemPage,
-    // ExerciseAnswerPage,
+    ExerciseTypePage,
+    ExerciseItemPage,
+    ExerciseAnswerPage,
     LoginPage,
     MapPage,
     PopoverPage,

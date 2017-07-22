@@ -18,9 +18,9 @@ import { TestListPage } from '../pages/test/test-list/test-list';
 import { SupportPage } from '../pages/support/support';
 
 import { ExerciseIndexPage } from '../pages/exercise/index/index';
-// import { ExerciseTypePage } from '../pages/exercise-type/exercise-type';
-// import { ExerciseItemPage } from '../pages/exercise-item/exercise-item';
-// import { ExerciseAnswerPage } from '../pages/exercise-answer/exercise-answer';
+import { ExerciseTypePage } from '../pages/exercise/exercise-type/exercise-type';
+import { ExerciseItemPage } from '../pages/exercise/exercise-item/exercise-item';
+import { ExerciseAnswerPage } from '../pages/exercise/exercise-answer/exercise-answer';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';

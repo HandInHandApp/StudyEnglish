@@ -3,13 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>题型选择</ion-title>
+    <ion-title>{{category}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-card *ngFor="let categorytype of categorytypes">
-    <ion-card-header (click)="goToExerciseQuestionPage(categorytype)">>
+    <ion-card-header (click)="goToExerciseQuestionPage(categorytype)">
       {{categorytype.name}}
     </ion-card-header>
     <ion-card-content>

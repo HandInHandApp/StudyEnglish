@@ -20,7 +20,7 @@ import { ConferenceData } from '../../../providers/conference-data';
 })
 export class ExerciseTypePage {
 
-  categoryid: any = null;
+  category: any = null;
   categorytypes: any[] = [];
 
   constructor(
@@ -33,23 +33,23 @@ export class ExerciseTypePage {
 
   ionViewDidLoad() {
 
-    this.categoryid = this.navParams.data.categoryId;
+    this.category = this.navParams.data.category;
 
-    this.confData.getCategorytypes().subscribe((categorytypesData: any[]) => {
-      for (let ctype of categorytypesData) {
-        if (ctype.categoryid === this.categoryid) {
-          this.categorytypes.push(ctype);
-        }
-      }
-      console.log("categorytypes for "+this.categoryid+" are "+ this.categorytypes);
-    });
+    // this.confData.getCategorytypes().subscribe((categorytypesData: any[]) => {
+    //   for (let ctype of categorytypesData) {
+    //     if (ctype.categoryid === this.categoryid) {
+    //       this.categorytypes.push(ctype);
+    //     }
+    //   }
+    //   console.log("categorytypes for "+this.categoryid+" are "+ this.categorytypes);
+    // });
 
   }
 
 
   goToExerciseQuestionPage(catgorytype: any) {
     console.log(catgorytype);
-    this.navCtrl.push(ExerciseItemPage, { categorytype: catgorytype });
+    // this.navCtrl.push(ExerciseItemPage, { categorytype: catgorytype });
   }
 
 }
