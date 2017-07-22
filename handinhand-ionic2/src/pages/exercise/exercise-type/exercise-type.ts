@@ -11,7 +11,7 @@ import {
 // import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ExerciseItemPage } from '../exercise-item/exercise-item';
 
-import { ConferenceData } from '../../providers/conference-data';
+import { ConferenceData } from '../../../providers/conference-data';
 
 
 @Component({
