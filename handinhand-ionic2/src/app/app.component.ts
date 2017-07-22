@@ -161,7 +161,7 @@ export class ConferenceApp {
   }
 
   isActive(page: PageInterface) {
-    let childNav = this.nav.getActiveChildNav();
+/*     let childNav = this.nav.getActiveChildNav();
 
     // Tabs are a special case because they have their own navigation
     if (childNav) {
@@ -169,7 +169,7 @@ export class ConferenceApp {
         return 'primary';
       }
       return;
-    }
+    } */
 
     if (this.nav.getActive() && this.nav.getActive().name === page.name) {
       return 'primary';

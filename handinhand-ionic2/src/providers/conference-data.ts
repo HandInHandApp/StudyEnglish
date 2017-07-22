@@ -429,10 +429,12 @@ export class ConferenceData {
   getSpeakingTestData(url){
     console.log(url)
 
-    // let url = 'assets/data/tpo34_speaking_json.json'
+    //  url = 'assets/data/tpo34_speaking_json.json'
     // return readdata
     return this.http.get(url)
-        .map((response) => response.json());
+        .map((response) => 
+          response.json()
+        );
   }
   
 

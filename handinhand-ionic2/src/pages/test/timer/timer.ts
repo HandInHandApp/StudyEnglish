@@ -6,51 +6,12 @@
 
 // import { ConferenceData } from '../../../providers/conference-data';
 
-import { Component, Input, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, Directive,Input,Output, OnDestroy, AfterViewInit,EventEmitter } from '@angular/core';
 
-// @Component({
-//    selector: 'roy-countdown',
-//    templateUrl: `
-//    <div class="count-down">
-//   <div class="title">
-//     <h4>
-//       {{title}}
-//     </h4>
-//   </div>
-//   <div class="body">
-//     <div class="content">
-//       <div class="top">
-//         {{hour}}
-//       </div>
-//       <div class="bottom">
-//         小时
-//       </div>
-//     </div>
-//     <div class="content">
-//       <div class="top">
-//         {{minute}}
-//       </div>
-//       <div class="bottom">
-//         分钟
-//       </div>
-//     </div>
-//     <div class="content">
-//       <div class="top">
-//         {{second}}
-//       </div>
-//       <div class="bottom">
-//         秒
-//       </div>
-//     </div>
-//   </div>
-// </div>
-//    `
-
-// })
 
 
 @Component({
- selector: 'roy-countdown',
+ selector: 'timer-countdown',
  templateUrl: './countdown.component.html'
 //  styleUrls: ['./timer.scss']
 })
@@ -60,6 +21,10 @@ export class TimerPage implements AfterViewInit, OnDestroy {
  @Input() endDate: number;
  // 父组件传递标题
  @Input() title: string;
+
+  @Output() childEvent = new EventEmitter<any>();
+
+
  // 小时差
  private hour: number;
  // 分钟差
@@ -92,6 +57,11 @@ export class TimerPage implements AfterViewInit, OnDestroy {
    this.diff = this.endDate
    console.log(this.endDate)
    console.log(this.diff)
+//    this.everySecond.emit("event");
+   if(this.endDate == 0) {
+        this.childEvent.emit(this.title);
+        clearInterval(this.timer);
+   }
   }, 1000);
  }
 

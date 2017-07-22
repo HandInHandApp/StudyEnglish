@@ -188,7 +188,7 @@ import { MasterClock } from '../providers/master-clock/master-clock';
     SpeakingTestPage, 
     ReadingTestPage,
     DirectionPage,
-    TimerPage,
+    // TimerPage,
     RecordPage
   ],
   providers: [

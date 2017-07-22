@@ -36,6 +36,7 @@ const MAX_GAIN_SLIDER_VALUE: number = 1000;
   selector: 'page-speaking-page',
   providers: [WebAudioRecordWav,WebAudioSaveWav],
   templateUrl: 'speaking-test.html'
+//   directives: [TimerPage]
 })
 export class SpeakingTestPage {
   
@@ -61,6 +62,7 @@ export class SpeakingTestPage {
     myfiles:any;
 
   endDate =  601*1000 ;
+  counttime =  10*1000 ;
   toplist: any[] = []
   session: any;
   type: any;
@@ -76,7 +78,12 @@ export class SpeakingTestPage {
   last_stepindex: any;
   total_question: number = 0;
   total_passage: number = 0;
-
+myrecord=[{
+    "name":"test"
+}]
+startrecord=0;
+praparetimer=15*1000;
+recordtimer=45*1000;
 
   constructor(public navParams: NavParams, 
     public confData: ConferenceData, 
@@ -95,7 +102,7 @@ export class SpeakingTestPage {
         this.tpourl = navParams.data.url;
         this.headername = navParams.data.headername;
 
-        
+
         confData.getSpeakingTestData(this.tpourl)
           .subscribe(resulte => 
                   {
@@ -139,123 +146,9 @@ export class SpeakingTestPage {
 
   }
 
-// record() {
-//   this.file.createFile(this.file.tempDirectory, 'record.m4a', true).then(() => {
-//     // let mediaObject = this.media.create(this.file.tempDirectory.replace(/^file:\/\//, '') + 'record.m4a');
-//     let mediaObject = this.media.create("documents://beer.mp3");
-//     mediaObject.startRecord();
-//     window.setTimeout(() => {
-//       mediaObject.stopRecord();
-//       mediaObject.release();
-//       /** Do something with the record file and then delete */
-//       // this.file.removeFile(this.file.tempDirectory, 'record.m4a');
-//     }, 10000);
-//   });
-// }
-// recordAudio() {
-//     // var src = "myrecording.mp3";
-//     var file: MediaObject = this.media.create("documents://beer.mp3")
-//     // to listen to plugin events:
-
-// file.onStatusUpdate.subscribe(status => console.log(status)); // fires when file status changes
-
-// file.onSuccess.subscribe(() => console.log('Action is successful'));
-
-// file.onError.subscribe(error => console.log('Error!', error));
-
-// // play the file
-// file.play();
-
-// // pause the file
-// file.pause();
-// }
-
-// isStartRecording =false;
-// mediaObject : MediaObject;
-// isNewRecord=true;
-// isPlayingRecord=false;
-// fileName;
-//   statusCallback(){
-    
-//   }
-
-//   showAlert(message) {
-//   let alert = this.alertCtrl.create({
-//     title: 'Error',
-//     subTitle: message,
-//     buttons: ['OK']
-//   });
-//   alert.present();
-// }
-
-// startRecording() {
-//         try {
-//     // Here we only want to get formated date-time to attach to file name.
-//     let fileNameAux = "documents://beer.mp3" //this.getNewRecordingFileName();
-//     fileNameAux = this.file.dataDirectory + fileNameAux;
-//     // if (this.imrCommonsService.isIos()) {
-//     if (true) {
-//       // https://github.com/driftyco/ionic-native/issues/1452#issuecomment-299605906
-//       // fileNameAux = fileNameAux.replace(/^file:\/\//, '');
-//     }
-//     // console.log('UploadAudioPage.startRecording() -> fileName: ' + fileNameAux)
-//     // this.mediaObject = this.media.create(fileNameAux,onStatusUpdate, onSuccess, onError);
-//     this.mediaObject = this.media.create(fileNameAux);
-
-            
-//     this.mediaObject.onStatusUpdate.subscribe(status => console.log(status)); // fires when file status changes
-
-//     this.mediaObject.onSuccess.subscribe(() => console.log('Action is successful'));
-
-//     this.mediaObject.onError.subscribe(error => console.log('Error!', error));
-//     // this.mediaObject.statusCallback= this.statusCallback();
-
-//     this.isStartRecording = true;
-
-
-//     this.mediaObject.startRecord();
-
-//              if (!this.isNewRecord) {
-//       this.isNewRecord = true;
-//     }
-
-//     this.fileName = fileNameAux;
-
-//     // let media = new MediaPlugin('../Library/NoCloud/recording.wav');
-//     // media.startRecord();
-//   }
-//   catch (e) {
-//     this.showAlert('Could not start recording.');
-//   }
-
-   
-
-//   }
 
 
 
-//   stopRecording() {
-//     this.mediaObject.stopRecord();
-//     this.isStartRecording = false;
-//   }
-
-//   startPlayback() {
-//     this.mediaObject.play();
-//     this.isPlayingRecord = true;
-//   }
-
-//    stopPlayback() {
-//     this.mediaObject.stop();
-//     this.isPlayingRecord = false;
- 
-//     console.log('UploadAudioPage.stopPlayback() -> filename: ' + this.fileName);   
-//     this.file.resolveLocalFilesystemUrl(this.file.dataDirectory + this.fileName).then(res => {
-//       console.log(res.toURL());
-//     }).catch(error => {
-//       console.log(JSON.stringify(error));
-//     })
-//   }
-  // const file: MediaObject = this.media.create('path/to/file.mp3');
 
   private get_total_graph(steps: any[]){
     for(let step of steps){
@@ -277,6 +170,13 @@ export class SpeakingTestPage {
         //  (new Date( (new Date()).getTime()  +  600*1000 ))
       }
       console.log(this.step)
+      if(this.step.indexOf('p')!=-1){
+            console.log(this.passages.passage[this.step])
+      }else if(this.step.indexOf('q')!=-1){
+            console.log(this.passages.question[this.step])
+      }else{}
+       
+       
   }
   gotoBack(){
       if( this.stepindex != 0){
@@ -289,74 +189,33 @@ export class SpeakingTestPage {
       
   }
 
-  // 小时差
- private hour: number;
- // 分钟差
- private minute: number;
- private minutestr: any;
- // 秒数差
- private second: number;
- private secondstr: any;
- // 时间差
- private _diff: number;
- private get diff() {
-  return this._diff;
- }
- private set diff(val) {
-  this._diff = Math.floor(val / 1000);
-  this.hour = Math.floor(this._diff / 3600);
-  this.minute = Math.floor((this._diff % 3600) / 60);
-  this.second = (this._diff % 3600) % 60;
-    
-  this.minutestr = (this.minute<10)?  ("0"+this.minute.toString()): this.minute.toString() ;
-  this.secondstr = (this.second<10)?  ("0"+this.second.toString()): this.second.toString() ;
- }
- // 定时器
- private timer;
+  playAudio1() {
+        var audio = new Audio('assets/mp3/speakingprepaerafterbepe.mp3');
+        audio.play();
+        // audio.ended
+        audio.addEventListener('ended', function(){
+            // onclick = this.setstartrecord2();
+            console.log("speakingprepaerafterbepe ended ");
+      });
+    };
 
- // 每一秒更新时间差
- ngAfterViewInit() {
-  this.timer = setInterval(() => {
-   this.endDate = this.endDate - 1000;
-   this.diff = this.endDate
-   console.log(this.endDate)
-   console.log(this.diff)
-   if(this.diff  <= 0){
-     this.gotoNext()
-   }
-  }, 1000);
- }
+  playAudio2 () {
+        var audio = new Audio('assets/mp3/speakingafterbepe.mp3');
+        audio.play();
+    };
 
- // 销毁组件时清除定时器
- ngOnDestroy() {
-  if (this.timer) {
-   clearInterval(this.timer);
+  setstartrecord(){
+      this.startrecord=1
+      this.playAudio1();
   }
- }
+    setstartrecord2(){
+      this.startrecord=2
+      this.playAudio2();
+  }
 
-// AudioRecorder plus.audio.getRecorder();
-// x= document.addEventListener( "plusready", onPlusReady, false );
-// r = null; 
-// // 扩展API加载完毕，现在可以正常调用扩展API 
-// onPlusReady() { 
-// 	r = plus.audio.getRecorder(); 
-// }
-// startRecord() {
-// 	if ( r == null ) {
-// 		alert( "Device not ready!" );
-// 		return; 
-// 	} 
-// 	r.record( {filename:"_doc/audio/"}, function () {
-// 		alert( "Audio record success!" );
-// 	}, function ( e ) {
-// 		alert( "Audio record failed: " + e.message );
-// 	} );
-// }
-// stopRecord() {
-// 	r.stop(); 
-// }
-
-
+  timerEnd(timertitle) { 
+      console.log(timertitle + ' timer End'); 
+    }
 
 
     /**

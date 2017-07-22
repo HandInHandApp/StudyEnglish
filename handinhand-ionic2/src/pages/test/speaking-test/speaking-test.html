@@ -22,7 +22,7 @@
         首页
       </button>
       <button ion-button (click)="gotoNext()" type="submit" block>
-        暂停
+        暂停 
       </button>
     </ion-buttons>
     <div style="text-align:center;">
@@ -43,7 +43,7 @@
          HideTime
       </button> 
       <button ion-button  >
-           {{minutestr}} : {{secondstr}} 
+            <timer-countdown title="headertimer" [endDate]="counttime" (childEvent) = "timerEnd($event)"></timer-countdown>   
       </button> 
          
 </span>
@@ -59,135 +59,148 @@
 
 
 <ion-content #popoverContent padding class="popover-page  ">
-<!-- 
-    <vu-gauge height="2.5em" nbars="55" 
-        [value]="webAudioRecord.currentVolume" 
-        [max]="webAudioRecord.maxVolumeSinceReset">
-    </vu-gauge>
-    <p class="gain-item-label">
-        Gain: {{percentGain}}% ({{decibels}})
-        <button ion-button small text-uppercase (click)="onResetGain()">
-            Reset Gain
-        </button>
-        <ion-range color="light" [(ngModel)]="gainRangeSliderValue" (ionChange)="onGainChange($event.value)" debounce="50" (touchend)="onRangeTouchEnd()" [max]="maxGainSliderValue">
-        </ion-range>
-    </p>
-    <div class="recording-time">
-        {{webAudioRecord.currentTime}}
-    </div> -->
 
-    <div class="record-upload-buttons">
-        <button ion-button color="logo-red" [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
-            <ion-icon [name]="recordButtonIcon">
-            </ion-icon>
-        </button>
-        <button ion-button color="logo-orange" [disabled]="!recorderIsReady() || webAudioRecord.isInactive" (click)="onClickStopButton()">
-            <ion-icon name="square">
-            </ion-icon>
-        </button>
-               <div id="myurl">
-                show xxx
-            </div>
-</div>
-        <!-- <input type="file" id="photoFileUpload"  [(ngModel)]="myfiles"  />
-
-
-     
-    </div> -->
-
-
-  <!-- <record-page> </record-page> -->
-  <!-- <button ion-button (click)="startRecording()" type="submit" block>
-         startRecording
-      </button> 
-
-        <button ion-button (click)="stopRecording()" type="submit" block>
-         stopRecording
-      </button> 
-
-    <button ion-button (click)="startPlayback()" type="submit" block>
-         startPlayback
-      </button> 
-
-         <button ion-button (click)="stopPlayback()" type="submit" block>
-         stopPlayback
-      </button>  -->
-
-
-
-
-   <!--调用手机的录像功能和直接打开系统文件目录。苹果手机调出来的是拍照和录像安卓手机调出来的录音功能-->
-   <!-- <input type="file" accept="audio/*" capture="microphone">  -->
-    <!--nput:file标签还支持一个multiple属性，表示可以支持多选,capture就没啥用了，因为multiple是专门用来支持多选的。-->
-   <!-- <input type="file" accept="audio/*" multiple> -->
-   <!--上传文件-->
-   <!-- <input type="file" name=""> -->
-     
+      
 
                 <div *ngFor="let item of steps;  let i = index;"  >
                     <div *ngIf="step === item && step.indexOf('p')==-1">
-                          <audio autoplay controls='controls' id='Audio1' style="width: 400px;" *ngIf="passages.question[item].mp3!=''">
+                        
+                        <!-- <audio autoplay controls='controls' id='Audio1' style="width: 400px;" *ngIf="passages.question[item].mp3!=''">
                               <source src={{passages.question[item].mp3}} type='audio/mpeg' />
-                               <!--<source src='assets/tpo34/tpo34_listening_passage1_1.mp3' type='audio/mpeg' />-->
-                            </audio>
+                        </audio> -->
+                        <audio autoplay id='Audio1'  *ngIf="passages.question[item].mp3!=''">
+                              <source src={{passages.question[item].mp3}} type='audio/mpeg' />
+                        </audio>
 
-                        <ion-list radio-group>
-                            <ion-list-header>
-                                <div #popoverText class="text-to-change">
-                                    {{passages.question[item].seq}}. {{passages.question[item].para}}
-                                <!--1.  Paragraph 1 makes all of the following points about Islamic books EXCEPT:-->
+                        <ion-row>
+                            <ion-col col-2></ion-col>
+                            <ion-col col-8>
+                                <div  *ngIf="passages.question[step].para">
+                                <h6> <b>{{passages.question[step].para}}</b> </h6>
+                                <br />
+                                <div style="border-top: 4px solid #000000"></div>
+                                <br />
+                                <br />
+                                <br />
+                                <ion-row *ngIf="startrecord==0">
+                                    <p style="text-align:center">
+                                    <img src='assets/img/recorder.png' style="width: 80px;   position: absolute;  left: 46%; " alt=""
+                                    (click)="setstartrecord()" >
+                                    </p>
+                                </ion-row>
+                                <div class="record-upload-buttons"  *ngIf="startrecord==0">
+                                    <button ion-button color="logo-blue" round [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
+                                        <ion-icon [name]="recordButtonIcon">
+                                        </ion-icon>
+                                    </button>
+                                    <button ion-button color="logo-orange" round [disabled]="!recorderIsReady() || webAudioRecord.isInactive" (click)="onClickStopButton()">
+                                        <ion-icon name="square">
+                                        </ion-icon>
+                                    </button>
                                 </div>
-                            </ion-list-header>
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[0]}} </ion-label>
-                            <ion-radio value="A" ></ion-radio>
-                        </ion-item>
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[1]}}</ion-label>
-                            <ion-radio value="B"></ion-radio>
-                        </ion-item>
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[2]}} </ion-label>
-                            <ion-radio value="C"></ion-radio>
-                        </ion-item>
+                                 <br />
+                                <br />
+                                <div *ngIf="startrecord>0" >
+                                    <ion-row  >
+                                        <ion-col col-4></ion-col>
+                                        <ion-col col-4>
+                                        <div *ngIf="startrecord==1">
+                                            <button ion-button full style="text-align: center; background:#f4f4f4 "></button>
+                                            <button ion-button full style="text-align: center;  "></button>
+                                            <button ion-button full style="text-align: center; "></button>
 
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[3]}} </ion-label>
-                            <ion-radio value="D"></ion-radio>
-                        </ion-item>
-                        </ion-list>
+                                        </div>
+                                        <div *ngIf="startrecord==2">
+                                            <button ion-button full style="text-align: center; background:#f4f4f4 ">Prepare your response</button>
+                                            <button ion-button full style="text-align: center;  ">
+                                                    <timer-countdown title="prapare" [endDate]="praparetimer" (childEvent) = "timerEnd($event)"></timer-countdown>  
+                                            </button>
+                                            <button ion-button full style="text-align: center; "></button>
+
+                                        </div>
+                                        <div *ngIf="startrecord==3">
+                                            <button ion-button full style="text-align: center; background:#f4f4f4 ">Recording</button>
+                                            <button ion-button full style="text-align: center;  ">
+                                                    <timer-countdown title="recording" [endDate]="recordtimer" (childEvent) = "timerEnd($event)"></timer-countdown>  
+                                            </button>
+                                            <button ion-button full style="text-align: center; "></button>
+
+                                        </div>
+   
+
+                                        </ion-col>
+                                        <ion-col col-4></ion-col>
+                                    </ion-row>
+      
+                                </div>
+              
+
+                                <ion-list>
+                                <ion-list-header style="text-align: center; background:#f4f4f4 " color="logo-blue" >
+                                    我的录音
+                                </ion-list-header>
+                                <ion-item id="myurl"  *ngFor="let item of myrecord; let i = index">
+                                    <h2>  <ion-icon name = 'planet'></ion-icon> {{i}}.</h2>
+                                    <ion-row>
+                                        <ion-col col-9>
+                                            <p>
+                                                {{item.name}}
+                                            </p>
+                                            
+                                        </ion-col>
+                                        <ion-col col-3>
+                                            <button ion-button color="danger" small > 删除 </button>
+                                            <button ion-button color="favorite" small  > 免费批改 </button>
+
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                                
+                            </ion-list>
+
+                                <div id="myurl">
+                                    show xxx
+                                </div>
+
+                                </div>
+                            </ion-col>
+                            <ion-col col-2></ion-col>
+                        </ion-row>
                     </div>      
                 </div>
- 
+  
                 <div #popoverText class="text-to-change">
                     <div *ngIf="step.indexOf('p')!=-1">
 
                       <ion-row>
                         <ion-col col-3></ion-col>
                         <ion-col col-6>
+                            <!-- <div *ngIf="step.indexOf('p')==-1">
+                            <audio autoplay controls='controls' id='Audio1' style="width: 400px;" *ngIf="passages.question[step].mp3!=''">
+                              <source src={{passages.question[step].mp3}} type='audio/mpeg' />
+                            </audio>
+                             </div>   -->
+
                             <a href="#" class="thumbnail" *ngIf="passages.passage[step].img!=''">
                             <img src={{passages.passage[step].img}} alt="" >
                             </a>
                             <!--{{passages.passage[step].mp3}}-->
-                            <audio  autoplay controls='controls' id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
+                            <audio  autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
                               <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
                                <!--<source src='assets/tpo34/tpo34_listening_passage1_1.mp3' type='audio/mpeg' />-->
                             </audio>
 
                             <div  *ngIf="passages.passage[step].contents.length > 0">
-                              <!--{{passages.passage[step].contents}}-->
-                               <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
+                               <p *ngFor="let para of passages.passage[step].contents">{{passages.passage[step].contents}}</p>
                             </div>
 
                         </ion-col>
                         <ion-col col-3></ion-col>
                     </ion-row>
                     </div>
-                    <!--<div *ngIf="step.indexOf('q')!=-1">
-                        <p>{{passages.question[step].para}}</p>
-                    </div>-->
-                </div>      
 
+                </div>      
+      
 </ion-content>
 
 
