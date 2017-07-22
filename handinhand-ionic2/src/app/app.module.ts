@@ -46,10 +46,10 @@ import { SpeakingTestPage  } from '../pages/test/speaking-test/speaking-test'
 import { ReadingTestPage   } from '../pages/test/reading-test/reading-test'
 import { DirectionPage } from   '../pages/directions/directions'
 
-import { ExercisePage } from '../pages/exercise/exercise';
-import { ExerciseTypePage } from '../pages/exercise-type/exercise-type';
-import { ExerciseItemPage } from '../pages/exercise-item/exercise-item';
-import { ExerciseAnswerPage } from '../pages/exercise-answer/exercise-answer';
+import { ExerciseIndexPage } from '../pages/exercise/index/index';
+// import { ExerciseTypePage } from '../pages/exercise-type/exercise-type';
+// import { ExerciseItemPage } from '../pages/exercise-item/exercise-item';
+// import { ExerciseAnswerPage } from '../pages/exercise-answer/exercise-answer';
 
 // import { AngularFireModule } from "angularfire2";
 import {EventDetailPage} from "../pages/map/create.component";
@@ -89,10 +89,10 @@ import { MasterClock } from '../providers/master-clock/master-clock';
 
     AboutPage,
     AccountPage,
-    ExercisePage,
-    ExerciseTypePage,
-    ExerciseItemPage,
-    ExerciseAnswerPage,
+    ExerciseIndexPage,
+    // ExerciseTypePage,
+    // ExerciseItemPage,
+    // ExerciseAnswerPage,
     LoginPage,
     MapPage,
     PopoverPage,
@@ -161,10 +161,10 @@ import { MasterClock } from '../providers/master-clock/master-clock';
     ConferenceApp,
     AboutPage,
     AccountPage,
-    ExercisePage,
-    ExerciseTypePage,
-    ExerciseItemPage,
-    ExerciseAnswerPage,
+    ExerciseIndexPage,
+    // ExerciseTypePage,
+    // ExerciseItemPage,
+    // ExerciseAnswerPage,
     LoginPage,
     MapPage,
     PopoverPage,

@@ -14,7 +14,7 @@ import {
 // import { ExerciseTypePage } from '../exercise-type/exercise-type';
 import { ExerciseAnswerPage } from '../exercise-answer/exercise-answer';
 
-import { ConferenceData } from '../../providers/conference-data';
+import { ConferenceData } from '../../../providers/conference-data';
 
 
 @Component({

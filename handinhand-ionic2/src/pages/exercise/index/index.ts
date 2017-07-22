@@ -10,14 +10,14 @@ import {
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ExerciseTypePage } from '../exercise-type/exercise-type';
 
-import { ConferenceData } from '../../providers/conference-data';
+import { ConferenceData } from '../../../providers/conference-data';
 
 
 @Component({
   selector: 'page-exercise',
-  templateUrl: 'exercise.html'
+  templateUrl: 'index.html'
 })
-export class ExercisePage {
+export class ExerciseIndexPage {
 
   categories: any[] = [];
 
