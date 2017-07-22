@@ -30,9 +30,14 @@
             <label *ngIf="step.indexOf('q')!=-1">Question{{passages.questions[step].seq}} of {{total_question}}</label>
         </div>
         <ion-buttons right>
-            <button ion-button (click)="gotoBack()" type="submit" block>
-         HideTime
-      </button>
+            <span class="button-inner">
+                <button ion-button (click)="gotoBack()" type="submit" block>
+                   HideTime
+                </button> 
+                <button ion-button  >
+                     {{minutestr}} : {{secondstr}} 
+                </button> 
+            </span>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
