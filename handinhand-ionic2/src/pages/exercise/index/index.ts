@@ -10,8 +10,6 @@ import {
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ExerciseTypePage } from '../exercise-type/exercise-type';
 
-import { ConferenceData } from '../../../providers/conference-data';
-
 
 @Component({
   selector: 'page-exercise',
@@ -40,7 +38,6 @@ export class ExerciseIndexPage {
   constructor(
     public actionSheetCtrl: ActionSheetController,
     public navCtrl: NavController,
-    public confData: ConferenceData,
     public config: Config,
     public inAppBrowser: InAppBrowser
   ) {}

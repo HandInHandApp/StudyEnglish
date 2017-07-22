@@ -28,6 +28,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
 
+import { ExerciseData } from '../providers/exercise/exercise-data';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
@@ -194,6 +195,7 @@ import { MasterClock } from '../providers/master-clock/master-clock';
   providers: [
     StatusBar,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ExerciseData,
     ConferenceData,
     UserData,
     InAppBrowser,
