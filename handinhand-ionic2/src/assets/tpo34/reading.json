@@ -2,7 +2,7 @@
     "steps":[
         "p1","q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14",
         "p2","q15","q16","q17","q18","q19","q20","q21","q22","q23","q24","q25","q26","q27","q28",
-        "p3"],
+        "p3","q29","q30","q31","q32","q33","q34","q35","q36","q37","q38","q39","q40","q41","q42"],
     "passage":{
         "p1":{
             "seq": 1,
@@ -465,6 +465,221 @@
                 "Evidence accumulated during the twentieth century proved that ants provide significant benefits for plants with extrafloral nectaries.",
                 "Research has shown that American morning glory plants that are protected by ants produce significantly more seeds than morning glory plants that are not protected by ants. ",
                 "Ants generally ignore small insects, but they will eat the adults of large insect species as well as their eggs and larvae."
+            ],
+            "answer":["B"]
+        },
+        "q29":{
+            "seq": 29,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":1,
+            "replace_para":"<span class='normal-icon'>&diams;</span>By the eighteenth century, Britain was experiencing a severe shortage of energy. Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay. Wood was in ever-shorter supply, yet it remained tremendously important. It served as the primary source of heat for all homes and industries and as a basic raw material. Processed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back. ",
+            "title":"What can be inferred from paragraph 1 about Britain’s short supply of wood in the eighteenth century? ",
+            "choices":{
+                "A":"Wood from Britain’s great forests was being exported to other countries for profit. ",
+                "B":"A growing population had required cutting down forests to increase available land for farming.",
+                "C":"Larger families required the construction of larger homes made from wood.  ",
+                "D":"What was left of the great forests after the medieval period was being strictly protected. "
+            },
+            "answer":["A"]
+        },
+        "q30":{
+            "seq": 30,
+            "passage":"p3",
+            "type":"pair-choice",
+            "replace_para_index":1,
+            "replace_para":"<span class='normal-icon'>&diams;</span>By the eighteenth century, Britain was experiencing a severe shortage of energy. Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay. Wood was in ever-shorter supply, yet it remained tremendously important. It served as the primary source of heat for all homes and industries and as a basic raw material. Processed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back. ",
+            "title":"Select TWO answer choices that, according to paragraph 1, are true statements about Russia’s iron industry in the eighteenth century. ",
+            "choices":{
+                "A":"Russia reached its maximum production of iron at the same time as Britain.",
+                "B":"Russia exported much of its iron production to Britain.",
+                "C":"Russia’s appetite for iron increased rapidly after 1740. ",
+                "D":"Russia’s energy resources eventually became insufficient and limited the growth of its iron industry."
+            },
+            "answer":["A","B"]
+        },
+        "q31":{
+            "seq": 31,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":2,
+            "replace_para":"As this early energy crisis grew worse, Britain looked toward its <span class='choice-background'>abundant</span> and widely scattered reserves of coal as an alternative to its vanishing wood. Coal was first used in Britain in the late Middle Ages as a source of heat. By 1640 most homes in London were heated with it, and it also provided heat for making beer, glass, soap, and other products. Coal was not used, however, to produce mechanical energy or to power machinery. It was there that coal’s potential wad enormous. ",
+            "title":"The word “<span class='choice-background'>abundant</span>” in the passage is closest in meaning to ",
+            "choices":{
+                "A":"reliable",
+                "B":"plentiful ",
+                "C":"well-preserved",
+                "D":"existing"
+            },
+            "answer":["A"]
+        },
+        "q32":{
+            "seq": 32,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":2,
+            "replace_para":"As this early energy crisis grew worse, Britain looked toward its abundant and widely scattered reserves of coal as an alternative to its vanishing wood. Coal was first used in Britain in the late Middle Ages as a source of heat. By 1640 most homes in London were heated with it, and it also provided heat for making <span class='choice-background'>beer, glass, soap, and other products</span>. Coal was not used, however, to produce mechanical energy or to power machinery. It was there that coal’s potential wad enormous. ",
+            "title":"Why are “<span class='choice-background'>beer, glass, soap, and other products</span>” mentioned in the discussion of   Britain’s energy? ",
+            "choices":{
+                "A":"To help explain why the energy crisis was so severe ",
+                "B":"To show that despite the energy crisis and as early as 1640, London homes were advanced and well supplied",
+                "C":"To emphasize that after 1640, British homes required energy for more than heat ",
+                "D":"To indicate that coal had been used for the production of certain products before the eighteenth century"
+            },
+            "answer":["A"]
+        },
+        "q33":{
+            "seq": 33,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":3,
+            "replace_para":"<span class='normal-icon'>&diams;</span>As more coal was produced, mines were dug deeper and deeper and were constantly filling with water. Mechanical pumps, usually powered by hundreds of horses waling in circles at the surface, had to be installed. Such power was expensive and bothersome. In an attempt to overcome these disadvantages, Thomas Savery in 1698 and Thomas Newcomen in 1705 invented the first primitive steam engines. Both engines were extremely inefficient. Both burned coal to produce steam, which was then used to operate a pump. However, by the early 1770s, many of the Savery engines and hundreds of the Newcomen engines were operating successfully, though inefficiently, in English and Scottish mines.",
+            "title":"According to paragraph 3, all of the following are ways in which the Savery and Newcomen engines were similar EXCEPT: ",
+            "choices":{
+                "A":"Both became relatively inexpensive after the 1770s.",
+                "B":"Both produced steam by burning coal. ",
+                "C":"Both were used to operate pumps. ",
+                "D":"Both were very inefficient. "
+            },
+            "answer":["A"]
+        },
+        "q34":{
+            "seq": 34,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":4,
+            "replace_para":"In the early 1760s, a <span class='choice-background'>gifted</span> young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This splendid invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment.",
+            "title":"The word “<span class='choice-background'>gifted</span>” in the passage is closest in meaning to ",
+            "choices":{
+                "A":"independent ",
+                "B":"talented ",
+                "C":"famous ",
+                "D":"ambitious"
+            },
+            "answer":["A"]
+        },
+        "q35":{
+            "seq": 35,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":4,
+            "replace_para":"<span class='normal-icon'>&diams;</span>In the early 1760s, a gifted young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This splendid invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment. ",
+            "title":"According to paragraph 4, what was James Watt’s major achievement? ",
+            "choices":{
+                "A":"He was able to apply his understanding of physics to invent a variety of scientific instruments and tools for skilled crafts workers.",
+                "B":"He taught university physics courses to outstanding students whose observations led to many patented inventions.",
+                "C":"He improved the efficiency of Newcomen’s engine by preventing energy from being lost.",
+                "D":"He redesigned Newcomen’s engine so that it no longer needed a separate condenser."
+            },
+            "answer":["A"]
+        },
+        "q36":{
+            "seq": 36,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":4,
+            "replace_para":"In the early 1760s, a gifted young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This <span class='choice-background'>splendid</span> invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment.",
+            "title":"The word “<span class='choice-background'>splendid</span>” in the passage is closest in meaning to ",
+            "choices":{
+                "A":"original ",
+                "B":"necessary ",
+                "C":"magnificent ",
+                "D":"popular"
+            },
+            "answer":["A"]
+        },
+        "q37":{
+            "seq": 37,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":5,
+            "replace_para":"<span class='normal-icon'>&diams;</span> The steam engine was quickly put to use in several industries in Britain. It drained mines and made possible the production of ever more coal to feed steam engines elsewhere. The steam power plant began to replace waterpower in the cotton-spinning mills as well as other industries during the 1780s, contributing to a phenomenal rise in industrialization. The British iron industry was radically transformed. The use of powerful, steam-driven bellows in blast furnaces helped iron makers switch over rapidly from limited charcoal to unlimited coke (which is made from coal) in the smelting of pig iron (the process of refining impure iron) after 1770 in the 1780s, Henry Cort developed the puddling furnace, which allowed pig iron to be refined in turn with coke. Cort also developed heavy-duty, steam-powered rolling mills, which were capable of producing finished iron in every shape and form. ",
+            "title":"Which of the following is NOT mentioned in paragraph 5 as a development that greatly changed the production of iron? ",
+            "choices":{
+                "A":"The use of coke in the smelting of pig iron",
+                "B":"The invention of a furnace that used coke to refine iron",
+                "C":"The discovery of a method for increasing the production of charcoal ",
+                "D":"The invention of powerful machinery that could shape, form, and finish iron"
+            },
+            "answer":["A"]
+        },
+        "q38":{
+            "seq": 38,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":6,
+            "replace_para":"<span class='normal-icon'>&diams;</span> The economic consequence of these technical innovations in steam power was a great boom in the British iron industry. In 1740 annual British iron production was only 17,000 tons, but by 1844, with the spread of coke smelting and the impact of Cort’s inventions, it had increased to 3,000,000 tons. This was a truly amazing expansion. Once scarce and expensive, iron became cheap, basic, and indispensable to the economy.",
+            "title":"In paragraph 6, why does the author compare British iron production in 1740 with that of 1844?",
+            "choices":{
+                "A":"To contrast the amounts of iron needed in Britain in two different centuries",
+                "B":"To illustrate how easy it was to make money using Cort’s invention",
+                "C":"To demonstrate the tremendous growth of the iron industry in Britain",
+                "D":"To demonstrate how inexpensive coal had become"
+            },
+            "answer":["A"]
+        },
+        "q39":{
+            "seq": 39,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":6,
+            "replace_para":"The economic consequence of these technical innovations in steam power was a great boom in the British iron industry. In 1740 annual British iron production was only 17,000 tons, but by 1844, with the spread of coke smelting and the impact of Cort’s inventions, it had increased to 3,000,000 tons. This was a truly amazing expansion. Once scarce and expensive, iron became cheap, basic, and <span class='choice-background'>indispensable</span> to the economy.",
+            "title":"The word “<span class='choice-background'>indispensable</span>” in the passage is closest in meaning to",
+            "choices":{
+                "A":"advantageous ",
+                "B":"essential ",
+                "C":"less costly",
+                "D":"highly stimulating"
+            },
+            "answer":["A"]
+        },
+        "q40":{
+            "seq": 40,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":-1,
+            "replace_para":"",
+            "title":"According to the passage, which of the following is true about the development of steam power? ",
+            "choices":{
+                "A":"The steam engine’s basic technology can be traced back to medieval Britain when steam-powered machinery was being tried in farming activities.",
+                "B":"Although Russia and Britain developed steam-power technology simultaneously, Britain was first to try it in a large-scale industry due to a greater need for iron",
+                "C":"Steam-power technology was largely the result of improvements developed to increase the supply of coal as a primary source of energy.",
+                "D":"Adaptations to steam engines required for their use in cotton-spinning mills led to radical developments in machinery used in the iron industry."
+            },
+            "answer":["A"]
+        },
+        "q41":{
+            "seq": 41,
+            "passage":"p3",
+            "type":"click-choice",
+            "replace_para_index":1,
+            "replace_para":[
+                "By the eighteenth century, Britain was experiencing a severe shortage of energy. ",
+                "@#【】",
+                "Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay.",
+                "@#【】",
+                "Wood was in ever-shorter supply, yet it remained tremendously important.",
+                "@#【】",
+                "It served as the primary source of heat for all homes and industries and as a basic raw material.",
+                "@#【】",
+                "rocessed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back."
+            ],
+            "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage.",
+            "content":"Energy had not been a problem for Britain in the past because it relied on a rich   source of energy: its vast forests.",
+            "answer":["B"]
+        },
+        "q42":{
+            "seq": 42,
+            "passage":"p3",
+            "type":"drag-choice",
+            "title":"By the eighteenth century, Britain was experiencing a severe shortage of energy.",
+            "choices":[
+                "The development of blast furnaces for the manufacture of pig iron made the Britain less dependent on wood.",
+                "After the medieval period, both Russia and Britain began to look for alternative sources of energy, such as steam power, in order to maintain the growth of their iron industries. ",
+                "Two inventors designed the first steam engines in order to overcome the disadvantages of relying on horses to power the pumps used in mining coal. ",
+                "James Watt was able to improve upon the efficiency of the steam engine and make it useful to several industries.",
+                "The puddling furnace increased the availability of charcoal to a variety of industries from cotton to iron production. ",
+                "Steam power increased coal production, which in turn allowed extraordinary growth of the iron industry and the British economy."
             ],
             "answer":["B"]
         }

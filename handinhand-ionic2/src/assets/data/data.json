@@ -359,19 +359,6 @@
     "desc":"描述描述。。。"
   }],
 
-  "categorytypes": [{
-    "categoryid":4,
-    "typeid":1,
-    "name":"词汇题"
-  },{
-    "categoryid":4,
-    "typeid":2,
-    "name":"细节题"
-  },{
-    "categoryid":4,
-    "typeid":3,
-    "name":"判断题"
-  }],
 
   "exercises": [{
         "id": 1,

@@ -8,10 +8,9 @@ import {
 } from 'ionic-angular';
 
 
-// import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ExerciseItemPage } from '../exercise-item/exercise-item';
 
-import { ConferenceData } from '../../../providers/conference-data';
+import { ExerciseData } from '../../../providers/exercise/exercise-data';
 
 
 @Component({
@@ -20,36 +19,36 @@ import { ConferenceData } from '../../../providers/conference-data';
 })
 export class ExerciseTypePage {
 
-  categoryid: any = null;
-  categorytypes: any[] = [];
+  category: any = null;
+  types: any[] = [];
+  errTip: string = null;
 
   constructor(
     public actionSheetCtrl: ActionSheetController,
     public navCtrl: NavController,
     public navParams: NavParams,
-    public confData: ConferenceData
+    public exerData: ExerciseData
   ) {}
 
 
   ionViewDidLoad() {
+    this.category = this.navParams.data.category;
 
-    this.categoryid = this.navParams.data.categoryId;
-
-    this.confData.getCategorytypes().subscribe((categorytypesData: any[]) => {
-      for (let ctype of categorytypesData) {
-        if (ctype.categoryid === this.categoryid) {
-          this.categorytypes.push(ctype);
-        }
-      }
-      console.log("categorytypes for "+this.categoryid+" are "+ this.categorytypes);
-    });
+    if (this.category == 'practise') {
+      this.exerData.getPractice().subscribe(res => {
+        this.types = res;
+      });
+      console.log("type data loaded: " + this.types);
+    } else {
+      this.errTip = "No type configured for " + this.category;
+    }
 
   }
 
 
-  goToExerciseQuestionPage(catgorytype: any) {
-    console.log(catgorytype);
-    this.navCtrl.push(ExerciseItemPage, { categorytype: catgorytype });
+  goToExerciseQuestionPage(type: any) {
+    console.log("click object: %o", type);
+    this.navCtrl.push(ExerciseItemPage, { typeid: type.id });
   }
 
 }

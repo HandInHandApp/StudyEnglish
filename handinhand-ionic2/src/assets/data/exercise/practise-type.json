@@ -1,0 +1,23 @@
+[
+  {
+    "id":1,
+    "name":"ch",
+    "title":"词汇题"
+  },{
+    "id":2,
+    "name":"xj",
+    "title":"细节题"
+  },{
+    "id":3,
+    "name":"zd",
+    "title":"指代题"
+  },{
+    "id":4,
+    "name":"xf",
+    "title":"选非题"
+  },{
+    "id":5,
+    "name":"td",
+    "title":"推断题"
+  }
+]
