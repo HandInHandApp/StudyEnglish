@@ -22,6 +22,8 @@ import { ExerciseTypePage } from '../pages/exercise/exercise-type/exercise-type'
 import { ExerciseItemPage } from '../pages/exercise/exercise-item/exercise-item';
 import { ExerciseAnswerPage } from '../pages/exercise/exercise-answer/exercise-answer';
 
+
+import { ExerciseData } from '../providers/exercise/exercise-data';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
