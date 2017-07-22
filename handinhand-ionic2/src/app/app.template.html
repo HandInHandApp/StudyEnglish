@@ -1,7 +1,9 @@
-<ion-split-pane>
+<!-- <ion-split-pane> -->
 
   <!-- logged out menu -->
-  <ion-menu id="loggedOutMenu" style="max-width: 10%; min-width: 30px;" [content]="content">
+   <ion-menu id="loggedOutMenu"  [content]="content"> 
+
+    <!-- <ion-menu id="loggedOutMenu" [content]="content"> -->
 
     <ion-header>
       <ion-toolbar>
@@ -10,12 +12,13 @@
     </ion-header>
 
     <ion-content class="outer-content">
-  <!--<ion-list>
+
+  <!-- <ion-list>
       <ion-item menuClose detail-none>Close Menu</ion-item>
       <button ion-button menuClose>Close Menu</button>
        <button ion-button (click)="closeMenu()"> Close </button>
 
-    </ion-list>-->
+    </ion-list> -->
 
       <ion-list>
         <ion-list-header>
@@ -99,4 +102,4 @@
   <!--<ion-nav [root]="rootPage" #content swipeBackEnabled="false" main></ion-nav>-->
    <ion-nav [root]="rootPage" #content swipeBackEnabled="true" main></ion-nav>
 
-</ion-split-pane>
+<!-- </ion-split-pane> -->

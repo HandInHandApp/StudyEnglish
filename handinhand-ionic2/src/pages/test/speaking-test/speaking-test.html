@@ -59,7 +59,7 @@
 
 
 <ion-content #popoverContent padding class="popover-page  ">
-
+<!-- 
     <vu-gauge height="2.5em" nbars="55" 
         [value]="webAudioRecord.currentVolume" 
         [max]="webAudioRecord.maxVolumeSinceReset">
@@ -74,7 +74,8 @@
     </p>
     <div class="recording-time">
         {{webAudioRecord.currentTime}}
-    </div>
+    </div> -->
+
     <div class="record-upload-buttons">
         <button ion-button color="logo-red" [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
             <ion-icon [name]="recordButtonIcon">
@@ -84,13 +85,15 @@
             <ion-icon name="square">
             </ion-icon>
         </button>
-
-        <input type="file" id="photoFileUpload"  [(ngModel)]="myfiles"  />
-
-            <div id="myurl">
+               <div id="myurl">
                 show xxx
             </div>
-    </div>
+</div>
+        <!-- <input type="file" id="photoFileUpload"  [(ngModel)]="myfiles"  />
+
+
+     
+    </div> -->
 
 
   <!-- <record-page> </record-page> -->
