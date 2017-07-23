@@ -35,7 +35,7 @@
                    HideTime
                 </button> 
                 <button ion-button  >
-                     {{minutestr}} : {{secondstr}} 
+                    <timer-countdown title="headertimer" [endDate]="counttime" (childEvent) = "timerEnd($event)"></timer-countdown>   
                 </button> 
             </span>
         </ion-buttons>
