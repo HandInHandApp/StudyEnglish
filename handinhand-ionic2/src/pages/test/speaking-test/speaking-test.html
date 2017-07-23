@@ -85,7 +85,7 @@
                                 <ion-row *ngIf="startrecord==0">
                                     <p style="text-align:center">
                                     <img src='assets/img/recorder.png' style="width: 80px;   position: absolute;  left: 46%; " alt=""
-                                    (click)="setstartrecord()" >
+                                    (click)="playAudio1() " >
                                     </p>
                                 </ion-row>
                                 <div class="record-upload-buttons"  *ngIf="startrecord==0">
@@ -98,32 +98,71 @@
                                         </ion-icon>
                                     </button>
                                 </div>
-                                 <br />
+                                <br />
                                 <br />
                                 <div *ngIf="startrecord>0" >
                                     <ion-row  >
                                         <ion-col col-4></ion-col>
                                         <ion-col col-4>
                                         <div *ngIf="startrecord==1">
-                                            <button ion-button full style="text-align: center; background:#f4f4f4 "></button>
-                                            <button ion-button full style="text-align: center;  "></button>
-                                            <button ion-button full style="text-align: center; "></button>
-
+                                            <ion-list>
+                                                <div class = "bootstrap-iso">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr><th style="text-align: center; background:#f4f4f4;"> ----</th></tr>
+                                                        </thead>
+                                                            <tbody>
+                                                                <tr><td style="text-align: center;">----</td></tr>
+                                                                <tr><td style="text-align: center;">----</td></tr>
+                                                            </tbody>
+                                                        </table>
+                                                </div>
+                                            </ion-list>
                                         </div>
                                         <div *ngIf="startrecord==2">
-                                            <button ion-button full style="text-align: center; background:#f4f4f4 ">Prepare your response</button>
+                                            <ion-list>
+                                                <div class = "bootstrap-iso">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr><th style="text-align: center; background:#f4f4f4;"> Prepare your response</th></tr>
+                                                        </thead>
+                                                            <tbody>
+                                                                <tr><td style="text-align: center;">
+                                                                    <timer-countdown title="prapare" [endDate]="praparetimer" (childEvent) = "timerEnd($event)"></timer-countdown>      
+                                                                </td></tr>
+                                                                <tr><td style="text-align: center;">----</td></tr>
+                                                            </tbody>
+                                                        </table>
+                                                </div>
+                                            </ion-list>
+                                            <!-- <button ion-button full style="text-align: center; background:#f4f4f4 ">Prepare your response</button>
                                             <button ion-button full style="text-align: center;  ">
                                                     <timer-countdown title="prapare" [endDate]="praparetimer" (childEvent) = "timerEnd($event)"></timer-countdown>  
                                             </button>
-                                            <button ion-button full style="text-align: center; "></button>
+                                            <button ion-button full style="text-align: center; "></button> -->
 
                                         </div>
                                         <div *ngIf="startrecord==3">
-                                            <button ion-button full style="text-align: center; background:#f4f4f4 ">Recording</button>
+                                            <ion-list>
+                                                <div class = "bootstrap-iso">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr><th style="text-align: center; background:#f4f4f4;"> Recording</tr>
+                                                        </thead>
+                                                            <tbody>
+                                                                <tr><td style="text-align: center;">
+                                                                    <timer-countdown title="recording" [endDate]="recordtimer" (childEvent) = "timerEnd($event)"></timer-countdown>      
+                                                                </td></tr>
+                                                                <tr><td style="text-align: center;">----</td></tr>
+                                                            </tbody>
+                                                        </table>
+                                                </div>
+                                            </ion-list>
+                                            <!-- <button ion-button full style="text-align: center; background:#f4f4f4 ">Recording</button>
                                             <button ion-button full style="text-align: center;  ">
                                                     <timer-countdown title="recording" [endDate]="recordtimer" (childEvent) = "timerEnd($event)"></timer-countdown>  
                                             </button>
-                                            <button ion-button full style="text-align: center; "></button>
+                                            <button ion-button full style="text-align: center; "></button> -->
 
                                         </div>
    

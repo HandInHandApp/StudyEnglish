@@ -189,32 +189,42 @@ recordtimer=45*1000;
       
   }
 
+
+
   playAudio1() {
+        this.startrecord=1
         var audio = new Audio('assets/mp3/speakingprepaerafterbepe.mp3');
         audio.play();
-        // audio.ended
-        audio.addEventListener('ended', function(){
-            // onclick = this.setstartrecord2();
-            console.log("speakingprepaerafterbepe ended ");
-      });
+
+        audio.onended= () => { 
+            console.log("speakingprepaerafterbepe ended !! ");
+             this.startrecord=2
+        }
     };
 
-  playAudio2 () {
-        var audio = new Audio('assets/mp3/speakingafterbepe.mp3');
-        audio.play();
-    };
+  playAudio2 (){
+      console.log("speakingprepaerafterbepe ended ");
+      
+      var audio = new Audio('assets/mp3/speakingafterbepe.mp3');
 
-  setstartrecord(){
-      this.startrecord=1
-      this.playAudio1();
-  }
-    setstartrecord2(){
-      this.startrecord=2
-      this.playAudio2();
-  }
+      audio.onended= () => { 
+            console.log("speakingprepaerafterbepe ended, start record !! ");
+             this.startrecord=3
+             this.onClickStartPauseButton()
+        }
+      audio.play();
+  };
 
   timerEnd(timertitle) { 
       console.log(timertitle + ' timer End'); 
+      if(timertitle == "prapare"){
+          this.playAudio2();
+      }else if(timertitle == "recording" ){
+         this.startrecord=0;
+         this.onClickStopButton()
+      }else{
+        console.log("unkonw"+timertitle + ' timer End'); 
+      }
     }
 
 
@@ -276,6 +286,7 @@ recordtimer=45*1000;
      * @returns {void}
      */
     public onClickStartPauseButton(): void {
+        console.log("onClickStartPauseButton recording")
         // this.currentVolume += Math.abs(Math.random() * 10);
         if (this.webAudioRecord.isRecording) {
             // we're recording (when clicked, so pause recording)
@@ -301,6 +312,7 @@ recordtimer=45*1000;
      * @returns {void}
      */
     public onClickStopButton(): void {
+        console.log("onClickStopButton recording")
         this.recordButtonIcon = START_RESUME_ICON;
         this.webAudioRecord.stop().subscribe(
             (recordingInfo: RecordingInfo) => {
