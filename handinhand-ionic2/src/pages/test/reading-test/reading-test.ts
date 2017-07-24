@@ -10,6 +10,11 @@ import { ConferenceData } from '../../../providers/conference-data';
   templateUrl: 'reading-test.html'
 })
 export class ReadingTestPage {
+  useranswer: any={
+    "q1":"", "q2":"", "q3":"", "q4":"", "q5":"", "q6":"", "q7":"", "q8":"","q9":"","q10":"","q11":"","q12":"", "q13":"", "q14":"",
+    "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
+    "q29":"", "q30":"", "q31":"", "q32":"","q33":"","q34":"","q35":"","q36":"","q37":"","q38":"","q39":"","q40":"","q41":"","q42":""
+  };
   passages: any;
   first_step: any;
   last_step: any;
@@ -47,6 +52,35 @@ export class ReadingTestPage {
         this.total_question = this.total_question + 1
       }
     }
+  }
+
+  setPairAnswer(event: any, choice: string){
+    if(event.checked==true){
+      if(this.useranswer[this.step]==""){
+        this.useranswer[this.step]=[choice]
+      }else if(this.useranswer[this.step].length>1){
+        event.checked=false 
+      }else{
+        this.useranswer[this.step].push(choice)
+      }
+    }else{
+      if(this.contains(this.useranswer[this.step], choice)){
+        for(let i=0;i<this.useranswer[this.step].length;i++){
+          if(this.useranswer[this.step][i]==choice){
+            this.useranswer[this.step].splice(i,1)
+          }
+        }
+      }
+    }
+  };
+
+  contains(arr: string[], str: string){
+    for(let i = 0; i < arr.length; i++){
+      if(str == arr[i]){
+        return true;
+      }
+    }
+    return false;
   }
 
   gotoNext() {

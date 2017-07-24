@@ -58,7 +58,7 @@
             <div *ngIf="step === item && step.indexOf('p')==-1 && passages.questions[step].type == 'single-choice'">
                 <ion-row>
                     <ion-col col-12 col-md-6>
-                        <ion-list radio-group>
+                        <ion-list radio-group [(ngModel)]="useranswer[step]">
                             <ion-list-header>
                                 <div #popoverText class="text-to-change">
                                    <h4 [innerHTML]="passages.questions[item].title"></h4>
@@ -66,7 +66,7 @@
                             </ion-list-header>
                             <ion-item>
                                 <ion-label>{{passages.questions[item].choices.A}} </ion-label>
-                                <ion-radio value="A"></ion-radio>
+                                <ion-radio value="A" (click)=saveAnswer($event)></ion-radio>
                             </ion-item>
                             <ion-item>
                                 <ion-label>{{passages.questions[item].choices.B}}</ion-label>
@@ -99,7 +99,7 @@
             <div *ngIf="step === item && step.indexOf('p')==-1 && passages.questions[step].type == 'pair-choice'">
                 <ion-row>
                     <ion-col col-12 col-md-6>
-                        <ion-list radio-group>
+                        <ion-list  >
                             <ion-list-header>
                                 <div #popoverText class="text-to-change">
                                    <h4 [innerHTML]="passages.questions[item].title"></h4>
@@ -107,20 +107,19 @@
                             </ion-list-header>
                             <ion-item>
                                 <ion-label>{{passages.questions[item].choices.A}} </ion-label>
-                                <ion-checkbox value="A"></ion-checkbox>
+                                <ion-checkbox value="A" (ionChange)="setPairAnswer($event, 'A')"></ion-checkbox>
                             </ion-item>
                             <ion-item>
                                 <ion-label>{{passages.questions[item].choices.B}}</ion-label>
-                                <ion-checkbox value="B"></ion-checkbox>
+                                <ion-checkbox value="B" (ionChange)="setPairAnswer($event, 'B')"></ion-checkbox>
                             </ion-item>
                             <ion-item>
                                 <ion-label>{{passages.questions[item].choices.C}} </ion-label>
-                                <ion-checkbox value="C"></ion-checkbox>
+                                <ion-checkbox value="C" (ionChange)="setPairAnswer($event, 'C')"></ion-checkbox>
                             </ion-item>
-
                             <ion-item>
                                 <ion-label>{{passages.questions[item].choices.D}} </ion-label>
-                                <ion-checkbox value="D"></ion-checkbox>
+                                <ion-checkbox value="D" (ionChange)="setPairAnswer($event, 'D')"></ion-checkbox>
                             </ion-item>
                         </ion-list>
                     </ion-col>
