@@ -11,15 +11,15 @@
         </ion-title>
 
         <ion-buttons end *ngIf="nSelectedNodes()">
-            <button ion-button small (click)="onClickTotalSelected()">
-                <ion-badge item-right>
+            <button ion-button small  style="color: #000;" (click)="onClickTotalSelected()">
+                <ion-badge item-right style="color: #000;"  >
                     {{nSelectedNodes()}} selected
                 </ion-badge>
             </button>
         </ion-buttons>
     </ion-navbar>
     <ion-toolbar no-border-top>
-        <p *ngIf="folderNode" text-center>
+        <p *ngIf="folderNode" text-center style="color: #000;" >
             {{getPath()}}
         </p>
         <button-bar [buttons]="headerButtons">
@@ -54,7 +54,7 @@
 
 <ion-footer [hidden]="nSelectedNodes() === 0">
     <ion-toolbar>
-        <button-bar [buttons]="footerButtons">
+        <button-bar style="color: #000;" [buttons]="footerButtons">
         </button-bar>
     </ion-toolbar>
 </ion-footer>

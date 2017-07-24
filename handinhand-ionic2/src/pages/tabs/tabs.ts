@@ -8,6 +8,7 @@ import { TrainingPage } from '../schedule/schedule';
 import { TestListPage } from '../test/test-list/test-list';
 import { ExerciseIndexPage } from '../exercise/index/index';
 
+import { LibraryPage } from '../library-page/library-page';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -19,6 +20,7 @@ export class TabsPage {
   tab3Root: any = MapPage;
   tab4Root: any = ExerciseIndexPage;
   tab5Root: any = AboutPage;
+  tab6Root: any = LibraryPage;
   mySelectedIndex: number;
 
   constructor(navParams: NavParams) {

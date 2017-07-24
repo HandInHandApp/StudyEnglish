@@ -27,6 +27,10 @@ import { ExerciseData } from '../providers/exercise/exercise-data';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
+
+import { LibraryPage } from '../pages/library-page/library-page';
+
+
 export interface PageInterface {
   title: string;
   name: string;
@@ -52,9 +56,11 @@ export class ConferenceApp {
   appPages: PageInterface[] = [
     { title: '测试', name: 'TabsPage', component: TabsPage, tabComponent: TestListPage, index: 0, icon: 'flask' },
     { title: '训练', name: 'TabsPage', component: TabsPage, tabComponent: TrainingPage, index: 1, icon: 'bicycle' },
-    { title: '计划', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'calendar' },
+    { title: '计划', name: 'TabsPage', component: TabsPage, tabComponent: MapPage,      index: 2, icon: 'calendar' },
     { title: '习题', name: 'TabsPage', component: TabsPage, tabComponent: ExerciseIndexPage, index: 3, icon: 'paper' },
-    { title: '我', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 4, icon: 'person-add' }
+    { title: '我'  , name: 'TabsPage', component: TabsPage, tabComponent: AboutPage,    index: 4, icon: 'person-add' },
+    { title: '录音', name: 'TabsPage', component: TabsPage, tabComponent: LibraryPage,  index: 5, icon: 'person-add' }
+   
   ];
   loggedInPages: PageInterface[] = [
     { title: '账号', name: 'AccountPage', component: AccountPage, icon: 'person' },
@@ -77,7 +83,7 @@ export class ConferenceApp {
     public storage: Storage,
     public splashScreen: SplashScreen
   ) {
-    this.menu.swipeEnable(true); 
+    //this.menu.swipeEnable(true); 
     // Check if the user has already seen the tutorial
     this.storage.get('hasSeenTutorial')
       .then((hasSeenTutorial) => {
@@ -117,8 +123,8 @@ export class ConferenceApp {
     // If we are already on tabs just change the selected tab
     // don't setRoot again, this maintains the history stack of the
     // tabs even if changing them from the menu
-    if (this.nav.getActiveChildNav() && page.index != undefined) {
-      this.nav.getActiveChildNav().select(page.index);
+    if (this.nav.getActiveChildNavs().length && page.index != undefined) {
+      this.nav.getActiveChildNavs()[0].select(page.index);
     // Set the root of the nav with params if it's a tab index
   } else {
       this.nav.setRoot(page.name, params).catch((err: any) => {
@@ -163,15 +169,15 @@ export class ConferenceApp {
   }
 
   isActive(page: PageInterface) {
-/*     let childNav = this.nav.getActiveChildNav();
 
+    let childNav = this.nav.getActiveChildNavs()[0];
     // Tabs are a special case because they have their own navigation
     if (childNav) {
       if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
         return 'primary';
       }
       return;
-    } */
+    }
 
     if (this.nav.getActive() && this.nav.getActive().name === page.name) {
       return 'primary';

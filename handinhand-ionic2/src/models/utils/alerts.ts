@@ -46,7 +46,9 @@ export function alertAndDo(
             text: button2Text,
             handler: action2
         });
-        alert.addButton('Cancel');
+        if (!action2) {
+            alert.addButton('Cancel');
+        };
     }
 
     alert.present();

@@ -66,6 +66,9 @@ import { ButtonBar } from '../components/button-bar/button-bar';
 import { ProgressSlider } from '../components/progress-slider/progress-slider';
 import { VuGauge } from '../components/vu-gauge/vu-gauge';
 
+import {  RecordListPage} from '../pages/recordlist-page/recordlist-page';
+import { TrackPage } from '../pages/track-page/track-page';
+import { LibraryPage } from '../pages/library-page/library-page';
 import { RecordPage } from '../pages/record-page/record-page';
 import { IdbAppData } from '../providers/idb-app-data/idb-app-data';
 import { IdbAppFS } from '../providers/idb-app-fs/idb-app-fs';
@@ -122,7 +125,10 @@ import { MasterClock } from '../providers/master-clock/master-clock';
             AudioPlay,
         ButtonBar,
         ProgressSlider,
-        VuGauge
+        VuGauge,
+        LibraryPage,
+        TrackPage,
+        RecordListPage
     // AngularFireModule
 
 
@@ -190,7 +196,10 @@ import { MasterClock } from '../providers/master-clock/master-clock';
     ReadingTestPage,
     DirectionPage,
     // TimerPage,
-    RecordPage
+    RecordPage,
+    LibraryPage,
+    TrackPage,
+    RecordListPage
   ],
   providers: [
     StatusBar,

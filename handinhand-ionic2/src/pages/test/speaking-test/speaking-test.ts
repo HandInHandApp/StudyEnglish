@@ -26,6 +26,8 @@ import { RecordingInfo } from '../../../providers/web-audio/common';
 import { IdbAppFS, UNFILED_FOLDER_KEY } from '../../../providers/idb-app-fs/idb-app-fs';
 import { WebAudioSaveWav } from '../../../providers/web-audio/save-wav';
 
+import { RecordListPage } from '../recordlist-page/recordlist-page';
+
 const START_RESUME_ICON: string = 'mic';
 const PAUSE_ICON: string = 'pause';
 const MAX_GAIN_SLIDER_VALUE: number = 1000;
@@ -220,7 +222,7 @@ recordtimer=45*1000;
       if(timertitle == "prapare"){
           this.playAudio2();
       }else if(timertitle == "recording" ){
-         this.startrecord=0;
+         this.startrecord=0 ;
          this.onClickStopButton()
       }else{
         console.log("unkonw"+timertitle + ' timer End'); 
