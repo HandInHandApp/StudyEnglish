@@ -57,30 +57,27 @@ export class ReadingTestPage {
   setPairAnswer(event: any, choice: string){
     if(event.checked==true){
       if(this.useranswer[this.step]==""){
-        this.useranswer[this.step]=[choice]
-      }else if(this.useranswer[this.step].length>1){
-        event.checked=false 
+        let pair_choice = {"A":false,"B":false,"C":false,"D":false}
+        this.useranswer[this.step]=pair_choice
+        this.useranswer[this.step][choice]=true
+      }else if(this.getChoiceCount(this.useranswer[this.step])>1){
+        event.checked=false
       }else{
-        this.useranswer[this.step].push(choice)
+        this.useranswer[this.step][choice]=true
       }
     }else{
-      if(this.contains(this.useranswer[this.step], choice)){
-        for(let i=0;i<this.useranswer[this.step].length;i++){
-          if(this.useranswer[this.step][i]==choice){
-            this.useranswer[this.step].splice(i,1)
-          }
-        }
-      }
+      this.useranswer[this.step][choice]=false
     }
   };
 
-  contains(arr: string[], str: string){
-    for(let i = 0; i < arr.length; i++){
-      if(str == arr[i]){
-        return true;
+  getChoiceCount(choices:any){
+    let count = 0;
+    for(let choice in choices){
+      if(choices[choice] == true){
+        count = count + 1; 
       }
     }
-    return false;
+    return count;
   }
 
   gotoNext() {
