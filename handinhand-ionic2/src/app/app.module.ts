@@ -75,6 +75,8 @@ import { IdbAppFS } from '../providers/idb-app-fs/idb-app-fs';
 import { AppState } from '../providers/app-state/app-state';
 import { MasterClock } from '../providers/master-clock/master-clock';
 
+import { ContainsPipe, NotContainsPipe } from '../pages/test/reading-test/reading-test.pipe';
+
 // import { ExaminationinfoPage } from '../pages/examinationinfo/examinationinfo';
 @NgModule({
   declarations: [
@@ -128,8 +130,11 @@ import { MasterClock } from '../providers/master-clock/master-clock';
         VuGauge,
         LibraryPage,
         TrackPage,
-        RecordListPage
+        RecordListPage,
     // AngularFireModule
+    // Pipe
+    ContainsPipe,
+    NotContainsPipe
 
 
   ],

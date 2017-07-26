@@ -87,7 +87,7 @@ export class ReadingTestPage {
     }
     if (this.step.indexOf("q") != -1) {
       let passageStep = this.passages.questions[this.step].passage
-      this.currentPassage = this.passages.passage[passageStep]
+      this.currentPassage= this.passages.passage[passageStep]
     } else {
       this.currentPassage = this.passages[this.step]
     }
