@@ -20,7 +20,7 @@ import { AppState } from '../../providers/app-state/app-state';
 import { TrackPage } from '../track-page/track-page';
 import { ButtonbarButton } from '../../components/button-bar/button-bar';
 
-import { Directive,Input,Output, OnDestroy, AfterViewInit,EventEmitter } from '@angular/core';
+import { Directive,Input,Output, OnDestroy, AfterViewInit,EventEmitter, OnChanges, SimpleChange  } from '@angular/core';
 
 export function getFolderPath(folderNode: TreeNode): string {
     'use strict';
@@ -40,14 +40,12 @@ export function getFolderPath(folderNode: TreeNode): string {
 })
 export class RecordListPage implements AfterViewInit, OnDestroy {
      // 父组件传递截止日期
- @Input() endDate: number;
+ @Input() refresh: number;
  // 父组件传递标题
  @Input() title: string;
 
-
- // 每一秒更新时间差
- ngAfterViewInit() {
- this.appState.getProperty('selectedNodes').then(
+ refreshcall(){
+    this.appState.getProperty('selectedNodes').then(
             (selectedNodes: any) => {
                 this.selectedNodes = selectedNodes;
                 this.appState.getProperty('lastViewedFolderKey')
@@ -64,10 +62,19 @@ export class RecordListPage implements AfterViewInit, OnDestroy {
         );
  }
 
+ ngAfterViewInit() {
+   this.refreshcall()
+ }
+
  // 销毁组件时清除定时器
  ngOnDestroy() {
 
  }
+
+     ngOnChanges(changes: {[propName: string]: SimpleChange}) {
+        console.dir(changes['refresh']);  
+        this.refreshcall()  
+    }
 
 
     @ViewChild(Content) public content: Content;

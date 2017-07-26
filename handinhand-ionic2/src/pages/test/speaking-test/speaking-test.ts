@@ -86,6 +86,7 @@ myrecord=[{
 startrecord=0;
 praparetimer=15*1000;
 recordtimer=45*1000;
+refreshtimer=0;
 
   constructor(public navParams: NavParams, 
     public confData: ConferenceData, 
@@ -319,7 +320,7 @@ recordtimer=45*1000;
         this.webAudioRecord.stop().subscribe(
             (recordingInfo: RecordingInfo) => {
                 const fileName: string =
-                    formatLocalTime(recordingInfo.dateCreated);
+                    this.headername +"_" + this.step+ "_" + formatLocalTime(recordingInfo.dateCreated);
                 this.idbAppFS.createNode(
                     fileName,
                     UNFILED_FOLDER_KEY,
@@ -328,6 +329,7 @@ recordtimer=45*1000;
                     ()=>{
                         var url =this.webAudioSaveWav.save(recordingInfo, fileName + '.wav');
                         
+                        this.refreshtimer= this.refreshtimer+1;
                         // var url =this.webAudioSaveWav.savepost(recordingInfo, fileName + '.wav').subscribe(
                         //     (audioBuffer1: AudioBuffer) => {
                         //         console.log("createNode success:"+fileName +" url:"+ url)
@@ -351,6 +353,7 @@ recordtimer=45*1000;
         // if we don't do this.content.resize() here then
         // the volume gauge does not show
         this.content.resize();
+        this.refreshtimer=0
     }
 
     public ionViewDidLeave(): void {

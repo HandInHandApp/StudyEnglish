@@ -84,13 +84,13 @@
                                 <br />
                                 <br />
                                 <br />
-                                <ion-row *ngIf="startrecord==0">
+                                <ion-row *ngIf="startrecord==0" style="height: 100px;">
                                     <p style="text-align:center">
                                     <img src='assets/img/recorder.png' style="width: 80px;   position: absolute;  left: 46%; " alt=""
                                     (click)="playAudio1() " >
                                     </p>
                                 </ion-row>
-                                <div class="record-upload-buttons"  *ngIf="startrecord==0">
+                                <!-- <div class="record-upload-buttons"  *ngIf="startrecord==0">
                                     <button ion-button color="logo-blue" round [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
                                         <ion-icon [name]="recordButtonIcon">
                                         </ion-icon>
@@ -99,7 +99,7 @@
                                         <ion-icon name="square">
                                         </ion-icon>
                                     </button>
-                                </div>
+                                </div> -->
                                 <br />
                                 <br />
                                 <div *ngIf="startrecord>0" >
@@ -175,35 +175,13 @@
       
                                 </div>
               
-                                <recordlist-page> </recordlist-page> 
+                                <recordlist-page [refresh]="refreshtimer"> </recordlist-page> 
 
-                                <!-- <ion-list>
-                                <ion-list-header style="text-align: center; background:#f4f4f4 " color="logo-blue" >
-                                    我的录音
-                                </ion-list-header>
-                                 
-                                <ion-item id="myurl"  *ngFor="let item of myrecord; let i = index">
-                                    <h2>  <ion-icon name = 'planet'></ion-icon> {{i}}.</h2>
-                                    <ion-row>
-                                        <ion-col col-9>
-                                            <p>
-                                                {{item.name}}
-                                            </p>
-                                            
-                                        </ion-col>
-                                        <ion-col col-3>
-                                            <button ion-button color="danger" small > 删除 </button>
-                                            <button ion-button color="favorite" small  > 免费批改 </button>
+            
 
-                                        </ion-col>
-                                    </ion-row>
-                                </ion-item>
-                                
-                            </ion-list> -->
-
-                                <div id="myurl">
+                                <!-- <div id="myurl">
                                     show xxx
-                                </div>
+                                </div> -->
 
                                 </div>
                             </ion-col>
