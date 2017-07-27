@@ -4,9 +4,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ContainsPipe implements PipeTransform {
   transform(index: number, paraIndexes: number[]) {
     for (let i in paraIndexes) {
-        if (paraIndexes[i] == index){}
+        if(paraIndexes[i] == index){
             return true;
         }
+    }
     return false;
   }
 }

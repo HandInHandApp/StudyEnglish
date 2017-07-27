@@ -86,10 +86,10 @@
                     <ion-col col-12 col-md-6>
                         <h2 [innerHTML]="currentPassage.title"></h2>
                         <div *ngFor="let para of currentPassage.contents;  let idx=index">
-                            <span *ngIf="(idx+1) | contains: passages.questions[step].replace_para_index  && passages.questions[step].type =='single-choice'">
-                                <p [innerHTML]="passages.questions[step].replace_para[idx]"></p>
+                            <span *ngIf="((idx+1) | contains:passages.questions[step].replace_para_index)  && passages.questions[step].type =='single-choice'">
+                                <p [innerHTML]="passages.questions[step].replace_para[idx+1]"></p>
                             </span>
-                            <span *ngIf="((idx+1) | notcontains: passages.questions[step].replace_para_index) && passages.questions[step].type =='single-choice'">
+                            <span *ngIf="((idx+1) | notcontains:passages.questions[step].replace_para_index) && passages.questions[step].type =='single-choice'">
                                <p [innerHTML]="para"></p>
                             </span>
                         </div>
@@ -127,10 +127,10 @@
                     <ion-col col-12 col-md-6>
                         <h2 [innerHTML]="currentPassage.title"></h2>
                         <div *ngFor="let para of currentPassage.contents;  let idx=index">
-                            <span *ngIf="(idx+1) | contains: passages.questions[step].replace_para_index  && passages.questions[step].type =='pair-choice'">
-                                <p [innerHTML]="passages.questions[step].replace_para[idx]"></p>
+                            <span *ngIf="((idx+1) | contains:passages.questions[step].replace_para_index)  && passages.questions[step].type =='pair-choice'">
+                                <p [innerHTML]="passages.questions[step].replace_para[idx+1]"></p>
                             </span>
-                            <span *ngIf="((idx+1) | notcontains: passages.questions[step].replace_para_index) && passages.questions[step].type =='pair-choice'">
+                            <span *ngIf="((idx+1) | notcontains:passages.questions[step].replace_para_index) && passages.questions[step].type =='pair-choice'">
                                <p [innerHTML]="para"></p>
                             </span>
                         </div>

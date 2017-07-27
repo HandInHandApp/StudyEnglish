@@ -1,9 +1,9 @@
 {
     "steps":[
         "p1",
-        "q1","q2","q3","q4","q5","q6","q7","q8",
-        "p2",
-        "p3"
+        "q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14",
+        "p2","q15","q16","q17","q18","q19","q20","q21","q22","q23","q24","q25","q26","q27","q28",
+        "p3","q29","q30","q31","q32","q33","q34","q35","q36","q37","q38","q39","q40","q41","q42"
     ],
     "passage":{
         "p1":{
@@ -182,8 +182,10 @@
             "seq": 9,
             "passage":"p1",
             "type":"single-choice",
-            "replace_para_index":3,
-            "replace_para":"The introduction of paper spurred a conceptual revolution whose consequences have barely been explored. Although paper was never as cheap as it has become today, it was far less expensive than parchment, and therefore more people could afford to buy books, Paper is thinner than parchment, so more pages could be enclosed within a single volume. <span class='choice-background'> At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available.</span> These large sheets meant that calligraphers and artists had more space on which to work.  Paintings became more complicated, giving the artist greater opportunities to depict space or emotion. The increased availability of paper, particularly after 1250, encouraged people to develop systems of representation, such as architectural plans and drawings. This in turn allowed the easy transfer of artistic ideas and motifs over great distances from one medium to another, and in a different scale in ways that had been difficult, if not impossible, in the previous period. ",
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"The introduction of paper spurred a conceptual revolution whose consequences have barely been explored. Although paper was never as cheap as it has become today, it was far less expensive than parchment, and therefore more people could afford to buy books, Paper is thinner than parchment, so more pages could be enclosed within a single volume. <span class='choice-background'> At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available.</span> These large sheets meant that calligraphers and artists had more space on which to work.  Paintings became more complicated, giving the artist greater opportunities to depict space or emotion. The increased availability of paper, particularly after 1250, encouraged people to develop systems of representation, such as architectural plans and drawings. This in turn allowed the easy transfer of artistic ideas and motifs over great distances from one medium to another, and in a different scale in ways that had been difficult, if not impossible, in the previous period. "
+            },
             "title":"Why does the author include the following information: “At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available.”?",
             "choices":{
                 "A":"To provide evidence that the development of papermaking techniques was very slow ",
@@ -197,8 +199,10 @@
             "seq": 10,
             "passage":"p1",
             "type":"single-choice",
-            "replace_para_index":3,
-            "replace_para":"<span class='normal-icon'>&diams;</span> The introduction of paper spurred a conceptual revolution whose consequences have barely been explored. Although paper was never as cheap as it has become today, it was far less expensive than parchment, and therefore more people could afford to buy books, Paper is thinner than parchment, so more pages could be enclosed within a single volume. At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available. These large sheets meant that calligraphers and artists had more space on which to work.  Paintings became more complicated, giving the artist greater opportunities to depict space or emotion. The increased availability of paper, particularly after 1250, encouraged people to develop systems of representation, such as architectural plans and drawings. This in turn allowed the easy transfer of artistic ideas and motifs over great distances from one medium to another, and in a different scale in ways that had been difficult, if not impossible, in the previous period. ",
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"<span class='normal-icon'>&diams;</span> The introduction of paper spurred a conceptual revolution whose consequences have barely been explored. Although paper was never as cheap as it has become today, it was far less expensive than parchment, and therefore more people could afford to buy books, Paper is thinner than parchment, so more pages could be enclosed within a single volume. At first, paper was made in relatively small sheets that were pasted together, but by the beginning of the fourteenth century, very large sheets – as much as a meter across – were available. These large sheets meant that calligraphers and artists had more space on which to work.  Paintings became more complicated, giving the artist greater opportunities to depict space or emotion. The increased availability of paper, particularly after 1250, encouraged people to develop systems of representation, such as architectural plans and drawings. This in turn allowed the easy transfer of artistic ideas and motifs over great distances from one medium to another, and in a different scale in ways that had been difficult, if not impossible, in the previous period. "
+            },
             "title":"According to paragraph 3, the increased availability of paper and the development of systems of representation",
             "choices":{
                 "A":" encourage more people to make their own drawings ",
@@ -212,8 +216,10 @@
             "seq": 11,
             "passage":"p1",
             "type":"single-choice",
-            "replace_para_index":4,
-            "replace_para":"<span class='normal-icon'>&diams;</span> Rounded styles of Arabic handwriting had long been used for correspondence and documents alongside the formal angular scripts used for inscriptions and manuscripts of the Koran. Around the year 900, Ibn Muqla, who was a secretary and vizier at the Abbasid court in Baghdad, developed a system of proportioned writing. He standardized the length of alif, the first letter of the Arabic alphabet, and then determined what the size and shape of all other letters should be, based on the alif. Eventually, six round forms of handwriting, composed of three pairs of big and little scripts known collectively as the Six Pens, became the standard repertory of every calligrapher.",
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"<span class='normal-icon'>&diams;</span> Rounded styles of Arabic handwriting had long been used for correspondence and documents alongside the formal angular scripts used for inscriptions and manuscripts of the Koran. Around the year 900, Ibn Muqla, who was a secretary and vizier at the Abbasid court in Baghdad, developed a system of proportioned writing. He standardized the length of alif, the first letter of the Arabic alphabet, and then determined what the size and shape of all other letters should be, based on the alif. Eventually, six round forms of handwriting, composed of three pairs of big and little scripts known collectively as the Six Pens, became the standard repertory of every calligrapher."
+            },
             "title":"According to paragraph 4, what did Ibn Muqla achieve around the year 900?",
             "choices":{
                 "A":"He modified a set of formal scripts known as the Six Pens into rounded scripts appropriate for correspondence. ",
@@ -227,8 +233,10 @@
             "seq": 12,
             "passage":"p1",
             "type":"single-choice",
-            "replace_para_index":4,
-            "replace_para":"Rounded styles of Arabic handwriting had long been used for correspondence and documents alongside the formal angular scripts used for inscriptions and manuscripts of the Koran. Around the year 900, Ibn Muqla, who was a secretary and vizier at the Abbasid court in Baghdad, developed a system of proportioned writing. He standardized the length of alif, the first letter of the Arabic alphabet, and then determined what the size and shape of all other letters should be, based on the alif. Eventually, six round forms of handwriting, <span class='choice-background'>composed of</span> three pairs of big and little scripts known collectively as the Six Pens, became the standard repertory of every calligrapher.",
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"Rounded styles of Arabic handwriting had long been used for correspondence and documents alongside the formal angular scripts used for inscriptions and manuscripts of the Koran. Around the year 900, Ibn Muqla, who was a secretary and vizier at the Abbasid court in Baghdad, developed a system of proportioned writing. He standardized the length of alif, the first letter of the Arabic alphabet, and then determined what the size and shape of all other letters should be, based on the alif. Eventually, six round forms of handwriting, <span class='choice-background'>composed of</span> three pairs of big and little scripts known collectively as the Six Pens, became the standard repertory of every calligrapher."
+            },
             "title":"The phrase “<span class='choice-background'>composed of</span>” in the passage is closest in meaning to",
             "choices":{
                 "A":"made up of ",
@@ -277,8 +285,10 @@
             "seq": 15,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":1,
-            "replace_para":"<span class='normal-icon'>&diams;</span> Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant.",
+            "replace_para_index":[1],
+            "replace_para":{
+                "1":"<span class='normal-icon'>&diams;</span> Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant."
+            },
             "title":"According to paragraph 1, floral nectar and extrafloral nectar are alike in that ",
             "choices":{
                 "A":"they are likely to be produced by the same plants ",
@@ -292,8 +302,10 @@
             "seq": 16,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":2,
-            "replace_para":"Ants are portably the most frequent and certainly the most <span class='choice-background'>persistent</span> defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants.",
+            "replace_para_index":[2],
+            "replace_para":{
+                "2":"Ants are portably the most frequent and certainly the most <span class='choice-background'>persistent</span> defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants."
+            },
             "title":"To say that ants are “<span class='choice-background'>persistent</span>” defenders of plants means that",  
             "choices":{
                 "A":"they defend plants against a wide variety of threats ",
@@ -307,8 +319,10 @@
             "seq": 17,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":2,
-            "replace_para":"<span class='normal-icon'>&diams;</span> Ants are portably the most frequent and certainly the most persistent defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants.",
+            "replace_para_index":[2],
+            "replace_para":{
+                "2":"<span class='normal-icon'>&diams;</span> Ants are portably the most frequent and certainly the most persistent defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants."
+            },
             "title":"What can be inferred from paragraph 2 about the ants that are attracted to the extrafloral nectarie",
             "choices":{
                 "A":"They do not eat the leaves of the plants that produce extrafloral nectar.",
@@ -322,8 +336,10 @@
             "seq": 18,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":3,
-            "replace_para":"<span class='normal-icon'>&diams;</span> Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants", 
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"<span class='normal-icon'>&diams;</span> Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants"
+            },
             "title":"According to paragraph 3, what was the position of the opponents of the “protectionist” hypothesis? ",
             "choices":{
                 "A":"Extrafloral nectar provides plants with a direct defense against attack by insects.",
@@ -337,8 +353,10 @@
             "seq": 19,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":3,
-            "replace_para":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a <span class='choice-background'>skeptical</span> William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants", 
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a <span class='choice-background'>skeptical</span> William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants"
+            },
             "title":"The word “<span class='choice-background'>skeptical</span>” in the passage is closest in meaning to ",
             "choices":{
                 "A":"curious ",
@@ -352,8 +370,10 @@
             "seq": 20,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":3,
-            "replace_para":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. <span class='choice-background'>That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants</span>", 
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. <span class='choice-background'>That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants</span>"
+            },
             "title":" Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
             "choices":{
                 "A":"We now have ample proof that ants benefit plants.",
@@ -367,8 +387,10 @@
             "seq": 21,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":4,
-            "replace_para":"<span class='normal-icon'>&diams;</span> One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars devour the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits." ,
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"<span class='normal-icon'>&diams;</span> One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars devour the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits."
+            },
             "title":"According to paragraph 4, what effect does the destruction of the corolla have on plants?",
             "choices":{
                 "A":"It leaves the seeds exposed and unprotected. ",
@@ -382,8 +404,10 @@
             "seq": 22,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":4,
-            "replace_para":"One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars <span class='choice-background'>devour</span> the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits." ,
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars <span class='choice-background'>devour</span> the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits." 
+            },
             "title":"The word “<span class='choice-background'>devour</span>” in the passage is closest in meaning to",
             "choices":{
                 "A":"attack",
@@ -397,8 +421,10 @@
             "seq": 23,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":5,
-            "replace_para":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay.", 
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
             "title":"What role does paragraph 5 play in the passage? ",
             "choices":{
                 "A":"It offers various kinds of evidence for the protectionist view.",
@@ -412,8 +438,10 @@
             "seq": 24,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":5,
-            "replace_para":"Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more <span class='choice-background'>vulnerable</span> because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay.", 
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more <span class='choice-background'>vulnerable</span> because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
             "title":"The word “<span class='choice-background'>vulnerable</span>” in the passage is closest in meaning to",
             "choices":{
                 "A":"numerous",
@@ -427,8 +455,10 @@
             "seq": 25,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":5,
-            "replace_para":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay.", 
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
             "title":"According to paragraph 5, what did Bentley’s comparative study show?",
             "choices":{
                 "A":"Many more plants grew in places where ants were present than where they were absent.",
@@ -442,8 +472,10 @@
             "seq": 26,
             "passage":"p2",
             "type":"single-choice",
-            "replace_para_index":5,
-            "replace_para":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay.", 
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
             "title":"According to paragraph 5, ants defend morning glory plants from seed beetles in each of the following ways EXCEPT ",
             "choices":{
                 "A":"driving adult beetles off the plants by nipping at their feet ",
@@ -491,8 +523,10 @@
             "seq": 29,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":1,
-            "replace_para":"<span class='normal-icon'>&diams;</span>By the eighteenth century, Britain was experiencing a severe shortage of energy. Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay. Wood was in ever-shorter supply, yet it remained tremendously important. It served as the primary source of heat for all homes and industries and as a basic raw material. Processed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back. ",
+            "replace_para_index":[1],
+            "replace_para":{
+                "1":"<span class='normal-icon'>&diams;</span>By the eighteenth century, Britain was experiencing a severe shortage of energy. Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay. Wood was in ever-shorter supply, yet it remained tremendously important. It served as the primary source of heat for all homes and industries and as a basic raw material. Processed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back. "
+            },
             "title":"What can be inferred from paragraph 1 about Britain’s short supply of wood in the eighteenth century? ",
             "choices":{
                 "A":"Wood from Britain’s great forests was being exported to other countries for profit. ",
@@ -506,8 +540,10 @@
             "seq": 30,
             "passage":"p3",
             "type":"pair-choice",
-            "replace_para_index":1,
-            "replace_para":"<span class='normal-icon'>&diams;</span>By the eighteenth century, Britain was experiencing a severe shortage of energy. Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay. Wood was in ever-shorter supply, yet it remained tremendously important. It served as the primary source of heat for all homes and industries and as a basic raw material. Processed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back. ",
+            "replace_para_index":[1],
+            "replace_para":{
+                "1":"<span class='normal-icon'>&diams;</span>By the eighteenth century, Britain was experiencing a severe shortage of energy. Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay. Wood was in ever-shorter supply, yet it remained tremendously important. It served as the primary source of heat for all homes and industries and as a basic raw material. Processed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back. "
+            },
             "title":"Select TWO answer choices that, according to paragraph 1, are true statements about Russia’s iron industry in the eighteenth century. ",
             "choices":{
                 "A":"Russia reached its maximum production of iron at the same time as Britain.",
@@ -521,8 +557,10 @@
             "seq": 31,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":2,
-            "replace_para":"As this early energy crisis grew worse, Britain looked toward its <span class='choice-background'>abundant</span> and widely scattered reserves of coal as an alternative to its vanishing wood. Coal was first used in Britain in the late Middle Ages as a source of heat. By 1640 most homes in London were heated with it, and it also provided heat for making beer, glass, soap, and other products. Coal was not used, however, to produce mechanical energy or to power machinery. It was there that coal’s potential wad enormous. ",
+            "replace_para_index":[2],
+            "replace_para":{
+                "2":"As this early energy crisis grew worse, Britain looked toward its <span class='choice-background'>abundant</span> and widely scattered reserves of coal as an alternative to its vanishing wood. Coal was first used in Britain in the late Middle Ages as a source of heat. By 1640 most homes in London were heated with it, and it also provided heat for making beer, glass, soap, and other products. Coal was not used, however, to produce mechanical energy or to power machinery. It was there that coal’s potential wad enormous. "
+            },
             "title":"The word “<span class='choice-background'>abundant</span>” in the passage is closest in meaning to ",
             "choices":{
                 "A":"reliable",
@@ -536,8 +574,10 @@
             "seq": 32,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":2,
-            "replace_para":"As this early energy crisis grew worse, Britain looked toward its abundant and widely scattered reserves of coal as an alternative to its vanishing wood. Coal was first used in Britain in the late Middle Ages as a source of heat. By 1640 most homes in London were heated with it, and it also provided heat for making <span class='choice-background'>beer, glass, soap, and other products</span>. Coal was not used, however, to produce mechanical energy or to power machinery. It was there that coal’s potential wad enormous. ",
+            "replace_para_index":[2],
+            "replace_para":{
+                "2":"As this early energy crisis grew worse, Britain looked toward its abundant and widely scattered reserves of coal as an alternative to its vanishing wood. Coal was first used in Britain in the late Middle Ages as a source of heat. By 1640 most homes in London were heated with it, and it also provided heat for making <span class='choice-background'>beer, glass, soap, and other products</span>. Coal was not used, however, to produce mechanical energy or to power machinery. It was there that coal’s potential wad enormous. "
+            },
             "title":"Why are “<span class='choice-background'>beer, glass, soap, and other products</span>” mentioned in the discussion of   Britain’s energy? ",
             "choices":{
                 "A":"To help explain why the energy crisis was so severe ",
@@ -551,8 +591,10 @@
             "seq": 33,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":3,
-            "replace_para":"<span class='normal-icon'>&diams;</span>As more coal was produced, mines were dug deeper and deeper and were constantly filling with water. Mechanical pumps, usually powered by hundreds of horses waling in circles at the surface, had to be installed. Such power was expensive and bothersome. In an attempt to overcome these disadvantages, Thomas Savery in 1698 and Thomas Newcomen in 1705 invented the first primitive steam engines. Both engines were extremely inefficient. Both burned coal to produce steam, which was then used to operate a pump. However, by the early 1770s, many of the Savery engines and hundreds of the Newcomen engines were operating successfully, though inefficiently, in English and Scottish mines.",
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"<span class='normal-icon'>&diams;</span>As more coal was produced, mines were dug deeper and deeper and were constantly filling with water. Mechanical pumps, usually powered by hundreds of horses waling in circles at the surface, had to be installed. Such power was expensive and bothersome. In an attempt to overcome these disadvantages, Thomas Savery in 1698 and Thomas Newcomen in 1705 invented the first primitive steam engines. Both engines were extremely inefficient. Both burned coal to produce steam, which was then used to operate a pump. However, by the early 1770s, many of the Savery engines and hundreds of the Newcomen engines were operating successfully, though inefficiently, in English and Scottish mines."
+            },
             "title":"According to paragraph 3, all of the following are ways in which the Savery and Newcomen engines were similar EXCEPT: ",
             "choices":{
                 "A":"Both became relatively inexpensive after the 1770s.",
@@ -566,8 +608,10 @@
             "seq": 34,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":4,
-            "replace_para":"In the early 1760s, a <span class='choice-background'>gifted</span> young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This splendid invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment.",
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"In the early 1760s, a <span class='choice-background'>gifted</span> young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This splendid invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment."
+            },
             "title":"The word “<span class='choice-background'>gifted</span>” in the passage is closest in meaning to ",
             "choices":{
                 "A":"independent ",
@@ -581,8 +625,10 @@
             "seq": 35,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":4,
-            "replace_para":"<span class='normal-icon'>&diams;</span>In the early 1760s, a gifted young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This splendid invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment. ",
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"<span class='normal-icon'>&diams;</span>In the early 1760s, a gifted young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This splendid invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment. "
+            },
             "title":"According to paragraph 4, what was James Watt’s major achievement? ",
             "choices":{
                 "A":"He was able to apply his understanding of physics to invent a variety of scientific instruments and tools for skilled crafts workers.",
@@ -596,8 +642,10 @@
             "seq": 36,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":4,
-            "replace_para":"In the early 1760s, a gifted young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This <span class='choice-background'>splendid</span> invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment.",
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"In the early 1760s, a gifted young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This <span class='choice-background'>splendid</span> invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment."
+            },
             "title":"The word “<span class='choice-background'>splendid</span>” in the passage is closest in meaning to ",
             "choices":{
                 "A":"original ",
@@ -611,8 +659,10 @@
             "seq": 37,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":5,
-            "replace_para":"<span class='normal-icon'>&diams;</span> The steam engine was quickly put to use in several industries in Britain. It drained mines and made possible the production of ever more coal to feed steam engines elsewhere. The steam power plant began to replace waterpower in the cotton-spinning mills as well as other industries during the 1780s, contributing to a phenomenal rise in industrialization. The British iron industry was radically transformed. The use of powerful, steam-driven bellows in blast furnaces helped iron makers switch over rapidly from limited charcoal to unlimited coke (which is made from coal) in the smelting of pig iron (the process of refining impure iron) after 1770 in the 1780s, Henry Cort developed the puddling furnace, which allowed pig iron to be refined in turn with coke. Cort also developed heavy-duty, steam-powered rolling mills, which were capable of producing finished iron in every shape and form. ",
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"<span class='normal-icon'>&diams;</span> The steam engine was quickly put to use in several industries in Britain. It drained mines and made possible the production of ever more coal to feed steam engines elsewhere. The steam power plant began to replace waterpower in the cotton-spinning mills as well as other industries during the 1780s, contributing to a phenomenal rise in industrialization. The British iron industry was radically transformed. The use of powerful, steam-driven bellows in blast furnaces helped iron makers switch over rapidly from limited charcoal to unlimited coke (which is made from coal) in the smelting of pig iron (the process of refining impure iron) after 1770 in the 1780s, Henry Cort developed the puddling furnace, which allowed pig iron to be refined in turn with coke. Cort also developed heavy-duty, steam-powered rolling mills, which were capable of producing finished iron in every shape and form. "
+            },
             "title":"Which of the following is NOT mentioned in paragraph 5 as a development that greatly changed the production of iron? ",
             "choices":{
                 "A":"The use of coke in the smelting of pig iron",
@@ -626,8 +676,10 @@
             "seq": 38,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":6,
-            "replace_para":"<span class='normal-icon'>&diams;</span> The economic consequence of these technical innovations in steam power was a great boom in the British iron industry. In 1740 annual British iron production was only 17,000 tons, but by 1844, with the spread of coke smelting and the impact of Cort’s inventions, it had increased to 3,000,000 tons. This was a truly amazing expansion. Once scarce and expensive, iron became cheap, basic, and indispensable to the economy.",
+            "replace_para_index":[6],
+            "replace_para":{
+                "6":"<span class='normal-icon'>&diams;</span> The economic consequence of these technical innovations in steam power was a great boom in the British iron industry. In 1740 annual British iron production was only 17,000 tons, but by 1844, with the spread of coke smelting and the impact of Cort’s inventions, it had increased to 3,000,000 tons. This was a truly amazing expansion. Once scarce and expensive, iron became cheap, basic, and indispensable to the economy."
+            },
             "title":"In paragraph 6, why does the author compare British iron production in 1740 with that of 1844?",
             "choices":{
                 "A":"To contrast the amounts of iron needed in Britain in two different centuries",
@@ -641,8 +693,10 @@
             "seq": 39,
             "passage":"p3",
             "type":"single-choice",
-            "replace_para_index":6,
-            "replace_para":"The economic consequence of these technical innovations in steam power was a great boom in the British iron industry. In 1740 annual British iron production was only 17,000 tons, but by 1844, with the spread of coke smelting and the impact of Cort’s inventions, it had increased to 3,000,000 tons. This was a truly amazing expansion. Once scarce and expensive, iron became cheap, basic, and <span class='choice-background'>indispensable</span> to the economy.",
+            "replace_para_index":[6],
+            "replace_para":{
+                "6":"The economic consequence of these technical innovations in steam power was a great boom in the British iron industry. In 1740 annual British iron production was only 17,000 tons, but by 1844, with the spread of coke smelting and the impact of Cort’s inventions, it had increased to 3,000,000 tons. This was a truly amazing expansion. Once scarce and expensive, iron became cheap, basic, and <span class='choice-background'>indispensable</span> to the economy."
+            },
             "title":"The word “<span class='choice-background'>indispensable</span>” in the passage is closest in meaning to",
             "choices":{
                 "A":"advantageous ",
