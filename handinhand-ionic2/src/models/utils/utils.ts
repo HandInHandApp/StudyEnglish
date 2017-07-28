@@ -214,13 +214,12 @@ export function downloadBlob(blob: Blob, fileName: string): string {
     anchorElement.download=url;
 
     //  anchorElement.type = "button";
-    
 
-     var t =document.createTextNode("test");
-     anchorElement.appendChild(t);
+    //  var t =document.createTextNode("test");
+    //  anchorElement.appendChild(t);
 
-    var board=document.getElementById("myurl")
-    board.appendChild(anchorElement);
+    // var board=document.getElementById("myurl")
+    // board.appendChild(anchorElement);
 
     // document.body.appendChild(anchorElement);
     // anchorElement.click();
@@ -229,7 +228,7 @@ export function downloadBlob(blob: Blob, fileName: string): string {
             // document.body.removeChild(anchorElement);
             window.URL.revokeObjectURL(url);
         },
-        1000000);
+        80000);
     console.log('saveBlob(): finished! url:'+url);
     return url
 }

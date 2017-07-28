@@ -28,6 +28,8 @@ import { WebAudioSaveWav } from '../../../providers/web-audio/save-wav';
 
 import { RecordListPage } from '../recordlist-page/recordlist-page';
 
+import { LoadingController } from 'ionic-angular';
+
 const START_RESUME_ICON: string = 'mic';
 const PAUSE_ICON: string = 'pause';
 const MAX_GAIN_SLIDER_VALUE: number = 1000;
@@ -60,7 +62,7 @@ export class SpeakingTestPage {
     // maxGainSliderValue referenced by template
     public maxGainSliderValue: number;
     // private gainSliderLeftIcon: string;
-
+    audio: any;
     myfiles:any;
 
   endDate =  601*1000 ;
@@ -97,7 +99,8 @@ refreshtimer=0;
     webAudioSaveWav: WebAudioSaveWav,
     appState: AppState,
     idbAppFS: IdbAppFS,
-    webAudioRecord: WebAudioRecordWav
+    webAudioRecord: WebAudioRecordWav,
+    public loadingCtrl: LoadingController
     // public mediaObject:MediaObject
   ) {
         this.session = navParams.data.session;
@@ -174,8 +177,10 @@ refreshtimer=0;
       }
       console.log(this.step)
       if(this.step.indexOf('p')!=-1){
+            this.playStepMp3(this.passages.passage[this.step].mp3)
             console.log(this.passages.passage[this.step])
       }else if(this.step.indexOf('q')!=-1){
+            this.playStepMp3(this.passages.question[this.step].mp3)
             console.log(this.passages.question[this.step])
       }else{}
        
@@ -191,7 +196,24 @@ refreshtimer=0;
   gotoHome(){
       
   }
+  playStepMp3(mp3file){
+      if(mp3file !=""){
+          if(this.audio){
+            this.audio.pause() ;
+          }
+          
+        this.audio = new Audio(mp3file);
+        this.audio.play();
 
+        this.audio.onended= () => { 
+            console.log(mp3file+" ended !! ");
+        }
+      }
+       
+  }
+//  <audio autoplay id='Audio1'  *ngIf="passages.question[item].mp3!=''">
+//                               <source src={{passages.question[item].mp3}} type='audio/mpeg' />
+//                         </audio>
 
 
   playAudio1() {
@@ -229,6 +251,9 @@ refreshtimer=0;
         console.log("unkonw"+timertitle + ' timer End'); 
       }
     }
+
+
+
 
 
     /**

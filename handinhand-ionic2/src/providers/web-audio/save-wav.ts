@@ -40,7 +40,7 @@ export class WebAudioSaveWav {
    
     }
 
-    public save(recordingInfo: RecordingInfo, fileName: string): void {
+    public save(recordingInfo: RecordingInfo, fileName: string, pushtoclould?:boolean): void {
         console.log('WebAudioSaveWav:save(' +
             recordingInfo.dbStartKey + this.keyOffset + ')');
         this.idb.readChunk(
@@ -86,8 +86,9 @@ export class WebAudioSaveWav {
 
                     try {
                         url = downloadBlob(this.blob, fileName);
-
-                        this.postWav(fileName, this.blob)
+                        if(pushtoclould){
+                            this.postWav(fileName, this.blob)
+                        }
                     }
                     catch (err) {
                         alert('save err: ' + err);
@@ -101,11 +102,18 @@ export class WebAudioSaveWav {
                 else {
                     // not done, recurse
                     this.keyOffset++;
-                    this.save(recordingInfo, fileName);
+                    if(pushtoclould){
+                        this.save(recordingInfo, fileName,pushtoclould);
+                    }else{
+                        this.save(recordingInfo, fileName);
+                    }
+                    
                 }
             }
         );
     }
+
+    
 
     private getFileReader(key: number): FileReader {
         // console.log('getFileReader(' + key + ') -> ' +

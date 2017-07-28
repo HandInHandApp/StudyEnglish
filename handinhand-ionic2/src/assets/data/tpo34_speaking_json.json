@@ -207,7 +207,7 @@
           "q3":{
             "seq": 3,
              "title":"Question 3 of 6",
-            "mp3":"assets/tpo34/tpo34_listening_question1_3.mp3",
+            "mp3":"assets/tpo34/tpo34_speaking_question3.mp3",
             "para":"The woman expresses her opinion about the university’s plan. Briefly summarize the plan. Then state her opinion about the plan and explain the reasons she gives for holding that opinion. ",
             "answer":[]
   
@@ -215,21 +215,21 @@
           "q4":{
             "seq": 4,
              "title":"Question 4 of 6",
-            "mp3":"assets/tpo34/tpo34_listening_question1_4.mp3",
+            "mp3":"assets/tpo34/tpo34_speaking_question4.mp3",
             "para":"Explain how the experiment described by the professor illustrates the familiarity principle. ",
             "answer":[]
           },
           "q5":{
             "seq": 5,
              "title":"Question 5 of 6",
-            "mp3":"assets/tpo34/tpo34_listening_question1_5.mp3",
+            "mp3":"assets/tpo34/tpo34_speaking_question5.mp3",
             "para":"Briefly summarize the problem the speakers are discussing. Then state which of the two solutions from the conversation you would recommend. Explain the reasons for your recommendation. ",
             "answer":[]
           },
           "q6":{
             "seq": 6,
              "title":"Question 6 of 6",
-            "mp3":"assets/tpo34/tpo34_listening_question1_6.mp3",
+            "mp3":"assets/tpo34/tpo34_speaking_question6.mp3",
             "para":"Using points and examples from the lecture, explain two dry-climate features of frogs.",
             "answer":["B"]
           }

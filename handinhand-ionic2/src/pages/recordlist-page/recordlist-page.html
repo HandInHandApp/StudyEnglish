@@ -33,16 +33,15 @@
         <ion-list-header style="text-align: center; background:#f4f4f4 " color="logo-blue" >
                                     我的录音
         </ion-list-header>
-        <ion-item clear *ngFor="let i of folderNode.childOrder" class="library-item">
+        <ion-item clear *ngFor="let i of listfilter(folderNode.childOrder)  " class="library-item">
                                
                    
-
-           
-            <!-- <ion-checkbox item-left [ngModel]="isSelected(folderItems[i])" (click)="onClickCheckbox(folderItems[i])">
+            <!-- <div *ngIf="itemfilter(folderItems[i].name)"> -->
+                          <!-- <ion-checkbox item-left [ngModel]="isSelected(folderItems[i])" (click)="onClickCheckbox(folderItems[i])">
             </ion-checkbox> -->
              <!-- <ion-row> -->
                 <!-- <ion-col col-9> -->
-                     <ion-label ion-button clear (click)="onClickListItem(folderItems[i])">
+                     <ion-label  ion-button clear (click)="onClickListItem(folderItems[i])">
                         <span *ngIf="folderItems[i].data">
                             <ion-icon name="play">
                             </ion-icon>
@@ -56,9 +55,12 @@
                  <!-- </ion-col>  -->
                  <!-- <ion-col col-3>  -->
                     <ion-label  ion-button  small (click)="onClickDeleteButton(folderItems[i])" > 删除 </ion-label>
-                    <ion-label  ion-button  small  > 免费批改 </ion-label>
+                    <ion-label  ion-button  small (click)="onClickPushItem(folderItems[i])"> 免费批改 </ion-label>
                  <!-- </ion-col>  -->
             <!-- </ion-row>  -->
+  
+            <!-- </div> -->
+           
 
         </ion-item>
         <ion-item class="library-empty-folder-message" *ngIf="!folderNode.childOrder.length">

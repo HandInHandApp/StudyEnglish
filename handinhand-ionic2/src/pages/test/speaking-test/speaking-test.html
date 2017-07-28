@@ -70,9 +70,9 @@
                         <!-- <audio autoplay controls='controls' id='Audio1' style="width: 400px;" *ngIf="passages.question[item].mp3!=''">
                               <source src={{passages.question[item].mp3}} type='audio/mpeg' />
                         </audio> -->
-                        <audio autoplay id='Audio1'  *ngIf="passages.question[item].mp3!=''">
+                        <!-- <audio autoplay id='Audio1'  *ngIf="passages.question[item].mp3!=''">
                               <source src={{passages.question[item].mp3}} type='audio/mpeg' />
-                        </audio>
+                        </audio> -->
 
                         <ion-row>
                             <ion-col col-2></ion-col>
@@ -90,16 +90,19 @@
                                     (click)="playAudio1() " >
                                     </p>
                                 </ion-row>
-                                <!-- <div class="record-upload-buttons"  *ngIf="startrecord==0">
-                                    <button ion-button color="logo-blue" round [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
-                                        <ion-icon [name]="recordButtonIcon">
-                                        </ion-icon>
-                                    </button>
-                                    <button ion-button color="logo-orange" round [disabled]="!recorderIsReady() || webAudioRecord.isInactive" (click)="onClickStopButton()">
-                                        <ion-icon name="square">
-                                        </ion-icon>
-                                    </button>
-                                </div> -->
+                                 <div class="record-upload-buttons"  *ngIf="startrecord==0">
+                                     <div   *ngIf="startrecord==-2">
+                                        <button ion-button color="logo-blue" round [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
+                                            <ion-icon [name]="recordButtonIcon">
+                                            </ion-icon>
+                                        </button>
+                                        <button ion-button color="logo-orange" round [disabled]="!recorderIsReady() || webAudioRecord.isInactive" (click)="onClickStopButton()">
+                                            <ion-icon name="square">
+                                            </ion-icon>
+                                        </button>
+                                     </div>
+
+                                </div> 
                                 <br />
                                 <br />
                                 <div *ngIf="startrecord>0" >
@@ -137,12 +140,6 @@
                                                         </table>
                                                 </div>
                                             </ion-list>
-                                            <!-- <button ion-button full style="text-align: center; background:#f4f4f4 ">Prepare your response</button>
-                                            <button ion-button full style="text-align: center;  ">
-                                                    <timer-countdown title="prapare" [endDate]="praparetimer" (childEvent) = "timerEnd($event)"></timer-countdown>  
-                                            </button>
-                                            <button ion-button full style="text-align: center; "></button> -->
-
                                         </div>
                                         <div *ngIf="startrecord==3">
                                             <ion-list>
@@ -160,12 +157,6 @@
                                                         </table>
                                                 </div>
                                             </ion-list>
-                                            <!-- <button ion-button full style="text-align: center; background:#f4f4f4 ">Recording</button>
-                                            <button ion-button full style="text-align: center;  ">
-                                                    <timer-countdown title="recording" [endDate]="recordtimer" (childEvent) = "timerEnd($event)"></timer-countdown>  
-                                            </button>
-                                            <button ion-button full style="text-align: center; "></button> -->
-
                                         </div>
    
 
@@ -175,7 +166,7 @@
       
                                 </div>
               
-                                <recordlist-page [refresh]="refreshtimer"> </recordlist-page> 
+                                <recordlist-page [refresh]="refreshtimer" [title]="step"> </recordlist-page> 
 
             
 
@@ -203,16 +194,17 @@
                              </div>   -->
 
                             <a href="#" class="thumbnail" *ngIf="passages.passage[step].img!=''">
-                            <img src={{passages.passage[step].img}} alt="" >
+                                <img src={{passages.passage[step].img}} alt="" >
                             </a>
-                            <!--{{passages.passage[step].mp3}}-->
-                            <audio  autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
+
+                            <!-- <audio  autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
                               <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
-                               <!--<source src='assets/tpo34/tpo34_listening_passage1_1.mp3' type='audio/mpeg' />-->
-                            </audio>
+                            </audio> -->
 
                             <div  *ngIf="passages.passage[step].contents.length > 0">
-                               <p *ngFor="let para of passages.passage[step].contents">{{passages.passage[step].contents}}</p>
+                               <p *ngFor="let para of passages.passage[step].contents">
+                                   {{passages.passage[step].contents}}
+                                </p>
                             </div>
 
                         </ion-col>

@@ -17,6 +17,9 @@ import EventData = DayPilot.EventData;
 import AV from 'leancloud-storage'; 
 // declare var firebase: any;
 
+import { LoadingController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
+
 const appId = 'Eul6rG90rOjIO5imP853JOmn-gzGzoHsz';
 const appKey = 'XdmDTh1MQGHCYrJjp1B5Jyh1';
 AV.init({ appId, appKey });
@@ -32,7 +35,10 @@ export class ConferenceData {
 // AV.init({ appId, appKey });
 
 
-  constructor(public http: Http, public user: UserData) {}
+  constructor(public http: Http, 
+              public user: UserData,
+              public loadingCtrl: LoadingController,
+              public alertCtrl: AlertController) {}
 
   load(): any {
     if (this.data) {
@@ -446,19 +452,38 @@ export class ConferenceData {
         .map((response) => response.json());
   }
 
+  showAlert(text,detail) {
+    let alert = this.alertCtrl.create({
+      title: text,
+      subTitle: detail,
+      buttons: ['OK']
+    });
+    alert.present();
+  }
   postuserRecoder(filename,blobfile){
     // AV.init(this.APP_ID, this.APP_KEY);
     console.log(blobfile)
-    //  var file = AV.File.withURL(filename, 'http://ww3.sinaimg.cn/bmiddle/596b0666gw1ed70eavm5tg20bq06m7wi.gif');
-    //  var file = AV.File.withURL(filename, url);
-    //  var bytes = [0xBE, 0xEF, 0xCA, 0xFE];
+    let loader = this.loadingCtrl.create({
+        content: "Please wait...",
+        });
+        loader.present();
+
+        setTimeout(() => {
+            loader.dismiss();
+            this.showAlert("上传失败","请重新上传")
+        }, 60000);
+
      var file = new AV.File(filename, {blob: blobfile} );
       file.save().then(function(file) {
         // 文件保存成功
         console.log(file.url());
+        loader.dismiss();
+        this.showAlert("上传成功","请等待老师批阅")
       }, function(error) {
         // 异常处理
         console.error(error);
+        loader.dismiss();
+        this.showAlert("上传失败",error)
       });
 
 

@@ -28,6 +28,12 @@ export function getFolderPath(folderNode: TreeNode): string {
     return (path === '/') ? path : path.slice(1);
 }
 
+
+import { ConferenceData } from '../../providers/conference-data';
+import { WebAudioSaveWav } from '../../providers/web-audio/save-wav';
+
+
+import { LoadingController } from 'ionic-angular';
 /**
  * @name LibraryPage
  * @description
@@ -36,7 +42,8 @@ export function getFolderPath(folderNode: TreeNode): string {
  */
 @Component({
     selector: 'recordlist-page',
-    templateUrl: 'recordlist-page.html'
+    templateUrl: 'recordlist-page.html',
+    providers: [WebAudioSaveWav],
 })
 export class RecordListPage implements AfterViewInit, OnDestroy {
      // 父组件传递截止日期
@@ -61,6 +68,25 @@ export class RecordListPage implements AfterViewInit, OnDestroy {
             }
         );
  }
+
+ itemfilter(item){
+    if(item.indexOf(this.title) != -1){
+        return true;
+    }else{
+        return false;
+    }
+ }
+listfilter(list){
+    var showlist=[]
+    list.forEach(element => {
+        if(this.itemfilter(this.folderItems[element].name)){
+            showlist.push(element)
+        }
+    });
+    return showlist;
+}
+
+
 
  ngAfterViewInit() {
    this.refreshcall()
@@ -90,6 +116,7 @@ export class RecordListPage implements AfterViewInit, OnDestroy {
     public headerButtons: ButtonbarButton[];
     public footerButtons: ButtonbarButton[];
 
+    private webAudioSaveWav: WebAudioSaveWav;
     /**
      * @constructor
      * @param {NavController} nav
@@ -100,8 +127,12 @@ export class RecordListPage implements AfterViewInit, OnDestroy {
         // modalController: ModalController,
         idbAppFS: IdbAppFS,
         appState: AppState,
-        platform: Platform
+        platform: Platform,
+        public confData: ConferenceData,
+        webAudioSaveWav: WebAudioSaveWav,
+        public loadingCtrl: LoadingController
     ) {
+        this.webAudioSaveWav = webAudioSaveWav;
         console.log('constructor():LibraryPage');
         this.navController = navController;
         this.alertController = alertController;
@@ -499,6 +530,7 @@ export class RecordListPage implements AfterViewInit, OnDestroy {
                             newFolderItems[childKey] = childNode;
                         } // for
                         this.folderNode = folderNode;
+                        console.log(this.folderNode)
                         this.folderItems = newFolderItems;
                         // resize content, because a change in this.folderNode
                         // can affect the header's visibility
@@ -763,4 +795,29 @@ export class RecordListPage implements AfterViewInit, OnDestroy {
                 this.selectNoneInFolder();
             });
     }
+
+
+
+    postWav(filename,url){
+        this.confData.postuserRecoder(filename,url);
+    }
+
+    //push to lean clould
+    onClickPushItem(node: TreeNode){
+
+        this.webAudioSaveWav.save( node.data, node.name+'.wav',true);
+          
+    }
+    presentLoading() {
+        let loader = this.loadingCtrl.create({
+        content: "Please wait...",
+        });
+        loader.present();
+
+        setTimeout(() => {
+            loader.dismiss();
+        }, 5000);
+    }
+   
+        
 }
