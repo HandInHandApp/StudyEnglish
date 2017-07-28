@@ -16,7 +16,11 @@ const appKey = 'XdmDTh1MQGHCYrJjp1B5Jyh1';
 @Injectable()
 export class ExerciseData {
 
-  constructor(public http: Http){}  
+  constructor(
+    public events: Events,
+    public storage: Storage,
+    public http: Http
+  ){}  
 
   getPractice(): any {
     let url:string = 'assets/data/exercise/practise-type.json';
