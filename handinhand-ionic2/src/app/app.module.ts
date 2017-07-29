@@ -57,6 +57,9 @@ import {EventDetailPage} from "../pages/map/create.component";
 import { FormsModule }   from '@angular/forms';
 
 import { TimerPage   } from '../pages/test/timer/timer'
+import { ProgressPage   } from '../pages/test/progress/progress'
+
+
 
 import { Media } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
@@ -123,6 +126,7 @@ import { ContainsPipe, NotContainsPipe } from '../pages/test/reading-test/readin
 
     EventDetailPage,
     TimerPage,
+    ProgressPage,
     RecordPage,
             AudioPlay,
         ButtonBar,

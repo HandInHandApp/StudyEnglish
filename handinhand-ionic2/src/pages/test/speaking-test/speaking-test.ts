@@ -29,6 +29,7 @@ import { WebAudioSaveWav } from '../../../providers/web-audio/save-wav';
 import { RecordListPage } from '../recordlist-page/recordlist-page';
 
 import { LoadingController } from 'ionic-angular';
+import { ProgressPage   } from '../progress/progress'
 
 const START_RESUME_ICON: string = 'mic';
 const PAUSE_ICON: string = 'pause';
@@ -89,6 +90,7 @@ startrecord=0;
 praparetimer=15*1000;
 recordtimer=45*1000;
 refreshtimer=0;
+loadProgress=45;
 
   constructor(public navParams: NavParams, 
     public confData: ConferenceData, 
@@ -224,6 +226,8 @@ refreshtimer=0;
         audio.onended= () => { 
             console.log("speakingprepaerafterbepe ended !! ");
              this.startrecord=2
+             this.loadProgress=15
+            //  this.loadProgressfun()
         }
     };
 
@@ -236,18 +240,31 @@ refreshtimer=0;
             console.log("speakingprepaerafterbepe ended, start record !! ");
              this.startrecord=3
              this.onClickStartPauseButton()
+            
+             this.loadProgress=45
+            //  this.loadProgressfun()
+            
+             
         }
       audio.play();
   };
 
+  stoprecord(){
+        this.startrecord=0 ;
+        this.onClickStopButton()
+  }
   timerEnd(timertitle) { 
       console.log(timertitle + ' timer End'); 
       if(timertitle == "prapare"){
           this.playAudio2();
       }else if(timertitle == "recording" ){
-         this.startrecord=0 ;
-         this.onClickStopButton()
+         if(this.startrecord==3){
+            this.startrecord=0 ;
+            this.onClickStopButton()
+         }
+         
       }else{
+        
         console.log("unkonw"+timertitle + ' timer End'); 
       }
     }
@@ -340,6 +357,7 @@ refreshtimer=0;
      * @returns {void}
      */
     public onClickStopButton(): void {
+        this.startrecord=0 ;
         console.log("onClickStopButton recording")
         this.recordButtonIcon = START_RESUME_ICON;
         this.webAudioRecord.stop().subscribe(

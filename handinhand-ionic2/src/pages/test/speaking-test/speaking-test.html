@@ -75,6 +75,8 @@
                         </audio> -->
 
                         <ion-row>
+                        
+
                             <ion-col col-2></ion-col>
                             <ion-col col-8>
                                 <div  *ngIf="passages.question[step].para">
@@ -135,7 +137,10 @@
                                                                 <tr><td style="text-align: center;">
                                                                     <timer-countdown title="prapare" [endDate]="praparetimer" (childEvent) = "timerEnd($event)"></timer-countdown>      
                                                                 </td></tr>
-                                                                <tr><td style="text-align: center;">----</td></tr>
+                                                                <tr><td style="text-align: center;">
+                                                                       <myprogress-bar [progress]="loadProgress"></myprogress-bar>   
+                                                             
+                                                                </td></tr>
                                                             </tbody>
                                                         </table>
                                                 </div>
@@ -152,7 +157,22 @@
                                                                 <tr><td style="text-align: center;">
                                                                     <timer-countdown title="recording" [endDate]="recordtimer" (childEvent) = "timerEnd($event)"></timer-countdown>      
                                                                 </td></tr>
-                                                                <tr><td style="text-align: center;">----</td></tr>
+                                                                <tr><td style="text-align: center;">
+                                                                    <ion-row  >
+                                                                         <ion-col col-10>
+                                                                             <myprogress-bar [progress]="loadProgress"></myprogress-bar> 
+
+                                                                         </ion-col>
+                                                                          <ion-col col-2>
+                                                                         <button ion-button  icon-only small (click)="onClickStopButton()">
+                                                                             <ion-icon name="square">
+                                                                            </ion-icon> 
+                                                                        </button>    
+                                                                          </ion-col>
+                                                                    
+                                                                    </ion-row  >
+                                                                    
+                                                                </td></tr>
                                                             </tbody>
                                                         </table>
                                                 </div>

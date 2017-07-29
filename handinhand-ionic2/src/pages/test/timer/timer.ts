@@ -22,7 +22,7 @@ export class TimerPage implements AfterViewInit, OnDestroy {
  // 父组件传递标题
  @Input() title: string;
 
-  @Output() childEvent = new EventEmitter<any>();
+ @Output() childEvent = new EventEmitter<any>();
 
 
  // 小时差
@@ -55,13 +55,15 @@ export class TimerPage implements AfterViewInit, OnDestroy {
   this.timer = setInterval(() => {
    this.endDate = this.endDate - 1000;
    this.diff = this.endDate
-   console.log(this.endDate)
-   console.log(this.diff)
+//    console.log(this.endDate)
+//    console.log(this.diff)
 //    this.everySecond.emit("event");
    if(this.endDate == 0) {
         this.childEvent.emit(this.title);
         clearInterval(this.timer);
    }
+   //每秒发送通知
+   this.childEvent.emit(this.title+"_"+this.endDate);
   }, 1000);
  }
 
