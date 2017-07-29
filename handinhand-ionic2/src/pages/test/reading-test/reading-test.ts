@@ -115,11 +115,10 @@ export class ReadingTestPage {
 
   insertClickContent(event: any) {
     console.log(event)
+    let tmpquestion = this.passages.questions[this.step]
     let htmlCollections = document.getElementsByClassName("click-choice")
-    for (let i = 0; i < htmlCollections.length; i++) {
-      htmlCollections[i].children[0].innerHTML = "";
-    }
-    event.target.children[0].innerHTML = this.passages.questions[this.step].content;
+    this.useranswer[this.step]=event.target.children[0].getAttribute("choice");
+    tmpquestion["choices"][this.useranswer[this.step]]=tmpquestion.content;
   }
 
   dragChoiceStart(event: any) {
