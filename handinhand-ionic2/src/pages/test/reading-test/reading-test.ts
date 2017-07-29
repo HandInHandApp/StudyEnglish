@@ -54,6 +54,12 @@ export class ReadingTestPage {
     }
   }
 
+  private loadDragChoice(){
+    if(this.useranswer[this.step] == ""){
+      this.useranswer[this.step]=["","",""]
+    }
+  }
+
   setPairAnswer(event: any, choice: string){
     if(event.checked==true){
       if(this.useranswer[this.step]==""){
@@ -88,6 +94,9 @@ export class ReadingTestPage {
     if (this.step.indexOf("q") != -1) {
       let passageStep = this.passages.questions[this.step].passage
       this.currentPassage= this.passages.passage[passageStep]
+      if(this.passages.questions[this.step].type=="drag-choice"){
+        this.loadDragChoice()
+      }
     } else {
       this.currentPassage = this.passages[this.step]
     }
@@ -101,6 +110,9 @@ export class ReadingTestPage {
     if (this.step.indexOf("q") != -1) {
       let passageStep = this.passages.questions[this.step].passage
       this.currentPassage = this.passages.passage[passageStep]
+      if(this.passages.questions[this.step].type=="drag-choice"){
+        this.loadDragChoice()
+      }
     } else {
       this.currentPassage = this.passages.passage[this.step]
     }
@@ -115,10 +127,14 @@ export class ReadingTestPage {
 
   insertClickContent(event: any) {
     console.log(event)
-    let tmpquestion = this.passages.questions[this.step]
-    let htmlCollections = document.getElementsByClassName("click-choice")
-    this.useranswer[this.step]=event.target.children[0].getAttribute("choice");
-    tmpquestion["choices"][this.useranswer[this.step]]=tmpquestion.content;
+    let choice = event.target.getAttribute("choice")
+    if(choice != this.useranswer[this.step]){
+        let tmpquestion = this.passages.questions[this.step]
+        let htmlCollections = document.getElementsByClassName("click-choice")
+        tmpquestion["choices"][this.useranswer[this.step]]="";
+        this.useranswer[this.step] = choice;
+        tmpquestion["choices"][this.useranswer[this.step]]=tmpquestion.content;
+    }
   }
 
   dragChoiceStart(event: any) {
@@ -128,9 +144,11 @@ export class ReadingTestPage {
   drop(event: any) {
     event.preventDefault();
     if (event.target.tagName == "DIV" && event.target.children.length == 0) {
-      console.log(event)
       var data = event.dataTransfer.getData("Text");
       event.target.appendChild(document.getElementById(data));
+      let answerChoice = data.split("-")[1]
+      let answerIdx = event.target.id.split("-")[1];
+      this.useranswer[this.step][answerIdx] = answerChoice; 
     }
   }
 

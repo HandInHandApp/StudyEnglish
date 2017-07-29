@@ -149,23 +149,23 @@
                             <span *ngIf="passages.questions[step].replace_para_index == (idx+1) && passages.questions[step].type =='click-choice'">
                                 <span *ngFor="let parastr of passages.questions[step].replace_para; let didx=index">
                                     <span *ngIf="parastr.indexOf('@#A')!=-1">
-                                       <strong class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>【
-                                           <span choice="A"  [innerHTML]="this.passages.questions[this.step]['choices']['A']"></span> 】
+                                       <strong choice="A" class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>
+                                           【{{ passages.questions[this.step]['choices']['A']}}】
                                         </strong>
                                     </span>
                                     <span *ngIf="parastr.indexOf('@#B')!=-1">
-                                       <strong class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>【
-                                           <span choice="B"  [innerHTML]="this.passages.questions[this.step]['choices']['B']"></span> 】
+                                       <strong  choice="B" class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>
+                                           【{{ passages.questions[this.step]['choices']['B']}}】
                                         </strong>
                                     </span>
                                     <span *ngIf="parastr.indexOf('@#C')!=-1">
-                                       <strong class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>【
-                                           <span choice="C"  [innerHTML]="this.passages.questions[this.step]['choices']['C']"></span> 】
+                                       <strong choice="C" class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>
+                                           【{{ passages.questions[this.step]['choices']['C']}}】
                                         </strong>
                                     </span>
                                     <span *ngIf="parastr.indexOf('@#D')!=-1">
-                                       <strong class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>【
-                                           <span choice="D" [innerHTML]="this.passages.questions[this.step]['choices']['D']"></span> 】
+                                       <strong choice="D" class="click-choice" id="click-choice-{{didx}}" (click)=insertClickContent($event)>
+                                           【{{ passages.questions[this.step]['choices']['D']}}】
                                         </strong>
                                     </span>
                                     <span *ngIf="parastr.indexOf('@#')==-1">
@@ -187,21 +187,44 @@
                     </ion-col>
                 </ion-row>
                 <ion-row class="drag-choice-answer">
-                    <ion-col col-md-12>
-                        <div (drop)="drop($event)" (dblclick)="rollbackDrag($event)" (dragover)="allowDrop($event)"></div>
-                    </ion-col>
-                    <ion-col col-md-12>
-                        <div (drop)="drop($event)" (dblclick)="rollbackDrag($event)" (dragover)="allowDrop($event)"></div>
-                    </ion-col>
-                    <ion-col col-md-12>
-                        <div (drop)="drop($event)" (dblclick)="rollbackDrag($event)" (dragover)="allowDrop($event)"></div>
+                    <ion-col col-md-12 *ngFor="let choice of useranswer[step]; let idx=index;">
+                        <div id="answer-{{idx}}" *ngIf="choice !='' " (drop)="drop($event)" (dblclick)="rollbackDrag($event)" (dragover)="allowDrop($event)">
+                             <p id="{{step}}-{{choice}}" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices[choice]}} </p>
+                        </div>
+                        <div id="answer-{{idx}}" *ngIf="choice =='' " (drop)="drop($event)" (dblclick)="rollbackDrag($event)" (dragover)="allowDrop($event)">
+                        </div>
                     </ion-col>
                 </ion-row>
                 <h3>Answer Choices</h3>
                 <ion-row class="drag-choice-source">
-                    <ion-col col-md-6 *ngFor="let choice of passages.questions[step].choices; let idx=index;">
-                        <div id="div-choice-{{idx}}">
-                            <p id="choice-{{idx}}" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ choice }} </p>
+                    <ion-col col-md-6>
+                        <div id="div-{{step}}-A">
+                            <p *ngIf="useranswer[step].indexOf('A')==-1" id="{{step}}-A" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices['A']}} </p>
+                        </div>
+                    </ion-col>
+                    <ion-col col-md-6>
+                        <div id="div-{{step}}-B">
+                            <p *ngIf="useranswer[step].indexOf('B')==-1"  id="{{step}}-B" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices['B']}} </p>
+                        </div>
+                    </ion-col>
+                    <ion-col col-md-6>
+                        <div id="div-{{step}}-C">
+                            <p *ngIf="useranswer[step].indexOf('C')==-1" id="{{step}}-C" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices['C']}} </p>
+                        </div>
+                    </ion-col>
+                    <ion-col col-md-6>
+                        <div id="div-{{step}}-D">
+                            <p *ngIf="useranswer[step].indexOf('D')==-1" id="{{step}}-D" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices['D']}} </p>
+                        </div>
+                    </ion-col>
+                    <ion-col col-md-6>
+                        <div id="div-{{step}}-E">
+                            <p *ngIf="useranswer[step].indexOf('E')==-1" id="{{step}}-E" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices['E']}} </p>
+                        </div>
+                    </ion-col>
+                    <ion-col col-md-6>
+                        <div id="div-{{step}}-F">
+                            <p *ngIf="useranswer[step].indexOf('F')==-1" id="{{step}}-F" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices['F']}} </p>
                         </div>
                     </ion-col>
                 </ion-row>

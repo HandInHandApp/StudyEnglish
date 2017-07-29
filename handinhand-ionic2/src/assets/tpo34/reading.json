@@ -277,14 +277,14 @@
             "passage":"p1",
             "type":"drag-choice",
             "title":"Islamic books from A.D. 900 to 1500 reflect major changes from the past and important innovations.",
-            "choices":[
-                "Books became major vehicle of artistic expression for calligraphers and painters, and the subjects of books expanded to include more and more kinds of works.",
-                "growing luxuriousness of books meant that the market for them was increasingly dominated by the wealthy and powerful patrons who could afford them. ",
-                "After it was learned from Chinese prisoners, the technique of papermaking spread throughout Islamic lands, where paper gradually replaced parchment. ",
-                "The high status enjoyed by calligraphers and artists made books extremely popular in the cities where books were bought and sold. ",
-                "The popularity of books led to major advances in the development and transfer of new artistic ideas. ",
-                "Around the year 900, a set of rounded styles of Arabic handwriting began replacing angular scripts in copying the manuscripts of the Koran."
-            ],
+            "choices":{
+                "A":"Books became major vehicle of artistic expression for calligraphers and painters, and the subjects of books expanded to include more and more kinds of works.",
+                "B":"growing luxuriousness of books meant that the market for them was increasingly dominated by the wealthy and powerful patrons who could afford them. ",
+                "C":"After it was learned from Chinese prisoners, the technique of papermaking spread throughout Islamic lands, where paper gradually replaced parchment. ",
+                "D":"The high status enjoyed by calligraphers and artists made books extremely popular in the cities where books were bought and sold. ",
+                "E":"The popularity of books led to major advances in the development and transfer of new artistic ideas. ",
+                "F":"Around the year 900, a set of rounded styles of Arabic handwriting began replacing angular scripts in copying the manuscripts of the Koran."
+            },
             "answer":["B"]
         },
         "q15":{
@@ -521,14 +521,14 @@
             "passage":"p2",
             "type":"drag-choice",
             "title":"Many plants have extrafloral nectaries that produce nectar even during periods in which the plant is not flowering.",
-            "choices":[
-                "Evolutionary history shows that plants that produce extrafloral nectar originated in the tropics.",
-                "Extrafloral nectar has a higher concentration of sugar than floral nectar and is more attractive to ants and other insects.",
-                "The protectionist hypothesis is that extrafloral nextar attracts ants, and that the ants, in order to preserve this energy-rich food source, attack insects that might harm the plant.",
-                "Evidence accumulated during the twentieth century proved that ants provide significant benefits for plants with extrafloral nectaries.",
-                "Research has shown that American morning glory plants that are protected by ants produce significantly more seeds than morning glory plants that are not protected by ants. ",
-                "Ants generally ignore small insects, but they will eat the adults of large insect species as well as their eggs and larvae."
-            ],
+            "choices":{
+                "A":"Evolutionary history shows that plants that produce extrafloral nectar originated in the tropics.",
+                "B":"Extrafloral nectar has a higher concentration of sugar than floral nectar and is more attractive to ants and other insects.",
+                "C":"The protectionist hypothesis is that extrafloral nextar attracts ants, and that the ants, in order to preserve this energy-rich food source, attack insects that might harm the plant.",
+                "D":"Evidence accumulated during the twentieth century proved that ants provide significant benefits for plants with extrafloral nectaries.",
+                "E":"Research has shown that American morning glory plants that are protected by ants produce significantly more seeds than morning glory plants that are not protected by ants. ",
+                "F":"Ants generally ignore small insects, but they will eat the adults of large insect species as well as their eggs and larvae."
+            },
             "answer":["B"]
         },
         "q29":{
@@ -764,14 +764,14 @@
             "passage":"p3",
             "type":"drag-choice",
             "title":"By the eighteenth century, Britain was experiencing a severe shortage of energy.",
-            "choices":[
-                "The development of blast furnaces for the manufacture of pig iron made the Britain less dependent on wood.",
-                "After the medieval period, both Russia and Britain began to look for alternative sources of energy, such as steam power, in order to maintain the growth of their iron industries. ",
-                "Two inventors designed the first steam engines in order to overcome the disadvantages of relying on horses to power the pumps used in mining coal. ",
-                "James Watt was able to improve upon the efficiency of the steam engine and make it useful to several industries.",
-                "The puddling furnace increased the availability of charcoal to a variety of industries from cotton to iron production. ",
-                "Steam power increased coal production, which in turn allowed extraordinary growth of the iron industry and the British economy."
-            ],
+            "choices":{
+                "A":"The development of blast furnaces for the manufacture of pig iron made the Britain less dependent on wood.",
+                "B":"After the medieval period, both Russia and Britain began to look for alternative sources of energy, such as steam power, in order to maintain the growth of their iron industries. ",
+                "C":"Two inventors designed the first steam engines in order to overcome the disadvantages of relying on horses to power the pumps used in mining coal. ",
+                "D":"James Watt was able to improve upon the efficiency of the steam engine and make it useful to several industries.",
+                "E":"The puddling furnace increased the availability of charcoal to a variety of industries from cotton to iron production. ",
+                "F":"Steam power increased coal production, which in turn allowed extraordinary growth of the iron industry and the British economy."
+            },
             "answer":["B"]
         }
     }
