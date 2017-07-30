@@ -1,3 +1,11 @@
+.alert-wrapper{
+    max-width: 680px;
+    min-width: 680px;
+}
+.alert-message, .alert-title{
+    text-align: center;
+    overflow-y: hidden;
+}
 .click-choice {
     cursor:pointer;
 }

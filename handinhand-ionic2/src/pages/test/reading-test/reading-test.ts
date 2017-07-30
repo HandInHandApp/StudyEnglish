@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 
-import { NavParams } from 'ionic-angular';
+import {AlertController, NavParams } from 'ionic-angular';
+
 
 import { ConferenceData } from '../../../providers/conference-data';
 
@@ -28,7 +29,11 @@ export class ReadingTestPage {
   currentPassage: any;
   dragAnswer: string = "";
 
-  constructor(public navParams: NavParams, public confData: ConferenceData) {
+  constructor(
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    public confData: ConferenceData
+  ) {
     confData.getReadingTestData("tpo34").subscribe(
       resulte => {
         console.log(resulte)
@@ -86,20 +91,47 @@ export class ReadingTestPage {
     return count;
   }
 
+  showAlert(){
+      let prompt = this.alertCtrl.create({
+           title: 'Finish Warning',
+           message: "You have seen all the questions in this part of the Reading Section <br/><br/>"
+               +"You may go back and Review . As long as there is time remaining. You can check your work<br/><br/> "
+               +"Click on Return to continue working<br/><br/> "
+               +"Click on Continue to got on <br/><br/> "
+               +"Once you leave this part of the Reading Section, You WILL NOT be able to Return on it",
+           buttons: [
+            {
+              text: 'RETURN',
+              handler: data => {
+                console.log('RETURN clicked');
+              }
+            },
+            {
+              text: 'CONTINUE',
+              handler: data => {
+                console.log('CONTINUE clicked');
+              }
+            }]
+        });
+      prompt.present();
+
+  }
   gotoNext() {
     if (this.stepindex != this.last_stepindex) {
       this.stepindex = this.stepindex + 1
       this.step = this.steps[this.stepindex]
-    }
-    if (this.step.indexOf("q") != -1) {
-      let passageStep = this.passages.questions[this.step].passage
-      this.currentPassage= this.passages.passage[passageStep]
-      if(this.passages.questions[this.step].type=="drag-choice"){
-        this.loadDragChoice()
-      }
-    } else {
-      this.currentPassage = this.passages[this.step]
-    }
+    }else if(this.steps[this.last_stepindex] == "q42"){
+      this.showAlert()
+   }
+   if (this.step.indexOf("q") != -1) {
+     let passageStep = this.passages.questions[this.step].passage
+     this.currentPassage= this.passages.passage[passageStep]
+     if(this.passages.questions[this.step].type=="drag-choice"){
+       this.loadDragChoice()
+     }
+   }else if(this.step.indexOf("p") != -1) {
+     this.currentPassage = this.passages[this.step]
+   }
 
   }
   gotoBack() {
