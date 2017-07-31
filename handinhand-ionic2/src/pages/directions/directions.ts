@@ -47,6 +47,7 @@ export class DirectionPage {
   }
 
   gotoHome(){  
+    this.navCtrl.pop()
   }
   
 }

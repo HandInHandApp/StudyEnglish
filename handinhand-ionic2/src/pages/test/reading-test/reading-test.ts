@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 
-import {AlertController, NavParams } from 'ionic-angular';
+import {NavController, AlertController, NavParams } from 'ionic-angular';
 
 
 import { ConferenceData } from '../../../providers/conference-data';
@@ -30,6 +30,7 @@ export class ReadingTestPage {
   dragAnswer: string = "";
 
   constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
     public alertCtrl: AlertController,
     public confData: ConferenceData
@@ -150,11 +151,9 @@ export class ReadingTestPage {
     }
   }
   gotoHome() {
-
+    this.navCtrl.pop()
   }
-
   stopTiming() {
-
   }
 
   insertClickContent(event: any) {

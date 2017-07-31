@@ -1,37 +1,37 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar hideBackButton>
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>TOP 1 Reading</ion-title>
         <ion-buttons end>
-            <button ion-button (click)="gotoReview()" type="submit" block>
+            <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block>
         Review
       </button>
-            <button ion-button (click)="gotoBack()" type="submit" block>
+            <button class="navbtn" ion-button (click)="gotoBack()" type="submit" block>
         BACK
       </button>
-            <button ion-button (click)="gotoNext()" type="submit" block>
+            <button class="navbtn" ion-button (click)="gotoNext()" type="submit" block>
         NEXT
       </button>
         </ion-buttons>
     </ion-navbar>
     <ion-toolbar>
         <ion-buttons left>
-            <button ion-button (click)="gotoHome()" type="submit" block>
+            <button class="tpobtn" ion-button (click)="gotoHome()" type="submit" block>
         首页
       </button>
-            <button ion-button (click)="stopTiming()" type="submit" block>
+            <button class="tpobtn" ion-button (click)="stopTiming()" type="submit" block>
         暂停
       </button>
         </ion-buttons>
         <div style="text-align:center;" *ngIf="passages != undefined">
-            <label *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
-            <label *ngIf="step.indexOf('q')!=-1">Question{{passages.questions[step].seq}} of {{total_question}}</label>
+            <label class="white-word" *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
+            <label class="white-word" *ngIf="step.indexOf('q')!=-1">Question{{passages.questions[step].seq}} of {{total_question}}</label>
         </div>
         <ion-buttons right>
             <span class="button-inner">
-                <button ion-button (click)="gotoBack()" type="submit" block>
+                <button class="tpobtn-small" ion-button (click)="gotoBack()" type="submit" block>
                    HideTime
                 </button> 
                 <button ion-button  >

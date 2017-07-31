@@ -39,3 +39,32 @@
 .choice-background{
     background-color:#cccccc;
 }
+.navbtn{
+    border-radius: 10px;
+    background-color: #283773;
+}
+.tpobtn{
+    border-radius: 10px;
+    background-color: #822a42;
+    width: 100px;
+}
+.tpobtn-small{
+    border-radius: 0px;
+    background-color: #522a42;
+    border: solid 1px  #bbbbbb;
+    width: 90px;
+}
+.tpobtn:hover{
+    border-radius: 10px;
+    background-color: #a22a42;
+    width: 100px;
+}
+.toolbar-background-md{
+  background: -webkit-linear-gradient(left, #4049a2, #822a42); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right,#4049a2, #822a42); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #4049a2, #822a42); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #4049a2, #822a42); /* 标准的语法 */
+}
+.white-word{
+    color:white;
+}
