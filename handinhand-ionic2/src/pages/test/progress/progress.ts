@@ -30,7 +30,7 @@ ngAfterViewInit(){
                 // this.precent_progress =parseInt(this.precent_progress) 
            }
         
-  }, 1000);
+    }, 1000);
     
   }
 

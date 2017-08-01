@@ -14,12 +14,14 @@ import {DayPilot} from "daypilot-pro-angular";
 import EventData = DayPilot.EventData;
 
 // import { AV } from "leancloud-storage";
-import AV from 'leancloud-storage'; 
+
 // declare var firebase: any;
 
 import { LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
+// import  AV  from './user-data';
+import AV from 'leancloud-storage'; 
 const appId = 'Eul6rG90rOjIO5imP853JOmn-gzGzoHsz';
 const appKey = 'XdmDTh1MQGHCYrJjp1B5Jyh1';
 AV.init({ appId, appKey });
@@ -483,21 +485,36 @@ export class ConferenceData {
         // 异常处理
         console.error(error);
         loader.dismiss();
-        this.showAlert("上传失败",error)
+        this.showAlert("上传失败",error.message)
       });
 
+  }
 
-    // var url ="https://api.leancloud.cn/1.1/files/"+filename
-    //   var myheaders = new Headers();
+  createUserBefroeCheckAV(params: any) {
+      // 新建 AVUser 对象实例
+      var user = new AV.User();
+      // 设置用户名
+      user.setUsername(params.username);
+      // 设置密码
+      user.setPassword(params.password);
+      // 设置邮箱
+      user.setMobilePhoneNumber(params.mobilePhone);
+      user.signUp().then(function (loginedUser) {
+          console.log(loginedUser);
+      }, function (error) {
+      });
+  }
+  createUserCheckSmsCodeAV(smscode: any) {
 
-    //   myheaders.append("Content-Type" ,"multipart/form-data");
-    //   myheaders.append("X-LC-Id", "Eul6rG90rOjIO5imP853JOmn-gzGzoHsz");
-    //   myheaders.append("X-LC-Key" , "XdmDTh1MQGHCYrJjp1B5Jyh1");
-  
-
-    // return this.http.post(url, params, {headers:myheaders})
-    //                 .map((response) => response.json());
-
+      AV.User.verifyMobilePhone(smscode).then(function(){
+        console.log("验证成功")
+         this.showAlert("恭喜您","注册成功")
+        
+      }, function(err){
+        console.log("验证失败")
+        this.showAlert("注册失败",err)
+      //验证失败
+      });
   }
 
 }

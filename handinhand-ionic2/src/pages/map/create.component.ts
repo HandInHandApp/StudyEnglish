@@ -48,25 +48,6 @@ import { ConferenceData, CreateEventParams } from './../../providers/conference-
 		
 		</ion-list>
 
-     <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required>
-      </div>
-      <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
-      </div>
-      <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-
-		<ion-row responsive-sm>
-			<ion-col>
-				<button ion-button (click)="submit()" type="submit" block>提交</button>
-			</ion-col>
-	
-		</ion-row>
-
 	</form>
 
 

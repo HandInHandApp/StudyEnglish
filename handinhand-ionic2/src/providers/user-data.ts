@@ -11,6 +11,8 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
+
+
 @Injectable()
 export class UserData {
   _favorites: string[] = [];
@@ -39,8 +41,11 @@ export class UserData {
     var url ="https://api.leancloud.cn/1.1/users"
     return this.http.post(url, params, {headers:this.getHeaders()})
                     .map((response) => response.json());
+
+
   }
-  
+
+
   requestMobilePhoneVerify(params: any): Observable<any> {
     var url ="https://api.leancloud.cn/1.1/requestMobilePhoneVerify"
     return this.http.post(url, params, {headers:this.getHeaders()})
