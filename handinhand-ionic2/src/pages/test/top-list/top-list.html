@@ -21,12 +21,7 @@
   <ion-list>
       <div class = "bootstrap-iso">
           <table class="table table-striped">
-
             <thead>
-                <!--<tr>
-                <th>名称</th>
-                <th>城市</th>
-                </tr>-->
             </thead>
             <tbody>
                 <tr *ngFor="let top of toplist" >
@@ -34,31 +29,16 @@
                     <h4>
                         {{top.title}}
                     </h4>
-              
                 </td>
-     
                 <td *ngFor="let item of top.items">
-                   
-                    <button type="button" class="btn btn-primary" (click)="goToTest(item,top)"
-                        data-toggle="button">  {{item.testNmae}}
+                    <button  ion-button large color="secondary" round  outline (click)="goToTest(item,top)" data-toggle="button">
+                       {{item.testNmae}}
                     </button>
                 </td>
-            
                 </tr>
-
             </tbody>
             </table>
       </div>
-      <!--<div *ngFor="let top of toplist" (click)="goToSessionDetail(session)">
-          
-      </div>
-    
-    <button ion-item *ngFor="let top of toplist">
-      <ion-icon name="cart" item-start></ion-icon>
-      {{top.title}}
-    </button>-->
-
-
   </ion-list>
 </ion-card>
 </ion-content>
