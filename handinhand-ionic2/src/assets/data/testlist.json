@@ -17,7 +17,7 @@
                      "pagetype":"Speaking"
                 },{
                     "testNmae":"写作",
-                    "url": "assets/data/tpo34_listenting_json.json",
+                    "url": "assets/data/tpo34_writing_json.json",
                      "pagetype":"Writing"
                 }
             ]
@@ -25,110 +25,110 @@
         {
             "title":"TPO1",
             "items":[
-                {
+                {   
                     "testNmae":"阅读",
                     "url": "",
-                    "pagetype":0
+                    "pagetype":"Reading"
                 },{
                     "testNmae":"听力",
                     "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":1
+                     "pagetype":"Listening"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":2
+                    "testNmae":"口语",
+                    "url": "assets/data/tpo34_speaking_json.json",
+                     "pagetype":"Speaking"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":3
+                    "testNmae":"写作",
+                    "url": "assets/data/tpo34_writing_json.json",
+                     "pagetype":"Writing"
                 }
             ]
         },
         {
             "title":"TP2",
             "items":[
-                {
+                {   
                     "testNmae":"阅读",
                     "url": "",
-                    "pagetype":0
+                    "pagetype":"Reading"
                 },{
                     "testNmae":"听力",
                     "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":1
+                     "pagetype":"Listening"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":2
+                    "testNmae":"口语",
+                    "url": "assets/data/tpo34_speaking_json.json",
+                     "pagetype":"Speaking"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":3
+                    "testNmae":"写作",
+                    "url": "assets/data/tpo34_writing_json.json",
+                     "pagetype":"Writing"
                 }
             ]
         },
         {
             "title":"TPO3",
             "items":[
-                {
+                {   
                     "testNmae":"阅读",
                     "url": "",
-                    "pagetype":0
+                    "pagetype":"Reading"
                 },{
                     "testNmae":"听力",
                     "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":1
+                     "pagetype":"Listening"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":2
+                    "testNmae":"口语",
+                    "url": "assets/data/tpo34_speaking_json.json",
+                     "pagetype":"Speaking"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":3
+                    "testNmae":"写作",
+                    "url": "assets/data/tpo34_writing_json.json",
+                     "pagetype":"Writing"
                 }
             ]
         },
         {
             "title":"TPO4",
             "items":[
-                {
+                {   
                     "testNmae":"阅读",
                     "url": "",
-                    "pagetype":0
+                    "pagetype":"Reading"
                 },{
                     "testNmae":"听力",
                     "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":1
+                     "pagetype":"Listening"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":2
+                    "testNmae":"口语",
+                    "url": "assets/data/tpo34_speaking_json.json",
+                     "pagetype":"Speaking"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":3
+                    "testNmae":"写作",
+                    "url": "assets/data/tpo34_writing_json.json",
+                     "pagetype":"Writing"
                 }
             ]
         },
         {
             "title":"TPO5",
             "items":[
-                {
+                {   
                     "testNmae":"阅读",
                     "url": "",
-                    "pagetype":0
+                    "pagetype":"Reading"
                 },{
                     "testNmae":"听力",
                     "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":1
+                     "pagetype":"Listening"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":2
+                    "testNmae":"口语",
+                    "url": "assets/data/tpo34_speaking_json.json",
+                     "pagetype":"Speaking"
                 },{
-                    "testNmae":"听力",
-                    "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":3
+                    "testNmae":"写作",
+                    "url": "assets/data/tpo34_writing_json.json",
+                     "pagetype":"Writing"
                 }
             ]
         }

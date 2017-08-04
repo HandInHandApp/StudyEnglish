@@ -36,7 +36,8 @@
           "title":"Conversion 1", 
           "img":"assets/tpo34/tpo34_passage1_1.jpg",
           "mp3":"assets/tpo34/tpo34_listening_passage1_1.mp3",
-          "contents": [
+          "contents": [],
+          "contentsOrign":[
             "Listen to a conversation between a student and an employee in the university library. ",
 
             "(woman) Ready to check out? ",
@@ -68,7 +69,8 @@
           "title":"Lecture 1", 
           "img":"assets/tpo34/tpo34_passage1_2.jpg",
           "mp3":"assets/tpo34/tpo34_listening_passage1_2.mp3",
-          "contents": [ 
+          "contents": [],
+          "contentsOrign": [ 
             "Listen to part of a lecture in an Art History class. ",
             "(male professor) All right, so last week we started talking about the painters and sculptors who were part of the art movement called Dada. But I don’t want you to think the ideas we introduced last time were limited to painting, sculpture, that sort of thing. So, today I want to move beyond the visual arts and talk a bit about Dada in the performing arts, in theater. But let’s start by reviewing what Dadais, OK? ",
 
@@ -91,7 +93,8 @@
           "title":"Lecture 2", 
           "img":"assets/tpo34/tpo34_passage1_3.jpg",
           "mp3":"assets/tpo34/tpo34_listening_passage1_3.mp3",
-          "contents": [ 
+          "contents": [],
+          "contentsOrign": [ 
             "Listen to part of a lecture in an Environmental Engineering class. ",
 
             "(male professor) At the end of yesterday’ At the end of yesterday’s class, we were discussing landfills and hundreds of millions of tons of everyday garbage which are deposited into them each year in the United States. It’s a growing problem. Quite simply we’re running out of space to put our garbage. ",
@@ -145,7 +148,8 @@
           "title":"Conversion 2", 
           "img":"assets/tpo34/tpo34_passage2_1.jpg",
           "mp3":"assets/tpo34/tpo34_listening_passage2_1.mp3",
-          "contents": [ 
+          "contents": [],
+          "contentsOrign": [ 
             "Listen to a conversation between a student and her Creative Writing professor. ",
 
             "(woman) Hello, Professor Thompson, can I talk to you for a minute? ",
@@ -172,7 +176,8 @@
           "title":"Lecture 3", 
           "img":"assets/tpo34/tpo34_passage2_2.jpg",
           "mp3":"assets/tpo34/tpo34_listening_passage2_2.mp3",
-          "contents": [ 
+          "contents": [],
+          "contentsOrign": [ 
             "Listen to part of a lecture in a Botany class. ",
 
             "(female professor) When we talk about pollination ecology, we’re talking about the relationship between a plant and its pollinator. From the plant’s perspective, the ideal pollinator is an animal that is under-fed, ready to eat and in a hurry. The pollinator, on the other hand, wants to remain well-fed with as little effort as possible. These factors help drive the evolution of plants and their pollinators, both of which depend on this balanced and delicate relationship. Sometimes only certain insects or birds can pollinate certain plants species. So, to really understand pollination ecology, both the flower and its pollinators must be studied. Let’s start with flowers. ",
@@ -196,7 +201,8 @@
           "title":"Lecture 4", 
           "img":"assets/tpo34/tpo34_passage2_3.jpg",
           "mp3":"assets/tpo34/tpo34_listening_passage2_3.mp3",
-          "contents": [ 
+          "contents": [],
+          "contentsOrign": [ 
             "Listen to part of a discussion in a Business Management class. ",
 
             "(female professor) Last week we were talking about innovation in businesses. Remember the graph I showed you? ",

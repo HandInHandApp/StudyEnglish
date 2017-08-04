@@ -428,21 +428,18 @@ export class ConferenceData {
 
   getListeningTestData(url){
     console.log(url)
-
-    // let listenurl = 'assets/data/tpo34_listenting_json.json'
-    // return readdata
     return this.http.get(url)
         .map((response) => response.json());
   }
   getSpeakingTestData(url){
     console.log(url)
-
-    //  url = 'assets/data/tpo34_speaking_json.json'
-    // return readdata
     return this.http.get(url)
-        .map((response) => 
-          response.json()
-        );
+        .map((response) => response.json());
+  }
+  getTestData(url){
+    console.log(url)
+    return this.http.get(url)
+        .map((response) => response.json());
   }
   
 

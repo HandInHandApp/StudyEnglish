@@ -1,0 +1,118 @@
+{
+      "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
+      "steps":["p1","p2",
+              "p_section1_1",
+              "p_section1_2",
+              "p_section1_3",
+              "p3",
+              "p_section2_1"],
+      "passage":{
+        "p1":{
+          "seq": 1,
+          "title":"", 
+          "img":"assets/img/listening1.png",
+          "mp3":"",
+          "contents": []
+        },
+        "p2":{
+          "seq": 2,
+          "title":"", 
+          "img":"",
+          "mp3":"",
+          "viewtype":"direction",
+          "contentsheader": "Writing Section Direction \n.........",
+          "contents": [
+           "Writing Section Direction \n........."
+          ]
+        },
+        "p_section1_1":{
+          "seq": 3,
+          "title":"Question 1 of 2", 
+          "img":"",
+          "mp3":"",
+          "time":180,
+          "viewtype":"grid-one",
+          "contents": [ 
+            "A huge marine mammal known as Steller’s sea cow once lived in the waters around Bering Island off the coast of Siberia. It was described in 1741 by Georg W. Steller, a naturalist who was among the first Europeans to see one. In 1768 the animal became extinct. The reasons for the extinction are not clear. Here are three theories about the main cause of the extinction. ",
+            "",
+            "First, the sea cows may have been overhunted by groups of native Siberian people. If this theory is correct, then the sea cow population would have originally been quite large, but hundreds of years off too much hunting by the native people diminished the number of sea cows. Sea cows were a good source of food in a harsh environment, so overhunting by native people could have been the main cause of extinction. ",
+            "",
+            "Second, the sea cow population may have become extinct because of ecosystems disturbances that caused a decline in their main source of food, kelp (a type of sea plant). Kelp populations respond negatively to a number of ecological changes. It is possible that ecological changes near Bering Island some time before 1768 caused a decrease of the kelp that the sea cows depend on. ",
+            "",
+            "Third, the main cause of extinction of the sea cows could have been European fur traders who came to the island after 1741. It is recorded that the fur traders caught the last sea cow in 1768. It thus seems reasonable to believe that hunting by European fur traders, who possessed weapons that allowed them to quickly kill a large number of the animals, was the main cause of the sea cow’s extinction."
+          ]
+        },
+        "p_section1_2":{
+          "seq": 4,
+          "title":"Question 1 of 2", 
+          "img":"assets/tpo34/tpo34_writing.jpg",
+          "mp3":"assets/tpo34/tpo34_writing_question.mp3",
+           
+          "contents": [],
+          "contentsOrign": [
+            "Now listen to part of a lecture on the topic you just read about. ",
+            "",
+            "(male professor) The truth is we don’t know what the main cause of extinction of Steller’s sea cow was. There are problems with each of the theories that you read about. ",
+            "",
+            "First, the sea cows were massive creatures. They were up to nine meters long and could weigh over ten tons, just enormous. A couple of sea cows could feed a small Siberian village for months. And the population of the native Siberian people wasn’t very large. So while the Siberians certainly did hunt the sea cows, they didn’t need to hunt a lot of them. So it’s unlikely they were the ones who brought the sea cows to the point of extinction. ",
+            "",
+            "Second, about a hypothetical decrease in kelp caused by ecological disturbances, well, if something severe really happened in the ecosystem near Bering Island sometime before 1768, it would have affected not just the kelp but also other parts of the ecosystem. For example, it would have caused the decline in other marine animals like whales. But fishing ships in the area did not report a whale decline. Since there is no indication of broader ecosystem problems, the kelp was probably growing just fine and the sea cows did not experience food shortage. ",
+            "",
+            "Third, it might seem like the European traders were responsible because the sea cows became extinct soon after the Europeans arrived. But, actually, by the time that the Europeans arrived, the sea cow population was already quite small. We have evidence that the sea cow population was at its largest hundreds of years before the 1700s. So something was causing a serious and on-going decrease in the sea cow population long before the Europeans arrived in the Bering Island area. Whatever this something was, it should be considered the main cause of the extinction, not the European traders who were just the last to arrive. ",
+            "",
+            "Summarize the points made in the lecture, being sure to explain how they challenge the specific theories presented in the reading passage.",
+            ""
+           ]
+        },
+        "p_section1_3":{
+          "seq": 5,
+          "title":"Question 1 of 2", 
+          "img":"",
+          "mp3":"",
+          "time":1200,
+          "viewtype":"grid-two",
+          "deriction":"Directions:You have 20 minutes to plan and write your response. Your response. will be judged on the basis of the qualit of your writing and on how well your response presents the points in the lecture and their relationship to the reading passage. Typically, an effective response will be 150 to 255 words",
+          "question":"Question: Summarise the points made in the lecture, being sure to explain how they cast doubt on specific points made in the reading passage",
+          "contents": [ 
+            "A huge marine mammal known as Steller’s sea cow once lived in the waters around Bering Island off the coast of Siberia. It was described in 1741 by Georg W. Steller, a naturalist who was among the first Europeans to see one. In 1768 the animal became extinct. The reasons for the extinction are not clear. Here are three theories about the main cause of the extinction. ",
+            "",
+            "First, the sea cows may have been overhunted by groups of native Siberian people. If this theory is correct, then the sea cow population would have originally been quite large, but hundreds of years off too much hunting by the native people diminished the number of sea cows. Sea cows were a good source of food in a harsh environment, so overhunting by native people could have been the main cause of extinction. ",
+            "",
+            "Second, the sea cow population may have become extinct because of ecosystems disturbances that caused a decline in their main source of food, kelp (a type of sea plant). Kelp populations respond negatively to a number of ecological changes. It is possible that ecological changes near Bering Island some time before 1768 caused a decrease of the kelp that the sea cows depend on. ",
+            "",
+            "Third, the main cause of extinction of the sea cows could have been European fur traders who came to the island after 1741. It is recorded that the fur traders caught the last sea cow in 1768. It thus seems reasonable to believe that hunting by European fur traders, who possessed weapons that allowed them to quickly kill a large number of the animals, was the main cause of the sea cow’s extinction."
+          ]
+        },
+        "p3":{
+          "seq": 6,
+          "title":"", 
+          "img":"",
+          "mp3":"",
+          "viewtype":"direction",
+          "contentsheader": "Writing Section Direction \n.........",
+          "contents": [
+           "Writing Section Direction \n........."
+          ]
+        },
+        "p_section2_1":{
+          "seq": 7,
+          "title":"Question 2 of 2", 
+          "img":"",
+          "mp3":"",
+          "time":1800,
+          "viewtype":"grid-three",
+          "deriction":"Directions:Read this question below. You have 30 minutes to plan, write, and revise your essay.Typically, an effective response will contain a minimun of 300 words",
+
+          "contents": [ 
+            "Do you agree or disagree with the following statement? ",
+            "",
+            "Educating children is a more difficult task today than it was in the past because they spend so much time on cell phone, online games, and social networking Web site. ",
+            "",
+            "Use specific reasons and examples to support your answer."
+          ]
+        }
+
+
+      }
+      
+    }
