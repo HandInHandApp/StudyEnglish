@@ -22,6 +22,8 @@ export class TimerPage implements AfterViewInit, OnDestroy {
  // 父组件传递标题
  @Input() title: string;
 
+ @Input() stop: boolean;
+
  @Output() childEvent = new EventEmitter<any>();
 
 
@@ -53,15 +55,18 @@ export class TimerPage implements AfterViewInit, OnDestroy {
  // 每一秒更新时间差
  ngAfterViewInit() {
   this.timer = setInterval(() => {
-   this.endDate = this.endDate - 1000;
-   this.diff = this.endDate
-//    console.log(this.endDate)
-//    console.log(this.diff)
-//    this.everySecond.emit("event");
+   if(this.stop == true || this.endDate == 0){
+       
+   }else{
+        this.endDate = this.endDate - 1000;
+        this.diff = this.endDate
+   }
+
    if(this.endDate == 0) {
         this.childEvent.emit(this.title);
         clearInterval(this.timer);
    }
+   
    //每秒发送通知
    this.childEvent.emit(this.title+"_"+this.endDate);
   }, 1000);
