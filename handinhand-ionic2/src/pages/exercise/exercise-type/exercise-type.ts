@@ -4,7 +4,8 @@ import {
   // ActionSheet,
   ActionSheetController,
   NavParams,
-  NavController
+  NavController,
+  ToastController
 } from 'ionic-angular';
 
 
@@ -27,28 +28,37 @@ export class ExerciseTypePage {
     public actionSheetCtrl: ActionSheetController,
     public navCtrl: NavController,
     public navParams: NavParams,
-    public exerData: ExerciseData
+    public exerData: ExerciseData,
+    public toastCtrl: ToastController
   ) {}
 
 
   ionViewDidLoad() {
     this.category = this.navParams.data.category;
 
-    if (this.category == 'practise') {
-      this.exerData.getPractice().subscribe(res => {
+    if (this.category == 'practice') {
+      this.exerData.getPracticeTypes().subscribe(res => {
         this.types = res;
       });
       console.log("type data loaded: " + this.types);
     } else {
       this.errTip = "No type configured for " + this.category;
+      this.presentToast(this.errTip);
     }
 
   }
 
+  goToExerciseItemsPage(type: any) {
+    console.log("click name: %s", type.name);
+    this.navCtrl.push(ExerciseItemPage, { typename: type.name });
+  }
 
-  goToExerciseQuestionPage(type: any) {
-    console.log("click object: %o", type);
-    this.navCtrl.push(ExerciseItemPage, { typeid: type.id });
+  presentToast(message: string) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
   }
 
 }

@@ -7,11 +7,13 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
-import AV from 'leancloud-storage'; 
-// declare var firebase: any;
+import AV from 'leancloud-storage';
 
-const appId = 'Eul6rG90rOjIO5imP853JOmn-gzGzoHsz';
-const appKey = 'XdmDTh1MQGHCYrJjp1B5Jyh1';
+// import { RxAVClient, RxAVObject, RxAVQuery } from 'rx-lean-js-core';
+// const appId = 'Eul6rG90rOjIO5imP853JOmn-gzGzoHsz';
+// const appKey = 'XdmDTh1MQGHCYrJjp1B5Jyh1';
+// RxAVClient.init({ appId, appKey });
+
 
 @Injectable()
 export class ExerciseData {
@@ -22,17 +24,24 @@ export class ExerciseData {
     public http: Http
   ){}  
 
-  getPractice(): any {
-    let url:string = 'assets/data/exercise/practise-type.json';
+  getPracticeTypes(): any {
+    let url:string = 'assets/data/exercise/practice-types.json';
 
     return this.http.get(url)
         .map((response) => response.json());
   }
 
-  getPracticeExeByType(id:number): any {
-    let url:string = 'assets/data/exercise/practise-exe.json';
+  getPracticeQuestionByType(type: string): any {
+    let query = new AV.Query('Question');
 
-    return this.http.get(url)
-        .map((response) => response.json());
+    console.log("Query type: %s", type);
+
+    query.contains('type', type);
+    query.limit(10);
+
+    return query.find().then(function(res){
+      return res;
+    }, function(err){});
+
   }
 }

@@ -18,12 +18,12 @@ import { ExerciseTypePage } from '../exercise-type/exercise-type';
 export class ExerciseIndexPage {
 
   categories: any[] = [{
-      name:"practise",
+      name:"practice",
       title:"分类练习",
       desc:"基本专项练习",
       img:"assets/img/exercise/header.jpg"
     },{
-      name:"drill",
+      name:"retired",
       title:"真题练习",
       desc:"严选Toelf真题",
       img:"assets/img/exercise/header.jpg"
@@ -46,8 +46,10 @@ export class ExerciseIndexPage {
     
   }
 
+  // currently only support practice
   goToExerciseTypePage(category: any) {
     console.log("click %s", category.name);
     this.navCtrl.push(ExerciseTypePage, { category: category.name });
   }
+
 }

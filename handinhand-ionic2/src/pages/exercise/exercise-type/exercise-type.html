@@ -9,11 +9,14 @@
 
 <ion-content>
   <ion-card *ngFor="let type of types">
-    <ion-card-header (click)="goToExerciseQuestionPage(type)">
-      {{type.title}}
+    <ion-card-header>
+      {{type.tdesc}}
     </ion-card-header>
-    <ion-card-content>
-      {{type.title}}
-    </ion-card-content>
+    <ion-list>
+      <button ion-item *ngFor="let item of type.titems" (click)="goToExerciseItemsPage(item)">
+        <ion-icon name="school" item-start></ion-icon>
+        {{item.title}}
+      </button>
+    </ion-list>
   </ion-card>
 </ion-content>

@@ -1,0 +1,54 @@
+[
+  {
+    "tid": 1,
+    "tname": "reading",
+    "tdesc": "阅读",
+    "titems": [{
+        "id": 101,
+        "name": "single-choice",
+        "title": "单选题"
+      },
+      {
+        "id": 102,
+        "name": "multi-choice",
+        "title": "多选题"
+      },
+      {
+        "id": 103,
+        "name": "sentence-insert",
+        "title": "句子插入题"
+      },
+      {
+        "id": 104,
+        "name": "prose-summary",
+        "title": "综述题"
+      }
+    ]
+  },
+  {
+    "tid": 2,
+    "tname": "listening",
+    "tdesc": "听力",
+    "titems": [{
+      "id": 201,
+      "name": "sentence-dictation",
+      "title": "句子听写训练"
+    }, {
+      "id": 202,
+      "name": "sentence-repeat",
+      "title": "句子跟读训练"
+    }, {
+      "id": 203,
+      "name": "sentence-meaning",
+      "title": "句群意思提炼训练"
+    }, {
+      "id": 204,
+      "name": "origin-step",
+      "title": "原文分步训练"
+    }, {
+      "id": 205,
+      "name": "single-choice",
+      "title": "题型训练"
+    }]
+  }
+]

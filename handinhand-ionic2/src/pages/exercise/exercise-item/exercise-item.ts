@@ -7,6 +7,7 @@ import {
   // Platform,
   NavParams,
   NavController,
+  ToastController
   // ViewController
 } from 'ionic-angular';
 
@@ -20,7 +21,7 @@ import { ExerciseData } from '../../../providers/exercise/exercise-data';
 })
 export class ExerciseItemPage {
   
-  categorytype: any = null;
+  typename: string = null;
   currentIndex: Number = 0;
   exercises: any[] = [];
   answer: any[] = [];
@@ -29,24 +30,26 @@ export class ExerciseItemPage {
     public modalCtrl: ModalController,
     public navCtrl: NavController,
     public navParams: NavParams,
-    public exerData: ExerciseData  
+    public exerData: ExerciseData,
+    public toastCtrl: ToastController
   ) {}
 
   ionViewDidLoad() {
-
-    this.categorytype = this.navParams.data.categorytype;
+    this.typename = this.navParams.data.typename;
     this.currentIndex = 0;
     
-    console.log("input categorytype is " + this.categorytype);
+    console.log("input typename is " + this.typename);
 
-    // // QUERY 10 questions
-    // this.confData.getExercises().subscribe((exercisesData: any[]) => {
-    //   this.exercises = exercisesData;
-    //   console.log("exercises size: "+this.exercises.length +" Index: " + this.currentIndex);
-    //   console.log("item: %o", this.exercises[0]);
-    // });
-
+    this.exerData.getPracticeQuestionByType(this.typename).then(res => {
+      this.exercises = res;
+      console.log("fetch result size is "+ this.exercises.length);
+    });
   }
+
+    // this.exerData.getPracticeQuestionByType(this.typename).then(function(res){
+    //   this.exercises = res;
+    //   console.log("fetch result size is "+ this.exercises.length);
+    // });
 
   openAnswerSheet() {
     console.log("open answer sheet");
