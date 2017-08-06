@@ -7,7 +7,7 @@
     height:50px;
     line-height:40px;
 }
-.review-body .review-row{
+.review-body .review-div{
     margin-top:5px;
     font-size: 15px;
     font-weight: bold; 
@@ -19,6 +19,9 @@
 .answer-col{
     text-align:center;
 }
-.review-row{
+.review-div{
     cursor: pointer;
+    border-bottom: solid 1px #eeeeee;
+    height:35px;
+    line-height: 35px;
 }

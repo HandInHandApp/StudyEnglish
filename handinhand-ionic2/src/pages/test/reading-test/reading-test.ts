@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, NavParams } from 'ionic-angular';
 import { ReadingReviewPage } from '../reading-review/reading-review'
 import { TestListPage } from '../test-list/test-list'
+import { TestReportPage } from '../test-report/test-report'
 
 
 import { ConferenceData } from '../../../providers/conference-data';
@@ -123,6 +124,7 @@ export class ReadingTestPage {
               text: 'CONTINUE',
               handler: data => {
                 console.log('CONTINUE clicked');
+                this.navCtrl.push(TestReportPage)
               }
             }]
         });

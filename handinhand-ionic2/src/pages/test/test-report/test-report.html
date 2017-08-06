@@ -11,8 +11,9 @@
     </ion-toolbar>
     <ion-grid class="review-header">
         <ion-row class="review-header-row"> 
-            <ion-col col-11>Quesion</ion-col>
+            <ion-col col-10>Quesion</ion-col>
             <ion-col col-1 class="answer-col">Your Answer</ion-col>
+            <ion-col col-1 class="answer-col">Correct Answer</ion-col>
         </ion-row>
     </ion-grid>
 </ion-header>
@@ -20,8 +21,9 @@
  <ion-grid>
         <div *ngFor="let step of steps; let idx=index;">
             <ion-row class="review-div" *ngIf="step.indexOf('q')!=-1">
-                <ion-col (click)='gotoQuestion(idx, step)'col-11>{{passages.questions[step].seq}}.<span [innerHTML]="passages.questions[step].title"></span></ion-col>
+                <ion-col (click)='gotoQuestion(idx, step)'col-10>{{passages.questions[step].seq}}.<span [innerHTML]="passages.questions[step].title"></span></ion-col>
                 <ion-col col-1 class="answer-col">-</ion-col>
+                <ion-col col-1 class="answer-col" [innerHTML]="passages.questions[step].answer"></ion-col>
             </ion-row>
         </div>
     </ion-grid>
