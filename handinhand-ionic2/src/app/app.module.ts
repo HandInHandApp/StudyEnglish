@@ -47,6 +47,8 @@ import { SpeakingTestPage  } from '../pages/test/speaking-test/speaking-test'
 import { ReadingTestPage   } from '../pages/test/reading-test/reading-test'
 import { DirectionPage } from   '../pages/directions/directions'
 
+import { ReadingReviewPage   } from '../pages/test/reading-review/reading-review'
+
 import { ExerciseIndexPage } from '../pages/exercise/index/index';
 import { ExerciseTypePage } from '../pages/exercise/exercise-type/exercise-type';
 import { ExerciseItemPage } from '../pages/exercise/exercise-item/exercise-item';
@@ -95,6 +97,8 @@ import { ContainsPipe, NotContainsPipe } from '../pages/test/reading-test/readin
     WritingTestPage, 
     SpeakingTestPage, 
     ReadingTestPage,
+
+    ReadingReviewPage, 
 
     AboutPage,
     AccountPage,
@@ -208,7 +212,9 @@ import { ContainsPipe, NotContainsPipe } from '../pages/test/reading-test/readin
     RecordPage,
     LibraryPage,
     TrackPage,
-    RecordListPage
+    RecordListPage,
+
+    ReadingReviewPage
   ],
   providers: [
     StatusBar,

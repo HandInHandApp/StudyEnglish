@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 
-import {NavController, AlertController, NavParams } from 'ionic-angular';
+import { NavController, AlertController, NavParams } from 'ionic-angular';
+import { ReadingReviewPage } from '../reading-review/reading-review'
+import { TestListPage } from '../test-list/test-list'
 
 
 import { ConferenceData } from '../../../providers/conference-data';
@@ -35,19 +37,29 @@ export class ReadingTestPage {
     public alertCtrl: AlertController,
     public confData: ConferenceData
   ) {
+    this.step = this.navParams.get("curstep")
+    this.stepindex = this.navParams.get("stepindex")
     confData.getReadingTestData("tpo34").subscribe(
       resulte => {
         console.log(resulte)
         this.passages = resulte
         this.steps = this.passages["steps"];
-        this.first_step = this.steps[this.stepindex];
-        this.step = this.first_step;
+        if(this.step == undefined){
+          this.stepindex = 0;
+          this.first_step = this.steps[this.stepindex];
+          this.step = this.first_step;
+          this.currentPassage = this.passages[this.step]
+        }else{
+          let passageStep = this.passages.questions[this.step].passage
+          this.currentPassage= this.passages.passage[passageStep]
+        }
         this.last_step = this.steps[this.passages["steps"].length - 1];
         this.last_stepindex = this.passages["steps"].length - 1;
         this.get_total_graph(this.steps);
-        this.currentPassage = this.passages[this.step]
       }
     );
+  }
+  ngAfterViewInit() {
   }
 
   private get_total_graph(steps: any[]) {
@@ -150,9 +162,15 @@ export class ReadingTestPage {
       this.currentPassage = this.passages.passage[this.step]
     }
   }
+
   gotoHome() {
-    this.navCtrl.pop()
+    this.navCtrl.popTo(this.navCtrl.first())
   }
+
+  gotoReview(){
+    this.navCtrl.push(ReadingReviewPage)
+  }
+
   stopTiming() {
   }
 

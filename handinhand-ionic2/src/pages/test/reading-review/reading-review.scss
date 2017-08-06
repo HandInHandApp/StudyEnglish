@@ -1,0 +1,24 @@
+.review-header{
+    background-color: #ffffff;
+    height:50px;
+    font-weight: bold;
+}
+.review-header .review-header-row {
+    height:50px;
+    line-height:40px;
+}
+.review-body .review-row{
+    margin-top:5px;
+    font-size: 15px;
+    font-weight: bold; 
+}
+.review-body{
+    padding:0;
+    background-color: #dddddd;
+}
+.answer-col{
+    text-align:center;
+}
+.review-row{
+    cursor: pointer;
+}

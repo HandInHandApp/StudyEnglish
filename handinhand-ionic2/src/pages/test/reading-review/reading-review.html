@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-buttons right>
+            <button class="tpobtn" ion-button (click)="goBack()" type="submit" block> Back </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-grid class="review-header">
+        <ion-row class="review-header-row"> 
+            <ion-col col-11>Quesion</ion-col>
+            <ion-col col-1 class="answer-col">Your Answer</ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-header>
+<ion-content class="review-body">
+ <ion-grid>
+        <ion-row *ngFor="let step of steps; let idx=index;" class="review-row">
+                <ion-col (click)='gotoQuestion(idx, step)'col-11 *ngIf="step.indexOf('q')!=-1">{{idx}}:<span [innerHTML]="passages.questions[step].title"></span></ion-col>
+                <ion-col col-1 class="answer-col" *ngIf="step.indexOf('q')!=-1">-</ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
