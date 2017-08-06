@@ -8,6 +8,7 @@ import { TestReportPage } from '../test-report/test-report'
 
 
 import { ConferenceData } from '../../../providers/conference-data';
+import { UserData } from '../../../providers/user-data';
 
 @Component({
   selector: 'page-reading-page',
@@ -15,9 +16,9 @@ import { ConferenceData } from '../../../providers/conference-data';
 })
 export class ReadingTestPage {
   useranswer: any={
-    "q1":"", "q2":"", "q3":"", "q4":"", "q5":"", "q6":"", "q7":"", "q8":"","q9":"","q10":"","q11":"","q12":"", "q13":"", "q14":"",
-    "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
-    "q29":"", "q30":"", "q31":"", "q32":"","q33":"","q34":"","q35":"","q36":"","q37":"","q38":"","q39":"","q40":"","q41":"","q42":""
+      "q1":"", "q2":"", "q3":"", "q4":"", "q5":"", "q6":"", "q7":"", "q8":"","q9":"","q10":"","q11":"","q12":"", "q13":"", "q14":"",
+      "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
+      "q29":"", "q30":"", "q31":"", "q32":"","q33":"","q34":"","q35":"","q36":"","q37":"","q38":"","q39":"","q40":"","q41":"","q42":""
   };
   passages: any;
   first_step: any;
@@ -36,7 +37,8 @@ export class ReadingTestPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public alertCtrl: AlertController,
-    public confData: ConferenceData
+    public confData: ConferenceData,
+    public userData: UserData
   ) {
     this.step = this.navParams.get("curstep")
     this.stepindex = this.navParams.get("stepindex")
@@ -46,11 +48,15 @@ export class ReadingTestPage {
         this.passages = resulte
         this.steps = this.passages["steps"];
         if(this.step == undefined){
+          this.userData.setUserReadingAnswer(this.useranswer)
           this.stepindex = 0;
           this.first_step = this.steps[this.stepindex];
           this.step = this.first_step;
           this.currentPassage = this.passages[this.step]
         }else{
+          this.userData.getUserReadingAnswer().then((value)=>{
+            this.useranswer = value
+          })
           let passageStep = this.passages.questions[this.step].passage
           this.currentPassage= this.passages.passage[passageStep]
         }
@@ -60,8 +66,9 @@ export class ReadingTestPage {
       }
     );
   }
+
   ngAfterViewInit() {
-  }
+  };
 
   private get_total_graph(steps: any[]) {
     for (let step of steps) {
@@ -171,6 +178,7 @@ export class ReadingTestPage {
 
   gotoReview(){
     this.navCtrl.push(ReadingReviewPage)
+    this.userData.setUserReadingAnswer(this.useranswer)
   }
 
   stopTiming() {
