@@ -443,13 +443,19 @@ export class ConferenceData {
   }
   
 
-  getTestListData(){
+  getTestListData(type){
+    let listenurl ;
+    if(type == "mintest"){
+       listenurl = 'assets/data/minitest.json'
+    }else{
+       listenurl = 'assets/data/testlist.json'
+    }
 
-    let listenurl = 'assets/data/testlist.json'
-    // return readdata
     return this.http.get(listenurl)
         .map((response) => response.json());
   }
+
+  
 
   showAlert(text,detail) {
     let alert = this.alertCtrl.create({

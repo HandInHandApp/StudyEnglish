@@ -90,17 +90,15 @@
              <p>{{test.desc1}}</p>
              <p> {{test.desc2}}</p>
              <p> {{test.desc3}}</p>
-             <!--<p>优点：用时短；全程52分钟</p>
-             <p> 缺点：不如全真模考考察细致</p>
-             <p> 适用人群：已经考过或者时间紧张的考生</p>-->
+
           </ion-card-content>
 
           <ion-row>
             <ion-col>
-              <button ion-button icon-left clear  (click)="goToAllTest(test.type)">
+              <button ion-button icon-left clear  (click)="goToAllTest()">
                 开始
               </button>
-              <button ion-button icon-left clear  (click)="goToTopList()">
+              <button ion-button icon-left clear  (click)="goToAllTest(test.type)">
                 全部列表
               </button>
             </ion-col>
@@ -112,23 +110,20 @@
   </ion-list>
 
 
- <ion-list  *ngSwitchCase="'steptest'" >
+ <!-- <ion-list  *ngSwitchCase="'steptest'" >
     <ion-grid fixed>
       <ion-row align-items-stretch>
-        <!--<ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let test" approxItemHeight="457px">-->
           <ion-col col-12 col-md-6 align-self-stretch align-self-center  *ngFor="let test of steptests" approxItemHeight="457px">
         <ion-card>
 
           <ion-item>
             <ion-avatar item-start>
-              <!--<img src="assets/img/marty-avatar.png">-->
               <img [src]="test.profileminPic" alt="test min profile pic">
             </ion-avatar>
             <h2>{{test.title}}</h2>
             <p>{{test.subtitle}}</p>
           </ion-item>
 
-          <!--<img src="assets/img/advance-card-bttf.png">-->
           <img [src]="test.profilePic" alt="test profile pic">
 
           <ion-card-content>
@@ -161,6 +156,6 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-list>
+  </ion-list> -->
   </div>
 </ion-content>

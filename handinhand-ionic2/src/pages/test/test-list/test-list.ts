@@ -75,10 +75,12 @@ export class TestListPage {
   ) { }
 
   goToAllTest(type: any) {
-    if(type == "alltest"){
-      this.navCtrl.push(AllTestPage);
-    }else{
+    if(type == "minitest"){
+    //   this.navCtrl.push(AllTestPage);
+    // }else{
       this.navCtrl.push(MiniTestPage);
+    }else{
+      this.navCtrl.push(TopListPage);
     }
     
   }

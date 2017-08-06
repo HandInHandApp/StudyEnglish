@@ -26,10 +26,10 @@ toplist: any[]
     ) {
     this.session = navParams.data.session;
     this.type = navParams.data.type;
-    this.confData.getTestListData()
+    this.confData.getTestListData("tpotest")
       .subscribe(resulte => 
               {
-                this.toplist =resulte.tpolist;
+                this.toplist =resulte.testlist;
                 console.log(resulte)
               }
            );
