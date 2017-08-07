@@ -107,19 +107,19 @@
                             </ion-list-header>
                             <ion-item>
                                 <ion-label class="label-pre-line">{{passages.questions[item].choices.A}} </ion-label>
-                                <ion-checkbox value="A" [checked]="useranswer[step]['A']" (ionChange)="setPairAnswer($event, 'A')"></ion-checkbox>
+                                <ion-checkbox value="A" [checked]="useranswer[step].indexOf('A')!=-1" (ionChange)="setPairAnswer($event, 'A')"></ion-checkbox>
                             </ion-item>
                             <ion-item>
                                 <ion-label class="label-pre-line">{{passages.questions[item].choices.B}}</ion-label>
-                                <ion-checkbox value="B"  [checked]="useranswer[this.step]['B']" (ionChange)="setPairAnswer($event, 'B')"></ion-checkbox>
+                                <ion-checkbox value="B"  [checked]="useranswer[step].indexOf('B')!=-1" (ionChange)="setPairAnswer($event, 'B')"></ion-checkbox>
                             </ion-item>
                             <ion-item>
                                 <ion-label class="label-pre-line">{{passages.questions[item].choices.C}} </ion-label>
-                                <ion-checkbox value="C" [checked]="useranswer[this.step]['C']" (ionChange)="setPairAnswer($event, 'C')"></ion-checkbox>
+                                <ion-checkbox value="C" [checked]="useranswer[step].indexOf('C')!=-1" (ionChange)="setPairAnswer($event, 'C')"></ion-checkbox>
                             </ion-item>
                             <ion-item>
                                 <ion-label class="label-pre-line">{{passages.questions[item].choices.D}} </ion-label>
-                                <ion-checkbox value="D" [checked]="useranswer[this.step]['D']" (ionChange)="setPairAnswer($event, 'D')"></ion-checkbox>
+                                <ion-checkbox value="D" [checked]="useranswer[step].indexOf('D')!=-1" (ionChange)="setPairAnswer($event, 'D')"></ion-checkbox>
                             </ion-item>
                         </ion-list>
                     </ion-col>

@@ -89,16 +89,19 @@ export class ReadingTestPage {
   setPairAnswer(event: any, choice: string){
     if(event.checked==true){
       if(this.useranswer[this.step]==""){
-        let pair_choice = {"A":false,"B":false,"C":false,"D":false}
-        this.useranswer[this.step]=pair_choice
-        this.useranswer[this.step][choice]=true
-      }else if(this.getChoiceCount(this.useranswer[this.step])>1){
+        let pair_choice = [] 
+        this.useranswer[this.step]=[choice]
+      }else if(this.useranswer[this.step].length>1){
         event.checked=false
       }else{
-        this.useranswer[this.step][choice]=true
+        this.useranswer[this.step].push(choice)
       }
     }else{
-      this.useranswer[this.step][choice]=false
+      for(var i=0; i<this.useranswer[this.step].length;i++){
+        if(this.useranswer[this.step][i] == choice){
+          this.useranswer[this.step].splice(i,1)
+        }
+      }
     }
   };
 
