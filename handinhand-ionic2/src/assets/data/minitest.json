@@ -1,0 +1,49 @@
+{
+    "testlist":[
+        {
+            "title":"入学测试试卷A",
+            "items":[
+                {   
+                    "testNmae":"阅读",
+                    "url": "assets/data/minitest_A_reading.json",
+                    "pagetype":"Reading"
+                },{
+                    "testNmae":"听力",
+                    "url": "assets/data/minitest_A_listenting.json",
+                     "pagetype":"Listening"
+                },{
+                    "testNmae":"口语",
+                    "url": "assets/data/minitest_A_speaking.json",
+                     "pagetype":"Speaking"
+                },{
+                    "testNmae":"写作",
+                    "url": "assets/data/minitest_A_writing.json",
+                     "pagetype":"Writing"
+                }
+            ]
+        },
+        {
+            "title":"入学测试试卷B",
+            "items":[
+                {   
+                    "testNmae":"阅读",
+                     "url": "assets/data/minitest_B_reading.json",
+                    "pagetype":"Reading"
+                },{
+                    "testNmae":"听力",
+                    "url": "assets/data/minitest_B_listenting.json",
+                     "pagetype":"Listening"
+                },{
+                    "testNmae":"口语",
+                    "url": "assets/data/minitest_B_speaking.json",
+                     "pagetype":"Speaking"
+                },{
+                    "testNmae":"写作",
+                    "url": "assets/data/minitest_B_writing.json",
+                     "pagetype":"Writing"
+                }
+            ]
+        }
+    ]
+
+    }
