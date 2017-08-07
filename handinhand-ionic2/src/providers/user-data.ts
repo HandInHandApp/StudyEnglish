@@ -109,7 +109,16 @@ export class UserData {
       return value;
     });
   };
+  
+  setUserReadingAnswer(answer: any): void {
+    this.storage.set("readingAnswer", answer)
+  };
 
+  getUserReadingAnswer(): Promise<any>{
+    return this.storage.get("readingAnswer").then((value) =>{
+      return value;
+    });
+  }
 
 
 }

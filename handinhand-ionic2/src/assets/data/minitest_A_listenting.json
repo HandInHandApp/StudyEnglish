@@ -1,0 +1,286 @@
+{
+      "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
+      "steps":["p1","p2",
+              "p_Conversion1",
+              "q1","q2","q3","q4","q5",
+              "p_Lecture1",
+              "q6","q7","q8","q9","q10","q11",
+              "p_Lecture2",
+              "q12","q13","q14","q15","q16","q17"],
+      "passage":{
+        "p1":{
+          "seq": 1,
+          "title":"", 
+          "img":"assets/img/listening1.png",
+          "mp3":"",
+          "contents": []
+        },
+        "p2":{
+          "seq": 2,
+          "title":"", 
+          "img":"",
+          "mp3":"assets/tpo34/tpo34_listening_direction1.mp3",
+          "contents": [
+           "Listening Section Direction \n........."
+          ]
+        },
+        "p_Conversion1":{
+          "seq": 3,
+          "title":"Conversion 1", 
+          "img":"assets/tpo34/tpo34_passage1_1.jpg",
+          "mp3":"assets/tpo34/tpo34_listening_passage1_1.mp3",
+          "contents": [],
+          "contentsOrign":[
+          ]
+        },
+        "p_Lecture1":{
+          "seq": 4,
+          "title":"Lecture 1", 
+          "img":"assets/tpo34/tpo34_passage1_2.jpg",
+          "mp3":"assets/tpo34/tpo34_listening_passage1_2.mp3",
+          "contents": [],
+          "contentsOrign": [ 
+          ]
+        },
+        "p_Lecture2":{
+          "seq": 5,
+          "title":"Lecture 2", 
+          "img":"assets/tpo34/tpo34_passage1_3.jpg",
+          "mp3":"assets/tpo34/tpo34_listening_passage1_3.mp3",
+          "contents": [],
+          "contentsOrign": [ 
+          ]
+        }
+      },
+      "question":{
+        "q1":{
+          "seq": 1,
+          "title":"Question 1 of 17",
+          "mp3":"assets/tpo34/tpo34_listening_question1_1.mp3",
+          "para":"Why does the student go to see the librarian? ",
+          "choices":[
+              "To sign up for a seminar on using electronic sources for research",
+              "To report that a journal is missing from the reference area",
+              "To find out the procedure for checking out journal articles",
+              "To ask about how to look for resources for a class paper"
+          ],
+            "answer":["A"]
+          },
+          "q2":{
+            "seq": 2,
+            "title":"Question 2 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_2.mp3",
+            "para":"What does the librarian say about the availability of journals and articles in the library?",
+            "choices":[
+              "hey are not easy to find if a professor put them on reserve ",
+              "Most of them are accessible in an electronic format",
+              "Most of them can be checked out for three weeks",
+              "Printed versions from the past three years are located in the reference section."
+            ],
+            "answer":["A"]
+          },
+          "q3":{
+            "seq": 3,
+             "title":"Question 3 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_3.mp3",
+            "para":"What does the librarian suggest the student should do to save time? ",
+            "choices":[
+                "Choose an easier research topic",
+                "Concentrate on five journals",
+                "Read the summaries of the articles first",
+                "Install a new program on her home computer"
+              ],
+            "answer":["B"]
+          },
+          "q4":{
+            "seq": 4,
+             "title":"Question 4 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_4.mp3",
+            "para":"What can be inferred about why the woman decides to use the computer in the library? ",
+            "choices":[
+              "She thinks she might need additional help from the man",
+              "She does not have a computer at home",
+              "She has to hand in her assignment by the end of the day",
+              "She will be meeting a friend in the library later on"
+              ],
+            "answer":["B"]
+          },
+          "q5":{
+            "seq": 5,
+             "title":"Question 5 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_5.mp3",
+            "para":"Why does the woman say this()",
+            "choices":[
+                "She had forgotten about the information",
+                "She is surprised she was not aware of the information",
+                "She is annoyed that the information was published only recently",
+                "She is concerned that the librarian gave her incorrect information"
+              ],
+            "answer":["B"]
+          },
+          "q6":{
+            "seq": 6,
+             "title":"Question 6 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_6.mp3",
+            "para":"What is the purpose of the lecture?",
+            "choices":[
+                "To explain the difference between two artistic styles",
+                "To describe a new art gallery to the class",
+                "To introduce an artist's work to the class",
+                "To show how artists' styles can evolve over time"
+              ],
+            "answer":["B"]
+          },
+          "q7":{
+            "seq": 7,
+             "title":"Question 7 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_7.mp3",
+            "para":"What does the professor say about Frantzen's painting of a farm scene?",
+            "choices":[
+                "It resembles a photograph",
+                "It may be Frantzen's best known painting",
+                "It was painted in the Impressionist style",
+                "It was painted while Frantzen lived abroad"
+              ],
+            "answer":["B"]
+          },
+          "q8":{
+            "seq": 8,
+             "title":"Question 8 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_8.mp3",
+            "para":"Why did Frantzen go to the Sales Barn?",
+            "choices":[
+                "To study human form and movement",
+                "To earn money by painting portraits",
+                "To paint farm animals in an outdoor setting",
+                "To meet people who could model for her paining"
+              ],
+            "answer":["B"]
+          },
+          "q9":{
+            "seq": 9,
+             "title":"Question 9 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_9.mp3",
+            "para":"What does the professor imply about the painting of the young woman surrounded by pumpkins?",
+            "choices":[
+                "It was painted at an art fair",
+                "It combines Impressionism with Realism",
+                "It convinced Frantzen that she was a good illustrator",
+                "It was originally meant to be used in an advertisement"
+              ],
+            "answer":["B"]
+          },
+          "q10":{
+            "seq": 10,
+             "title":"Question 10 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_10.mp3",
+            "para":"Why does the professor discuss Frantzen's difficulties as a young painter?",
+            "choices":[
+                "He wants to point out mistakes that young artists commonly make",
+                "He thinks her example can inspire the students in their own lives",
+                "Her difficulties remind him of the difficulties he himself experienced as a young girl",
+                "Her difficulties are the subject of some of the paintings in the gallery that the students will visit"
+            ],
+            "answer":["B"]
+          },
+          "q11":{
+            "seq": 11,
+             "title":"Question 11 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_11.mp3",
+            "para":"What does the professor imply when he says this() ",
+            "choices":[
+                "The students can understand Frantzen's art without knowing about her life",
+                "The students should pay very close attention to what he is going to say",
+                "Some of his students are already familiar with Frantzen's life story",
+                "Some of his students may not appreciate Frantzen's work"
+            ],
+            "answer":["B"]
+          },
+            "q12":{
+            "seq": 12,
+             "title":"Question 12 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_12.mp3",
+            "para":"What does the professor mainly discuss? ",
+            "choices":[
+                "The difference in age among American mountain ranges",
+                "The importance of a technique used for dating geological materials",
+                "The recent discovery of an ancient canyon",
+                "A comparison of various minerals used for dating"
+            ],
+            "answer":["B"]
+          },
+            "q13":{
+            "seq": 13,
+             "title":"Question 13 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_13.mp3",
+            "para":"Before the use of uranium-lead analysis, where did most geologists think the Grand Canyon sandstone came from?",
+            "choices":[
+                "An ancient lake located in the American Southwest",
+                "A desert that once connected two continents",
+                "Sands carried by a river from the Appalachian Mountains",
+                "A nearby mountain range that had flattened out over time"
+            ],
+            "answer":["B"]
+          },
+            "q14":{
+            "seq": 14,
+             "title":"Question 14 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_14.mp3",
+            "para":"In the talk, the professor describes the sequence of uranium-lead dating. Summarize the sequence by putting the events in the correct order.",
+            "drag":[
+              "       Drag your answer choices to spaces where they belong. To remove an answer choice, click on it",
+              " ",
+              "Zircon in the sandstone is matched to the zircon in a particular mountain range.",
+              "  The amount of lead in sandstone zircon is measured",
+              "  The age of zircon in a sandstone sample is determined"
+            ],
+            "choices":[
+                "1",
+              "2",
+              "3"
+            ],
+            "answer":["B"]
+          },
+            "q15":{
+            "seq": 15,
+             "title":"Question 15 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_15.mp3",
+            "para":"According to the professor, what change has caused uranium-lead dating to gain popularity recently?",
+            "choices":[
+                "It can be performed outside a laboratory",
+                "It can now be done more efficiently",
+                "It no longer involves radioactive elements",
+                "It can be used in fields other than geology"
+            ],
+            "answer":["B"]
+          },
+            "q16":{
+            "seq": 16,
+             "title":"Question 16 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_16.mp3",
+            "para":"Why does the professor talk about the breaking apart of Earth's continents?",
+            "choices":[
+                "To give another example of how uranium-lead dating might be useful",
+                "To explain how the Grand Canyon was formed",
+                "To demonstrate how difficult uranium-lead dating is",
+                "To disprove a theory about the age of Earth's first mountain ranges"
+            ],
+            "answer":["B"]
+          },
+            "q17":{
+            "seq": 17,
+             "title":"Question 17 of 17",
+            "mp3":"assets/tpo34/tpo34_listening_question1_17.mp3",
+            "para":"What does the professor imply when he says this",
+             "choices":[
+                "The class is easier than other geology classes",
+                "The class has already studied the information he is discussing",
+                "Some students should take a course in geological dating techniques",
+                "He will discuss the topic later in the class"
+             ],
+            "answer":["B"]
+          }
+          
+      }
+
+    }
