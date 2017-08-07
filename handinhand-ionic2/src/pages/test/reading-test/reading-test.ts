@@ -56,6 +56,7 @@ export class ReadingTestPage {
         }else{
           this.userData.getUserReadingAnswer().then((value)=>{
             this.useranswer = value
+            this.loadDragChoice()
           })
           let passageStep = this.passages.questions[this.step].passage
           this.currentPassage= this.passages.passage[passageStep]
@@ -81,7 +82,7 @@ export class ReadingTestPage {
   }
 
   private loadDragChoice(){
-    if(this.useranswer[this.step] == ""){
+    if(this.passages.questions[this.step]["type"] == "drag-choice" && this.useranswer[this.step] == ""){
       this.useranswer[this.step]=["","",""]
     }
   }
