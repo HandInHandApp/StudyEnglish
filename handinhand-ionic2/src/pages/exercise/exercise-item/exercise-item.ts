@@ -24,7 +24,7 @@ export class ExerciseItemPage {
   typename: string = null;
   currentIndex: Number = 0;
   exercises: any[] = [];
-  answer: any[] = [];
+  answers: any[] = null;
 
   constructor(
     public modalCtrl: ModalController,
@@ -41,7 +41,14 @@ export class ExerciseItemPage {
     console.log("input typename is " + this.typename);
 
     this.exerData.getPracticeQuestionByType(this.typename).then(res => {
-      this.exercises = res;
+      for (let ele of res) {
+        this.exercises.push({
+          'text': ele.get('anchor').text,
+          'title': ele.get('title'),
+          'choice': ele.get('choice')
+        })
+      }
+      this.answers = Array(this.exercises).fill(null); 
       console.log("fetch result size is "+ this.exercises.length);
     });
   }
@@ -53,7 +60,7 @@ export class ExerciseItemPage {
 
   openAnswerSheet() {
     console.log("open answer sheet");
-    let modal = this.modalCtrl.create(ExerciseAnswerPage, this.answer);
+    let modal = this.modalCtrl.create(ExerciseAnswerPage, this.answers);
     modal.present();
   }
 

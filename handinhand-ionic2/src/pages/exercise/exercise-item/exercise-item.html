@@ -16,10 +16,21 @@
 <ion-grid>
   <ion-row>
     <ion-col col-12>
-       <div>{{exercises[currentIndex].material}}</div>
-      <div>{{exercises[currentIndex].question}}</div>
-      <div>{{exercises[currentIndex].choices}}</div> 
-      <div>{{exercises[currentIndex].tip}}</div>  
+      <div *ngIf="exercises.length>0">
+        <div class="exer-text">{{exercises[currentIndex].text}}</div> 
+        <div class="exer-title">{{currentIndex+1}}. {{exercises[currentIndex].title}}</div>
+        <div class="exer-choice">
+          <ion-list radio-group >
+            <ion-list-header>
+              {{currentIndex+1}}. {{exercises[currentIndex].title}}
+            </ion-list-header>
+          </ion-list>
+          <ion-item *ngFor="let choice of exercises[currentIndex].choice">
+            <ion-label>{{choice}}</ion-label>
+            <ion-radio value="{{choice}}"></ion-radio>
+          </ion-item>
+        </div> 
+      </div>
     </ion-col>
   </ion-row>
   <ion-row>
