@@ -31,6 +31,7 @@ import { SupportPage } from '../pages/support/support';
 import { ExerciseData } from '../providers/exercise/exercise-data';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { KeysPipe } from '../directives/keyspipe';
 
 // import { DayPilotCalendarComponent,DayPilotModule} from 'daypilot-pro-angular';
 import { DayPilot } from 'daypilot-pro-angular';
@@ -144,7 +145,8 @@ import { ContainsPipe, NotContainsPipe } from '../pages/test/reading-test/readin
     // AngularFireModule
     // Pipe
     ContainsPipe,
-    NotContainsPipe
+    NotContainsPipe,
+    KeysPipe
 
 
   ],
