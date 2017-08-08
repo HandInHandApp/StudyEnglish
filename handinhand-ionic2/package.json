@@ -53,6 +53,7 @@
         "leancloud-realtime": "^3.5.2",
         "leancloud-storage": "^3.0.2",
         "rx-lean-js-core": "^0.4.8",
+        "ionic-minify": "^2.0.10",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
         "tslint": "^5.5.0",
