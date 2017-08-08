@@ -18,33 +18,32 @@
     <ion-col col-12>
       <div *ngIf="exercises.length>0">
         <div class="exer-text">{{exercises[currentIndex].text}}</div> 
-        <div class="exer-title">{{currentIndex+1}}. {{exercises[currentIndex].title}}</div>
         <div class="exer-choice">
           <ion-list radio-group >
-            <ion-list-header>
+            <ion-list-header class="exer-title">
               {{currentIndex+1}}. {{exercises[currentIndex].title}}
             </ion-list-header>
+            <ion-item *ngFor="let entry of exercises[currentIndex].choice | keys">
+              <ion-label><span class="choice">{{entry.key}}</span>{{entry.value}}</ion-label>
+              <ion-radio value="{{entry.key}}"></ion-radio>
+            </ion-item> 
           </ion-list>
-          <ion-item *ngFor="let choice of exercises[currentIndex].choice">
-            <ion-label>{{choice}}</ion-label>
-            <ion-radio value="{{choice}}"></ion-radio>
-          </ion-item>
         </div> 
       </div>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col>
-      <button ion-button color="light" icon-start (click)="goPrevious()">
+  <ion-row text-center>
+    <ion-col col-3>
+      <button ion-button color="light" icon-start [disabled]="currentIndex==0" (click)="goPrevious()">
         <ion-icon name='arrow-back' ></ion-icon>
-        Back
+        Previous 
       </button>
     </ion-col>
     <ion-col col-6>
       <div>{{currentIndex+1}}</div>
     </ion-col>
-    <ion-col>
-      <button ion-button color="light" icon-end (click)="goNext()">
+    <ion-col col-3>
+      <button ion-button color="light" icon-end [disabled]="currentIndex==max_count-1" (click)="goNext()">
         Next
         <ion-icon name='arrow-forward'></ion-icon>
       </button>

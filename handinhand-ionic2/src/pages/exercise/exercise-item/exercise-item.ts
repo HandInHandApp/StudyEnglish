@@ -13,6 +13,7 @@ import {
 
 import { ExerciseAnswerPage } from '../exercise-answer/exercise-answer';
 
+import { KeysPipe } from '../../../providers/util/keyspipe'
 import { ExerciseData } from '../../../providers/exercise/exercise-data';
 
 @Component({
@@ -22,7 +23,8 @@ import { ExerciseData } from '../../../providers/exercise/exercise-data';
 export class ExerciseItemPage {
   
   typename: string = null;
-  currentIndex: Number = 0;
+  currentIndex: number = 0;
+  max_count: number = 0;
   exercises: any[] = [];
   answers: any[] = null;
 
@@ -48,7 +50,8 @@ export class ExerciseItemPage {
           'choice': ele.get('choice')
         })
       }
-      this.answers = Array(this.exercises).fill(null); 
+      this.answers = Array(this.exercises).fill(null);
+      this.max_count = this.exercises.length;
       console.log("fetch result size is "+ this.exercises.length);
     });
   }
@@ -66,10 +69,19 @@ export class ExerciseItemPage {
 
   goPrevious() {
     console.log("go previous");
+    this.currentIndex--;
+    if (this.currentIndex < 0) {
+      this.currentIndex = 0;
+    }
+
   }
 
   goNext() {
     console.log("go next");
+    this.currentIndex++;
+    if (this.currentIndex >= this.max_count) {
+      this.currentIndex = this.max_count - 1;
+    }
   }
 
 }
