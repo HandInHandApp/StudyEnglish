@@ -39,7 +39,7 @@ export class WritingTestPage {
   datas: any;
   currentPassage: any;
   dragAnswer: string = "";
-
+  timer_stop=false;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -113,9 +113,14 @@ export class WritingTestPage {
   gotoHome() {
     this.navCtrl.pop()
   }
-  stopTiming() {
-  }
 
+  stopTiming() {
+      if(this.timer_stop == false){
+          this.timer_stop=true;
+      }else{
+          this.timer_stop = false;
+      }
+  }
 
   counttime =  60*60*1000 ;
   timerEnd(timertitle) { 

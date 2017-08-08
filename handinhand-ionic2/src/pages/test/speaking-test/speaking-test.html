@@ -1,5 +1,49 @@
-
-
+<ion-header>
+    <ion-navbar hideBackButton>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>TOP 1 Reading</ion-title>
+        <ion-buttons end>
+            <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block>
+        Review
+      </button>
+            <button class="navbtn" ion-button (click)="gotoBack()" type="submit" block>
+        BACK
+      </button>
+            <button class="navbtn" ion-button (click)="gotoNext()" type="submit" block>
+        NEXT
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button class="tpobtn" ion-button (click)="gotoHome()" type="submit" block>
+        首页
+      </button>
+            <button class="tpobtn" ion-button (click)="stopTiming()" type="submit" block>
+        暂停
+      </button>
+        </ion-buttons>
+    <div style="text-align:center;">
+        <label *ngIf="step.indexOf('p')!=-1">{{passages.passage[step].title}} </label>
+        <label *ngIf="step.indexOf('q')!=-1">{{passages.question[step].title}}</label>
+    </div>
+       
+        <ion-buttons right>
+            <span class="button-inner">
+                <button class="tpobtn-small" ion-button (click)="stopTiming()" type="submit" block>
+                   <div *ngIf="timer_stop == false">HideTime</div>
+                   <div *ngIf="timer_stop == true">ShowTime </div>
+                </button> 
+                <button ion-button  >
+                    <timer-countdown title="headertimer"  [stop]="timer_stop" [endDate]="counttime" (childEvent) = "timerEnd($event)"></timer-countdown>   
+                </button> 
+            </span>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<!-- 
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -31,14 +75,7 @@
         <label *ngIf="step.indexOf('p')!=-1">{{passages.passage[step].title}} </label>
         <label *ngIf="step.indexOf('q')!=-1">{{passages.question[step].title}}</label>
     </div>
-       <!-- <ion-buttons end>
-      <button ion-button  (click)="gotoHome()" type="submit" block>
-        首页
-      </button>
-      <button ion-button (click)="gotoNext()" type="submit" block>
-        暂停
-      </button>
-    </ion-buttons> -->
+
      <ion-buttons end>
 <span class="button-inner">
       <button ion-button (click)="gotoBack()" type="submit" block>
@@ -50,11 +87,10 @@
          
 </span>
 
-       <!-- <roy-countdown title="" [endDate]="endDate"></roy-countdown>  -->
 
     </ion-buttons> 
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 
 
@@ -186,7 +222,7 @@
       
                                 </div>
               
-                                <recordlist-page [refresh]="refreshtimer" [title]="step"> </recordlist-page> 
+                                <recordlist-page [refresh]="refreshtimer" [title]="headername +'_' + step+ '_'"> </recordlist-page> 
 
             
 

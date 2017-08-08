@@ -1,0 +1,81 @@
+{
+      "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
+      "steps":["p1","p2",
+              "p_section1",
+              "q1",
+              "p_section3","p_section3_1","p_section3_2",
+              "q3"],
+      "passage":{
+        "p1":{
+          "seq": 1,
+          "title":"", 
+          "img":"assets/img/listening1.png",
+          "mp3":"",
+          "contents": []
+        },
+        "p2":{
+          "seq": 2,
+          "title":"", 
+          "img":"",
+          "mp3":"assets/tpo34/speaking_direction.mp3",
+          "contents": [
+           "Speaking Section Direction \n........."
+          ]
+        },
+        "p_section1":{
+          "seq": 3,
+          "title":"Question 1 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question1_qd.mp3",
+          "contents": [ ]
+        },
+        "p_section3":{
+          "seq": 4,
+          "title":"Question 3 of 6", 
+          "img":"assets/img/listening1.png",
+          "mp3":"assets/tpo34/tpo34_speaking_question3_qd.mp3",
+          "contents": [ ]
+        },
+        "p_section3_1":{
+          "seq": 5,
+          "title":"Question 3 of 6", 
+          "img":"",
+          "mp3":"assets/tpo34/tpo34_speaking_question3_beforeread.mp3",
+          "contents": [ "Reading time: 00:45 second"],
+          "readingtime":45,
+          "origin1":["Read an article in the campus newspaper. You will have 45 seconds to read the article. Begin reading now. "],
+          "origin2":[
+              ]
+        },
+        "p_section3_2":{
+          "seq": 6,
+          "title":"Question 3 of 6", 
+          "img":"assets/tpo34/tpo34_question3.jpg",
+          "mp3":"assets/tpo34/tpo34_speaking_question3_dialog.mp3",
+          "contents": [ ],
+          "origin1": [
+          
+   
+          ]
+        }
+      },
+      "question":{
+        "q1":{
+          "seq": 1,
+          "title":"Question 1 of 6",
+          "mp3":"assets/tpo34/tpo34_speaking_question1.mp3",
+          "para":"Describe an activity that you enjoy doing with your family. Explain why. Please include reasons and details in your response.  ",
+          "answer":[]
+          },
+          "q3":{
+            "seq": 3,
+             "title":"Question 3 of 6",
+            "mp3":"assets/tpo34/tpo34_speaking_question3.mp3",
+            "para":"The man expresses his opinion of the university’s plan to eliminate the bus service. State his opinion and explain the reasons he gives for holding that opinion. ",
+            "answer":[]
+  
+          }
+          
+      }
+
+    }

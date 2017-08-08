@@ -32,7 +32,7 @@ export class ReadingTestPage {
   datas: any;
   currentPassage: any;
   dragAnswer: string = "";
-
+  timer_stop=false;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -186,6 +186,12 @@ export class ReadingTestPage {
   }
 
   stopTiming() {
+      if(this.timer_stop == false){
+            this.timer_stop=true;
+      }else{
+          this.timer_stop = false;
+      }
+      
   }
 
   insertClickContent(event: any) {

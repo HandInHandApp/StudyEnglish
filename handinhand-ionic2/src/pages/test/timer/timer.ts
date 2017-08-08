@@ -12,7 +12,7 @@ import { Component, Directive,Input,Output, OnDestroy, AfterViewInit,EventEmitte
 
 @Component({
  selector: 'timer-countdown',
- templateUrl: './countdown.component.html'
+ templateUrl: './timer.html'
 //  styleUrls: ['./timer.scss']
 })
 

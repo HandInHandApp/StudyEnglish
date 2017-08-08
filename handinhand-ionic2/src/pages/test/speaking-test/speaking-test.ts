@@ -86,6 +86,7 @@ export class SpeakingTestPage {
 myrecord=[{
     "name":"test"
 }]
+timer_stop=false;
 startrecord=0;
 praparetimer=15*1000;
 recordtimer=45*1000;
@@ -252,6 +253,14 @@ loadProgress=45;
   stoprecord(){
         this.startrecord=0 ;
         this.onClickStopButton()
+  }
+  stopTiming() {
+      if(this.timer_stop == false){
+            this.timer_stop=true;
+      }else{
+          this.timer_stop = false;
+      }
+      
   }
   timerEnd(timertitle) { 
       console.log(timertitle + ' timer End'); 

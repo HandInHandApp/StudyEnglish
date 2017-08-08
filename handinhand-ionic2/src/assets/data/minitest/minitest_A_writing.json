@@ -1,0 +1,114 @@
+{
+      "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
+      "steps":["p1","p2",
+              "p_section1_1",
+              "p_section1_2",
+              "p_section1_3",
+              "p3",
+              "p_section2_1"],
+      "passage":{
+        "p1":{
+          "seq": 1,
+          "title":"", 
+          "img":"assets/img/listening1.png",
+          "mp3":"",
+          "contents": []
+        },
+        "p2":{
+          "seq": 2,
+          "title":"", 
+          "img":"",
+          "mp3":"",
+          "viewtype":"direction",
+          "contentsheader": "Writing Section Direction \n.........",
+          "contents": [
+            "This section measures your ability to use writing to communicate in an academic environment. There will be two writing tasks.",
+            "For the first writing task, you will read a passage and listen to a lecture and then answer a question based on what you have read and heard. For the second task, you will answer a question based on your own knowledge and experience.",
+            "At the end of this Practice Test you’ll find a script for the audio track, sample student essays, and comments on those essays by official exam raters."
+            ]
+        },
+        "p_section1_1":{
+          "seq": 3,
+          "title":"Question 1 of 2", 
+          "img":"",
+          "mp3":"",
+          "time":180,
+          "viewtype":"grid-one",
+          "contents": [ 
+              "In the area today covered by several states in the American Southwest, the Anasazi Indians, who are sometimes referred to as Pueblo Indians, once lived. The Anasazi has a history that went back into prehistoric times. They even experienced a several-hundred-year golden age that ended around 1150. However, the Anasazi suddenly vanished only a couple of centuries later. Many anthropologists attribute their disappearance to war.",
+              "Archaeologists have combed through the ruins of past Anasazi settlements. One feature they have noted is that there are a large number of places which were burned. Even some of the Anasazi’s ritual sites were burned. This strongly suggests the reason for the tribes they had defeated in battle. The fact that Anasazi sites were burned shows they too must have been occupied.",
+              "At these same sites, archaeologists have also unearthed a large number of personal articles that once belonged to individual Anasazi. Many of these items, including pottery, jewelry, and other personal effects, would have been valuable to their owners. In most cases, their owners would not have left them. However, many believe that because of the sudden onset of war, their owners were either slain or had no time to gather their belongings as they fled from approaching enemies.",
+              "There is also the geographical aspect of the Anasazi. Their settlements, which were mostly in modern-day Arizona and New Mexico, were located in places with abundant sources of water, a unique feature for the American Southwest. It would only be natural that other tribes, coveting the rich land, would make war upon the Anasazi and attempt to drive them out, as they, apparently successfully, did."  
+          ]
+        },
+        "p_section1_2":{
+          "seq": 4,
+          "title":"Question 1 of 2", 
+          "img":"assets/tpo34/tpo34_writing.jpg",
+          "mp3":"assets/tpo34/tpo34_writing_question.mp3",
+           
+          "contents": [],
+          "contentsOrign": [
+            "Now listen to part of a lecture on the topic you just read about. ",
+            "",
+            "(male professor) The truth is we don’t know what the main cause of extinction of Steller’s sea cow was. There are problems with each of the theories that you read about. ",
+            "",
+            "First, the sea cows were massive creatures. They were up to nine meters long and could weigh over ten tons, just enormous. A couple of sea cows could feed a small Siberian village for months. And the population of the native Siberian people wasn’t very large. So while the Siberians certainly did hunt the sea cows, they didn’t need to hunt a lot of them. So it’s unlikely they were the ones who brought the sea cows to the point of extinction. ",
+            "",
+            "Second, about a hypothetical decrease in kelp caused by ecological disturbances, well, if something severe really happened in the ecosystem near Bering Island sometime before 1768, it would have affected not just the kelp but also other parts of the ecosystem. For example, it would have caused the decline in other marine animals like whales. But fishing ships in the area did not report a whale decline. Since there is no indication of broader ecosystem problems, the kelp was probably growing just fine and the sea cows did not experience food shortage. ",
+            "",
+            "Third, it might seem like the European traders were responsible because the sea cows became extinct soon after the Europeans arrived. But, actually, by the time that the Europeans arrived, the sea cow population was already quite small. We have evidence that the sea cow population was at its largest hundreds of years before the 1700s. So something was causing a serious and on-going decrease in the sea cow population long before the Europeans arrived in the Bering Island area. Whatever this something was, it should be considered the main cause of the extinction, not the European traders who were just the last to arrive. ",
+            "",
+            "Summarize the points made in the lecture, being sure to explain how they challenge the specific theories presented in the reading passage.",
+            ""
+           ]
+        },
+        "p_section1_3":{
+          "seq": 5,
+          "title":"Question 1 of 2", 
+          "img":"",
+          "mp3":"",
+          "time":600,
+          "viewtype":"grid-two",
+          "deriction":"Summarize the points made in the lecture, being sure to specifically explain how they cast doubt on points made in the reading passage.You must finish your answer in 10 minutes.",
+          "question":"Main idea of listening(at leaset 3 Supporting idea ):",
+          "contents": [ 
+              "In the area today covered by several states in the American Southwest, the Anasazi Indians, who are sometimes referred to as Pueblo Indians, once lived. The Anasazi has a history that went back into prehistoric times. They even experienced a several-hundred-year golden age that ended around 1150. However, the Anasazi suddenly vanished only a couple of centuries later. Many anthropologists attribute their disappearance to war.",
+              "Archaeologists have combed through the ruins of past Anasazi settlements. One feature they have noted is that there are a large number of places which were burned. Even some of the Anasazi’s ritual sites were burned. This strongly suggests the reason for the tribes they had defeated in battle. The fact that Anasazi sites were burned shows they too must have been occupied.",
+              "At these same sites, archaeologists have also unearthed a large number of personal articles that once belonged to individual Anasazi. Many of these items, including pottery, jewelry, and other personal effects, would have been valuable to their owners. In most cases, their owners would not have left them. However, many believe that because of the sudden onset of war, their owners were either slain or had no time to gather their belongings as they fled from approaching enemies.",
+              "There is also the geographical aspect of the Anasazi. Their settlements, which were mostly in modern-day Arizona and New Mexico, were located in places with abundant sources of water, a unique feature for the American Southwest. It would only be natural that other tribes, coveting the rich land, would make war upon the Anasazi and attempt to drive them out, as they, apparently successfully, did."  
+          ]
+        },
+        "p3":{
+          "seq": 6,
+          "title":"", 
+          "img":"",
+          "mp3":"",
+          "viewtype":"direction",
+          "contentsheader": "Writing Section Direction \n.........",
+          "contents": [
+           "Independent Writing \n........."
+          ]
+        },
+        "p_section2_1":{
+          "seq": 7,
+          "title":"Question 2 of 2", 
+          "img":"",
+          "mp3":"",
+          "time":1200,
+          "viewtype":"grid-three",
+          "deriction":"Directions:Read this question below. You have 20 minutes to plan, write, and revise your essay.Typically, an effective response will contain a minimun of 150 words",
+
+          "contents": [ 
+            "Do you agree or disagree with the following statement?",
+            "",
+            "Some people say that the Internet provides people with a lot of valuable information. Others think access to so much information create problems. Which view do you agree with? ",
+            "",
+            "Use specific reasons and examples to support your answer. You do NOT have to write the first and last paragraph.（>150words in 20 minutes）"
+          ]
+        }
+
+
+      }
+      
+    }

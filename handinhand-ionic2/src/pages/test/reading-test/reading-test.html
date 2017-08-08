@@ -31,11 +31,13 @@
         </div>
         <ion-buttons right>
             <span class="button-inner">
-                <button class="tpobtn-small" ion-button (click)="gotoBack()" type="submit" block>
-                   HideTime
+                <button class="tpobtn-small" ion-button (click)="stopTiming()" type="submit" block>
+                   <div *ngIf="timer_stop == false">HideTime</div>
+                   <div *ngIf="timer_stop == true">ShowTime </div>
                 </button> 
-                <button ion-button  >
-                    <timer-countdown title="headertimer" [endDate]="counttime" (childEvent) = "timerEnd($event)"></timer-countdown>   
+                <button ion-button>
+                    <!-- <timer-countdown title="step" [stop]="timer_stop" [endDate]="passages.passage[step].time*1000" (childEvent) = "timerEnd($event)"></timer-countdown>    -->
+                     <timer-countdown title="headertimer"  [stop]="timer_stop" [endDate]="counttime" (childEvent) = "timerEnd($event)"></timer-countdown>    
                 </button> 
             </span>
         </ion-buttons>
