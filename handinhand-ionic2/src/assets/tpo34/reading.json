@@ -18,17 +18,6 @@
         },
         "p2":{
             "seq": 2,
-            "title":"Protection of Plants by Insects", 
-            "contents": [
-            "Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant. ",
-            "Ants are portably the most frequent and certainly the most persistent defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants.",
-            "Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants. ",
-            "One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars devour the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits. ",
-            "Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay. "
-            ]
-        },
-        "p3":{
-            "seq": 3,
             "title":"The Development of Steam Power", 
             "contents": [
             "By the eighteenth century, Britain was experiencing a severe shortage of energy. Because of the growth of population, most of the great forests of medieval Britain had long ago been replaced by fields of grain and hay. Wood was in ever-shorter supply, yet it remained tremendously important. It served as the primary source of heat for all homes and industries and as a basic raw material. Processed wood (charcoal) was the fuel that was mixed with iron ore in the blast furnace to produce pig iron (raw iron). The iron industry’s appetite for wood was enormous, and by 1740 the British iron industry was stagnating. Vast forests enabled Russia to become the world’s leading producer of iron, much of which was exported to Britain. But Russia’s potential for growth was limited too, and in a few decades Russia would reach the barrier of inadequate energy that was already holding England back.",
@@ -37,6 +26,17 @@
             "In the early 1760s, a gifted young Scot named James Watt was drawn to a critical study of the steam engine. Watt was employed at the time by the University of Glasgow as a skilled crafts worker making scientific instruments. In 1763, Watt was called on to repair a Newcomen engine being used in a physics course. After a series of observations, Watt saw that the Newcomen’s waste of energy could be reduced by adding a separate condenser. This splendid invention, patented in 1769, greatly increased the efficiency of the steam engine. The steam engine of Watt and his followers was the technological advance that gave people, at least for a while, unlimited power and allowed the invention and use of all kinds of power equipment. ",
             "The steam engine was quickly put to use in several industries in Britain. It drained mines and made possible the production of ever more coal to feed steam engines elsewhere. The steam power plant began to replace waterpower in the cotton-spinning mills as well as other industries during the 1780s, contributing to a phenomenal rise in industrialization. The British iron industry was radically transformed. The use of powerful, steam-driven bellows in blast furnaces helped iron makers switch over rapidly from limited charcoal to unlimited coke (which is made from coal) in the smelting of pig iron (the process of refining impure iron) after 1770 in the 1780s, Henry Cort developed the puddling furnace, which allowed pig iron to be refined in turn with coke. Cort also developed heavy-duty, steam-powered rolling mills, which were capable of producing finished iron in every shape and form.",
             "The economic consequence of these technical innovations in steam power was a great boom in the British iron industry. In 1740 annual British iron production was only 17,000 tons, but by 1844, with the spread of coke smelting and the impact of Cort’s inventions, it had increased to 3,000,000 tons. This was a truly amazing expansion. Once scarce and expensive, iron became cheap, basic, and indispensable to the economy. "
+            ]
+        },
+        "p3":{
+            "seq": 3,
+            "title":"Protection of Plants by Insects", 
+            "contents": [
+            "Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant. ",
+            "Ants are portably the most frequent and certainly the most persistent defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants.",
+            "Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants. ",
+            "One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars devour the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits. ",
+            "Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay. "
             ]
         }
     },
@@ -56,7 +56,7 @@
                 "C":"They were sold primarily near mosques.",
                 "D":"Most books were intended for sale on the open market"
             },
-            "answer":["A"]
+            "answer":["C"]
         },
         "q2":{
             "seq": 2,
@@ -73,7 +73,7 @@
                 "C":"praised ",
                 "D":"supported "
                 },
-            "answer":["A"]
+            "answer":["D"]
         },
         "q3":{
             "seq": 3,
@@ -107,7 +107,7 @@
                 "C":"used rounded scripts",
                 "D":"were usually written on parchment"
             },
-            "answer":["B"]
+            "answer":["D"]
         },
         "q5":{
             "seq": 5,
@@ -124,7 +124,7 @@
                 "C":"To emphasize how influential and well known the book markets were",
                 "D":"To demonstrate the need for religious texts in Islamic lands"
             },
-            "answer":["B"]
+            "answer":["C"]
         },
         "q6":{
             "seq": 6,
@@ -141,7 +141,7 @@
                 "C":"discovered in",
                 "D":"combined with"
             },
-            "answer":["B"]
+            "answer":["A"]
         },
         "q7":{
             "seq": 7,
@@ -176,7 +176,7 @@
                 "C":"Paper could be produced in sheets of varying weights and thicknesses",
                 "D":"More people could buy books made of paper because it was cheaper."
             },
-            "answer":["B"]
+            "answer":["C"]
         },
         "q9":{
             "seq": 9,
@@ -193,7 +193,7 @@
                 "C":"To make the point that paper allowed artists to develop paintings that were more expressive and complex",
                 "D":"To prove that paper was more popular with artists who used large sheets, than it was with book printers, who used smaller sheets"
             },
-            "answer":["B"]
+            "answer":["C"]
         },
         "q10":{
             "seq": 10,
@@ -244,7 +244,7 @@
                 "C":"in addition to",
                 "D":"similar to"
             },
-            "answer":["B"]
+            "answer":["A"]
         },
         "q13":{
             "seq": 13,
@@ -270,7 +270,7 @@
             },
             "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage.",
             "content":"This change occurred for good reason.",
-            "answer":["B"]
+            "answer":["C"]
         },
         "q14":{
             "seq": 14,
@@ -285,255 +285,11 @@
                 "E":"The popularity of books led to major advances in the development and transfer of new artistic ideas. ",
                 "F":"Around the year 900, a set of rounded styles of Arabic handwriting began replacing angular scripts in copying the manuscripts of the Koran."
             },
-            "answer":["B"]
+            "answer":["A","C","E"]
         },
         "q15":{
             "seq": 15,
             "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[1],
-            "replace_para":{
-                "1":"<span class='normal-icon'>&diams;</span> Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant."
-            },
-            "title":"According to paragraph 1, floral nectar and extrafloral nectar are alike in that ",
-            "choices":{
-                "A":"they are likely to be produced by the same plants ",
-                "B":"they basically consist of the same chemical components ",
-                "C":"they attract only insects that will defend the plant",
-                "D":"they are produced by the same parts of the plant "
-            },
-            "answer":["A"]
-        },
-        "q16":{
-            "seq": 16,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[2],
-            "replace_para":{
-                "2":"Ants are portably the most frequent and certainly the most <span class='choice-background'>persistent</span> defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants."
-            },
-            "title":"To say that ants are “<span class='choice-background'>persistent</span>” defenders of plants means that",  
-            "choices":{
-                "A":"they defend plants against a wide variety of threats ",
-                "B":"they continue to defend plants for as long as the plants are threatened",
-                "C":"they are successful defenders of plants ",
-                "D":"they are easily observable defenders of plants"
-            },
-            "answer":["A"]
-        },
-        "q17":{
-            "seq": 17,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[2],
-            "replace_para":{
-                "2":"<span class='normal-icon'>&diams;</span> Ants are portably the most frequent and certainly the most persistent defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants."
-            },
-            "title":"What can be inferred from paragraph 2 about the ants that are attracted to the extrafloral nectarie",
-            "choices":{
-                "A":"They do not eat the leaves of the plants that produce extrafloral nectar.",
-                "B":"They live almost entirely on extrafloral nectar. ",
-                "C":"They spend most of their energy guarding extrafloral nectaries.",
-                "D":"They frequently fight among themselves over extrafloral nectar."
-            },
-            "answer":["A"]
-        },
-        "q18":{
-            "seq": 18,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[3],
-            "replace_para":{
-                "3":"<span class='normal-icon'>&diams;</span> Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants"
-            },
-            "title":"According to paragraph 3, what was the position of the opponents of the “protectionist” hypothesis? ",
-            "choices":{
-                "A":"Extrafloral nectar provides plants with a direct defense against attack by insects.",
-                "B":"Ants substantially benefit plants that secrete extrafloral nectar.",
-                "C":"The secretion of extrafloral nectar plays a role in the plant’s internal functioning.",
-                "D":"Ants visit plants that secrete extrafloral nectar as often as they visit plants that do not. "
-            },
-            "answer":["A"]
-        },
-        "q19":{
-            "seq": 19,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[3],
-            "replace_para":{
-                "3":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a <span class='choice-background'>skeptical</span> William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants"
-            },
-            "title":"The word “<span class='choice-background'>skeptical</span>” in the passage is closest in meaning to ",
-            "choices":{
-                "A":"curious ",
-                "B":"doubtful ",
-                "C":"open-minded",
-                "D":"practical"
-            },
-            "answer":["A"]
-        },
-        "q20":{
-            "seq": 20,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[3],
-            "replace_para":{
-                "3":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. <span class='choice-background'>That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants</span>"
-            },
-            "title":" Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
-            "choices":{
-                "A":"We now have ample proof that ants benefit plants.",
-                "B":"Barbara Bentley has called for additional proof that ants benefit plants. ",
-                "C":"In 1977 Barbara Bentley conducted research that proved that all prior studies were wrong.",
-                "D":"Proof that ants benefit plants will require many more observations and experiments."
-            },
-            "answer":["A"]
-        },
-        "q21":{
-            "seq": 21,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[4],
-            "replace_para":{
-                "4":"<span class='normal-icon'>&diams;</span> One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars devour the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits."
-            },
-            "title":"According to paragraph 4, what effect does the destruction of the corolla have on plants?",
-            "choices":{
-                "A":"It leaves the seeds exposed and unprotected. ",
-                "B":"It prevents the stigma from developing. ",
-                "C":"It keeps pollen grains from attaching properly.",
-                "D":"It prevents the flower from attracting pollinators."
-            },
-            "answer":["A"]
-        },
-        "q22":{
-            "seq": 22,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[4],
-            "replace_para":{
-                "4":"One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars <span class='choice-background'>devour</span> the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits." 
-            },
-            "title":"The word “<span class='choice-background'>devour</span>” in the passage is closest in meaning to",
-            "choices":{
-                "A":"attack",
-                "B":"eat",
-                "C":"damage ",
-                "D":"prefer"
-            },
-            "answer":["A"]
-        },
-        "q23":{
-            "seq": 23,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[5],
-            "replace_para":{
-                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
-            },
-            "title":"What role does paragraph 5 play in the passage? ",
-            "choices":{
-                "A":"It offers various kinds of evidence for the protectionist view.",
-                "B":"It presents the study that first proved that ants benefit plants.",
-                "C":"It explains how insects find sources of nectar. ",
-                "D":"It presents information that partly contradicts the protectionist view. "
-            },
-            "answer":["A"]
-        },
-        "q24":{
-            "seq": 24,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[5],
-            "replace_para":{
-                "5":"Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more <span class='choice-background'>vulnerable</span> because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
-            },
-            "title":"The word “<span class='choice-background'>vulnerable</span>” in the passage is closest in meaning to",
-            "choices":{
-                "A":"numerous",
-                "B":"harmful",
-                "C":"open to attack",
-                "D":"difficult to locate"
-            },
-            "answer":["A"]
-        },
-        "q25":{
-            "seq": 25,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[5],
-            "replace_para":{
-                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
-            },
-            "title":"According to paragraph 5, what did Bentley’s comparative study show?",
-            "choices":{
-                "A":"Many more plants grew in places where ants were present than where they were absent.",
-                "B":"The ants preferred plants with low seed production to plants with high seed production. ",
-                "C":"The plants occupied by ants produced many more seeds than those that were not occupied by ants.",
-                "D":"The plants that grew in places without ants were much smaller and weaker than those that grew in places where ants were present."
-            },
-            "answer":["A"]
-        },
-        "q26":{
-            "seq": 26,
-            "passage":"p2",
-            "type":"single-choice",
-            "replace_para_index":[5],
-            "replace_para":{
-                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
-            },
-            "title":"According to paragraph 5, ants defend morning glory plants from seed beetles in each of the following ways EXCEPT ",
-            "choices":{
-                "A":"driving adult beetles off the plants by nipping at their feet ",
-                "B":"catching and eating adult beetles ",
-                "C":"eating beetle eggs they find on developing fruits",
-                "D":"making it difficult for beetles to lay eggs on developing fruits"
-            },
-            "answer":["A"]
-        },
-        "q27":{
-            "seq": 27,
-            "passage":"p2",
-            "type":"click-choice",
-            "replace_para_index":2,
-            "replace_para":[
-                "Ants are portably the most frequent and certainly the most persistent defenders of plants.",
-                "@#A【】",
-                "Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. ",
-                "@#B【】",
-                "To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. ",
-                "@#C【】",
-                "Many of these intruders are herbivorous and would eat the leaves of the plants.",
-                "@#D【】"
-            ],
-            "choices":{
-                "A":"",   
-                "B":"",  
-                "C":"",  
-                "D":""   
-            },
-            "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage. ",
-            "content":"Sometimes they capture the insects to feed their protein-hungry larvae.",
-            "answer":["B"]
-        },
-        "q28":{
-            "seq": 28,
-            "passage":"p2",
-            "type":"drag-choice",
-            "title":"Many plants have extrafloral nectaries that produce nectar even during periods in which the plant is not flowering.",
-            "choices":{
-                "A":"Evolutionary history shows that plants that produce extrafloral nectar originated in the tropics.",
-                "B":"Extrafloral nectar has a higher concentration of sugar than floral nectar and is more attractive to ants and other insects.",
-                "C":"The protectionist hypothesis is that extrafloral nextar attracts ants, and that the ants, in order to preserve this energy-rich food source, attack insects that might harm the plant.",
-                "D":"Evidence accumulated during the twentieth century proved that ants provide significant benefits for plants with extrafloral nectaries.",
-                "E":"Research has shown that American morning glory plants that are protected by ants produce significantly more seeds than morning glory plants that are not protected by ants. ",
-                "F":"Ants generally ignore small insects, but they will eat the adults of large insect species as well as their eggs and larvae."
-            },
-            "answer":["B"]
-        },
-        "q29":{
-            "seq": 29,
-            "passage":"p3",
             "type":"single-choice",
             "replace_para_index":[1],
             "replace_para":{
@@ -546,11 +302,11 @@
                 "C":"Larger families required the construction of larger homes made from wood.  ",
                 "D":"What was left of the great forests after the medieval period was being strictly protected. "
             },
-            "answer":["A"]
+            "answer":["B"]
         },
-        "q30":{
-            "seq": 30,
-            "passage":"p3",
+        "q16":{
+            "seq": 16,
+            "passage":"p2",
             "type":"pair-choice",
             "replace_para_index":[1],
             "replace_para":{
@@ -563,11 +319,11 @@
                 "C":"Russia’s appetite for iron increased rapidly after 1740. ",
                 "D":"Russia’s energy resources eventually became insufficient and limited the growth of its iron industry."
             },
-            "answer":["A","B"]
+            "answer":["BD"]
         },
-        "q31":{
-            "seq": 31,
-            "passage":"p3",
+        "q17":{
+            "seq": 17,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[2],
             "replace_para":{
@@ -580,11 +336,11 @@
                 "C":"well-preserved",
                 "D":"existing"
             },
-            "answer":["A"]
+            "answer":["B"]
         },
-        "q32":{
-            "seq": 32,
-            "passage":"p3",
+        "q18":{
+            "seq": 18,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[2],
             "replace_para":{
@@ -597,11 +353,11 @@
                 "C":"To emphasize that after 1640, British homes required energy for more than heat ",
                 "D":"To indicate that coal had been used for the production of certain products before the eighteenth century"
             },
-            "answer":["A"]
+            "answer":["D"]
         },
-        "q33":{
-            "seq": 33,
-            "passage":"p3",
+        "q19":{
+            "seq": 19,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[3],
             "replace_para":{
@@ -616,9 +372,9 @@
             },
             "answer":["A"]
         },
-        "q34":{
-            "seq": 34,
-            "passage":"p3",
+        "q20":{
+            "seq": 20,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[4],
             "replace_para":{
@@ -631,11 +387,11 @@
                 "C":"famous ",
                 "D":"ambitious"
             },
-            "answer":["A"]
+            "answer":["B"]
         },
-        "q35":{
-            "seq": 35,
-            "passage":"p3",
+        "q21":{
+            "seq": 21,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[4],
             "replace_para":{
@@ -648,11 +404,11 @@
                 "C":"He improved the efficiency of Newcomen’s engine by preventing energy from being lost.",
                 "D":"He redesigned Newcomen’s engine so that it no longer needed a separate condenser."
             },
-            "answer":["A"]
+            "answer":["C"]
         },
-        "q36":{
-            "seq": 36,
-            "passage":"p3",
+        "q22":{
+            "seq": 22,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[4],
             "replace_para":{
@@ -665,11 +421,11 @@
                 "C":"magnificent ",
                 "D":"popular"
             },
-            "answer":["A"]
+            "answer":["C"]
         },
-        "q37":{
-            "seq": 37,
-            "passage":"p3",
+        "q23":{
+            "seq": 23,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[5],
             "replace_para":{
@@ -682,11 +438,11 @@
                 "C":"The discovery of a method for increasing the production of charcoal ",
                 "D":"The invention of powerful machinery that could shape, form, and finish iron"
             },
-            "answer":["A"]
+            "answer":["C"]
         },
-        "q38":{
-            "seq": 38,
-            "passage":"p3",
+        "q24":{
+            "seq": 24,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[6],
             "replace_para":{
@@ -699,11 +455,11 @@
                 "C":"To demonstrate the tremendous growth of the iron industry in Britain",
                 "D":"To demonstrate how inexpensive coal had become"
             },
-            "answer":["A"]
+            "answer":["C"]
         },
-        "q39":{
-            "seq": 39,
-            "passage":"p3",
+        "q25":{
+            "seq": 25,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":[6],
             "replace_para":{
@@ -716,11 +472,11 @@
                 "C":"less costly",
                 "D":"highly stimulating"
             },
-            "answer":["A"]
+            "answer":["B"]
         },
-        "q40":{
-            "seq": 40,
-            "passage":"p3",
+        "q26":{
+            "seq": 26,
+            "passage":"p2",
             "type":"single-choice",
             "replace_para_index":-1,
             "replace_para":"",
@@ -731,11 +487,11 @@
                 "C":"Steam-power technology was largely the result of improvements developed to increase the supply of coal as a primary source of energy.",
                 "D":"Adaptations to steam engines required for their use in cotton-spinning mills led to radical developments in machinery used in the iron industry."
             },
-            "answer":["A"]
+            "answer":["C"]
         },
-        "q41":{
-            "seq": 41,
-            "passage":"p3",
+        "q27":{
+            "seq": 27,
+            "passage":"p2",
             "type":"click-choice",
             "replace_para_index":1,
             "replace_para":[
@@ -757,11 +513,11 @@
             },
             "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage.",
             "content":"Energy had not been a problem for Britain in the past because it relied on a rich   source of energy: its vast forests.",
-            "answer":["B"]
+            "answer":["A"]
         },
-        "q42":{
-            "seq": 42,
-            "passage":"p3",
+        "q28":{
+            "seq": 28,
+            "passage":"p2",
             "type":"drag-choice",
             "title":"By the eighteenth century, Britain was experiencing a severe shortage of energy.",
             "choices":{
@@ -772,7 +528,251 @@
                 "E":"The puddling furnace increased the availability of charcoal to a variety of industries from cotton to iron production. ",
                 "F":"Steam power increased coal production, which in turn allowed extraordinary growth of the iron industry and the British economy."
             },
+            "answer":["C","D","F"]
+        },
+        "q29":{
+            "seq": 29,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[1],
+            "replace_para":{
+                "1":"<span class='normal-icon'>&diams;</span> Many plants – one or more species of at least 68 different families – can secrete nectar  even when they have no blossoms, because they bear extrafloral nectaries (structures that  produce nectar) on stems, leaves, leaf stems, or other structures. These plants usually occur where ants are abundant, most in the tropics but some in temperate areas. Among those of northeastern North America are various plums, cherries, roses, hawthorns, poplars, and oaks. Like floral nectar, extrafloral nectar consists mainly of water with a high content of dissolved sugars and, in some plants, small amounts of amino acids. The extrafloral nectaries of some plants are known to attract ants and other insects, but the evolutionary history of most plants with these nectaries is unknown. Nevertheless, most ecologists believe that all extrafloral nectaries attract insects that will defend the plant."
+            },
+            "title":"According to paragraph 1, floral nectar and extrafloral nectar are alike in that ",
+            "choices":{
+                "A":"they are likely to be produced by the same plants ",
+                "B":"they basically consist of the same chemical components ",
+                "C":"they attract only insects that will defend the plant",
+                "D":"they are produced by the same parts of the plant "
+            },
             "answer":["B"]
+        },
+        "q30":{
+            "seq": 30,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[2],
+            "replace_para":{
+                "2":"Ants are portably the most frequent and certainly the most <span class='choice-background'>persistent</span> defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants."
+            },
+            "title":"To say that ants are “<span class='choice-background'>persistent</span>” defenders of plants means that",  
+            "choices":{
+                "A":"they defend plants against a wide variety of threats ",
+                "B":"they continue to defend plants for as long as the plants are threatened",
+                "C":"they are successful defenders of plants ",
+                "D":"they are easily observable defenders of plants"
+            },
+            "answer":["B"]
+        },
+        "q31":{
+            "seq": 31,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[2],
+            "replace_para":{
+                "2":"<span class='normal-icon'>&diams;</span> Ants are portably the most frequent and certainly the most persistent defenders of plants. Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. Many of these intruders are herbivorous and would eat the leaves of the plants."
+            },
+            "title":"What can be inferred from paragraph 2 about the ants that are attracted to the extrafloral nectarie",
+            "choices":{
+                "A":"They do not eat the leaves of the plants that produce extrafloral nectar.",
+                "B":"They live almost entirely on extrafloral nectar. ",
+                "C":"They spend most of their energy guarding extrafloral nectaries.",
+                "D":"They frequently fight among themselves over extrafloral nectar."
+            },
+            "answer":["A"]
+        },
+        "q32":{
+            "seq": 32,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"<span class='normal-icon'>&diams;</span> Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants"
+            },
+            "title":"According to paragraph 3, what was the position of the opponents of the “protectionist” hypothesis? ",
+            "choices":{
+                "A":"Extrafloral nectar provides plants with a direct defense against attack by insects.",
+                "B":"Ants substantially benefit plants that secrete extrafloral nectar.",
+                "C":"The secretion of extrafloral nectar plays a role in the plant’s internal functioning.",
+                "D":"Ants visit plants that secrete extrafloral nectar as often as they visit plants that do not. "
+            },
+            "answer":["C"]
+        },
+        "q33":{
+            "seq": 33,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a <span class='choice-background'>skeptical</span> William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants"
+            },
+            "title":"The word “<span class='choice-background'>skeptical</span>” in the passage is closest in meaning to ",
+            "choices":{
+                "A":"curious ",
+                "B":"doubtful ",
+                "C":"open-minded",
+                "D":"practical"
+            },
+            "answer":["B"]
+        },
+        "q34":{
+            "seq": 34,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[3],
+            "replace_para":{
+                "3":"Biologists once thought that secretion of extrafloral nectar has some purely internal physiological function, and that ants provide no benefit whatsoever to the plants that secrete it. This view and the opposing “protectionist” hypothesis that ants defend plants had been disputed for over a hundred years when, in 1910, a skeptical William Morton Wheeler commented on the controversy. He called for proof of the protectionist view: that visitations of the ants confer protection on the plants and that in the absence of the insects a much greater number would perish or fail to produce flowers or seeds than when the insects are present. <span class='choice-background'>That we now have an abundance of the proof that was called for was established when Barbara Bentley reviewed the relevant evidence in 1977, and since then many more observations and experiments have provided still further proof that ants benefit plants</span>"
+            },
+            "title":" Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
+            "choices":{
+                "A":"We now have ample proof that ants benefit plants.",
+                "B":"Barbara Bentley has called for additional proof that ants benefit plants. ",
+                "C":"In 1977 Barbara Bentley conducted research that proved that all prior studies were wrong.",
+                "D":"Proof that ants benefit plants will require many more observations and experiments."
+            },
+            "answer":["A"]
+        },
+        "q35":{
+            "seq": 35,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"<span class='normal-icon'>&diams;</span> One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars devour the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits."
+            },
+            "title":"According to paragraph 4, what effect does the destruction of the corolla have on plants?",
+            "choices":{
+                "A":"It leaves the seeds exposed and unprotected. ",
+                "B":"It prevents the stigma from developing. ",
+                "C":"It keeps pollen grains from attaching properly.",
+                "D":"It prevents the flower from attracting pollinators."
+            },
+            "answer":["D"]
+        },
+        "q36":{
+            "seq": 36,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[4],
+            "replace_para":{
+                "4":"One example shows how ants attracted to extrafloral nectaries protect morning glories against attacking insects. The principal insect enemies of the North American morning glory feed mainly on its flowers or fruits rather than its leaves. Grasshoppers feeding on flowers indirectly block pollination and the production of seeds by destroying the corolla or the stigma, which receives the pollen grains and on which the pollen germinates. Without their colorful corolla, flowers do not attract pollinators and are not fertilized. An adult grasshopper can consume a large corolla, about 2.5 inches long, in an hour. Caterpillars and seed beetles affect seed production directly. Caterpillars <span class='choice-background'>devour</span> the ovaries, where the seeds are produced, and seed beetle larvae eat seeds as they burrow in developing fruits." 
+            },
+            "title":"The word “<span class='choice-background'>devour</span>” in the passage is closest in meaning to",
+            "choices":{
+                "A":"attack",
+                "B":"eat",
+                "C":"damage ",
+                "D":"prefer"
+            },
+            "answer":["B"]
+        },
+        "q37":{
+            "seq": 37,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
+            "title":"What role does paragraph 5 play in the passage? ",
+            "choices":{
+                "A":"It offers various kinds of evidence for the protectionist view.",
+                "B":"It presents the study that first proved that ants benefit plants.",
+                "C":"It explains how insects find sources of nectar. ",
+                "D":"It presents information that partly contradicts the protectionist view. "
+            },
+            "answer":["A"]
+        },
+        "q38":{
+            "seq": 38,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more <span class='choice-background'>vulnerable</span> because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
+            "title":"The word “<span class='choice-background'>vulnerable</span>” in the passage is closest in meaning to",
+            "choices":{
+                "A":"numerous",
+                "B":"harmful",
+                "C":"open to attack",
+                "D":"difficult to locate"
+            },
+            "answer":["C"]
+        },
+        "q39":{
+            "seq": 39,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
+            "title":"According to paragraph 5, what did Bentley’s comparative study show?",
+            "choices":{
+                "A":"Many more plants grew in places where ants were present than where they were absent.",
+                "B":"The ants preferred plants with low seed production to plants with high seed production. ",
+                "C":"The plants occupied by ants produced many more seeds than those that were not occupied by ants.",
+                "D":"The plants that grew in places without ants were much smaller and weaker than those that grew in places where ants were present."
+            },
+            "answer":["C"]
+        },
+        "q40":{
+            "seq": 40,
+            "passage":"p3",
+            "type":"single-choice",
+            "replace_para_index":[5],
+            "replace_para":{
+                "5":"<span class='normal-icon'>&diams;</span> Extrafloral nectaries at the base of each sepal attract several kinds of insects, but 96 percent of them are ants, several different species of them. When buds are still small, less than a quarter of an inch long, the sepal nectaries are already present and producing nectar.  They continue to do so as the flower develops and while the fruit matures. Observations leave little doubt that ants protect morning glory flowers and fruits from the combined enemy force of grasshoppers, caterpillars, and seed beetles. Bentley compares the seed production of six plants that grew where there were no ants with that of seventeen plants that were occupied by ants. Unprotected plants bore only 45 seeds per plant, but plants occupied by ants bore 211 seeds per plant. Although ants are not big enough to kill or seriously injure grasshoppers, they drive them away by nipping at their feet. Seed beetles are more vulnerable because they are much smaller than grasshoppers. The ants prey on the adult beetles, disturb females as they lay their eggs on developing fruits, and eat many of the eggs they do manage to lay."
+            },
+            "title":"According to paragraph 5, ants defend morning glory plants from seed beetles in each of the following ways EXCEPT ",
+            "choices":{
+                "A":"driving adult beetles off the plants by nipping at their feet ",
+                "B":"catching and eating adult beetles ",
+                "C":"eating beetle eggs they find on developing fruits",
+                "D":"making it difficult for beetles to lay eggs on developing fruits"
+            },
+            "answer":["A"]
+        },
+        "q41":{
+            "seq": 41,
+            "passage":"p3",
+            "type":"click-choice",
+            "replace_para_index":2,
+            "replace_para":[
+                "Ants are portably the most frequent and certainly the most persistent defenders of plants.",
+                "@#A【】",
+                "Since the highly active worker ants require a great deal of energy, plants exploit this need by providing extrafloral nectar that supplies ants with abundant energy. ",
+                "@#B【】",
+                "To return this favor, ants guard the nectaries, driving away or killing intruding insects that might compete with ants for nectar. ",
+                "@#C【】",
+                "Many of these intruders are herbivorous and would eat the leaves of the plants.",
+                "@#D【】"
+            ],
+            "choices":{
+                "A":"",   
+                "B":"",  
+                "C":"",  
+                "D":""   
+            },
+            "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage. ",
+            "content":"Sometimes they capture the insects to feed their protein-hungry larvae.",
+            "answer":["C"]
+        },
+        "q42":{
+            "seq": 42,
+            "passage":"p3",
+            "type":"drag-choice",
+            "title":"Many plants have extrafloral nectaries that produce nectar even during periods in which the plant is not flowering.",
+            "choices":{
+                "A":"Evolutionary history shows that plants that produce extrafloral nectar originated in the tropics.",
+                "B":"Extrafloral nectar has a higher concentration of sugar than floral nectar and is more attractive to ants and other insects.",
+                "C":"The protectionist hypothesis is that extrafloral nextar attracts ants, and that the ants, in order to preserve this energy-rich food source, attack insects that might harm the plant.",
+                "D":"Evidence accumulated during the twentieth century proved that ants provide significant benefits for plants with extrafloral nectaries.",
+                "E":"Research has shown that American morning glory plants that are protected by ants produce significantly more seeds than morning glory plants that are not protected by ants. ",
+                "F":"Ants generally ignore small insects, but they will eat the adults of large insect species as well as their eggs and larvae."
+            },
+            "answer":["C","D","E"]
         }
     }
 }

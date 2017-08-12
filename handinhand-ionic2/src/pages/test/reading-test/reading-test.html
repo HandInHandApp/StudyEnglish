@@ -189,10 +189,10 @@
                 </ion-row>
                 <ion-row class="drag-choice-answer">
                     <ion-col col-md-12 *ngFor="let choice of useranswer[step]; let idx=index;">
-                        <div id="answer-{{idx}}" *ngIf="choice !='' " (drop)="drop($event)" (dblclick)="rollbackDrag($event)" (dragover)="allowDrop($event)">
-                             <p id="{{step}}-{{choice}}" (dragstart)="dragChoiceStart($event)" draggable="true"> {{ passages.questions[step].choices[choice]}} </p>
+                        <div style="border: 1px solid green;" id="answer-{{idx}}" *ngIf="choice !='' " (dblclick)="rollbackDrag($event, idx)">
+                             <p id="{{step}}-{{choice}}" (dragstart)="dragChoiceStart($event)" draggable="false"> {{ passages.questions[step].choices[choice]}} </p>
                         </div>
-                        <div id="answer-{{idx}}" *ngIf="choice =='' " (drop)="drop($event)" (dblclick)="rollbackDrag($event)" (dragover)="allowDrop($event)">
+                        <div style="border: 1px solid blue;" id="answer-{{idx}}" *ngIf="choice =='' " (drop)="drop($event)" (dragover)="allowDrop($event)">
                         </div>
                     </ion-col>
                 </ion-row>

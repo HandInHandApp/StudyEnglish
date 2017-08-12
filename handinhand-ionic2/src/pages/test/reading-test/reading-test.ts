@@ -88,22 +88,25 @@ export class ReadingTestPage {
   }
 
   setPairAnswer(event: any, choice: string){
+    let tempchoice: string;
+    tempchoice = this.useranswer[this.step]
     if(event.checked==true){
-      if(this.useranswer[this.step]==""){
-        let pair_choice = [] 
-        this.useranswer[this.step]=[choice]
-      }else if(this.useranswer[this.step].length>1){
+      if(tempchoice==""){
+         tempchoice=choice
+      }else if(tempchoice.length>1){
         event.checked=false
       }else{
-        this.useranswer[this.step].push(choice)
+        tempchoice=tempchoice+choice
       }
     }else{
-      for(var i=0; i<this.useranswer[this.step].length;i++){
-        if(this.useranswer[this.step][i] == choice){
-          this.useranswer[this.step].splice(i,1)
-        }
-      }
+      tempchoice = tempchoice.replace(choice,"")
     }
+    console.log(tempchoice);
+    this.useranswer[this.step]=tempchoice.split("").sort(
+      function compareFunction(param1,param2){
+			    return param1.localeCompare(param2);
+			}
+    ).join("")
   };
 
   getChoiceCount(choices:any){
@@ -117,6 +120,7 @@ export class ReadingTestPage {
   }
 
   showAlert(){
+      this.userData.setUserReadingAnswer(this.useranswer)
       let prompt = this.alertCtrl.create({
            title: 'Finish Warning',
            message: "You have seen all the questions in this part of the Reading Section <br/><br/>"
@@ -207,13 +211,13 @@ export class ReadingTestPage {
   }
 
   dragChoiceStart(event: any) {
-    event.dataTransfer.setData("Text", event.target.id);
+    event.dataTransfer.setData("dragTarget", event.target.id);
   }
 
   drop(event: any) {
     event.preventDefault();
     if (event.target.tagName == "DIV" && event.target.children.length == 0) {
-      var data = event.dataTransfer.getData("Text");
+      var data = event.dataTransfer.getData("dragTarget");
       event.target.appendChild(document.getElementById(data));
       let answerChoice = data.split("-")[1]
       let answerIdx = event.target.id.split("-")[1];
@@ -225,11 +229,11 @@ export class ReadingTestPage {
     event.preventDefault();
   }
 
-  rollbackDrag(event: any) {
+  rollbackDrag(event: any, idx: number) {
     if (event.target.tagName == "P") {
       let targetEle = document.getElementById("div-"+event.target.id);
       if(targetEle != null){
-        targetEle.appendChild(event.target)
+        this.useranswer[this.step][idx]=''
       }
     }
   }

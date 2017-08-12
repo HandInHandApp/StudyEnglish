@@ -9,6 +9,12 @@
             <button class="tpobtn" ion-button (click)="goBack()" type="submit" block> Back </button>
         </ion-buttons>
     </ion-toolbar>
+    <ion-grid class="score-header">
+        <ion-row class="score-header-row"> 
+            <ion-col col-1>得分: <span>20</span></ion-col>
+            <ion-col col-1>准确率: <span>{{correct_rate}}</span></ion-col>
+        </ion-row>
+    </ion-grid>
     <ion-grid class="review-header">
         <ion-row class="review-header-row"> 
             <ion-col col-10>Quesion</ion-col>

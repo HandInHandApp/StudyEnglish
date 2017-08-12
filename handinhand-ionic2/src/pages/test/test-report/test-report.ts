@@ -11,6 +11,8 @@ import { UserData } from '../../../providers/user-data';
 export class TestReportPage{
   passages: any;
   steps: any;
+  score: number;
+  correct_rate: any;
   useranswer: any={
       "q1":"", "q2":"", "q3":"", "q4":"", "q5":"", "q6":"", "q7":"", "q8":"","q9":"","q10":"","q11":"","q12":"", "q13":"", "q14":"",
       "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
@@ -30,6 +32,21 @@ export class TestReportPage{
         this.steps = this.passages["steps"]
         this.userData.getUserReadingAnswer().then((value)=>{
           this.useranswer=value
+          let correct_answer = 0;
+          let total_count = 0;
+          for(let step in this.useranswer){
+            total_count = total_count + 1;
+            if(this.passages.questions[step].type == "drag-choice"){
+              if(this.useranswer[step] != "" && this.passages.questions[step].answer.join("") == this.useranswer[step].join("")){
+                correct_answer = correct_answer + 1;
+              }
+            }else{
+              if(this.passages.questions[step].answer.join("") == this.useranswer[step]){
+                correct_answer = correct_answer + 1;
+              }
+            }
+          }
+          this.correct_rate = correct_answer+"/"+total_count;
         });
       }
     );
