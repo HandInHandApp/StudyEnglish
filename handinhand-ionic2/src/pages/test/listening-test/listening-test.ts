@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 
-import { NavParams } from 'ionic-angular';
+// import { NavParams } from 'ionic-angular';
 
+import { NavController, AlertController, NavParams } from 'ionic-angular';
 
 import { ConferenceData } from '../../../providers/conference-data';
 // import { TimerPage   } from '../timer/timer'
@@ -31,9 +32,13 @@ export class ListeningTestPage {
   total_passage: number = 0;
   timer_stop=false;
   counttime =  10*1000 ;
+  audio: any;
 
-
-  constructor(public navParams: NavParams, public confData: ConferenceData) {
+  constructor(public navParams: NavParams, 
+    public confData: ConferenceData,
+    public navCtrl: NavController
+  ) {
+    
     this.session = navParams.data.session;
     this.type = navParams.data.type;
     this.tpourl = navParams.data.url;
@@ -65,6 +70,15 @@ export class ListeningTestPage {
     }
   }
 
+  playaudo(){
+    if(this.step.indexOf('p')!=-1){
+      this.playStepMp3(this.passages.passage[this.step].mp3)
+      console.log(this.passages.passage[this.step])
+    }else if(this.step.indexOf('q')!=-1){
+          this.playStepMp3(this.passages.question[this.step].mp3)
+          console.log(this.passages.question[this.step])
+    }else{}
+  }
 
   gotoNext(){
       if(this.stepindex != this.last_stepindex){
@@ -72,18 +86,22 @@ export class ListeningTestPage {
         this.step =  this.steps[this.stepindex]
 
         this.endDate = 601*1000
-        //  (new Date( (new Date()).getTime()  +  600*1000 ))
       }
       console.log(this.step)
+      this.playaudo() 
   }
+
   gotoBack(){
       if( this.stepindex != 0){
         this.stepindex = this.stepindex-1
         this.step =  this.steps[this.stepindex]
       } 
        console.log(this.step)
+       this.playaudo() 
   }
-  gotoHome(){
+  gotoHome() {
+    // this.navCtrl.popTo(this.navCtrl.first())
+    this.navCtrl.pop()
       
   }
 
@@ -98,6 +116,22 @@ export class ListeningTestPage {
   timerEnd(timertitle) { 
       console.log(timertitle + ' timer End'); 
       // this.gotoNext()
+  }
+
+  playStepMp3(mp3file){
+    if(mp3file !=""){
+        if(this.audio){
+          this.audio.pause() ;
+        }
+        
+      this.audio = new Audio(mp3file);
+      this.audio.play();
+
+      this.audio.onended= () => { 
+          console.log(mp3file+" ended !! ");
+      }
     }
+     
+}
 
 }

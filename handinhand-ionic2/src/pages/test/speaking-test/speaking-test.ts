@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 
 
-import { NavParams } from 'ionic-angular';
+//import { NavParams } from 'ionic-angular';
 
+import { NavController, AlertController, NavParams } from 'ionic-angular';
 
 import { ConferenceData } from '../../../providers/conference-data';
 // import { TimerPage   } from '../timer/timer'
 
 import { Media } from '@ionic-native/media';
 import { MediaObject } from '@ionic-native/media';
-import {  AlertController } from 'ionic-angular';
+// import {  AlertController } from 'ionic-angular';
 
 import { File } from '@ionic-native/file';
 
@@ -94,6 +95,7 @@ refreshtimer=0;
 loadProgress=45;
 
   constructor(public navParams: NavParams, 
+    public navCtrl: NavController,
     public confData: ConferenceData, 
     private media: Media,
     public file: File,
@@ -169,6 +171,15 @@ loadProgress=45;
     }
   }
 
+  playaudo(){
+    if(this.step.indexOf('p')!=-1){
+      this.playStepMp3(this.passages.passage[this.step].mp3)
+      console.log(this.passages.passage[this.step])
+    }else if(this.step.indexOf('q')!=-1){
+          this.playStepMp3(this.passages.question[this.step].mp3)
+          console.log(this.passages.question[this.step])
+    }else{}
+  }
 
   gotoNext(){
       if(this.stepindex != this.last_stepindex){
@@ -179,13 +190,7 @@ loadProgress=45;
         //  (new Date( (new Date()).getTime()  +  600*1000 ))
       }
       console.log(this.step)
-      if(this.step.indexOf('p')!=-1){
-            this.playStepMp3(this.passages.passage[this.step].mp3)
-            console.log(this.passages.passage[this.step])
-      }else if(this.step.indexOf('q')!=-1){
-            this.playStepMp3(this.passages.question[this.step].mp3)
-            console.log(this.passages.question[this.step])
-      }else{}
+      this.playaudo() 
        
        
   }
@@ -195,10 +200,15 @@ loadProgress=45;
         this.step =  this.steps[this.stepindex]
       } 
        console.log(this.step)
+       this.playaudo() 
   }
-  gotoHome(){
+
+  gotoHome() {
+    // this.navCtrl.popTo(this.navCtrl.first())
+    this.navCtrl.pop()
       
   }
+
   playStepMp3(mp3file){
       if(mp3file !=""){
           if(this.audio){

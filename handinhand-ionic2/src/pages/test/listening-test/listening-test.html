@@ -50,16 +50,14 @@
 
                 <div *ngFor="let item of steps;  let i = index;"  >
                     <div *ngIf="step === item && step.indexOf('p')==-1">
-                          <audio autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.question[item].mp3!=''">
+                          <!-- <audio autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.question[item].mp3!=''">
                               <source src={{passages.question[item].mp3}} type='audio/mpeg' />
-                               <!--<source src='assets/tpo34/tpo34_listening_passage1_1.mp3' type='audio/mpeg' />-->
-                            </audio>
+                          </audio> -->
 
                         <ion-list radio-group>
                             <ion-list-header>
                                 <div #popoverText class="text-to-change">
                                     {{passages.question[item].seq}}. {{passages.question[item].para}}
-                                <!--1.  Paragraph 1 makes all of the following points about Islamic books EXCEPT:-->
                                 </div>
                             </ion-list-header>
                         <ion-item>
@@ -92,14 +90,11 @@
                             <a href="#" class="thumbnail" *ngIf="passages.passage[step].img!=''">
                             <img src={{passages.passage[step].img}} alt="" >
                             </a>
-                            <!--{{passages.passage[step].mp3}}-->
-                            <audio  autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
+                            <!-- <audio  autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
                               <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
-                               <!--<source src='assets/tpo34/tpo34_listening_passage1_1.mp3' type='audio/mpeg' />-->
-                            </audio>
+                            </audio> -->
 
                             <div  *ngIf="passages.passage[step].contents.length > 0">
-                              <!--{{passages.passage[step].contents}}-->
                                <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
                             </div>
 
