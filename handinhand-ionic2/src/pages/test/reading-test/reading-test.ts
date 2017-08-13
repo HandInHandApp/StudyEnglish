@@ -33,6 +33,8 @@ export class ReadingTestPage {
   currentPassage: any;
   dragAnswer: string = "";
   timer_stop=false;
+  headername: string;
+  tpourl: string;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -42,7 +44,9 @@ export class ReadingTestPage {
   ) {
     this.step = this.navParams.get("curstep")
     this.stepindex = this.navParams.get("stepindex")
-    confData.getReadingTestData("tpo34").subscribe(
+    this.tpourl = this.navParams.get("tpourl")
+    this.headername= this.navParams.get("headername")
+    confData.getReadingTestData(this.tpourl).subscribe(
       resulte => {
         console.log(resulte)
         this.passages = resulte
@@ -139,7 +143,10 @@ export class ReadingTestPage {
               text: 'CONTINUE',
               handler: data => {
                 console.log('CONTINUE clicked');
-                this.navCtrl.push(TestReportPage)
+                this.navCtrl.push(TestReportPage,{
+                    tpourl:this.tpourl,
+                    headername:this.headername,
+                })
               }
             }]
         });
@@ -185,7 +192,11 @@ export class ReadingTestPage {
   }
 
   gotoReview(){
-    this.navCtrl.push(ReadingReviewPage)
+    this.navCtrl.push(ReadingReviewPage,
+     {
+        tpourl:this.tpourl,
+        headername:this.headername,
+     })
     this.userData.setUserReadingAnswer(this.useranswer)
   }
 

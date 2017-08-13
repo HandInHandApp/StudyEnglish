@@ -5,7 +5,7 @@
             "items":[
                 {   
                     "testNmae":"阅读",
-                    "url": "",
+                    "url": "assets/data/tpo34_reading_json.json",
                     "pagetype":"Reading"
                 },{
                     "testNmae":"听力",

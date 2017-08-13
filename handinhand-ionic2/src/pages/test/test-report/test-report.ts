@@ -18,14 +18,18 @@ export class TestReportPage{
       "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
       "q29":"", "q30":"", "q31":"", "q32":"","q33":"","q34":"","q35":"","q36":"","q37":"","q38":"","q39":"","q40":"","q41":"","q42":""
   };
-
+  headername: string;
+  tpourl: string;
   constructor(
     public navCtrl: NavController,
+    public navParams: NavParams,
     public viewCtrl: ViewController,
     public confData: ConferenceData,
     public userData: UserData
   ){
-    confData.getReadingTestData("tpo34").subscribe(
+    this.tpourl = this.navParams.get("tpourl")
+    this.headername= this.navParams.get("headername")
+    confData.getReadingTestData(this.tpourl).subscribe(
       resulte => {
         console.log(resulte)
         this.passages = resulte

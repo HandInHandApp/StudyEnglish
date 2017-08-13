@@ -45,16 +45,11 @@ toplist: any[]
 
   
   goToTest(topitem,top){
-       
-
         this.navCtrl.push(this.itemPages[topitem.pagetype], {
-            
             type: "type",
             url:topitem.url,
             headername:top.title+" "+topitem.pagetype,
             session: topitem
         });
- 
-   
   }
 }

@@ -15,12 +15,19 @@ export class DirectionPage {
   directionType: string;  //you can choose reading, writing, speaking, listening
   directionData: any;
 
+  type: any;
+  tpourl:any;
+  headername:any;
+
   constructor(
         public navParams: NavParams,
         public navCtrl: NavController,
         public confData: ConferenceData) {
     this.session = navParams.data.session;
     this.directionType = "reading"
+    this.tpourl = navParams.data.url;
+    this.headername = navParams.data.headername;
+
     this.directionData={
       title:'', contents:[]
     }
@@ -40,7 +47,11 @@ export class DirectionPage {
     }
       
   continue(){
-    this.navCtrl.push(this.itemPages[this.directionType], {});
+    this.navCtrl.push(this.itemPages[this.directionType], 
+      {
+        tpourl:this.tpourl,
+        headername:this.headername,
+      });
   }
 
   stopClocking(){  

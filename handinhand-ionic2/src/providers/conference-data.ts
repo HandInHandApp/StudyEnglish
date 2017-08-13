@@ -403,8 +403,8 @@ export class ConferenceData {
                     .map((response) => response.json());
   }
 
-  getReadingTestData(course: string) {
-    return this.http.get('assets/'+course+'/reading.json')
+  getReadingTestData(tpourl: string) {
+    return this.http.get(tpourl)
                .map(result=> result.json());
   }
 
