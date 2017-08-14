@@ -1,3 +1,35 @@
+<style type="text/css">
+
+  .expand { 
+    height:1px; 
+    margin:2px 0; 
+    background:#2187e7; 
+    position:absolute;
+    box-shadow:0px 0px 10px 1px rgba(0,198,255,0.4);
+  }
+  
+  .html5       { width:70%;  -moz-animation:html5 2s ease-out;       -webkit-animation:html5 2s ease-out;       }
+
+  @-moz-keyframes html5       { 0%  { width:0px;} 100%{ width:70%;}  }
+
+  
+  @-webkit-keyframes html5       { 0%  { width:0px;} 100%{ width:70%;}  }
+
+  
+  </style>
+
+  
+<!-- <div class="container">
+    <div class="content">
+      <div class="col">
+        <ul id="skill">
+          <li><span class="expand html5"></span><em>HTML 5</em></li>
+
+        </ul>
+      </div>
+    </div>
+  </div> -->
+
  <div class="progress-outer">
     <div class="progress-inner" [style.width]="precent_progress + '%'">
         {{precent_progress }}% 
@@ -5,8 +37,3 @@
 </div>
  
 
-<!--   <div class="myprogress">
-    <div class="myprogress-bar">
-      <div class="myprogress-shadow" [style.width]="progress + '%'"></div>
-    </div>
-  </div> -->

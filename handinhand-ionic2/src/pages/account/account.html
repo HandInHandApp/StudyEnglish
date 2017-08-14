@@ -12,12 +12,34 @@
     <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
     <h2>{{username}}</h2>
 
+    <ion-list>
+        <ion-item (click)="goToSessionDetail('starttest','have')">
+          <ion-thumbnail item-start>
+            <img src="assets/img/advance-card-tmntr.jpg">
+          </ion-thumbnail>
+          <h2>已经参加过托福考试</h2>
+        </ion-item>
+         <ion-item (click)="goToSessionDetail('starttest','will')">
+          <ion-thumbnail item-start>
+            <img src="assets/img/speakers/rabbit.jpg">
+          </ion-thumbnail>
+          <h2>未参加过托福考试，但已报名</h2>
+        </ion-item>
+         
+        
+      </ion-list>
+
+    
     <ion-list inset>
-      <button ion-item (click)="updatePicture()">Update Picture</button>
+      <!-- <button ion-item (click)="setting()">账户设置</button> -->
+      <button ion-item (click)="setting()">上传学习进度</button>
+      <button ion-item (click)="support()">技术支持</button>
+      <button ion-item (click)="logout()">退出</button>
+      <!-- <button ion-item (click)="updatePicture()">Update Picture</button>
       <button ion-item (click)="changeUsername()">Change Username</button>
       <button ion-item (click)="changePassword()">Change Password</button>
       <button ion-item (click)="support()">Support</button>
-      <button ion-item (click)="logout()">Logout</button>
+      <button ion-item (click)="logout()">Logout</button> -->
     </ion-list>
   </div>
 </ion-content>

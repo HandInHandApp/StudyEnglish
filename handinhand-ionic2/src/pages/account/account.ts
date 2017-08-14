@@ -4,6 +4,7 @@ import { AlertController, NavController } from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
 
+import { ExaminationDetailPage } from '../examination-detail/examination-detail';
 
 @Component({
   selector: 'page-account',
@@ -12,7 +13,9 @@ import { UserData } from '../../providers/user-data';
 export class AccountPage {
   username: string;
 
-  constructor(public alertCtrl: AlertController, public nav: NavController, public userData: UserData) {
+  constructor(public alertCtrl: AlertController, 
+    public nav: NavController, 
+    public userData: UserData) {
 
   }
 
@@ -22,6 +25,34 @@ export class AccountPage {
 
   updatePicture() {
     console.log('Clicked to update picture');
+  }
+
+  setting(){
+    let alert = this.alertCtrl.create({
+      title: '设置',
+      buttons: [
+        '取消'
+      ]
+    });
+    alert.addInput({
+      name: '用户名称',
+      value: this.username,
+      placeholder: '用户名称'
+    });
+    alert.addInput({
+      name: '用户名称',
+      value: this.username,
+      placeholder: '用户名称'
+    });
+    alert.addButton({
+      text: '确定',
+      handler: (data: any) => {
+        this.userData.setUsername(data.username);
+        this.getUsername();
+      }
+    });
+
+    alert.present();
   }
 
   // Present an alert with the current username populated
@@ -39,6 +70,16 @@ export class AccountPage {
       value: this.username,
       placeholder: 'username'
     });
+    alert.addInput({
+      name: 'username',
+      value: this.username,
+      placeholder: 'username'
+    });
+    alert.addInput({
+      name: 'username',
+      value: this.username,
+      placeholder: 'username'
+    });
     alert.addButton({
       text: 'Ok',
       handler: (data: any) => {
@@ -48,6 +89,13 @@ export class AccountPage {
     });
 
     alert.present();
+  }
+
+  goToSessionDetail(session: any,type: any) {
+    this.nav.push(ExaminationDetailPage, {
+      type: type,
+      session: session
+    });
   }
 
   getUsername() {
@@ -68,4 +116,5 @@ export class AccountPage {
   support() {
     this.nav.push('SupportPage');
   }
+
 }
