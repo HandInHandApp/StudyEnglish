@@ -5,6 +5,8 @@ import { AlertController, NavController } from 'ionic-angular';
 import { UserData } from '../../providers/user-data';
 
 import { ExaminationDetailPage } from '../examination-detail/examination-detail';
+import { ConferenceData } from '../../providers/conference-data';
+
 
 @Component({
   selector: 'page-account',
@@ -15,7 +17,8 @@ export class AccountPage {
 
   constructor(public alertCtrl: AlertController, 
     public nav: NavController, 
-    public userData: UserData) {
+    public userData: UserData,
+    public confData: ConferenceData) {
 
   }
 
@@ -115,6 +118,27 @@ export class AccountPage {
 
   support() {
     this.nav.push('SupportPage');
+  }
+
+  showAlert(text,detail) {
+    let alert = this.alertCtrl.create({
+      title: text,
+      subTitle: detail,
+      buttons: ['OK']
+    });
+    alert.present();
+    
+  }
+
+  getAll(){
+    this.userData.getAllLocalDatas()
+  }
+
+  queryUserDatas(id){
+    this.confData.queryUserDatas(id)
+  }
+  sycn(){
+      this.confData.syncloaclDatas()   
   }
 
 }

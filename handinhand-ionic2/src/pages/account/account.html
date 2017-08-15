@@ -32,7 +32,10 @@
     
     <ion-list inset>
       <!-- <button ion-item (click)="setting()">账户设置</button> -->
-      <button ion-item (click)="setting()">上传学习进度</button>
+
+      <button ion-item (click)="getAll()">查询本地用户数据</button>
+
+      <button ion-item (click)="sycn()">与Clould同步学习进度</button>
       <button ion-item (click)="support()">技术支持</button>
       <button ion-item (click)="logout()">退出</button>
       <!-- <button ion-item (click)="updatePicture()">Update Picture</button>

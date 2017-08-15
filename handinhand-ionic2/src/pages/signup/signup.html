@@ -75,23 +75,16 @@
 	</ion-col>
 	<ion-col col-2></ion-col>
 	<ion-col col-4>
-		<button ion-button (click)="requestVerfiyCode(signupForm)" type="submit" block>发送短信验证码</button>
-		</ion-col>
+		
+		<!-- <button ion-button (click)="requestVerfiyCode(signupForm)" type="submit" block>发送短信验证码</button> -->
+		<button ion-button (click)="signUp2(signupForm)" type="submit" block>发送短信验证码</button>
+	</ion-col>
   </ion-row>
 
-		
-
-	
-
 		</ion-list>
-
-		
-
-		<!-- <div padding>
-			<button ion-button (click)="onSignup(signupForm)" type="submit" block>创建</button>
-		</div> -->
 		<div padding>
-			<button ion-button (click)="sendSmsCodeToVerfiy(signupForm)" type="submit" block>创建</button>
+			<!-- <button ion-button (click)="signUp(signupForm)" type="submit" block>创建</button> -->
+			<button ion-button (click)="checkSmsCode(signupForm)" type="submit" block>创建</button>
 		</div>
 		
 	</form>

@@ -37,10 +37,14 @@
 
 		<ion-row responsive-sm>
 			<ion-col>
-				<button ion-button (click)="onLogin(loginForm)" type="submit" block>登录</button>
+				<button ion-button (click)="logincheck(loginForm)" type="submit" block>登录</button>
 			</ion-col>
 			<ion-col>
 				<button ion-button (click)="onSignup()" color="light" block>注册</button>
+				<!-- <button ion-button (click)="getAll()" color="light" block>查询本地用户数据</button>
+				<button ion-button (click)="pushtoDb()" color="light" block>本地用户数据推送至Clould</button>
+				<button ion-button (click)="sycn()" color="light" block>与Clould同步</button>
+		 -->
 			</ion-col>
 		</ion-row>
 	</form>

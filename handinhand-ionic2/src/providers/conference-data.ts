@@ -500,24 +500,61 @@ export class ConferenceData {
       user.setUsername(params.username);
       // 设置密码
       user.setPassword(params.password);
-      // 设置邮箱
       user.setMobilePhoneNumber(params.mobilePhone);
-      user.signUp().then(function (loginedUser) {
-          console.log(loginedUser);
-      }, function (error) {
-      });
+      return user.signUp()
   }
-  createUserCheckSmsCodeAV(smscode: any) {
 
-      AV.User.verifyMobilePhone(smscode).then(function(){
-        console.log("验证成功")
-         this.showAlert("恭喜您","注册成功")
-        
-      }, function(err){
-        console.log("验证失败")
-        this.showAlert("注册失败",err)
-      //验证失败
-      });
+  createUserCheckSmsCodeAV(smscode: any) {
+    return  AV.User.verifyMobilePhone(smscode)
+  }
+
+  requestSmsCode(phone){
+    return AV.Cloud.requestSmsCode(phone)
+  }
+  signUpOrlogInWithMobilePhone(phone,smscode){
+    return AV.User.signUpOrlogInWithMobilePhone(phone, smscode)
+  }
+
+
+  login(name,passwd){
+    return AV.User.logIn(name, passwd)
+  }
+
+  pushloaclDatas(datas,username){
+
+    var Todo = AV.Object.extend('UserDatas');
+    var todo = new Todo();
+    // todo.set('readingAnswer', datas.readingAnswer);
+    // todo.set('username', username);
+    // todo.set('userid',datas.userid)
+    for(var p in datas){
+        todo.set(p, datas[p])
+    }
+    return todo.save()
+  }
+  syncloaclDatas(){
+        var datas = this.user.getAllLocalDatas()
+        this.user.getUserDatasId().then(
+          userdatasid => {
+            var todo = AV.Object.createWithoutData('UserDatas', userdatasid);
+            for(var p in datas){
+              todo.set(p, datas[p])
+            }
+             todo.save().then( (success) => {
+              this.showAlert("同步成功","")
+            },  (error)  => {
+              this.showAlert("发送失败", error)
+            });
+          }
+
+        );
+
+  }
+
+  queryUserDatas(userid){
+    var query = new AV.Query('UserDatas');
+    query.equalTo('userid', userid);
+    return query.find()
   }
 
 }

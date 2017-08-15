@@ -18,6 +18,7 @@ export class UserData {
   _favorites: string[] = [];
   HAS_LOGGED_IN = 'hasLoggedIn';
   HAS_SEEN_TUTORIAL = 'hasSeenTutorial';
+  localDatas= {} ;
 
   constructor(
     public events: Events,
@@ -70,6 +71,7 @@ export class UserData {
     }
   };
 
+
   login(username: string): void {
     this.storage.set(this.HAS_LOGGED_IN, true);
     this.setUsername(username);
@@ -90,6 +92,38 @@ export class UserData {
 
   setUsername(username: string): void {
     this.storage.set('username', username);
+  };
+  setUserId(userid: string): void {
+    this.storage.set('userid', userid);
+  };
+  setUserDatasId(userid: string): void {
+    this.storage.set('userdatasid', userid);
+  };
+
+  setUserDatas(datas){
+    for(var p in datas){
+      //遍历json对象的每个key/value对,p为key
+         this.storage.set(p, datas[p])
+         console.log(p + " " + datas[p]);
+      }
+  }
+  // updateUserDatasInClould(datas){
+  //   for(var p in datas){
+  //     //遍历json对象的每个key/value对,p为key
+  //        this.storage.set(p, datas[p])
+  //        console.log(p + " " + datas[p]);
+  //     }
+  // }
+
+  getUserId(): Promise<string>  {
+    return this.storage.get('userid').then((value) => {
+      return value;
+    });
+  };
+  getUserDatasId(): Promise<string>  {
+    return this.storage.get('userdatasid').then((value) => {
+      return value;
+    });
   };
 
   getUsername(): Promise<string> {
@@ -118,6 +152,19 @@ export class UserData {
     return this.storage.get("readingAnswer").then((value) =>{
       return value;
     });
+  }
+  
+
+  getAllLocalDatas(){
+    this.storage.forEach( (value, key, iterationNumber) => {
+      console.log(value,key,iterationNumber)
+      this.localDatas[key] = value
+    })
+    return  this.localDatas;
+  }
+
+  getLoalDatas(){
+    return  this.localDatas;
   }
 
 
