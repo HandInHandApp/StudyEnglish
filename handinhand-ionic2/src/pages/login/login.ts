@@ -31,7 +31,7 @@ export class LoginPage {
 
     if (form.valid) {
       this.userData.login(this.login.username);
-      this.pushtoDb()
+      
       this.navCtrl.push(TabsPage);
     }
   }
@@ -62,14 +62,18 @@ export class LoginPage {
             .then(results => {
               console.log(results)
               this.showAlert("","登录成功")
-             
-              this.userData.setUserDatasId(results[0].id)
-              this.userData.setUserDatas(results[0].attributes)
-              
+              if(results[0]){
+                this.userData.setUserDatasId(results[0].id)
+                this.userData.setUserDatas(results[0].attributes)
+              }else{
+                this.initUserToDb()
+              }
+
               this.onLogin(form)
 
             },  (error) => {
               this.showAlert("获取用户数据失败", error)
+              
             });
           
 
@@ -82,7 +86,19 @@ export class LoginPage {
   getAll(){
     this.userData.getAllLocalDatas()
   }
-  pushtoDb(){
+
+  initUserToDb(){
+    var x= {};
+    this.confData.pushloaclDatas(x,this.login.username)
+      .then( (todo) => {
+        console.log('setUserDatasId is ' + todo.id);
+        this.userData.setUserDatasId(todo.id)
+      },  (error)  => {
+        this.showAlert("发送失败", error)
+      });
+  }
+
+  pushCurUserDatatoDb(){
     var x= this.userData.getAllLocalDatas();
     this.confData.pushloaclDatas(x,this.login.username)
       .then( (todo) => {

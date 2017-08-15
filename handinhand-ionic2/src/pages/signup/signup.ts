@@ -48,9 +48,21 @@ export class SignupPage {
     
   }
 
+  initUserToDb(){
+    var x= {};
+    this.confData.pushloaclDatas(x,this.signup.username)
+      .then( (todo) => {
+        console.log('setUserDatasId is ' + todo.id);
+        this.userData.setUserDatasId(todo.id)
+      },  (error)  => {
+        this.showAlert("发送失败", error)
+      });
+  }
+
   //sinup with phone and then to check sms code
   signUp2(form: NgForm){
-    if (!form.valid)  return
+    // if (!form.valid) 
+    //    return
     
     if(typeof(this.signup.mobilePhone) == "undefined" || this.signup.mobilePhone< 10000000000){
       this.showAlert("注意", "请输入正确的手机号码")
@@ -69,12 +81,13 @@ export class SignupPage {
   }
   checkSmsCode(form: NgForm){
     if (!form.valid)  return
-    if(typeof(this.signup.smsCode) == "undefined" || typeof(this.signup.smsCode) != "number" ){
+    if(typeof(this.signup.smsCode) == "undefined"  ){
       this.showAlert("注意", "请输入正确的手机验证码")
       return
     }
     this.confData.createUserCheckSmsCodeAV(this.signup.smsCode)
         .then( success =>{
+          this.initUserToDb()
           this.onSignup(form)
           this.showAlert("恭喜您","注册成功")
 
