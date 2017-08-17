@@ -12,48 +12,7 @@ import { ConferenceData, CreateEventParams } from './../../providers/conference-
 
 @Component({
   selector: 'create-dialog',
-  template: `
- <ion-header>
-  <ion-navbar>
-      <ion-title [hidden]="type === 'update'">创建</ion-title>
-    <ion-title [hidden]="type === 'create'">更新</ion-title>
-    
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-
-
-	<form #eventForm="ngForm" novalidate>
-		<ion-list no-lines>
-			<ion-item>
-				<ion-label stacked color="primary">开始时间</ion-label>
-				<ion-input [(ngModel)]="event.start" name="start" type="text" #start="ngModel" spellcheck="false" autocapitalize="off"
-					required>
-				</ion-input>
-			</ion-item>
-
-
-			<ion-item>
-				<ion-label stacked color="primary">结束时间</ion-label>
-				<ion-input [(ngModel)]="event.end" name="end" type="text" #end="ngModel" required>
-				</ion-input>
-			</ion-item>
-
-      <ion-item>
-				<ion-label stacked color="primary"> 任务</ion-label>
-				<ion-input [(ngModel)]="event.text" name="text" type="text" #text="ngModel" required>
-				</ion-input>
-			</ion-item>
-		
-		</ion-list>
-
-	</form>
-
-
-
-</ion-content>
-  `,
+  templateUrl: 'create.component.html'
   // template: `
   //   <daypilot-modal #modal (close)="closed()">
   //   <div class="center">

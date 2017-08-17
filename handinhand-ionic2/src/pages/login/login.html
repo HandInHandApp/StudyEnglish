@@ -13,8 +13,26 @@
 		<h2>手把手过托福</h2>
 	</div>
 
+	<div class="bootstrap-iso">
+			<div class="container">
+
 	<form #loginForm="ngForm" novalidate>
-		<ion-list no-lines>
+			<div class="form-group">
+					<label for="username">用户名:</label>
+					<input class="form-control" required [(ngModel)]="login.username" name="username" type="text" #username="ngModel">
+					<div [hidden]="username.valid ||  submitted == false" color="danger" padding-left>
+							Username is required
+					</div>
+			</div>
+			<div class="form-group">
+					<label for="username">密码:</label>
+					<input class="form-control" [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+					<div [hidden]="password.valid || submitted == false" color="danger"  padding-left>
+							Password is required
+					</div>
+			</div>
+
+		<!-- <ion-list no-lines>
 			<ion-item>
 				<ion-label stacked color="primary">用户名</ion-label>
 				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
@@ -33,7 +51,7 @@
 			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
 				Password is required
 			</p>
-		</ion-list>
+		</ion-list> -->
 
 		<ion-row responsive-sm>
 			<ion-col>
@@ -48,5 +66,6 @@
 			</ion-col>
 		</ion-row>
 	</form>
-
+</div>
+</div>
 </ion-content>

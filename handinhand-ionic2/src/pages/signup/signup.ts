@@ -27,6 +27,12 @@ export class SignupPage {
     public alertCtrl: AlertController
   ) {}
 
+  whos = [
+          {name:"我是学生",value:"student" },
+          {name:"我是家长",value:"parent" },
+          {name:"我是老师",value:"teacher" }
+  ]
+
   onSignup(form: NgForm) {
     this.submitted = true;
 
