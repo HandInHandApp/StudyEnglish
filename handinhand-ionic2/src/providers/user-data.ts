@@ -153,6 +153,16 @@ export class UserData {
       return value;
     });
   }
+
+  setUserListeningAnswer(answer: any): void {
+    this.storage.set("listeningAnswer", answer)
+  };
+
+  getUserListeningAnswer(): Promise<any>{
+    return this.storage.get("listeningAnswer").then((value) =>{
+      return value;
+    });
+  }
   
 
   getAllLocalDatas(){
