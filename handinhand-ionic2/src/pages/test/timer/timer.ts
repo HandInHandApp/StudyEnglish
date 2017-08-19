@@ -24,8 +24,11 @@ export class TimerPage implements AfterViewInit, OnDestroy {
 
  @Input() stop: boolean;
 
+ @Input() hidden: boolean;
+
  @Output() childEvent = new EventEmitter<any>();
 
+ @Output() endEvent = new EventEmitter<any>();
 
  // 小时差
  private hour: number;
@@ -64,6 +67,7 @@ export class TimerPage implements AfterViewInit, OnDestroy {
 
    if(this.endDate == 0) {
         this.childEvent.emit(this.title);
+        this.endEvent.emit(this.title);
         clearInterval(this.timer);
    }
    

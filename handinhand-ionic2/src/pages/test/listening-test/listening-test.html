@@ -1,116 +1,112 @@
 <ion-header>
+
     <ion-navbar hideBackButton>
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>TOP 1 Reading</ion-title>
+        <ion-title>{{headername}}</ion-title>
         <ion-buttons end>
+            <!--Listening没有review 
             <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block>
-        Review
-      </button>
+                Review
+            </button>-->
             <button class="navbtn" ion-button (click)="gotoBack()" type="submit" block>
-        BACK
-      </button>
+                Back
+            </button>
             <button class="navbtn" ion-button (click)="gotoNext()" type="submit" block>
-        NEXT
-      </button>
+                Next
+            </button>
         </ion-buttons>
     </ion-navbar>
+
     <ion-toolbar>
         <ion-buttons left>
             <button class="tpobtn" ion-button (click)="gotoHome()" type="submit" block>
-        首页
-      </button>
-            <button class="tpobtn" ion-button (click)="stopTiming()" type="submit" block>
-        暂停
-      </button>
+                首页
+            </button>
+            <button class="tpobtn" ion-button (click)="pauseToBreak()" type="submit" block>
+                暂停
+            </button>
         </ion-buttons>
-    <div style="text-align:center;">
-        <label *ngIf="step.indexOf('p')!=-1">{{passages.passage[step].title}} </label>
-        <label *ngIf="step.indexOf('q')!=-1">{{passages.question[step].title}}</label>
-    </div>
-       
+
+        <div style="text-align:center;">
+            <label *ngIf="step.indexOf('p')==0">{{passages.passage[step].title}}</label>
+            <label *ngIf="step.indexOf('q')==0">{{passages.question[step].title}}</label>
+        </div>
+
         <ion-buttons right>
             <span class="button-inner">
-                <button class="tpobtn-small" ion-button (click)="stopTiming()" type="submit" block>
-                   <div *ngIf="timer_stop == false">HideTime</div>
-                   <div *ngIf="timer_stop == true">ShowTime </div>
+                <button class="tpobtn-small" ion-button (click)="toggleTimerHidden()" type="submit" block>
+                   <div *ngIf="timer_hidden">SHOW TIME</div>
+                   <div *ngIf="!timer_hidden">HIDE TIME</div>
                 </button> 
-                <button ion-button  >
-                    <timer-countdown title="headertimer"  [stop]="timer_stop" [endDate]="counttime" (childEvent) = "timerEnd($event)"></timer-countdown>   
+                <button ion-button>
+                    <timer-countdown title="headertimer" [hidden]="timer_hidden" [stop]="timer_stop" [endDate]="counttime" (endEvent)="timerEnd($event)"></timer-countdown>   
                 </button> 
             </span>
         </ion-buttons>
     </ion-toolbar>
+
 </ion-header>
 
 
 
-<ion-content #popoverContent padding class="popover-page  ">
+<ion-content #popoverContent padding class="popover-page">
 
-                <div *ngFor="let item of steps;  let i = index;"  >
-                    <div *ngIf="step === item && step.indexOf('p')==-1">
-                          <!-- <audio autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.question[item].mp3!=''">
-                              <source src={{passages.question[item].mp3}} type='audio/mpeg' />
-                          </audio> -->
+    <div *ngFor="let item of steps;  let i = index;">
+        <!--如果是question -->
+        <div *ngIf="step === item && step.indexOf('q')==0">
+            <audio autoplay id='Audio10' *ngIf="passages.question[step].mp3!=''">
+                <source src={{passages.question[step].mp3}} type='audio/mpeg' />
+            </audio>
 
-                        <ion-list radio-group>
-                            <ion-list-header>
-                                <div #popoverText class="text-to-change">
-                                    {{passages.question[item].seq}}. {{passages.question[item].para}}
-                                </div>
-                            </ion-list-header>
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[0]}} </ion-label>
-                            <ion-radio value="A" ></ion-radio>
-                        </ion-item>
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[1]}}</ion-label>
-                            <ion-radio value="B"></ion-radio>
-                        </ion-item>
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[2]}} </ion-label>
-                            <ion-radio value="C"></ion-radio>
-                        </ion-item>
-
-                        <ion-item>
-                            <ion-label>{{passages.question[item].choices[3]}} </ion-label>
-                            <ion-radio value="D"></ion-radio>
-                        </ion-item>
-                        </ion-list>
-                    </div>      
-                </div>
- 
-                <div #popoverText class="text-to-change">
-                    <div *ngIf="step.indexOf('p')!=-1">
-
-                      <ion-row>
-                        <ion-col col-3></ion-col>
-                        <ion-col col-6>
-                            <a href="#" class="thumbnail" *ngIf="passages.passage[step].img!=''">
-                            <img src={{passages.passage[step].img}} alt="" width="509" height="359">
-                            </a>
-                            <!-- <audio  autoplay  id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
-                              <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
-                            </audio> -->
-
-                            <div  *ngIf="passages.passage[step].contents.length > 0">
-                               <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
-                            </div>
-
-                        </ion-col>
-                        <ion-col col-3></ion-col>
-                    </ion-row>
+            <ion-list radio-group [(ngModel)]="useranswer[step]">
+                <ion-list-header>
+                    <div #popoverText class="text-to-change">
+                        {{passages.question[item].seq}}. {{passages.question[item].para}}
                     </div>
-                    <!--<div *ngIf="step.indexOf('q')!=-1">
-                        <p>{{passages.question[step].para}}</p>
-                    </div>-->
-                </div>      
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>{{passages.question[item].choices[0]}} </ion-label>
+                    <ion-radio value="A"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>{{passages.question[item].choices[1]}}</ion-label>
+                    <ion-radio value="B"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>{{passages.question[item].choices[2]}} </ion-label>
+                    <ion-radio value="C"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>{{passages.question[item].choices[3]}} </ion-label>
+                    <ion-radio value="D"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </div>
+
+        <!--如果是passage -->
+        <div *ngIf="step === item && step.indexOf('p')==0">
+            <ion-row>
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <a href="#" class="thumbnail" *ngIf="passages.passage[step].img!=''">
+                        <img src={{passages.passage[step].img}} alt="" >
+                    </a>
+
+                    <div *ngIf="passages.passage[step].contents.length > 0">
+                        <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
+                    </div>
+
+                    <audio autoplay [controls]="passages.passage[step].contents.length==0" id='Audio-{{step}}' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
+                        <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
+                    </audio>
+
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>
+        </div>
+    </div>
 
 </ion-content>
-
-
-
-
-
-

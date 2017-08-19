@@ -1,12 +1,5 @@
-
 <span class="button-inner">
-        <div *ngIf="stop == true">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </div>
-        <div *ngIf="stop ==  false">
-            {{minutestr}} : {{secondstr}}    
-        </div>
-              
+        <div [hidden]="hidden">
+            {{minutestr}} : {{secondstr}}
+        </div>       
 </span>
-
-  

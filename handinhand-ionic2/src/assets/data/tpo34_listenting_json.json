@@ -18,13 +18,13 @@
         "p1":{
           "seq": 1,
           "title":"", 
-          "img":"assets/img/listening1.png",
+          "img":"assets/img/listening2.png",
           "mp3":"",
           "contents": []
         },
         "p2":{
           "seq": 2,
-          "title":"", 
+          "title":"",
           "img":"",
           "mp3":"assets/tpo34/tpo34_listening_direction1.mp3",
           "contents": [
