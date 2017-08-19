@@ -44,10 +44,12 @@ toplist: any[]
   
   goToTest(topitem,top){
         this.navCtrl.push(this.itemPages[topitem.pagetype], {
+            curTPO: top,
             type: "type",
             url:topitem.url,
             headername:top.title+" "+topitem.pagetype,
-            session: topitem
+            session: topitem,
+            title: top.title
         });
   }
 }

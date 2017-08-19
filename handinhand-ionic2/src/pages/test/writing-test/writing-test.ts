@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import {NavController, AlertController, NavParams } from 'ionic-angular';
+import { TestReportPage } from '../test-report/test-report'
 
 
 import { ConferenceData } from '../../../providers/conference-data';
@@ -10,7 +11,8 @@ import { ConferenceData } from '../../../providers/conference-data';
   templateUrl: 'writing-test.html'
 })
 export class WritingTestPage {
-
+  paperType: string = "writing";
+  curTPO: any;
   grid_three_input: any;
   grid_two_input: any;
   grid_three_input_number: any;
@@ -20,10 +22,8 @@ export class WritingTestPage {
   type: any;
   tpourl:any;
   headername:any;
-  
   step: string;
   first_step: any;
-
   useranswer: any={
     "q1":"", "q2":"", "q3":"", "q4":"", "q5":"", "q6":"", "q7":"", "q8":"","q9":"","q10":"","q11":"","q12":"", "q13":"", "q14":"",
     "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
@@ -46,6 +46,7 @@ export class WritingTestPage {
     public alertCtrl: AlertController,
     public confData: ConferenceData
   ) {
+        this.curTPO = navParams.get("curTPO")
         this.session = navParams.data.session;
         this.type = navParams.data.type;
         this.tpourl = navParams.data.url;
@@ -82,6 +83,12 @@ export class WritingTestPage {
               text: 'CONTINUE',
               handler: data => {
                 console.log('CONTINUE clicked');
+                this.navCtrl.push(TestReportPage,{
+                    curTPO: this.curTPO,
+                    tpourl:this.tpourl,
+                    headername:this.headername,
+                    paperType: this.paperType
+                })
               }
             }]
         });

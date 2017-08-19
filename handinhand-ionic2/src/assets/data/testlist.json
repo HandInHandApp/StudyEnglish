@@ -1,6 +1,6 @@
 {
     "testlist":[
-        {
+        { 
             "title":"TPO34",
             "items":[
                 {   
@@ -10,7 +10,7 @@
                 },{
                     "testNmae":"听力",
                     "url": "assets/data/tpo34_listenting_json.json",
-                     "pagetype":"Listening"
+                    "pagetype":"Listening"
                 },{
                     "testNmae":"口语",
                     "url": "assets/data/tpo34_speaking_json.json",

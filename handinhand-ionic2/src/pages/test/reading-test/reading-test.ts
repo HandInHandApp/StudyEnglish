@@ -15,11 +15,14 @@ import { UserData } from '../../../providers/user-data';
   templateUrl: 'reading-test.html'
 })
 export class ReadingTestPage {
+  paperType: string = "reading"
+  curTPO: any;
   useranswer: any={
       "q1":"", "q2":"", "q3":"", "q4":"", "q5":"", "q6":"", "q7":"", "q8":"","q9":"","q10":"","q11":"","q12":"", "q13":"", "q14":"",
       "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
       "q29":"", "q30":"", "q31":"", "q32":"","q33":"","q34":"","q35":"","q36":"","q37":"","q38":"","q39":"","q40":"","q41":"","q42":""
   };
+  title: string;
   passages: any;
   first_step: any;
   last_step: any;
@@ -46,6 +49,8 @@ export class ReadingTestPage {
     this.stepindex = this.navParams.get("stepindex")
     this.tpourl = this.navParams.get("tpourl")
     this.headername= this.navParams.get("headername")
+    this.title = this.navParams.get("title")
+    this.curTPO = this.navParams.get("curTPO") 
     confData.getReadingTestData(this.tpourl).subscribe(
       resulte => {
         console.log(resulte)
@@ -144,8 +149,11 @@ export class ReadingTestPage {
               handler: data => {
                 console.log('CONTINUE clicked');
                 this.navCtrl.push(TestReportPage,{
+                    curTPO: this.curTPO,
                     tpourl:this.tpourl,
                     headername:this.headername,
+                    title: this.title,
+                    paperType: this.paperType
                 })
               }
             }]
@@ -196,6 +204,7 @@ export class ReadingTestPage {
      {
         tpourl:this.tpourl,
         headername:this.headername,
+        title: this.title
      })
     this.userData.setUserReadingAnswer(this.useranswer)
   }

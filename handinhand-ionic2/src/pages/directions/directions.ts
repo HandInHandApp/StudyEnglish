@@ -11,9 +11,11 @@ import { ReadingTestPage } from   '../test/reading-test/reading-test'
   templateUrl: 'directions.html'
 })
 export class DirectionPage {
+  curTPO: any;
   session: any;
   directionType: string;  //you can choose reading, writing, speaking, listening
   directionData: any;
+  title: string;
 
   type: any;
   tpourl:any;
@@ -23,10 +25,12 @@ export class DirectionPage {
         public navParams: NavParams,
         public navCtrl: NavController,
         public confData: ConferenceData) {
+    this.curTPO = navParams.get("curTPO")
     this.session = navParams.data.session;
     this.directionType = "reading"
     this.tpourl = navParams.data.url;
     this.headername = navParams.data.headername;
+    this.title = navParams.get("title")
 
     this.directionData={
       title:'', contents:[]
@@ -49,8 +53,10 @@ export class DirectionPage {
   continue(){
     this.navCtrl.push(this.itemPages[this.directionType], 
       {
+        curTPO:this.curTPO,
         tpourl:this.tpourl,
         headername:this.headername,
+        title: this.title
       });
   }
 

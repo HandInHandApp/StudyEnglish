@@ -19,6 +19,7 @@ export class ReadingReviewPage{
   };
   headername: string;
   tpourl: string;
+  title: string;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -28,6 +29,7 @@ export class ReadingReviewPage{
   ){
     this.tpourl = this.navParams.get("tpourl")
     this.headername= this.navParams.get("headername")
+    this.title = this.navParams.get("title")
     confData.getReadingTestData(this.tpourl).subscribe(
       resulte => {
         console.log(resulte)
@@ -50,6 +52,7 @@ export class ReadingReviewPage{
       curstep:step,
       tpourl:this.tpourl,
       headername:this.headername,
+      title: this.title
     })
   }
 }
