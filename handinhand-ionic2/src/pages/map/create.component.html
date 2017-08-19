@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title [hidden]="type === 'update'">创建</ion-title>
+      <ion-title [hidden]="type === 'create'">更新</ion-title>
+      
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+  
+  <div class="bootstrap-iso">
+  <div class="container">
+  
+    <form #eventForm="ngForm" novalidate>
+    
+    <div class="form-group">
+      <label for="start">开始时间:</label>
+      <input class="form-control" required [(ngModel)]="event.start" name="start" type="text" #start="ngModel" spellcheck="false" autocapitalize="off" >
+    </div>
+    <div class="form-group">
+      <label for="end">结束时间:</label>
+      <input class="form-control" required [(ngModel)]="event.end" name="end" type="text" #end="ngModel" >
+    </div>
+    <div class="form-group">
+      <label for="end"> 任务:</label>
+      <input class="form-control" required [(ngModel)]="event.text" name="text" type="text" #text="ngModel"  >
+    </div>
+  
+    <div padding>
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button (click)="cancel()"  block>取消</button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button (click)="submit()" type="submit" block>创建</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  
+    </form>
+  </div>
+  </div>
+  
+  </ion-content>
