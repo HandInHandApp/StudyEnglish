@@ -36,6 +36,7 @@ export class ReadingTestPage {
   currentPassage: any;
   dragAnswer: string = "";
   timer_stop=false;
+  timer_hidden = false;
   headername: string;
   tpourl: string;
   constructor(
@@ -117,7 +118,22 @@ export class ReadingTestPage {
 			}
     ).join("")
   };
-
+  pauseToBreak() {
+    this.timer_stop = true;
+    let prompt = this.alertCtrl.create({
+      title: '休息，休息一会~计时已停止',
+      message: "",
+      buttons: [
+        {
+          text: '继续答题',
+          handler: data => {
+            console.log('RETURN clicked');
+            this.timer_stop = false;
+          }
+        }]
+    });
+    prompt.present();
+  }
   getChoiceCount(choices:any){
     let count = 0;
     for(let choice in choices){
@@ -218,6 +234,13 @@ export class ReadingTestPage {
       
   }
 
+  toggleTimerHidden() {
+    if (this.timer_hidden) {
+      this.timer_hidden = false;
+    } else if (!this.timer_hidden) {
+      this.timer_hidden = true;
+    }
+  }
   insertClickContent(event: any) {
     console.log(event)
     let choice = event.target.getAttribute("choice")

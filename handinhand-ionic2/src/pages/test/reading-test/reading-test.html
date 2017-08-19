@@ -21,7 +21,7 @@
             <button class="tpobtn" ion-button (click)="gotoHome()" type="submit" block>
         首页
       </button>
-            <button class="tpobtn" ion-button (click)="stopTiming()" type="submit" block>
+            <button class="tpobtn" ion-button (click)="pauseToBreak()" type="submit" block>
         暂停
       </button>
         </ion-buttons>
@@ -29,15 +29,14 @@
             <label class="white-word" *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
             <label class="white-word" *ngIf="step.indexOf('q')!=-1">Question{{passages.questions[step].seq}} of {{total_question}}</label>
         </div>
-        <ion-buttons right>
+         <ion-buttons right>
             <span class="button-inner">
-                <button class="tpobtn-small" ion-button (click)="stopTiming()" type="submit" block>
-                   <div *ngIf="timer_stop == false">HideTime</div>
-                   <div *ngIf="timer_stop == true">ShowTime </div>
+                <button class="tpobtn-small" ion-button (click)="toggleTimerHidden()" type="submit" block>
+                   <div *ngIf="timer_hidden">SHOW TIME</div>
+                   <div *ngIf="!timer_hidden">HIDE TIME</div>
                 </button> 
                 <button ion-button>
-                    <!-- <timer-countdown title="step" [stop]="timer_stop" [endDate]="passages.passage[step].time*1000" (childEvent) = "timerEnd($event)"></timer-countdown>    -->
-                     <timer-countdown title="headertimer"  [stop]="timer_stop" [endDate]="counttime" (childEvent) = "timerEnd($event)"></timer-countdown>    
+                    <timer-countdown title="headertimer" [hidden]="timer_hidden" [stop]="timer_stop" [endDate]="counttime" (endEvent)="timerEnd($event)"></timer-countdown>   
                 </button> 
             </span>
         </ion-buttons>
