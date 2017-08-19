@@ -1,30 +1,33 @@
 {
-      "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
-      "steps":["p1","p2",
+      "qsteps":["d1","d2","q1","q2","d3","p2","p3"],
+      "steps":["d1","d2",
               "p_section1_1",
               "p_section1_2",
               "p_section1_3",
-              "p3",
+              "d3",
               "p_section2_1"],
-      "passage":{
-        "p1":{
-          "seq": 1,
-          "title":"", 
-          "img":"assets/img/listening1.png",
-          "mp3":"",
-          "contents": []
+      "directions":{
+        "d1":{
+          "type":"image",
+          "title":"Writing Directions",
+          "img": "assets/img/listening1.png"
         },
-        "p2":{
-          "seq": 2,
-          "title":"", 
-          "img":"",
-          "mp3":"",
-          "viewtype":"direction",
-          "contentsheader": "Writing Section Direction \n.........",
+        "d2":{
+          "type":"text",
+          "title":"Writing Directions", 
+          "contents": [
+             "Writing Section Direction \n........."
+          ]
+        },
+        "d3":{
+          "type":"text",
+          "title":"Writing Directions", 
           "contents": [
            "Writing Section Direction \n........."
           ]
-        },
+        }
+      },
+      "passage":{
         "p_section1_1":{
           "seq": 3,
           "title":"Question 1 of 2", 
@@ -47,7 +50,7 @@
           "title":"Question 1 of 2", 
           "img":"assets/tpo34/tpo34_writing.jpg",
           "mp3":"assets/tpo34/tpo34_writing_question.mp3",
-           
+          "viewtype":"listen-view",
           "contents": [],
           "contentsOrign": [
             "Now listen to part of a lecture on the topic you just read about. ",
@@ -83,17 +86,6 @@
             "Third, the main cause of extinction of the sea cows could have been European fur traders who came to the island after 1741. It is recorded that the fur traders caught the last sea cow in 1768. It thus seems reasonable to believe that hunting by European fur traders, who possessed weapons that allowed them to quickly kill a large number of the animals, was the main cause of the sea cow’s extinction."
           ]
         },
-        "p3":{
-          "seq": 6,
-          "title":"", 
-          "img":"",
-          "mp3":"",
-          "viewtype":"direction",
-          "contentsheader": "Writing Section Direction \n.........",
-          "contents": [
-           "Writing Section Direction \n........."
-          ]
-        },
         "p_section2_1":{
           "seq": 7,
           "title":"Question 2 of 2", 
@@ -102,7 +94,6 @@
           "time":1800,
           "viewtype":"grid-three",
           "deriction":"Directions:Read this question below. You have 30 minutes to plan, write, and revise your essay.Typically, an effective response will contain a minimun of 300 words",
-
           "contents": [ 
             "Do you agree or disagree with the following statement? ",
             "",
@@ -111,8 +102,5 @@
             "Use specific reasons and examples to support your answer."
           ]
         }
-
-
       }
-      
     }

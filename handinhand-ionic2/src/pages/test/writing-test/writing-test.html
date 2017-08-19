@@ -3,167 +3,139 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>TOP 1 Reading</ion-title>
+        <ion-title>{{ headername }}</ion-title>
         <ion-buttons end>
-            <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block>
-        Review
-      </button>
-            <button class="navbtn" ion-button (click)="gotoBack()" type="submit" block>
-        BACK
-      </button>
-            <button class="navbtn" ion-button (click)="gotoNext()" type="submit" block>
-        NEXT
-      </button>
+        <button ion-button  class="navbtn" *ngIf="(passages != undefined) && (step.indexOf('d')==-1)" (click)="gotoNext()" type="submit" block>
+            Next
+        </button>
         </ion-buttons>
     </ion-navbar>
     <ion-toolbar>
         <ion-buttons left>
             <button class="tpobtn" ion-button (click)="gotoHome()" type="submit" block>
-        首页
-      </button>
+                首页
+            </button>
             <button class="tpobtn" ion-button (click)="stopTiming()" type="submit" block>
-        暂停
-      </button>
+                暂停
+            </button>
         </ion-buttons>
-
-        <div style="text-align:center;" *ngIf="passages">
-               <label *ngIf="step.indexOf('p')!=-1">{{passages.passage[step].title}} </label>
-            <!-- <label class="white-word" *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
-            <label class="white-word" *ngIf="step.indexOf('q')!=-1">Question{{passages.questions[step].seq}} of {{total_question}}</label> -->
-        </div>
-        
-         <ion-buttons right *ngIf="passages">
-            <span class="button-inner">
-                <button class="tpobtn-small" ion-button (click)="stopTiming()" type="submit" block>
-                   <div *ngIf="timer_stop == false">HideTime</div>
-                   <div *ngIf="timer_stop == true">ShowTime </div>
-                </button> 
-                <button ion-button  >
-                    <timer-countdown title="step" [stop]="timer_stop" [endDate]="passages.passage[step].time*1000" (childEvent) = "timerEnd($event)"></timer-countdown>   
-                </button> 
-            </span>
+        <ion-buttons right>
+        <button ion-button *ngIf="(passages != undefined) && (step.indexOf('d')!=-1)" (click)="gotoNext()" type="submit" block>
+           CONTINUE
+        </button>
         </ion-buttons>
-
+    <div style="text-align:center;" *ngIf="passages != undefined">
+        <label *ngIf="step.indexOf('p')!=-1" >{{passages.passage[step].title}} </label>
+    </div>
+    <ion-buttons right  *ngIf="(passages != undefined) && (step.indexOf('d')==-1) && (passages.passage[step].viewtype !='listen-view')">
+        <span class="button-inner">
+            <button class="tpobtn-small" ion-button (click)="stopTiming()" type="submit" block>
+                <div *ngIf="timer_stop == false">HideTime</div>
+                <div *ngIf="timer_stop == true">ShowTime </div>
+            </button> 
+            <button ion-button  >
+                <timer-countdown title="step" [stop]="timer_stop" [endDate]="passages.passage[step].time*1000" (childEvent) = "timerEnd($event)"></timer-countdown>   
+            </button> 
+        </span>
+    </ion-buttons>
     </ion-toolbar>
-</ion-header>
+    </ion-header>
 
 <ion-content padding class="popover-page">
     <div *ngIf="passages!=undefined">
-      <div #popoverText class="text-to-change">
-                    <div *ngIf="step.indexOf('p')!=-1">
-                    
-                      <ion-row>
-                        <ion-col col-3></ion-col>
-                        <ion-col col-6>
+        <div *ngIf="step.indexOf('d')!=-1">
+            <div style="text-align:center;">
+                <a href="#" class="thumbnail" *ngIf="passages.directions[step].type=='image'">
+                    <img src={{passages.directions[step].img}} alt="" width="509" height="359">
+                </a>
+            </div>
+            <div *ngIf="passages.directions[step].type=='text'">
+                <h3 class="directions-header">{{passages.directions[step].title}}</h3> 
+                <p *ngFor="let para of passages.directions[step].contents">{{para}}</p>
+            </div>
+        </div>
+        <div #popoverText class="text-to-change">
+            <div *ngIf="step.indexOf('p')!=-1">
+                <ion-row>
+                    <ion-col col-3></ion-col>
+                    <ion-col col-6>
                             <a href="#" class="thumbnail" *ngIf="passages.passage[step].img!=''">
                                 <img src={{passages.passage[step].img}} alt="" width="509" height="359">
                             </a>
                             <audio autoplay controls='controls' id='Audio1' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
                               <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
                             </audio>
-                        
+                    </ion-col>
+                    <ion-col col-3></ion-col>
+                </ion-row>
+                <div *ngIf="passages.passage[step].viewtype=='grid-one'">
+                    <ion-row style="height: 100px;" >
+                        {{passages.passage[step].deriction}}
+                    </ion-row>
+                    <ion-row style="border-top:1px solid #000000;">
+                        <ion-col col-6 style="height: 500px; border-right:1px solid #000000;">
+                            <div  *ngIf="passages.passage[step].contents.length > 0">
+                                <p *ngFor="let para of passages.passage[step].contents">
+                                    {{para}}
+                                </p>
+                            </div>             
                         </ion-col>
-                        <ion-col col-3></ion-col>
-                      </ion-row>
-                      <div *ngIf="passages.passage[step].viewtype=='direction'" >
-                        <h4  style="text-align:center;">
-                            
-                          {{passages.passage[step].contentsheader }}
-                        </h4>
-                        <ion-row>
-                                <div  *ngIf="passages.passage[step].contents.length > 0">
-                                    <p *ngFor="let para of passages.passage[step].contents">
-                                        {{para}}
-                                    </p>
-                                </div>  
-                        </ion-row>
-                      </div>
-
-
-                    <div *ngIf="passages.passage[step].viewtype=='grid-one'">
-                        <ion-row style="height: 100px;" >
+                        <ion-col col-6 style="height: 500px; ">
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div *ngIf="passages.passage[step].viewtype=='grid-two'">
+                    <div >
+                        <ion-row style="height: 50px;">
                             {{passages.passage[step].deriction}}
                         </ion-row>
-                
-                        <ion-row style="border-top:1px solid #000000;">
-                            <ion-col col-6 style="height: 500px; border-right:1px solid #000000;">
-                                <div  *ngIf="passages.passage[step].contents.length > 0">
-                                    <p *ngFor="let para of passages.passage[step].contents">
-                                        {{para}}
-                                    </p>
-                                </div>             
-                            </ion-col>
-                            <ion-col col-6 style="height: 500px; ">
-    
-                            </ion-col>
+                        <ion-row style="height: 50px; border-top:1px solid #000000;">
+                            {{passages.passage[step].question}}
                         </ion-row>
                     </div>
-                    
-                    <div *ngIf="passages.passage[step].viewtype=='grid-two'">
-    
-                        <div >
-                            <ion-row style="height: 50px;">
-                                {{passages.passage[step].deriction}}
-                            </ion-row>
-                            <ion-row style="height: 50px; border-top:1px solid #000000;">
-                                {{passages.passage[step].question}}
-                            </ion-row>
-                        </div>
-        
-                        <ion-row style="border-top:1px solid #000000;">
-                            <ion-col col-6 style="height: 500px; border-right:1px solid #000000;">
-                                <div  *ngIf="passages.passage[step].contents.length > 0">
-                                    <p *ngFor="let para of passages.passage[step].contents">
-                                        {{para}}
-                                    </p>
-                                </div>             
-                            </ion-col>
-                            <ion-col col-6 style="height: 500px; ">
-                                <h4 style="text-align:right;">
-                                    Word Count{{countInputNumber(grid_two_input)}}
-                                </h4>
-                                
-                                <textarea style="border-style: solid; border-color: #FFFFFF"
-                                    [(ngModel)]="grid_two_input"  (change)="countInputNumber(grid_two_input)" 
-                                    rows="300" cols="110">
-                                </textarea>
-                                
-                            </ion-col>
-                        </ion-row>
-                    </div>
-
-
-                    <div *ngIf="passages.passage[step].viewtype=='grid-three'">
-    
-                        <ion-row style="height: 100px;" >
-                            {{passages.passage[step].deriction}}
-                        </ion-row>
-        
-                        <ion-row style="border-top:1px solid #000000;">
-                            <ion-col col-6 style="height: 500px; border-right:1px solid #000000;">
-                                <div  *ngIf="passages.passage[step].contents.length > 0">
-                                    <p *ngFor="let para of passages.passage[step].contents">
-                                        {{para}}
-                                    </p>
-                                </div>             
-                            </ion-col>
-                            <ion-col id="grid-input" col-6 style="height: 500px; ">
-                                <h4 style="text-align:right;">
-                                    Word Count{{countInputNumber(grid_three_input)}}
-                                </h4>
-                                
-                                <textarea style="border-style: solid; border-color: #FFFFFF"
-                                    [(ngModel)]="grid_three_input"  (change)="countInputNumber(grid_three_input)" 
-                                    rows="300" cols="110">
-                                </textarea>
-                                
-                            </ion-col>
-                        </ion-row>
-                    </div>
-
-
-                    </div>
-
-                </div>     
+                    <ion-row style="border-top:1px solid #000000;">
+                        <ion-col col-6 style="height: 500px; border-right:1px solid #000000;">
+                            <div  *ngIf="passages.passage[step].contents.length > 0">
+                                <p *ngFor="let para of passages.passage[step].contents">
+                                    {{para}}
+                                </p>
+                            </div>             
+                        </ion-col>
+                        <ion-col col-6 style="height: 500px; ">
+                            <h4 style="text-align:right;">
+                                Word Count{{countInputNumber(grid_two_input)}}
+                            </h4>
+                            <textarea style="border-style: solid; border-color: #FFFFFF"
+                                [(ngModel)]="grid_two_input"  (change)="countInputNumber(grid_two_input)" 
+                                rows="300" cols="110">
+                            </textarea>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div *ngIf="passages.passage[step].viewtype=='grid-three'">
+                    <ion-row style="height: 100px;" >
+                        {{passages.passage[step].deriction}}
+                    </ion-row>
+                    <ion-row style="border-top:1px solid #000000;">
+                        <ion-col col-6 style="height: 500px; border-right:1px solid #000000;">
+                            <div  *ngIf="passages.passage[step].contents.length > 0">
+                                <p *ngFor="let para of passages.passage[step].contents">
+                                    {{para}}
+                                </p>
+                            </div>             
+                        </ion-col>
+                        <ion-col id="grid-input" col-6 style="height: 500px; ">
+                            <h4 style="text-align:right;">
+                                Word Count{{countInputNumber(grid_three_input)}}
+                            </h4>
+                            <textarea style="border-style: solid; border-color: #FFFFFF"
+                                [(ngModel)]="grid_three_input"  (change)="countInputNumber(grid_three_input)" 
+                                rows="300" cols="110">
+                            </textarea>
+                        </ion-col>
+                    </ion-row>
+                </div>
+           </div>
+        </div>     
     </div>
 </ion-content>

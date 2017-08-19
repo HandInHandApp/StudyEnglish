@@ -15,22 +15,23 @@
 .drag-choice-source ion-col div{
     text-align: left;
     border: 1px solid #000000;
-    font-weight: 12px;
     height:70px;
     padding:3px 1px;
     border-radius: 4px;
+    font-size:1.2em;
     cursor: default;
 }
 .drag-choice-answer ion-col div{
     text-align: left;
     border: 1px solid #000000;
-    font-weight: 12px;
     height:70px;
     border-radius: 4px;
     cursor: pointer;
 }
 .drag-choice-answer ion-col p{
     margin: 0px;
+    font-size:1.2em;
+    line-height: 70px;
     height: 70px;
 }
 .normal-icon{

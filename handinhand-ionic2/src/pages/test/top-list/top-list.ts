@@ -19,7 +19,6 @@ export class TopListPage {
 
 
 toplist: any[]
-
   constructor(public navParams: NavParams,
               public navCtrl: NavController,
               public confData: ConferenceData
@@ -39,8 +38,7 @@ toplist: any[]
       "Reading":DirectionPage,
       "Listening":ListeningTestPage,
       "Speaking":SpeakingTestPage,
-      "Writing":WritingTestPage
-
+      "Writing": WritingTestPage
   }
 
   
