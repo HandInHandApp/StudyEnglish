@@ -1,5 +1,5 @@
 {
-      "qsteps":["d1","d2","q1","q2","d3","p2","p3"],
+      "reportStep":["p_section1_1","p_section2_1"],
       "steps":["d1","d2",
               "p_section1_1",
               "p_section1_2",
@@ -35,6 +35,7 @@
           "mp3":"",
           "time":180,
           "viewtype":"grid-one",
+          "question":"Question: Summarise the points made in the lecture, being sure to explain how they cast doubt on specific points made in the reading passage",
           "contents": [ 
             "A huge marine mammal known as Steller’s sea cow once lived in the waters around Bering Island off the coast of Siberia. It was described in 1741 by Georg W. Steller, a naturalist who was among the first Europeans to see one. In 1768 the animal became extinct. The reasons for the extinction are not clear. Here are three theories about the main cause of the extinction. ",
             "",
@@ -52,6 +53,7 @@
           "mp3":"assets/tpo34/tpo34_writing_question.mp3",
           "viewtype":"listen-view",
           "contents": [],
+          "question":"Question: Summarise the points made in the lecture, being sure to explain how they cast doubt on specific points made in the reading passage",
           "contentsOrign": [
             "Now listen to part of a lecture on the topic you just read about. ",
             "",
@@ -94,13 +96,7 @@
           "time":1800,
           "viewtype":"grid-three",
           "deriction":"Directions:Read this question below. You have 30 minutes to plan, write, and revise your essay.Typically, an effective response will contain a minimun of 300 words",
-          "contents": [ 
-            "Do you agree or disagree with the following statement? ",
-            "",
-            "Educating children is a more difficult task today than it was in the past because they spend so much time on cell phone, online games, and social networking Web site. ",
-            "",
-            "Use specific reasons and examples to support your answer."
-          ]
+          "question": "<p>Do you agree or disagree with the following statement? </p><p>Educating children is a more difficult task today than it was in the past because they spend so much time on cell phone, online games, and social networking Web site.</p><p> Use specific reasons and examples to support your answer.</p>"
         }
       }
     }

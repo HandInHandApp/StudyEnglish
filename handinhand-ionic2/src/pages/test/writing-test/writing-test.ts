@@ -51,15 +51,21 @@ export class WritingTestPage {
         this.type = navParams.data.type;
         this.tpourl = navParams.data.url;
         this.headername = navParams.data.headername;
+        this.step = this.navParams.get("curstep")
         confData.getTestData(this.tpourl).subscribe(
           resulte => {
             console.log(resulte)
             this.passages = resulte
             this.steps = this.passages["steps"];
-            this.first_step = this.steps[this.stepindex];
-            this.step = this.first_step;
+            if(this.step == undefined){
+               this.stepindex  = 0
+               this.first_step = this.steps[this.stepindex];
+               this.step = this.first_step;
+               this.last_step = this.steps[this.last_stepindex];
+            }else{
+              this.stepindex = this.passages["steps"].indexOf(this.step)
+            }
             this.last_stepindex = this.passages["steps"].length - 1;
-            this.last_step = this.steps[this.last_stepindex];
           }
         );
   }

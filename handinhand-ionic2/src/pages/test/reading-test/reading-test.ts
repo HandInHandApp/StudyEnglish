@@ -47,7 +47,6 @@ export class ReadingTestPage {
     public userData: UserData
   ) {
     this.step = this.navParams.get("curstep")
-    this.stepindex = this.navParams.get("stepindex")
     this.tpourl = this.navParams.get("tpourl")
     this.headername= this.navParams.get("headername")
     this.title = this.navParams.get("title")
@@ -64,6 +63,7 @@ export class ReadingTestPage {
           this.step = this.first_step;
           this.currentPassage = this.passages[this.step]
         }else{
+          this.stepindex = this.passages["steps"].indexOf(this.step)
           this.userData.getUserReadingAnswer().then((value)=>{
             this.useranswer = value
             this.loadDragChoice()

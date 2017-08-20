@@ -20,7 +20,7 @@
  <ion-grid>
         <div *ngFor="let step of steps; let idx=index;">
             <ion-row class="review-div" *ngIf="step.indexOf('q')!=-1">
-                <ion-col (click)='gotoQuestion(idx, step)'col-11>{{passages.questions[step].seq}}.<span [innerHTML]="passages.questions[step].title"></span></ion-col>
+                <ion-col (click)='gotoQuestion(step)'col-11>{{passages.questions[step].seq}}.<span [innerHTML]="passages.questions[step].title"></span></ion-col>
                 <ion-col col-1 class="answer-col" *ngIf="useranswer[step] !='' " [innerHTML]="useranswer[step]"></ion-col>
                 <ion-col col-1 class="answer-col" *ngIf="useranswer[step] ==''">-</ion-col>
             </ion-row>

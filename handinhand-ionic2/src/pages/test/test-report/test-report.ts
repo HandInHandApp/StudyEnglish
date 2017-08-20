@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController,ViewController, NavParams } from 'ionic-angular';
 import { ConferenceData } from '../../../providers/conference-data';
 import { ReadingTestPage } from '../reading-test/reading-test';
+import { WritingTestPage } from '../writing-test/writing-test';
 import { UserData } from '../../../providers/user-data';
 
 @Component({
@@ -19,17 +20,26 @@ export class TestReportPage{
     },
     "listening":{},
     "speaking":{},
-    "writing":{},
+    "writing":{
+      "p_section1_1":"",
+      "p_section2_1":""
+    },
   }
-  passages: any;
-  steps: any;
-  score: number;
-  correct_rate: any;
-  headername: string;
+  readingpaper: any;
+  writingpaper: any;
+
   readingUrl:string;
   listeningUrl:string;
   speakingUrl:string;
   writingUrl:string;
+
+  steps: any;
+  score: number;
+  correct_rate: any;
+  headername: string;
+
+
+
   title: string;
   constructor(
     public navCtrl: NavController,
@@ -59,20 +69,20 @@ export class TestReportPage{
     confData.getReadingTestData(this.readingUrl).subscribe(
       resulte => {
         console.log(resulte)
-        this.passages = resulte
-        this.steps = this.passages["steps"]
+        this.readingpaper= resulte
+        this.steps = this.readingpaper["steps"]
         this.userData.getUserReadingAnswer().then((value)=>{
           this.useranswer["reading"]=value
           let correct_answer = 0;
           let total_count = 0;
           for(let step in this.useranswer["reading"]){
             total_count = total_count + 1;
-            if(this.passages.questions[step].type == "drag-choice"){
-              if(this.useranswer["reading"][step] != "" && this.passages.questions[step].answer.join("") == this.useranswer["reading"][step].join("")){
+            if(this.readingpaper.questions[step].type == "drag-choice"){
+              if(this.useranswer["reading"][step] != "" && this.readingpaper.questions[step].answer.join("") == this.useranswer["reading"][step].join("")){
                 correct_answer = correct_answer + 1;
               }
             }else{
-              if(this.passages.questions[step].answer.join("") == this.useranswer["reading"][step]){
+              if(this.readingpaper.questions[step].answer.join("") == this.useranswer["reading"][step]){
                 correct_answer = correct_answer + 1;
               }
             }
@@ -81,16 +91,36 @@ export class TestReportPage{
         });
       }
     );
+    confData.getTestData(this.writingUrl).subscribe(
+      resulte => {
+        console.log(resulte)
+        this.writingpaper= resulte
+        this.steps = this.writingpaper["steps"];
+      }
+    );
   }
 
   goBack() {
     this.navCtrl.pop()
   }
 
-  gotoQuestion(stepidx: number, step: string){
-    this.navCtrl.push(ReadingTestPage,{
-      stepindex: stepidx,
-      curstep:step
+  gotoQuestion(step: string){
+    let paperTypes = {
+      "reading":{
+        "page":ReadingTestPage,
+        "tpourl":this.readingUrl
+      },
+      "writing": {
+        "page":WritingTestPage,
+        "tpourl":this.writingUrl
+      }
+    }
+    let page = paperTypes[this.paperType]
+    this.navCtrl.push(paperTypes[this.paperType]["page"],{
+      curTPO: this.curTPO,
+      headername:this.headername,
+      curstep:step,
+      url:paperTypes[this.paperType]["tpourl"]
     })
   }
 }

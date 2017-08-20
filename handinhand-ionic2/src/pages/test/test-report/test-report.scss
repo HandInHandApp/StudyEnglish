@@ -1,0 +1,27 @@
+span.report-question p{
+    display: inline;
+}
+.report-header{
+    background-color: #e45549;
+    font-weight: bold;
+    height:50px;
+    line-height: 30px;
+}
+.score-header {
+    background-color: #ffffff;
+    height:50px;
+    line-height:50px;
+}
+.score-header .report-header-row {
+    height:50px;
+    line-height:40px;
+}
+.report-body .report-div{
+    margin-top:5px;
+    font-size: 15px;
+    font-weight: bold; 
+}
+.report-body{
+    padding:0;
+    background-color: #dddddd;
+}

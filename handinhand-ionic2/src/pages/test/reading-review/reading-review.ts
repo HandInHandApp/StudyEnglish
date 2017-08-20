@@ -46,9 +46,8 @@ export class ReadingReviewPage{
     this.navCtrl.pop()
   }
 
-  gotoQuestion(stepidx: number, step: string){
+  gotoQuestion(step: string){
     this.navCtrl.push(ReadingTestPage,{
-      stepindex: stepidx,
       curstep:step,
       tpourl:this.tpourl,
       headername:this.headername,
