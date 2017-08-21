@@ -568,6 +568,8 @@ export interface CreateEventParams {
   end: string;
   text: string;
   objectId:string;
+  // timephases?: string;
+  
 }
 
 export interface MoveEventParams {

@@ -58,6 +58,7 @@ import { ExerciseAnswerPage } from '../pages/exercise/exercise-answer/exercise-a
 
 // import { AngularFireModule } from "angularfire2";
 import {EventDetailPage} from "../pages/map/create.component";
+import {AutoCreatePage} from "../pages/map/autocreate";
 import { FormsModule }   from '@angular/forms';
 
 import { TimerPage   } from '../pages/test/timer/timer'
@@ -132,6 +133,7 @@ import { ContainsPipe, NotContainsPipe } from '../pages/test/reading-test/readin
     // DayPilotModule,
 
     EventDetailPage,
+    AutoCreatePage,
     TimerPage,
     ProgressPage,
     RecordPage,
@@ -204,6 +206,7 @@ import { ContainsPipe, NotContainsPipe } from '../pages/test/reading-test/readin
     ExaminationDetailPage,
     TrainingDetailPage,
     EventDetailPage,
+    AutoCreatePage,
     AllTestPage,
     MiniTestPage,
     TopListPage,

@@ -12,6 +12,15 @@
 </ion-content>-->
 
 <ion-content padding>
+
+    <ion-row>
+        <ion-col col-10> </ion-col>
+        <ion-col col-2>
+            <button  ion-button item-end outline icon-end  (click)="autoCreate({},'create')" (viewChange)="viewChange()"> 自动创建学习计划 </button>
+        </ion-col>
+
+    </ion-row>
+
   <div style="float:left; width: 160px">
     <daypilot-navigator [config]="navigatorConfig" [(date)]="calendarConfig.startDate" #navigator></daypilot-navigator>
   </div>

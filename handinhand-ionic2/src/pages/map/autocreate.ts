@@ -11,50 +11,24 @@ import { ConferenceData, CreateEventParams } from './../../providers/conference-
 // import { FormsModule }   from '@angular/forms';
 
 @Component({
-  selector: 'create-dialog',
-  templateUrl: 'create.component.html'
-  // template: `
-  //   <daypilot-modal #modal (close)="closed()">
-  //   <div class="center">
-  //     <h1>New Event</h1>
-  //     <form [formGroup]="form">
-  //       <div class="form-item">
-  //         <input formControlName="name" type="text" placeholder="Event Name"> <span *ngIf="!form.controls.name.valid">Event name required</span>
-  //       </div>
-  //       <div class="form-item">
-  //         <input formControlName="start" type="text" placeholder="Start"> <span *ngIf="!form.controls.start.valid">Invalid datetime</span>
-  //       </div>
-  //       <div class="form-item">
-  //         <input formControlName="end" type="text" placeholder="End"> <span *ngIf="!form.controls.end.valid">Invalid datetime</span>
-  //       </div>
-  //       <div class="form-item">
-  //         <button (click)="submit()" [disabled]="!form.valid">Create</button>
-  //         <button (click)="cancel()">Cancel</button>
-  //       </div>
-  //   </form>
-  //   </div>
-  //   </daypilot-modal>
-  // `,
-  // styles: [`
-  // .center {
-  //   max-width: 800px;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
-  // .form-item {
-  //   margin: 4px 0px;
-  // }
-  // `]
+  selector: 'create-auto',
+  templateUrl: 'autocreate.html'
 })
-export class EventDetailPage {
+export class AutoCreatePage {
 
-  event: CreateEventParams;
+  event: any;
   type: any;
-  
+  allhours:number;
 
   constructor(public navParams: NavParams, public navCtrl: NavController, private ds: ConferenceData) {
     this.event = navParams.data.event;
     this.type = navParams.data.type;
+
+    if(typeof(this.event.timephases) =="undefined" ){
+      this.event.timephases=[]
+    }else{
+      this.event.timephases=JSON.parse(this.event.timephases)
+    }
   }
 
 
@@ -141,4 +115,16 @@ export class EventDetailPage {
     };
   }
 
+  addNewToList(){
+    console.log("addNewToList")
+    this.event.timephases.push({"channelName":"","point":""})
+    // this.detail.includeChannel[0].buName="1111xxx"
+  }
+  deleteFromList(item){
+    this.event.timephases.pop(item)
+  }
+
+  caculation(){
+    this.allhours =  (this.event.end - this.event.start)*this.event.duration
+  }
 }

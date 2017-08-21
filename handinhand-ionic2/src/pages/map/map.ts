@@ -10,6 +10,8 @@ import { NavController } from 'ionic-angular';
 import { MoveEventParams,CreateEventParams } from './../../providers/conference-data';
 
 import {EventDetailPage} from "./create.component";
+import {AutoCreatePage} from "./autocreate";
+
 
 // declare var google: any;
 
@@ -72,6 +74,12 @@ export class MapPage {
 @ViewChild('navigator') navigator: DayPilot.Angular.Navigator;
 // @ViewChild("create") create: CreateComponent;
 
+autoCreate(event: any,type: any) {
+  this.navCtrl.push(AutoCreatePage, {
+    type: type,
+    event: event
+  });
+}
 
   goToEventDetail(event: any,type: any) {
     this.navCtrl.push(EventDetailPage, {
