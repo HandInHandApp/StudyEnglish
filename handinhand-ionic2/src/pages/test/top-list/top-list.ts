@@ -5,7 +5,7 @@ import { NavParams,NavController } from 'ionic-angular';
 import { ListeningTestPage } from '../listening-test/listening-test'
 import { WritingTestPage } from   '../writing-test/writing-test'
 import { SpeakingTestPage } from  '../speaking-test/speaking-test'
-import { DirectionPage } from   '../../directions/directions'
+import { ReadingTestPage } from  '../reading-test/reading-test'
 
 import { ConferenceData } from '../../../providers/conference-data';
 
@@ -35,7 +35,7 @@ toplist: any[]
   }
 
   itemPages= {
-      "Reading":DirectionPage,
+      "Reading":ReadingTestPage,
       "Listening":ListeningTestPage,
       "Speaking":SpeakingTestPage,
       "Writing": WritingTestPage

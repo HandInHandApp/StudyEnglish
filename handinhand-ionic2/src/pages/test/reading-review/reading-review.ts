@@ -10,6 +10,7 @@ import { UserData } from '../../../providers/user-data';
   templateUrl: 'reading-review.html'
 })
 export class ReadingReviewPage{
+  curTPO: any;
   passages: any;
   steps: any;
   useranswer: any={
@@ -27,7 +28,8 @@ export class ReadingReviewPage{
     public confData: ConferenceData,
     public userData: UserData
   ){
-    this.tpourl = this.navParams.get("tpourl")
+    this.curTPO = this.navParams.get("curTPO") 
+    this.tpourl = this.navParams.get("url")
     this.headername= this.navParams.get("headername")
     this.title = this.navParams.get("title")
     confData.getReadingTestData(this.tpourl).subscribe(
@@ -48,8 +50,9 @@ export class ReadingReviewPage{
 
   gotoQuestion(step: string){
     this.navCtrl.push(ReadingTestPage,{
+      curTPO: this.curTPO,
       curstep:step,
-      tpourl:this.tpourl,
+      url:this.tpourl,
       headername:this.headername,
       title: this.title
     })

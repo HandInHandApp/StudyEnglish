@@ -47,7 +47,7 @@ export class ReadingTestPage {
     public userData: UserData
   ) {
     this.step = this.navParams.get("curstep")
-    this.tpourl = this.navParams.get("tpourl")
+    this.tpourl = this.navParams.get("url")
     this.headername= this.navParams.get("headername")
     this.title = this.navParams.get("title")
     this.curTPO = this.navParams.get("curTPO") 
@@ -61,7 +61,6 @@ export class ReadingTestPage {
           this.stepindex = 0;
           this.first_step = this.steps[this.stepindex];
           this.step = this.first_step;
-          this.currentPassage = this.passages[this.step]
         }else{
           this.stepindex = this.passages["steps"].indexOf(this.step)
           this.userData.getUserReadingAnswer().then((value)=>{
@@ -85,8 +84,10 @@ export class ReadingTestPage {
     for (let step of steps) {
       if (step.indexOf("p") != -1) {
         this.total_passage = this.total_passage + 1
-      } else {
+      } else if (step.indexOf('q') != -1){
         this.total_question = this.total_question + 1
+      }else{
+        // do nothing
       }
     }
   }
@@ -166,7 +167,7 @@ export class ReadingTestPage {
                 console.log('CONTINUE clicked');
                 this.navCtrl.push(TestReportPage,{
                     curTPO: this.curTPO,
-                    tpourl:this.tpourl,
+                    url:this.tpourl,
                     headername:this.headername,
                     title: this.title,
                     paperType: this.paperType
@@ -218,7 +219,8 @@ export class ReadingTestPage {
   gotoReview(){
     this.navCtrl.push(ReadingReviewPage,
      {
-        tpourl:this.tpourl,
+        curTPO: this.curTPO,
+        url:this.tpourl,
         headername:this.headername,
         title: this.title
      })

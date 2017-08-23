@@ -46,10 +46,10 @@
 <ion-content class="report-body">
 <div [ngSwitch]="paperType">
   <div *ngSwitchCase="'reading'">
-    <ion-grid *ngIf="paperType=='reading'">
-        <div *ngFor="let step of steps; let idx=index;">
-            <ion-row class="report-div" *ngIf="step.indexOf('q')!=-1">
-                <ion-col (click)='gotoQuestion(step)'col-10>{{readingpaper.questions[step].seq}}.<span [innerHTML]="readingpaper.questions[step].title"></span></ion-col>
+    <ion-grid *ngIf="(paperType=='reading') && (readingpaper != undefined)">
+        <div *ngFor="let step of readingpaper['steps']; let idx=index;">
+            <ion-row (click)='gotoQuestion(step)' class="report-div" *ngIf="step.indexOf('q')!=-1">
+                <ion-col col-10>{{readingpaper.questions[step].seq}}.<span [innerHTML]="readingpaper.questions[step].title"></span></ion-col>
                 <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] !='' " [innerHTML]="useranswer[paperType][step]"></ion-col>
                 <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] ==''">-</ion-col>
                 <ion-col col-1 class="answer-col" [innerHTML]="readingpaper.questions[step].answer"></ion-col>

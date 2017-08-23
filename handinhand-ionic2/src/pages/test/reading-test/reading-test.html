@@ -4,33 +4,24 @@
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>{{ headername }}</ion-title>
-        <ion-buttons end>
-            <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block>
-        Review
-      </button>
-            <button class="navbtn" ion-button (click)="gotoBack()" type="submit" block>
-        BACK
-      </button>
-            <button class="navbtn" ion-button (click)="gotoNext()" type="submit" block>
-        NEXT
-      </button>
+        <ion-buttons *ngIf="(passages != undefined) && (step.indexOf('d')==-1)" end>
+            <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block> Review </button>
+            <button class="navbtn" ion-button (click)="gotoBack()" type="submit" block> BACK </button>
+            <button class="navbtn" ion-button (click)="gotoNext()" type="submit" block> NEXT </button>
         </ion-buttons>
     </ion-navbar>
     <ion-toolbar>
         <ion-buttons left>
-            <button class="tpobtn" ion-button (click)="gotoHome()" type="submit" block>
-        首页
-      </button>
-            <button class="tpobtn" ion-button (click)="pauseToBreak()" type="submit" block>
-        暂停
-      </button>
+            <button class="tpobtn" ion-button (click)="gotoHome()" type="submit" block> 首页 </button>
+            <button class="tpobtn" ion-button (click)="pauseToBreak()" type="submit" block> 暂停 </button>
         </ion-buttons>
-        <div style="text-align:center;" *ngIf="passages != undefined">
+        <div style="text-align:center;" *ngIf="(passages != undefined) && (step.indexOf('d')==-1)">
             <label class="white-word" *ngIf="step.indexOf('p')!=-1">Passage {{passages.passage[step].seq}} of {{total_passage}}</label>
             <label class="white-word" *ngIf="step.indexOf('q')!=-1">Question{{passages.questions[step].seq}} of {{total_question}}</label>
         </div>
-         <ion-buttons right>
-            <span class="button-inner">
+        <ion-buttons right>
+            <button ion-button *ngIf="(passages != undefined) && (step.indexOf('d')!=-1)" (click)="gotoNext()" type="submit" block> CONTINUE </button>
+            <span class="button-inner" *ngIf="(passages != undefined) && (step.indexOf('d')==-1)" >
                 <button class="tpobtn-small" ion-button (click)="toggleTimerHidden()" type="submit" block>
                    <div *ngIf="timer_hidden">SHOW TIME</div>
                    <div *ngIf="!timer_hidden">HIDE TIME</div>
@@ -44,7 +35,13 @@
 </ion-header>
 
 <ion-content padding class="popover-page">
-    <div *ngIf="passages!=undefined">
+    <div *ngIf="(passages!=undefined) && (step.indexOf('d')!=-1)">
+        <div *ngIf="passages.directions[step].type=='text'">
+            <h3 class="directions-header">{{passages.directions[step].title}}</h3> 
+            <p *ngFor="let para of passages.directions[step].contents">{{para}}</p>
+        </div>
+    </div>
+    <div *ngIf="(passages!=undefined) && (step.indexOf('d')==-1)">
         <div *ngIf="step.indexOf('p')!=-1">
             <ion-row>
                 <ion-col col-12 col-md-6>

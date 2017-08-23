@@ -1,10 +1,24 @@
 {
     "steps":[
+        "d1",
         "p1",
         "q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14",
         "p2","q15","q16","q17","q18","q19","q20","q21","q22","q23","q24","q25","q26","q27","q28",
         "p3","q29","q30","q31","q32","q33","q34","q35","q36","q37","q38","q39","q40","q41","q42"
     ],
+    "directions":{
+        "d1":{
+            "type":"text",
+            "title":"Reading Directions", 
+            "contents": [
+                "In this part of the Reading section, you will read 3 passages.. You will have 60 minutes to read the passages and answer the questions. ",
+                "Most questions in the Reading section are worth 1 point, but the last question for each passage is worth more than 1 point. The directions indicate how many points you may receive.",
+                "Some passages will include a word or phrase that is underlined in blue. Click on the word or phrase to see its definition or an explanation. ",
+                "When you want to move to the next question, click on Next.You may skip questions and go back to them later .If you want to go back to previous questions, click on Back.You can click the Review at any time and the  review screen will show you which questions you have answered and which you have not answered. From this review screen, you may go directly to any question you have already seen in the Reading section",
+                "Click on Continue to go on"
+            ]
+        }
+    },
     "passage":{
         "p1":{
             "seq": 1,
