@@ -83,7 +83,7 @@ export class Idb {
                 };
             },
             source: Observable<void> = Observable.create((observer) => {
-                let timerId: number,
+                let timerId: any,
                     repeat: () => void = () => {
                         try {
                             console.log('trying to delete ' + dbName + ' ...');

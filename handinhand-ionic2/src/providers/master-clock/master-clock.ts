@@ -18,7 +18,7 @@ export const CLOCK_INTERVAL_MSEC: number = 1000 / CLOCK_FREQUENCY_HZ;
 @Injectable()
 export class MasterClock {
     public isRunning: boolean;
-    private intervalId: number;
+    private intervalId: any;
     private ngZone: NgZone;
     private functions: { [id: string]: () => void };
 
