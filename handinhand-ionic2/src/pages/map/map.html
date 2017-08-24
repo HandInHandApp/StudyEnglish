@@ -14,24 +14,42 @@
 <ion-content padding>
 
     <ion-row>
-        <ion-col col-10> </ion-col>
+        <ion-col col-10> 
+          <div *ngIf="show=='month'">
+              <button   ion-button item-end outline icon-end  (click)="showChange('calendar')" (viewChange)="viewChange()"> 按周显示 </button>              
+          </div>
+          <div *ngIf="show=='calendar'">
+              <button   ion-button item-end outline icon-end  (click)="showChange('month')" (viewChange)="viewChange()"> 按月显示 </button>              
+          </div>
+            
+        </ion-col>
         <ion-col col-2>
             <button  ion-button item-end outline icon-end  (click)="autoCreate({},'create')" (viewChange)="viewChange()"> 自动创建学习计划 </button>
         </ion-col>
 
+
+
     </ion-row>
-
-  <div style="float:left; width: 160px">
-    <daypilot-navigator [config]="navigatorConfig" [(date)]="calendarConfig.startDate" #navigator></daypilot-navigator>
+  <div *ngIf="show=='calendar'">
+        <div style="float:left; width: 160px" >            
+          <daypilot-navigator [config]="navigatorConfig1" [(date)]="calendarConfig.startDate" #navigator></daypilot-navigator>
+        </div>
+      
+        <div  style="margin-left: 160px" >
+          <daypilot-calendar #calendar [events]="events" [config]="calendarConfig" (viewChange)="viewChange()"></daypilot-calendar>
+        </div>
+  </div>
+  <div *ngIf="show=='month'">
+      <div style="float:left; width: 160px" >
+          <daypilot-navigator [config]="navigatorConfig2" [(date)]="monthConfig.startDate"  #navigator></daypilot-navigator>
+      </div>
+      <div  style="margin-left: 160px" >
+          <daypilot-month #calendar [events]="events" [config]="monthConfig" (viewChange)="viewChange()"></daypilot-month>
+      </div>
   </div>
 
-  <!--<div  style="margin-left: 160px">
-    <daypilot-calendar [events]="events" [config]="calendarConfig" #calendar></daypilot-calendar>
-  </div>-->
-   
-  <div  style="margin-left: 160px">
-    <daypilot-calendar #calendar [events]="events" [config]="calendarConfig" (viewChange)="viewChange()"></daypilot-calendar>
-  </div>
+
+
   <!--<create-dialog></create-dialog>-->
   <!--<create-dialog #create (close)="createClosed()"></create-dialog>-->
 

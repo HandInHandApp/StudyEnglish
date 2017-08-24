@@ -59,20 +59,10 @@ export class AutoCreatePage {
   }
 
   submit() {
-    // let data = this.eventForm.getRawValue();
+  
 
-    // let params: CreateEventParams = {
-    //   start: DayPilot.Date.parse(this.event.start, this.dateFormat).toString(),
-    //   end: DayPilot.Date.parse(this.event.end, this.dateFormat).toString(),
-    //   text: this.event.text
-    // };
-
-    // this.ds.createEvent(params).subscribe(result => {
-    //   params.id = result.id;
-    //   this.modal.hide();
-    //   this.close.emit(params);
-    // });
-    // let params: Event  = event;
+    this.allhours =  (this.event.end - this.event.start)*this.event.duration
+    
 
     this.ds.createEvent(this.event).subscribe(result => {
           console.log(result)
@@ -85,16 +75,7 @@ export class AutoCreatePage {
             console.log(result)
             // this.modal.hide();
             this.navCtrl.pop();
-
-            
-            // this.close.emit();
-            
           })
-
-           
-      // params.id = result.id;
-      // this.modal.hide();
-      // this.close.emit(params);
     });
   }
 
@@ -125,6 +106,5 @@ export class AutoCreatePage {
   }
 
   caculation(){
-    this.allhours =  (this.event.end - this.event.start)*this.event.duration
   }
 }
