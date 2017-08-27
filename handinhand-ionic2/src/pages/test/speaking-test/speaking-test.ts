@@ -17,6 +17,9 @@ import { File } from '@ionic-native/file';
 
 // import { RecordPage } from '../../record-page/record-page';
 
+
+
+import { TestReportPage } from '../test-report/test-report'
 import { ViewChild } from '@angular/core';
 import { Content } from 'ionic-angular';
 import { formatLocalTime } from '../../../models/utils/utils';
@@ -45,7 +48,9 @@ const MAX_GAIN_SLIDER_VALUE: number = 1000;
 //   directives: [TimerPage]
 })
 export class SpeakingTestPage {
-  
+    paperType: string = "speaking"
+    curTPO: any;
+    title: string;
     @ViewChild(Content) public content: Content;
     private webAudioSaveWav: WebAudioSaveWav;
     private appState: AppState;
@@ -67,53 +72,51 @@ export class SpeakingTestPage {
     audio: any;
     myfiles:any;
 
-  endDate =  601*1000 ;
-  counttime =  10*1000 ;
-  toplist: any[] = []
-  session: any;
-  type: any;
-  tpourl:any;
-  headername:any;
+    endDate =  601*1000 ;
+    counttime =  10*1000 ;
+    toplist: any[] = []
+    session: any;
+    type: any;
+    tpourl:any;
+    headername:any;
 
-  passages: any;
-  first_step: any;
-  last_step: any;
-  stepindex=0;
-  step="";
-  steps: any[];
-  last_stepindex: any;
-  total_question: number = 0;
-  total_passage: number = 0;
-myrecord=[{
-    "name":"test"
-}]
-timer_stop=false;
-startrecord=0;
-praparetimer=15*1000;
-recordtimer=45*1000;
-refreshtimer=0;
-loadProgress=45;
+    passages: any;
+    first_step: any;
+    last_step: any;
+    stepindex=0;
+    step="";
+    steps: any[];
+    last_stepindex: any;
+    total_question: number = 0;
+    total_passage: number = 0;
+    myrecord=[{
+        "name":"test"
+    }]
+    timer_stop=false;
+    startrecord=0;
+    praparetimer=15*1000;
+    recordtimer=45*1000;
+    refreshtimer=0;
+    loadProgress=45;
 
-  constructor(public navParams: NavParams, 
-    public navCtrl: NavController,
-    public confData: ConferenceData, 
-    private media: Media,
-    public file: File,
-    public alertCtrl: AlertController,
-    
-    webAudioSaveWav: WebAudioSaveWav,
-    appState: AppState,
-    idbAppFS: IdbAppFS,
-    webAudioRecord: WebAudioRecordWav,
-    public loadingCtrl: LoadingController
-    // public mediaObject:MediaObject
-  ) {
+    constructor(public navParams: NavParams, 
+        public navCtrl: NavController,
+        public confData: ConferenceData, 
+        private media: Media,
+        public file: File,
+        public alertCtrl: AlertController,
+        webAudioSaveWav: WebAudioSaveWav,
+        appState: AppState,
+        idbAppFS: IdbAppFS,
+        webAudioRecord: WebAudioRecordWav,
+        public loadingCtrl: LoadingController
+    ) {
+        this.headername= this.navParams.get("headername")
+        this.title = this.navParams.get("title")
+        this.curTPO = this.navParams.get("curTPO") 
+        this.tpourl = this.navParams.get("url")
         this.session = navParams.data.session;
         this.type = navParams.data.type;
-        this.tpourl = navParams.data.url;
-        this.headername = navParams.data.headername;
-
-
         confData.getSpeakingTestData(this.tpourl)
           .subscribe(resulte => 
                   {
@@ -161,133 +164,145 @@ loadProgress=45;
 
 
 
-  private get_total_graph(steps: any[]){
-    for(let step of steps){
-      if(step.indexOf("p")!=-1){
-        this.total_passage=this.total_passage+1
-      }else{
-        this.total_question=this.total_question+1
-      }
-    }
-  }
-
-  playaudo(){
-    if(this.step.indexOf('p')!=-1){
-      this.playStepMp3(this.passages.passage[this.step].mp3)
-      console.log(this.passages.passage[this.step])
-    }else if(this.step.indexOf('q')!=-1){
-          this.playStepMp3(this.passages.question[this.step].mp3)
-          console.log(this.passages.question[this.step])
-    }else{}
-  }
-
-  gotoNext(){
-      if(this.stepindex != this.last_stepindex){
-        this.stepindex = this.stepindex+1
-        this.step =  this.steps[this.stepindex]
-
-        this.endDate = 601*1000
-        //  (new Date( (new Date()).getTime()  +  600*1000 ))
-      }
-      console.log(this.step)
-      this.playaudo() 
-       
-       
-  }
-  gotoBack(){
-      if( this.stepindex != 0){
-        this.stepindex = this.stepindex-1
-        this.step =  this.steps[this.stepindex]
-      } 
-       console.log(this.step)
-       this.playaudo() 
-  }
-
-  gotoHome() {
-    // this.navCtrl.popTo(this.navCtrl.first())
-    this.navCtrl.pop()
-      
-  }
-
-  playStepMp3(mp3file){
-      if(mp3file !=""){
-          if(this.audio){
-            this.audio.pause() ;
+    private get_total_graph(steps: any[]){
+        for(let step of steps){
+          if(step.indexOf("p")!=-1){
+            this.total_passage=this.total_passage+1
+          }else{
+            this.total_question=this.total_question+1
           }
-          
-        this.audio = new Audio(mp3file);
-        this.audio.play();
-
-        this.audio.onended= () => { 
-            console.log(mp3file+" ended !! ");
         }
       }
-       
-  }
-//  <audio autoplay id='Audio1'  *ngIf="passages.question[item].mp3!=''">
-//                               <source src={{passages.question[item].mp3}} type='audio/mpeg' />
-//                         </audio>
+    
+    playaudo(){
+        if(this.step.indexOf('p')!=-1){
+          this.playStepMp3(this.passages.passage[this.step].mp3)
+          console.log(this.passages.passage[this.step])
+        }else if(this.step.indexOf('q')!=-1){
+              this.playStepMp3(this.passages.question[this.step].mp3)
+              console.log(this.passages.question[this.step])
+        }else{}
+    }
+    showAlert(){
+        let prompt = this.alertCtrl.create({
+            title: 'Finish Warning',
+            message: "You have seen all the questions in this part of the Reading Section <br/><br/>"
+                +"You may go back and Review . As long as there is time remaining. You can check your work<br/><br/> "
+                +"Click on Return to continue working<br/><br/> "
+                +"Click on Continue to got on <br/><br/> "
+                +"Once you leave this part of the Reading Section, You WILL NOT be able to Return on it",
+            buttons: [
+                {
+                  text: 'RETURN',
+                  handler: data => {
+                    console.log('RETURN clicked');
+                  }
+                },
+                {
+                  text: 'CONTINUE',
+                  handler: data => {
+                    console.log('CONTINUE clicked');
+                    this.navCtrl.push(TestReportPage,{
+                        curTPO: this.curTPO,
+                        url:this.tpourl,
+                        headername:this.headername,
+                        title: this.title,
+                        paperType: this.paperType
+                    })
+                  }
+                }]
+            });
+        prompt.present();
+    }
 
+    gotoNext(){
+        if(this.stepindex != this.last_stepindex){
+            this.stepindex = this.stepindex+1
+            this.step =  this.steps[this.stepindex]
+            this.endDate = 601*1000
+        }else{
+            this.showAlert()
+        }
+        console.log(this.step)
+        this.playaudo() 
+    }
+    gotoBack(){
+        if( this.stepindex != 0){
+            this.stepindex = this.stepindex-1
+            this.step =  this.steps[this.stepindex]
+        } 
+       console.log(this.step)
+       this.playaudo() 
+    }
 
-  playAudio1() {
+    gotoHome() {
+        this.navCtrl.pop()
+    }
+
+    playStepMp3(mp3file){
+        if(mp3file !=""){
+            if(this.audio){
+              this.audio.pause() ;
+            }
+            
+          this.audio = new Audio(mp3file);
+          this.audio.play();
+
+          this.audio.onended= () => { 
+              console.log(mp3file+" ended !! ");
+          }
+        }
+    }
+
+    playAudio1() {
         this.startrecord=1
         var audio = new Audio('assets/mp3/speakingprepaerafterbepe.mp3');
         audio.play();
-
         audio.onended= () => { 
             console.log("speakingprepaerafterbepe ended !! ");
-             this.startrecord=2
-             this.loadProgress=15
+            this.startrecord=2
+            this.loadProgress=15
             //  this.loadProgressfun()
         }
     };
 
-  playAudio2 (){
-      console.log("speakingprepaerafterbepe ended ");
-      
-      var audio = new Audio('assets/mp3/speakingafterbepe.mp3');
+    playAudio2 (){
+        console.log("speakingprepaerafterbepe ended ");
+        var audio = new Audio('assets/mp3/speakingafterbepe.mp3');
+        audio.onended= () => { 
+              console.log("speakingprepaerafterbepe ended, start record !! ");
+               this.startrecord=3
+               this.onClickStartPauseButton()
+               this.loadProgress=45
+              //  this.loadProgressfun()
+          }
+        audio.play();
+    };
 
-      audio.onended= () => { 
-            console.log("speakingprepaerafterbepe ended, start record !! ");
-             this.startrecord=3
-             this.onClickStartPauseButton()
-            
-             this.loadProgress=45
-            //  this.loadProgressfun()
-            
-             
-        }
-      audio.play();
-  };
-
-  stoprecord(){
+    stoprecord(){
         this.startrecord=0 ;
         this.onClickStopButton()
-  }
-  stopTiming() {
-      if(this.timer_stop == false){
-            this.timer_stop=true;
-      }else{
-          this.timer_stop = false;
-      }
-      
-  }
-  timerEnd(timertitle) { 
-      console.log(timertitle + ' timer End'); 
-      if(timertitle == "prapare"){
-          this.playAudio2();
-      }else if(timertitle == "recording" ){
-         if(this.startrecord==3){
-            this.startrecord=0 ;
-            this.onClickStopButton()
-         }
-         
-      }else{
-        
-        console.log("unkonw"+timertitle + ' timer End'); 
-      }
     }
-
+    stopTiming() {
+        if(this.timer_stop == false){
+            this.timer_stop=true;
+        }else{
+            this.timer_stop = false;
+        }
+    }
+    timerEnd(timertitle) { 
+        console.log(timertitle + ' timer End'); 
+        if(timertitle == "prapare"){
+            this.playAudio2();
+        }else if(timertitle == "recording" ){
+           if(this.startrecord==3){
+              this.startrecord=0 ;
+              this.onClickStopButton()
+           }
+        }else{
+          console.log("unkonw"+timertitle + ' timer End'); 
+        }
+    }
 
 
 

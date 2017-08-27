@@ -1,6 +1,6 @@
 {
       "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
-      "steps":["p1","p2",
+      "steps":["d1","d2",
               "p_section1",
               "q1",
               "p_section2",
@@ -13,14 +13,21 @@
               "q5",
               "p_section6","p_section6_2",
               "q6"],
-      "passage":{
-        "p1":{
-          "seq": 1,
-          "title":"", 
-          "img":"assets/img/listening1.png",
-          "mp3":"",
-          "contents": []
+      "directions":{
+        "d1":{
+          "type":"image",
+          "title":"Writing Directions",
+          "img": "assets/img/listening1.png"
         },
+        "d2":{
+          "type":"text",
+          "title":"Speaking Directions", 
+          "contents": [
+             "Speaking Section Direction \n........."
+          ]
+        }
+      },
+      "passage":{
         "p2":{
           "seq": 2,
           "title":"", 
