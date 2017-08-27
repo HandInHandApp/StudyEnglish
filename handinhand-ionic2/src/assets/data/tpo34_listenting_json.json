@@ -1,6 +1,6 @@
 {
-      "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
-      "steps":["p1","p2",
+      "qsteps":["d1","d2","q1","q2","q3","p2","p3"],
+      "steps":["d1","d2",
               "p_Conversion1",
               "q1","q2","q3","q4","q5",
               "p_Lecture1",
@@ -15,14 +15,14 @@
               "p_Lecture4",
               "q32","q33","q34","q35","q36","q37"],
       "passage":{
-        "p1":{
+        "d1":{
           "seq": 1,
           "title":"", 
           "img":"assets/img/listening2.png",
           "mp3":"",
           "contents": []
         },
-        "p2":{
+        "d2":{
           "seq": 2,
           "title":"",
           "img":"",

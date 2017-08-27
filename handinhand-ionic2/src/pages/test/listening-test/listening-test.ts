@@ -13,8 +13,7 @@ import { TestReportPage } from '../test-report/test-report'
 })
 
 export class ListeningTestPage {
-  // endDate = 601 * 1000;
-  // toplist: any[] = []
+
   session: any;
   type: any;
   tpourl: any;
@@ -29,9 +28,13 @@ export class ListeningTestPage {
   last_stepindex: any;
   total_question: number = 0;
   total_passage: number = 0;
-  timer_stop = false;
+  timer_stop = true;
   counttime = 600 * 1000;
   timer_hidden = false;
+
+  paperType: string = "listening";
+  title: String;
+  curTPO: any;
 
   useranswer = {
     "q1": "",
@@ -84,6 +87,8 @@ export class ListeningTestPage {
     this.type = navParams.data.type;
     this.tpourl = navParams.data.url;
     this.headername = navParams.data.headername;
+    this.title = navParams.data.title;
+    this.curTPO = this.navParams.get("curTPO")
     confData.getListeningTestData(this.tpourl)
       .subscribe(
       resulte => {
@@ -110,6 +115,9 @@ export class ListeningTestPage {
     }
   }
 
+  /**
+   * 下一步
+   */
   gotoNext() {
     if (this.stepindex != this.last_stepindex) {
       this.stepindex = this.stepindex + 1
@@ -121,6 +129,9 @@ export class ListeningTestPage {
     console.log(this.step)
   }
 
+  /**
+   * 上一步
+   */
   gotoBack() {
     if (this.stepindex != 0) {
       this.stepindex = this.stepindex - 1
@@ -129,10 +140,16 @@ export class ListeningTestPage {
     console.log(this.step)
   }
 
+  /**
+   * 首页
+   */
   gotoHome() {
     this.navCtrl.popTo(this.navCtrl.first())
   }
 
+  /**
+   * 暂停休息
+   */
   pauseToBreak() {
     this.timer_stop = true;
     let prompt = this.alertCtrl.create({
@@ -158,6 +175,9 @@ export class ListeningTestPage {
   //   }
   // }
 
+  /**
+   * 显示或隐藏时间
+   */
   toggleTimerHidden() {
     if (this.timer_hidden) {
       this.timer_hidden = false;
@@ -166,10 +186,31 @@ export class ListeningTestPage {
     }
   }
 
+  /**
+   * 倒计时结束
+   * @param event 
+   */
   timerEnd(event: any) {
 
   }
 
+  /**
+   * 音频播放事件
+   */
+  audioPlayed() {
+    this.timer_stop = true;
+  }
+
+  /**
+   * 音频播放结束事件
+   */
+  audioEnded() {
+    this.timer_stop = false;
+  }
+
+  /**
+   * 答题结束显示弹出框
+   */
   showAlert() {
     this.userData.setUserListeningAnswer(this.useranswer);//存储到内部存储中
     let prompt = this.alertCtrl.create({
@@ -190,10 +231,18 @@ export class ListeningTestPage {
           text: 'CONTINUE',
           handler: data => {
             console.log('CONTINUE clicked');
-            // this.navCtrl.push(TestReportPage, {
-            //   tpourl: this.tpourl,
-            //   headername: this.headername,
-            // })
+            console.log(this.tpourl);
+            console.log(this.headername);
+            console.log(this.title);
+            console.log(this.paperType);
+            console.log(this.curTPO);
+            this.navCtrl.push(TestReportPage, {
+              tpourl: this.tpourl,
+              headername: this.headername,
+              title: this.title,
+              paperType: this.paperType,
+              curTPO: this.curTPO
+            })
           }
         }]
     });

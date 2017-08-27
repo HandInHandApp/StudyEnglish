@@ -3,76 +3,88 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title style="text-align:center;" >{{title}}</ion-title>
+        <ion-title style="text-align:center;">{{title}}</ion-title>
     </ion-navbar>
     <ion-toolbar>
         <div padding>
             <ion-segment [(ngModel)]="paperType">
-              <ion-segment-button value="reading">
-               Reading 
-              </ion-segment-button>
-              <ion-segment-button value="listening">
-               Listening 
-              </ion-segment-button>
-              <ion-segment-button value="speaking">
-                Speaking 
-              </ion-segment-button>
-              <ion-segment-button value="writing">
-                Writing 
-              </ion-segment-button>
+                <ion-segment-button value="reading">
+                    Reading
+                </ion-segment-button>
+                <ion-segment-button value="listening">
+                    Listening
+                </ion-segment-button>
+                <ion-segment-button value="speaking">
+                    Speaking
+                </ion-segment-button>
+                <ion-segment-button value="writing">
+                    Writing
+                </ion-segment-button>
             </ion-segment>
         </div>
     </ion-toolbar>
     <ion-grid class="score-header">
-        <ion-row *ngIf="paperType == 'reading' || paperType == 'listening'" class="report-header-row"> 
+        <ion-row *ngIf="paperType == 'reading' || paperType == 'listening'" class="report-header-row">
             <ion-col col-1>得分: <span>20</span></ion-col>
             <ion-col col-1>准确率: <span>{{correct_rate}}</span></ion-col>
         </ion-row>
-        <ion-row *ngIf="paperType == 'writing' || paperType == 'speaking'" class="report-header-row"> 
+        <ion-row *ngIf="paperType == 'writing' || paperType == 'speaking'" class="report-header-row">
         </ion-row>
     </ion-grid>
     <ion-grid class="report-header">
-        <ion-row *ngIf="paperType == 'reading' || paperType == 'listening'" class="report-header-row"> 
+        <ion-row *ngIf="paperType == 'reading' || paperType == 'listening'" class="report-header-row">
             <ion-col col-10>Quesion</ion-col>
             <ion-col col-1 class="answer-col">Your Answer</ion-col>
             <ion-col col-1 class="answer-col">Correct Answer</ion-col>
         </ion-row>
-        <ion-row *ngIf="paperType == 'writing'" class="report-header-row"> 
+        <ion-row *ngIf="paperType == 'writing'" class="report-header-row">
             <ion-col col-11>Quesion</ion-col>
             <ion-col col-1 class="answer-col">Status</ion-col>
         </ion-row>
     </ion-grid>
 </ion-header>
 <ion-content class="report-body">
-<div [ngSwitch]="paperType">
-  <div *ngSwitchCase="'reading'">
-    <ion-grid *ngIf="(paperType=='reading') && (readingpaper != undefined)">
-        <div *ngFor="let step of readingpaper['steps']; let idx=index;">
-            <ion-row (click)='gotoQuestion(step)' class="report-div" *ngIf="step.indexOf('q')!=-1">
-                <ion-col col-10>{{readingpaper.questions[step].seq}}.<span [innerHTML]="readingpaper.questions[step].title"></span></ion-col>
-                <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] !='' " [innerHTML]="useranswer[paperType][step]"></ion-col>
-                <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] ==''">-</ion-col>
-                <ion-col col-1 class="answer-col" [innerHTML]="readingpaper.questions[step].answer"></ion-col>
-            </ion-row>
+    <div [ngSwitch]="paperType">
+        <div *ngSwitchCase="'reading'">
+            <ion-grid *ngIf="(paperType=='reading') && (readingpaper != undefined)">
+                <div *ngFor="let step of readingpaper['steps']; let idx=index;">
+                    <ion-row (click)='gotoQuestion(step)' class="report-div" *ngIf="step.indexOf('q')!=-1">
+                        <ion-col col-10>{{readingpaper.questions[step].seq}}.<span [innerHTML]="readingpaper.questions[step].title"></span></ion-col>
+                        <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] !='' " [innerHTML]="useranswer[paperType][step]"></ion-col>
+                        <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] ==''">-</ion-col>
+                        <ion-col col-1 class="answer-col" [innerHTML]="readingpaper.questions[step].answer"></ion-col>
+                    </ion-row>
+                </div>
+            </ion-grid>
         </div>
-    </ion-grid>
-  </div>
-  <div *ngSwitchCase="'listening'">
-      Listen
-  </div>
-  <div *ngSwitchCase="'speaking'">
-      Speak
-  </div>
-  <div *ngSwitchCase="'writing'">
-    <ion-grid *ngIf="(paperType=='writing') && (writingpaper!= undefined)">
-        <div *ngFor="let rstep of writingpaper['reportStep']; let idx=index;">
-            <ion-row class="report-div">
-                <ion-col (click)='gotoQuestion(rstep)' col-10>{{idx + 1}}
-                    <span class="report-question" [innerHTML]="writingpaper.passage[rstep].question"></span>
-                </ion-col>
-            </ion-row>
+
+        <!-- 听力答卷报告 -->
+        <div *ngSwitchCase="'listening'">
+            <ion-grid *ngIf="(paperType=='listening') && (listeningpaper != undefined)">
+                <div *ngFor="let step of listeningpaper['steps']; let idx=index;">
+                    <ion-row (click)='gotoQuestion(step)' class="report-div" *ngIf="step.indexOf('q')==0">
+                        <ion-col col-10>{{listeningpaper.question[step].seq}}.<span [innerHTML]="listeningpaper.question[step].para"></span></ion-col>
+                        <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] !='' " [innerHTML]="useranswer[paperType][step]"></ion-col>
+                        <ion-col col-1 class="answer-col" *ngIf="useranswer[paperType][step] ==''">-</ion-col>
+                        <ion-col col-1 class="answer-col" [innerHTML]="listeningpaper.question[step].answer"></ion-col>
+                    </ion-row>
+                </div>
+            </ion-grid>
         </div>
-    </ion-grid>
-  </div>
-</div>
+
+        <div *ngSwitchCase="'speaking'">
+            Speak
+        </div>
+        <div *ngSwitchCase="'writing'">
+            <ion-grid *ngIf="(paperType=='writing') && (writingpaper!= undefined)">
+                <div *ngFor="let rstep of writingpaper['reportStep']; let idx=index;">
+                    <ion-row class="report-div">
+                        <ion-col (click)='gotoQuestion(rstep)' col-10>{{idx + 1}}
+                            <span class="report-question" [innerHTML]="writingpaper.passage[rstep].question"></span>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-grid>
+        </div>
+    </div>
 </ion-content>
