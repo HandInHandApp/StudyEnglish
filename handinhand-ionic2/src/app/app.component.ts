@@ -94,6 +94,8 @@ export class ConferenceApp {
         }
         this.platformReady()
       });
+      var localDatas =userData.getAllLocalDatas();
+      console.log(localDatas)
 
     // load the conference data
     confData.load();

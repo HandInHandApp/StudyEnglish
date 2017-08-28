@@ -46,11 +46,28 @@ autoCreate(event: any,type: any) {
   });
 }
 
-  goToEventDetail(event: any,type: any) {
-    this.navCtrl.push(EventDetailPage, {
-      type: type,
-      event: event
-    });
+  // goToEventDetail(event: any,type: any) {
+  //   this.navCtrl.push(EventDetailPage, {
+  //     type: type,
+  //     event: event
+  //   });
+  // }
+
+  datetimeFormate(date, time){
+    var datatime;
+    // if(typeof(time) == "undefined"){
+    //   time = ""
+    // }
+    datatime = new DayPilot.Date(date )
+
+    // if(time.split(":").length == 3){
+    //        datatime = new DayPilot.Date(date + "T" + time)
+    // }else if(time.split(":").length == 2){
+    //        datatime = new DayPilot.Date(date + "T" + time +":00")
+    // }else{
+    //        datatime = new DayPilot.Date(date + "T" + "00:00:00")
+    // }
+          return datatime
   }
 
   navigatorConfig1 = {
@@ -75,6 +92,23 @@ autoCreate(event: any,type: any) {
     viewType: "Month",
     eventDeleteHandling: "Update",
    
+
+    onEventClicked: args => {
+      console.log("onEventClicked: " + args.e.text())
+      let id =args.e.data.id;
+      for (var i = 0; i < this.events.length; i ++) {
+        console.log("find id"+id+" now: "+this.events[i].id)
+        if(id ==this.events[i].id){
+     
+            var item =this.events[i];
+            item.start = item.start.value.split("T")[0],
+            item.end = item.end.value.split("T")[0],
+            this.goToEventDetail(item,"update")
+            break;
+        }
+      }
+    },
+
     onEventDeleted: args => {
       this.ds.deleteEvent(args.e.data.objectId).subscribe(result => {
         console.log(result);
@@ -104,8 +138,23 @@ autoCreate(event: any,type: any) {
         this.calendar.control.message("Resized")});
     },
     onTimeRangeSelected: args => {
-      // this.create.show(args);
-      this.goToEventDetail(args, "create" )
+
+      // this.goToEventDetail(args, "create" )
+      // this.month.control.clearSelection();
+      
+      var e = {
+              start:args.start.value.split("T")[0],
+              end: args.end.value.split("T")[0],
+              starttime:args.start.value.split("T")[1],
+              endtime: args.end.value.split("T")[1],
+              // id: DayPilot.guid(),
+              resource: args.resource,
+              // text: name,
+              bubbleHtml: "",
+      };
+      // this.events.push(e)
+      // this.scheduler.control.message("Created");
+      this.goToEventDetail(e,"create")
     }
   };
 
@@ -117,6 +166,26 @@ autoCreate(event: any,type: any) {
     eventDeleteHandling: "Update",
     dayBeginsHour : 6,
     dayEndsHour : 24,
+
+
+    onEventClicked: args => {
+      console.log("onEventClicked: " + args.e.text())
+      let id =args.e.data.id;
+      for (var i = 0; i < this.events.length; i ++) {
+
+        console.log("find id"+id+" now: "+this.events[i].id)
+        if(id ==this.events[i].id){
+     
+            var item =this.events[i];
+            item.start = item.start.value.split("T")[0],
+            item.end = item.end.value.split("T")[0],
+            this.goToEventDetail(item,"update")
+            break;
+
+        }
+      }
+    },
+
     onEventDeleted: args => {
       this.ds.deleteEvent(args.e.data.objectId).subscribe(result => {
         console.log(result);
@@ -146,8 +215,25 @@ autoCreate(event: any,type: any) {
         this.calendar.control.message("Resized")});
     },
     onTimeRangeSelected: args => {
-      // this.create.show(args);
-      this.goToEventDetail(args, "create" )
+     
+      // this.goToEventDetail(args, "create" )
+       
+              // this.calendar.control.clearSelection();
+              
+              var e = {
+                      start:args.start.value.split("T")[0],
+                      end: args.end.value.split("T")[0],
+                      starttime:args.start.value.split("T")[1],
+                      endtime: args.end.value.split("T")[1],
+                      // id: DayPilot.guid(),
+                      resource: args.resource,
+                      // text: name,
+                      bubbleHtml: "",
+              };
+              // this.events.push(e)
+              // this.scheduler.control.message("Created");
+              this.goToEventDetail(e,"create")
+              // this.openModal("create",e)
     },
     onBeforeCellRender:  args => {
       var now = new DayPilot.Date().getTime();
@@ -172,7 +258,20 @@ autoCreate(event: any,type: any) {
 
   }
 
-
+  goToEventDetail(event: any,type:any) {
+    // go to the session detail page
+    // and pass in the session data
+    if( typeof( event.start) == "object"){
+        event.start = event.start.value.split("T")[0]
+    }
+    if(typeof( event.end) == "object"){
+        event.end = event.end.value.split("T")[0]
+    }
+    this.navCtrl.push(EventDetailPage, {
+      event: event,
+      type:type
+    });
+  }
 
   viewChange(){
     
@@ -182,6 +281,15 @@ autoCreate(event: any,type: any) {
               {
                 this.events=resulte;
                 console.log(this.events)
+            
+                for (var i = 0; i < this.events.length; i ++) {
+                  
+                    var ev=this.events[i];
+                    // this.events[i].text=this.setEventTitle(this.events[i]);
+                    this.events[i].start = this.datetimeFormate(ev.start, ev.starttime);
+                    this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
+                    // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
+                };
               }
            );
       // this.fbGetData()

@@ -7,8 +7,9 @@ import {DayPilot} from "daypilot-pro-angular";
 import { FormGroup, FormControl} from "@angular/forms";
 // import {CreateEventParams, DataService} from "./data.service";
 import { ConferenceData, CreateEventParams } from './../../providers/conference-data';
-
+// import { UserData } from '../../../providers/user-data';
 // import { FormsModule }   from '@angular/forms';
+import { UserData } from '../../providers/user-data';
 
 @Component({
   selector: 'create-auto',
@@ -20,9 +21,11 @@ export class AutoCreatePage {
   type: any;
   allhours:number;
 
-  constructor(public navParams: NavParams, public navCtrl: NavController, private ds: ConferenceData) {
+  constructor(public navParams: NavParams, public navCtrl: NavController, private ds: ConferenceData, private userdata: UserData) {
     this.event = navParams.data.event;
     this.type = navParams.data.type;
+    
+    this.event.uid = userdata.getUserId()
 
     if(typeof(this.event.timephases) =="undefined" ){
       this.event.timephases=[]
@@ -61,22 +64,34 @@ export class AutoCreatePage {
   submit() {
   
 
-    this.allhours =  (this.event.end - this.event.start)*this.event.duration
+    // this.allhours =  (this.event.end - this.event.start)*this.event.duration
     
+    var day1 = new DayPilot.Date(this.event.start);  
+    var day2 = new DayPilot.Date(this.event.end);  
+    var dayCount = (day2.getTime() - day1.getTime())/1000/60/60/24; 
+    
+    for(var i=0; i< dayCount; i++){
+      var itemevent = this.event;
 
-    this.ds.createEvent(this.event).subscribe(result => {
-          console.log(result)
-          this.event.objectId = result.objectId;
-          // this.event.id = parseInt(result.objectId);
-          var time =new Date();
-          this.event.id = time.getTime() ;
+      var tmp:  DayPilot.Date = day1.addDays(i)
+      itemevent.start = tmp.toString().split("T")[0],
+      itemevent.end = itemevent.start;
+      var time =new Date();
+      itemevent.id = time.getTime() ;
 
-          this.ds.updateEvent(this.event).subscribe(result => {
+      this.ds.createEvent(itemevent).subscribe(result => {
             console.log(result)
-            // this.modal.hide();
-            this.navCtrl.pop();
-          })
-    });
+            itemevent.objectId = result.objectId;
+            // this.event.id = parseInt(result.objectId);
+
+
+            // this.ds.updateEvent(itemevent).subscribe(result => {
+              // console.log(result)
+              // this.modal.hide();
+              // this.navCtrl.pop();
+            // })
+      });
+    }
   }
 
   cancel() {

@@ -19,6 +19,7 @@ export class UserData {
   HAS_LOGGED_IN = 'hasLoggedIn';
   HAS_SEEN_TUTORIAL = 'hasSeenTutorial';
   localDatas= {} ;
+  userid;
 
   constructor(
     public events: Events,
@@ -114,8 +115,11 @@ export class UserData {
   //        console.log(p + " " + datas[p]);
   //     }
   // }
-
-  getUserId(): Promise<string>  {
+  getUserId(){
+    return this.localDatas["userid"]
+  }
+  
+  getuserid(): Promise<string>  {
     return this.storage.get('userid').then((value) => {
       return value;
     });

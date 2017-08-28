@@ -367,7 +367,7 @@ export class ConferenceData {
                     .map((response) => response.json());
   }
 
-  createEvent(params: CreateEventParams): Observable<BackendResult> {
+  createEvent(params: any): Observable<BackendResult> {
     var url ="https://api.leancloud.cn/1.1/classes/Event"
     return this.http.post(url, params, {headers:this.getHeaders()})
                     .map((response) => response.json());
@@ -388,7 +388,7 @@ export class ConferenceData {
     return this.http.put(url, {headers:this.getHeaders()})
                     .map((response) => response.json());
   }
-  updateEvent(params: CreateEventParams): Observable<BackendResult> {
+  updateEvent(params: any): Observable<BackendResult> {
     var objectId=params.objectId;
   
     var url = "https://api.leancloud.cn/1.1/classes/Event/"+objectId;
@@ -568,6 +568,7 @@ export interface CreateEventParams {
   end: string;
   text: string;
   objectId:string;
+  uid?:string;
   // timephases?: string;
   
 }

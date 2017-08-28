@@ -11,17 +11,43 @@
   <div class="bootstrap-iso">
   <div class="container">
   
+      <h1> 计划设置 </h1>
     <form #eventForm="ngForm" novalidate>
-    总共有学习时间{{caculation()}}
-    <div class="form-group">
+    <!-- 总共有学习时间{{caculation()}} -->
+<!-- {{event.uid}} -->
+    <div class="form-group"> 
+        <div class="form-inline">
+          <label for="start">起始日期：</label>
+          <input class="form-control" required [(ngModel)]="event.start" name="start" type="Date" #start="ngModel" spellcheck="false" autocapitalize="off">
+
+          <label for="starttime">起始时间：</label>
+          <input class="form-control" required [(ngModel)]="event.starttime" name="starttime" type="Time" step="1" #start="ngModel" spellcheck="false" autocapitalize="off">
+        </div>
+      </div>
+      <div class="form-group"> 
+        <div class="form-inline">
+          <label for="end">结束日期：</label>
+          <input class="form-control" required [(ngModel)]="event.end" name="end" type="Date" #end="ngModel">
+       
+          <label for="endtime">结束时间：</label>
+          <input class="form-control" required [(ngModel)]="event.endtime" name="endtime" type="Time"  step="1" #start="ngModel" spellcheck="false" autocapitalize="off">
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label for="end"> 任务:</label>
+          <input class="form-control" required [(ngModel)]="event.text" name="text" type="text" #text="ngModel"  >
+        </div>
+      
+    <!-- <div class="form-group">
       <label for="start">开始日期:</label>
       <input class="form-control" required [(ngModel)]="event.start" name="start" type="Date" #start="ngModel" spellcheck="false" autocapitalize="off" >
     </div>
     <div class="form-group">
       <label for="end">结束日期:</label>
       <input class="form-control" required [(ngModel)]="event.end" name="end" type="Date" #end="ngModel" >
-    </div>
-    <div class="form-group">
+    </div> -->
+    <!-- <div class="form-group">
         <label for="end">每天学习时长:</label>
         <input class="form-control" required [(ngModel)]="event.duration" name="duration" type="number" #end="ngModel" >
     </div>
@@ -43,7 +69,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
 
   

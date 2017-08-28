@@ -7,6 +7,7 @@ import {DayPilot} from "daypilot-pro-angular";
 import { FormGroup, FormControl} from "@angular/forms";
 // import {CreateEventParams, DataService} from "./data.service";
 import { ConferenceData, CreateEventParams } from './../../providers/conference-data';
+import { UserData } from '../../providers/user-data';
 
 // import { FormsModule }   from '@angular/forms';
 
@@ -52,9 +53,11 @@ export class EventDetailPage {
   type: any;
   
 
-  constructor(public navParams: NavParams, public navCtrl: NavController, private ds: ConferenceData) {
+  constructor(public navParams: NavParams, public navCtrl: NavController, private ds: ConferenceData
+    , private userdata: UserData) {
     this.event = navParams.data.event;
     this.type = navParams.data.type;
+    this.event.uid = userdata.getUserId()
   }
 
 
