@@ -71,7 +71,9 @@
 
           <ion-col col-10>
              <p>
-                时间段：{{event.start}} - {{event.end}}
+                时间段：{{event.start.value.split("T")[0]}}:{{event.starttime}} - {{event.end.value.split("T")[0]}}:{{event.endtime}} 
+                
+                <!-- 时间段：{{event.start}} - {{event.end}} -->
              </p>
              
           </ion-col>
