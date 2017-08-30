@@ -325,7 +325,7 @@ autoCreate(event: any,type: any) {
   viewChange(){
     if(typeof(this.uid) == "undefined" )
        this.uid = this.userdata.getUserId()
-    if(typeof(this.uid) == "undefined" || this.uid == ""){
+    if(typeof(this.uid) == "undefined" || this.uid == null || this.uid == ""){
       // return 
       this.userdata.getAllLocalDatas();
       this.userdata.getuserid().then( id => {
