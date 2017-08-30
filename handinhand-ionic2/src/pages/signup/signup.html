@@ -35,7 +35,7 @@
 
 			<div class="form-group">
 					<label for="mobilePhone">请输入手机号码:</label>
-					<input class="form-control" required [(ngModel)]="signup.mobilePhone" name="mobilePhone" type="number" #mobilePhone="ngModel">
+					<input class="form-control" required [(ngModel)]="signup.mobilePhone" name="mobilePhone" type="text" #mobilePhone="ngModel">
 					<div [hidden]="mobilePhone.valid ||  submitted == false" color="danger" padding-left>
 							phone is required
 					</div>
