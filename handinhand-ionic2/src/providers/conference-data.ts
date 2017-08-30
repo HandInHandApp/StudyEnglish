@@ -329,10 +329,23 @@ export class ConferenceData {
       return  myheaders;
  }
 
-
-  getEvents(start: DayPilot.Date, end: DayPilot.Date): Observable<EventData[]> {
+ getEventsUser(uid){
+    var query = new AV.Query('Event');
+    query.equalTo('uid', uid);
+    return query.find()
+    // .then(function (results) {
+    //   console.log(results)
+    // }, function (error) {
+    //   console.log(error)
+    // });
+  }
+  getEvents(start: DayPilot.Date, end: DayPilot.Date,uid: any): Observable<EventData[]> {
     console.log(start)
     console.log(end)
+    var user={"uid":uid}
+    // var url = "https://api.leancloud.cn/1.1/classes/Event?where=%7B%22uid%22%3A%2259930043128fe100581656af%22%7D&&&order=-updatedAt&&"
+    
+    
     var url="https://api.leancloud.cn/1.1/classes/Event?limit=100&&order=-updatedAt&&";
     return this.http.get(url, {headers:this.getHeaders()})
                     .map((response) => {

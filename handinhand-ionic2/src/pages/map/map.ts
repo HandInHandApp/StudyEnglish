@@ -11,6 +11,7 @@ import { MoveEventParams,CreateEventParams } from './../../providers/conference-
 
 import {EventDetailPage} from "./create.component";
 import {AutoCreatePage} from "./autocreate";
+import { UserData } from '../../providers/user-data';
 
 
 // declare var google: any;
@@ -32,6 +33,7 @@ export class MapPage {
 
 
 show="month";
+uid;
 @ViewChild('scheduler') scheduler: DayPilot.Angular.Scheduler;
 
 @ViewChild('calendar') calendar: DayPilot.Angular.Calendar;
@@ -254,8 +256,11 @@ autoCreate(event: any,type: any) {
   }
 
   
-  constructor(public navCtrl: NavController, private ds: ConferenceData) {
+  constructor(public navCtrl: NavController, 
+    private ds: ConferenceData,
+    private userdata: UserData) {
 
+      this.uid = userdata.getUserId()
   }
 
   goToEventDetail(event: any,type:any) {
@@ -274,25 +279,50 @@ autoCreate(event: any,type: any) {
   }
 
   viewChange(){
+    if(typeof(this.uid) == "undefined" )
+       this.uid = this.userdata.getUserId()
+    if(typeof(this.uid) == "undefined" || this.uid == ""){
+      return 
+    }
+    this.events =[]
+    this.ds.getEventsUser(this.uid)    
+    .then( (results: any) => {
+        console.log(results)
+        var tmp =results;
+        // this.events = []
+
+        for (var i = 0; i <tmp.length; i ++) {
+            var x =tmp[i].attributes
+            this.events[i] =x;
+
+            var ev=this.events[i];
+            // this.events[i].text=this.setEventTitle(this.events[i]);
+            this.events[i].start = this.datetimeFormate(ev.start, ev.starttime);
+            this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
+            // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
+        };
+      }, function (error) {
+        console.log(error)
+      });
     
-    this.ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd())
-     // .subscribe(resulte => console.log(resulte));
-           .subscribe(resulte => 
-              {
-                this.events=resulte;
-                console.log(this.events)
+
+    // this.ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd(), this.uid)
+    //        .subscribe(resulte => 
+    //           {
+    //             this.events=resulte;
+    //             console.log(this.events)
             
-                for (var i = 0; i < this.events.length; i ++) {
+    //             for (var i = 0; i < this.events.length; i ++) {
                   
-                    var ev=this.events[i];
-                    // this.events[i].text=this.setEventTitle(this.events[i]);
-                    this.events[i].start = this.datetimeFormate(ev.start, ev.starttime);
-                    this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
-                    // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
-                };
-              }
-           );
-      // this.fbGetData()
+    //                 var ev=this.events[i];
+    //                 // this.events[i].text=this.setEventTitle(this.events[i]);
+    //                 this.events[i].start = this.datetimeFormate(ev.start, ev.starttime);
+    //                 this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
+    //                 // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
+    //             };
+    //           }
+    //        );
+    
   }
 
 
