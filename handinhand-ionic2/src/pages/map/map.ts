@@ -29,7 +29,7 @@ export class MapPage {
   last: number = 1;
 
   events: any[] = [ ];
-
+  events2: any[] = [ ];
 
 
 show="month";
@@ -62,13 +62,13 @@ autoCreate(event: any,type: any) {
     // }
     datatime = new DayPilot.Date(date )
 
-    // if(time.split(":").length == 3){
-    //        datatime = new DayPilot.Date(date + "T" + time)
-    // }else if(time.split(":").length == 2){
-    //        datatime = new DayPilot.Date(date + "T" + time +":00")
-    // }else{
-    //        datatime = new DayPilot.Date(date + "T" + "00:00:00")
-    // }
+    if(time.split(":").length == 3){
+           datatime = new DayPilot.Date(date + "T" + time)
+    }else if(time.split(":").length == 2){
+           datatime = new DayPilot.Date(date + "T" + time +":00")
+    }else{
+           datatime = new DayPilot.Date(date + "T" + "00:00:00")
+    }
           return datatime
   }
 
@@ -150,9 +150,9 @@ autoCreate(event: any,type: any) {
               starttime:args.start.value.split("T")[1],
               endtime: args.end.value.split("T")[1],
               // id: DayPilot.guid(),
-              resource: args.resource,
+              // resource: args.resource,
               // text: name,
-              bubbleHtml: "",
+              // bubbleHtml: "",
       };
       // this.events.push(e)
       // this.scheduler.control.message("Created");
@@ -227,15 +227,18 @@ autoCreate(event: any,type: any) {
                       end: args.end.value.split("T")[0],
                       starttime:args.start.value.split("T")[1],
                       endtime: args.end.value.split("T")[1],
-                      // id: DayPilot.guid(),
-                      resource: args.resource,
-                      // text: name,
                       bubbleHtml: "",
               };
-              // this.events.push(e)
+        //       var e = {
+        //         start:args.start,
+        //         end: args.end,
+        //         starttime:args.start.value.split("T")[1],
+        //         endtime: args.end.value.split("T")[1],
+        //         bubbleHtml: "",
+        // };
+        //       this.events.push(e)
               // this.scheduler.control.message("Created");
               this.goToEventDetail(e,"create")
-              // this.openModal("create",e)
     },
     onBeforeCellRender:  args => {
       var now = new DayPilot.Date().getTime();
@@ -284,7 +287,7 @@ autoCreate(event: any,type: any) {
     if(typeof(this.uid) == "undefined" || this.uid == ""){
       return 
     }
-    this.events =[]
+    // this.events =[]
     this.ds.getEventsUser(this.uid)    
     .then( (results: any) => {
         console.log(results)
@@ -293,6 +296,7 @@ autoCreate(event: any,type: any) {
 
         for (var i = 0; i <tmp.length; i ++) {
             var x =tmp[i].attributes
+            x.objectId=tmp[i].id
             this.events[i] =x;
 
             var ev=this.events[i];
@@ -301,6 +305,7 @@ autoCreate(event: any,type: any) {
             this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
             // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
         };
+        
       }, function (error) {
         console.log(error)
       });
