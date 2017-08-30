@@ -92,7 +92,8 @@ export class SignupPage {
       return
     }
     this.confData.createUserCheckSmsCodeAV(this.signup.smsCode)
-        .then( success =>{
+        .then( (success:any )=>{
+          this.userData.setUserId(success.objectId);
           this.initUserToDb()
           this.onSignup(form)
           this.showAlert("恭喜您","注册成功")
