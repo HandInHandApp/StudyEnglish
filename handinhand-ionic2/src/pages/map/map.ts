@@ -281,52 +281,61 @@ autoCreate(event: any,type: any) {
     });
   }
 
+  getUserEvents(){
+  // this.events =[]
+  this.ds.getEventsUser(this.uid)    
+  .then( (results: any) => {
+      console.log(results)
+      var tmp =results;
+      this.events = []
+
+      for (var i = 0; i <tmp.length; i ++) {
+          var x =tmp[i].attributes
+          x.objectId=tmp[i].id
+          var ev=x;
+          x.start = this.datetimeFormate(ev.start, ev.starttime);
+          x.end   = this.datetimeFormate(ev.end,   ev.endtime);
+          this.events.push(x);
+      };
+      
+    }, function (error) {
+      console.log(error)
+    });
+  
+
+  // this.ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd(), this.uid)
+  //        .subscribe(resulte => 
+  //           {
+  //             this.events=resulte;
+  //             console.log(this.events)
+          
+  //             for (var i = 0; i < this.events.length; i ++) {
+                
+  //                 var ev=this.events[i];
+  //                 // this.events[i].text=this.setEventTitle(this.events[i]);
+  //                 this.events[i].start = this.datetimeFormate(ev.start, ev.starttime);
+  //                 this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
+  //                 // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
+  //             };
+  //           }
+  //        );
+  
+  }
+
   viewChange(){
     if(typeof(this.uid) == "undefined" )
        this.uid = this.userdata.getUserId()
     if(typeof(this.uid) == "undefined" || this.uid == ""){
-      return 
+      // return 
+      this.userdata.getAllLocalDatas();
+      this.userdata.getuserid().then( id => {
+        this.uid = id;
+        this.getUserEvents()
+      })
+
+    }else{
+      this.getUserEvents()
     }
-    // this.events =[]
-    this.ds.getEventsUser(this.uid)    
-    .then( (results: any) => {
-        console.log(results)
-        var tmp =results;
-        // this.events = []
-
-        for (var i = 0; i <tmp.length; i ++) {
-            var x =tmp[i].attributes
-            x.objectId=tmp[i].id
-            this.events[i] =x;
-
-            var ev=this.events[i];
-            // this.events[i].text=this.setEventTitle(this.events[i]);
-            this.events[i].start = this.datetimeFormate(ev.start, ev.starttime);
-            this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
-            // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
-        };
-        
-      }, function (error) {
-        console.log(error)
-      });
-    
-
-    // this.ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd(), this.uid)
-    //        .subscribe(resulte => 
-    //           {
-    //             this.events=resulte;
-    //             console.log(this.events)
-            
-    //             for (var i = 0; i < this.events.length; i ++) {
-                  
-    //                 var ev=this.events[i];
-    //                 // this.events[i].text=this.setEventTitle(this.events[i]);
-    //                 this.events[i].start = this.datetimeFormate(ev.start, ev.starttime);
-    //                 this.events[i].end   = this.datetimeFormate(ev.end,   ev.endtime);
-    //                 // this.events[i].bubbleHtml=this.setbubbleHtml(this.events[i]);
-    //             };
-    //           }
-    //        );
     
   }
 
