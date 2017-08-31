@@ -55,11 +55,11 @@ export class ConferenceApp {
   // the login page disables the left menu
   appPages: PageInterface[] = [
     { title: '测试', name: 'TabsPage', component: TabsPage, tabComponent: TestListPage, index: 0, icon: 'flask' },
-    { title: '训练', name: 'TabsPage', component: TabsPage, tabComponent: TrainingPage, index: 1, icon: 'bicycle' },
-    { title: '计划', name: 'TabsPage', component: TabsPage, tabComponent: MapPage,      index: 2, icon: 'calendar' },
-    { title: '习题', name: 'TabsPage', component: TabsPage, tabComponent: ExerciseIndexPage, index: 3, icon: 'paper' },
-    { title: '我'  , name: 'TabsPage', component: TabsPage, tabComponent: AboutPage,    index: 4, icon: 'person-add' },
-    { title: '录音', name: 'TabsPage', component: TabsPage, tabComponent: LibraryPage,  index: 5, icon: 'person-add' }
+    // { title: '训练', name: 'TabsPage', component: TabsPage, tabComponent: TrainingPage, index: 1, icon: 'bicycle' },
+    { title: '计划', name: 'TabsPage', component: TabsPage, tabComponent: MapPage,      index: 1, icon: 'calendar' },
+    { title: '习题', name: 'TabsPage', component: TabsPage, tabComponent: ExerciseIndexPage, index: 2, icon: 'paper' },
+    { title: '我'  , name: 'TabsPage', component: TabsPage, tabComponent: AboutPage,    index: 3, icon: 'person-add' },
+    { title: '录音', name: 'TabsPage', component: TabsPage, tabComponent: LibraryPage,  index: 4, icon: 'person-add' }
    
   ];
   loggedInPages: PageInterface[] = [
