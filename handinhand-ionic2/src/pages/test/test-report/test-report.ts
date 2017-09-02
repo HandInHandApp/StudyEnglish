@@ -44,6 +44,7 @@ export class TestReportPage {
 
   steps: any;
   score: number;
+  reading_correct_rate: any;
   correct_rate: any;
   headername: string;
 
@@ -97,7 +98,7 @@ export class TestReportPage {
               }
             }
           }
-          this.correct_rate = correct_answer + "/" + total_count;
+          this.reading_correct_rate = correct_answer + "/" + total_count;
         });
       }
     );
