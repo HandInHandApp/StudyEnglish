@@ -1,5 +1,4 @@
 // Copyright (c) 2017 Tracktunes Inc
-
 import { Component, ViewChild } from '@angular/core';
 import {
     AlertController,
@@ -46,13 +45,12 @@ import { LoadingController } from 'ionic-angular';
     providers: [WebAudioSaveWav],
 })
 export class RecordListPage implements AfterViewInit, OnDestroy {
-     // 父组件传递截止日期
- @Input() refresh: number;
- // 父组件传递标题
- @Input() title: string;
-
- refreshcall(){
-    this.appState.getProperty('selectedNodes').then(
+    // 父组件传递截止日期
+    @Input() refresh: number;
+    // 父组件传递标题
+    @Input() title: string;
+    refreshcall(){
+        this.appState.getProperty('selectedNodes').then(
             (selectedNodes: any) => {
                 this.selectedNodes = selectedNodes;
                 this.appState.getProperty('lastViewedFolderKey')
@@ -64,44 +62,41 @@ export class RecordListPage implements AfterViewInit, OnDestroy {
                                 'LibraryPage:ionViewWillEnter(): ' +
                                 'lastViewedFolderKey=' +
                                 lastViewedFolderKey);
-                        });
+                        }
+                    );
             }
         );
- }
-
- itemfilter(item){
-    if(item.indexOf(this.title) != -1){
-        return true;
-    }else{
-        return false;
     }
- }
-listfilter(list){
-    var showlist=[]
-    list.forEach(element => {
-        if(this.itemfilter(this.folderItems[element].name)){
-            showlist.push(element)
+
+    itemfilter(item){
+        if(item.indexOf(this.title) != -1){
+            return true;
+        }else{
+            return false;
         }
-    });
-    return showlist;
-}
+    }
 
+    listfilter(list){
+        var showlist=[]
+        list.forEach(element => {
+            if(this.itemfilter(this.folderItems[element].name)){
+                showlist.push(element)
+            }
+        });
+        return showlist;
+    }
 
+    ngAfterViewInit() {
+        this.refreshcall()
+    }
 
- ngAfterViewInit() {
-   this.refreshcall()
- }
+    // 销毁组件时清除定时器
+    ngOnDestroy() {}
 
- // 销毁组件时清除定时器
- ngOnDestroy() {
-
- }
-
-     ngOnChanges(changes: {[propName: string]: SimpleChange}) {
+    ngOnChanges(changes: {[propName: string]: SimpleChange}) {
         console.dir(changes['refresh']);  
         this.refreshcall()  
     }
-
 
     @ViewChild(Content) public content: Content;
     private navController: NavController;
@@ -310,14 +305,15 @@ listfilter(list){
         }
         alertAndDo(
             this.alertController,
-            'Permanently delete ' + nNodes + ' item' + (nNodes > 1 ? 's?' : '?'),
-            'Cancel',
+            '确定要删除此音频?',
+            //'Permanently delete ' + nNodes + ' item' + (nNodes > 1 ? 's?' : '?'),
+            '取消',
             () => {
                     console.log('Library::deleteNodes(): cancel deleting ' + nNodes +
                     ' selected items ...');
                     this.onClickCheckbox(node)
             },
-            'Ok',
+            '确定',
             () => {
                 console.log('Library::deleteNodes(): deleting ' + nNodes +
                     ' selected items ...');
@@ -818,6 +814,4 @@ listfilter(list){
             loader.dismiss();
         }, 5000);
     }
-   
-        
 }

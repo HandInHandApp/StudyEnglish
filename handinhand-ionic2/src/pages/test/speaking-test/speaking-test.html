@@ -15,8 +15,8 @@
             <button class="tpobtn" ion-button (click)="pauseToBreak()" type="submit" block> 暂停 </button>
         </ion-buttons>
         <div style="text-align:center;">
-            <label *ngIf="step.indexOf('p')==0">{{passages.passage[step].title}} </label>
-            <label *ngIf="step.indexOf('q')==0">{{passages.question[step].title}}</label>
+            <label class="white-word" *ngIf="step.indexOf('p')==0">{{passages.passage[step].title}} </label>
+            <label class="white-word" *ngIf="step.indexOf('q')==0">{{passages.question[step].title}}</label>
         </div>
         <ion-buttons right>
             <button ion-button *ngIf="(passages != undefined) && (step.indexOf('d')==0)" (click)="gotoNext()" type="submit" block> CONTINUE </button>
@@ -37,21 +37,20 @@
         </div>
     </div>
     <div *ngFor="let item of steps;  let i = index;"  >
-        <div *ngIf="step === item && step.indexOf('q')!=-1">
+        <div *ngIf="step === item && step.indexOf('q')==0">
             <ion-row>
                 <ion-col col-2></ion-col>
                 <ion-col col-8>
                     <div  *ngIf="passages.question[step].para">
-                    <h6> <b>{{passages.question[step].para}}</b> </h6>
-                    <div style="border-top: 4px solid #000000"></div>
-                    <ion-row *ngIf="startrecord==0" style="height: 100px;">
-                        <p style="text-align:center">
-                            <img src='assets/img/recorder.png' style="width: 80px;   position: absolute;  left: 46%; " alt=""
-                                (click)="playAudio1() " >
-                        </p>
-                    </ion-row>
+                        <h6><b>{{passages.question[step].para}}</b></h6>
+                        <div style="border-top: 4px solid #000000"></div>
+                        <ion-row *ngIf="startrecord==0" style="height: 100px;">
+                            <p style="text-align:center">
+                                <img src='assets/img/recorder.png' style="width: 80px;  position: absolute; left:46%;" alt="" (click)="playAudio1() " >
+                            </p>
+                        </ion-row>
                         <div class="record-upload-buttons"  *ngIf="startrecord==0">
-                            <div   *ngIf="startrecord==-2">
+                            <div *ngIf="startrecord==-2">
                                 <button ion-button color="logo-blue" round [disabled]="!recorderIsReady()" (click)="onClickStartPauseButton()">
                                     <ion-icon [name]="recordButtonIcon"></ion-icon>
                                 </button>
@@ -61,84 +60,78 @@
                             </div>
                          </div> 
                         <div *ngIf="startrecord>0" >
-                            <ion-row  >
+                            <ion-row>
                                 <ion-col col-4></ion-col>
                                 <ion-col col-4>
-                                <div *ngIf="startrecord==1">
-                                    <ion-list>
-                                        <div class = "bootstrap-iso">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr><th style="text-align: center; background:#f4f4f4;"> ----</th></tr>
-                                                </thead>
+                                    <div *ngIf="startrecord==1">
+                                        <ion-list>
+                                            <div class = "bootstrap-iso">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr><th style="text-align: center; background:#f4f4f4;"> ----</th></tr>
+                                                    </thead>
                                                     <tbody>
                                                         <tr><td style="text-align: center;">----</td></tr>
                                                         <tr><td style="text-align: center;">----</td></tr>
                                                     </tbody>
                                                 </table>
-                                        </div>
-                                    </ion-list>
-                                </div>
-                                <div *ngIf="startrecord==2">
-                                    <ion-list>
-                                        <div class = "bootstrap-iso">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr><th style="text-align: center; background:#f4f4f4;"> Prepare your response</th></tr>
-                                                </thead>
+                                            </div>
+                                        </ion-list>
+                                    </div>
+                                    <div *ngIf="startrecord==2">
+                                        <ion-list>
+                                            <div class = "bootstrap-iso">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr><th style="text-align: center; background:#f4f4f4;"> Prepare your response</th></tr>
+                                                    </thead>
                                                     <tbody>
                                                         <tr><td style="text-align: center;">
                                                             <timer-countdown title="prapare" [endDate]="praparetimer" (childEvent) = "timerEnd($event)"></timer-countdown>      
                                                         </td></tr>
                                                         <tr><td style="text-align: center;">
                                                                <myprogress-bar [progress]="loadProgress"></myprogress-bar>   
-                                                     
                                                         </td></tr>
                                                     </tbody>
                                                 </table>
-                                        </div>
-                                    </ion-list>
-                                </div>
-                                <div *ngIf="startrecord==3">
-                                    <ion-list>
-                                        <div class = "bootstrap-iso">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr><th style="text-align: center; background:#f4f4f4;"> Recording</tr>
-                                                </thead>
+                                            </div>
+                                        </ion-list>
+                                    </div>
+                                    <div *ngIf="startrecord==3">
+                                        <ion-list>
+                                            <div class = "bootstrap-iso">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr><th style="text-align: center; background:#f4f4f4;"> Recording</tr>
+                                                    </thead>
                                                     <tbody>
                                                         <tr><td style="text-align: center;">
                                                             <timer-countdown title="recording" [endDate]="recordtimer" (childEvent) = "timerEnd($event)"></timer-countdown>      
                                                         </td></tr>
                                                         <tr><td style="text-align: center;">
-                                                            <ion-row  >
-                                                                 <ion-col col-10>
-                                                                     <myprogress-bar [progress]="loadProgress"></myprogress-bar> 
-
-                                                                 </ion-col>
-                                                                  <ion-col col-2>
-                                                                 <button ion-button  icon-only small (click)="onClickStopButton()">
-                                                                     <ion-icon name="square">
-                                                                    </ion-icon> 
-                                                                </button>    
-                                                                  </ion-col>
-                                                            
-                                                            </ion-row  >
-                                                            
+                                                            <ion-row>
+                                                                <ion-col col-10>
+                                                                    <myprogress-bar [progress]="loadProgress"></myprogress-bar> 
+                                                                </ion-col>
+                                                                <ion-col col-2>
+                                                                    <button ion-button  icon-only small (click)="onClickStopButton()">
+                                                                        <ion-icon name="square"></ion-icon> 
+                                                                    </button>    
+                                                                </ion-col>
+                                                            </ion-row>
                                                         </td></tr>
                                                     </tbody>
                                                 </table>
-                                        </div>
-                                    </ion-list>
-                                </div>
+                                            </div>
+                                        </ion-list>
+                                    </div>
                                 </ion-col>
-                                <ion-col col-4></ion-col>
                             </ion-row>
                         </div>
-                        <recordlist-page [refresh]="refreshtimer" [title]="headername +'_' + step+ '_'"> </recordlist-page> 
+                        <recordlist-page [refresh]="refreshtimer" [title]="headername +'_' + step+ '_'">
+                        </recordlist-page> 
                     </div>
                 </ion-col>
-                <ion-col col-2></ion-col>
             </ion-row>
        </div>      
     </div>
