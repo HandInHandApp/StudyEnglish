@@ -13,6 +13,7 @@ import { ConferenceData } from '../../../providers/conference-data';
 export class WritingTestPage {
   paperType: string = "writing";
   curTPO: any;
+  title: string;
   grid_three_input: any;
   grid_two_input: any;
   grid_three_input_number: any;
@@ -52,6 +53,7 @@ export class WritingTestPage {
         this.tpourl = navParams.data.url;
         this.headername = navParams.data.headername;
         this.step = this.navParams.get("curstep")
+        this.title = this.navParams.get("title")
         confData.getTestData(this.tpourl).subscribe(
           resulte => {
             console.log(resulte)
@@ -93,6 +95,7 @@ export class WritingTestPage {
                     curTPO: this.curTPO,
                     tpourl:this.tpourl,
                     headername:this.headername,
+                    title: this.title,
                     paperType: this.paperType
                 })
               }

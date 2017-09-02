@@ -182,6 +182,7 @@ export class TestReportPage {
       curTPO: this.curTPO,
       headername: this.headername,
       curstep: step,
+      title: this.title,
       url: paperTypes[this.paperType]["tpourl"]
     })
   }
