@@ -32,6 +32,8 @@ export class ListeningTestPage {
   counttime = 600 * 1000;
   timer_hidden = false;
 
+  isBackable = false;
+
   paperType: string = "listening";
   title: String;
   curTPO: any;
@@ -70,10 +72,7 @@ export class ListeningTestPage {
     "q31": "",
     "q32": "",
     "q33": "",
-    "q34": "",
-    "q35": "",
-    "q36": "",
-    "q37": ""
+    "q34": ""
   }
 
   constructor(
@@ -88,7 +87,8 @@ export class ListeningTestPage {
     this.tpourl = navParams.data.url;
     this.headername = navParams.data.headername;
     this.title = navParams.data.title;
-    this.curTPO = this.navParams.get("curTPO")
+    this.curTPO = navParams.data.curTPO;
+
     confData.getListeningTestData(this.tpourl)
       .subscribe(
       resulte => {
@@ -96,7 +96,15 @@ export class ListeningTestPage {
         this.passages = resulte;
         this.steps = this.passages["steps"];
         this.first_step = this.steps[this.stepindex];
-        this.step = this.first_step;
+        if (this.navParams.get("curstep") == undefined) {
+          this.step = this.first_step;
+        } else {//如果是跳转过来的
+          this.step = this.navParams.get("curstep");
+          this.stepindex = this.steps.indexOf(this.step);
+          this.userData.getUserListeningAnswer().then((value) => {
+            this.useranswer = value;
+          });
+        }
         this.last_step = this.steps[this.passages["steps"].length - 1];
         this.last_stepindex = this.passages["steps"].length - 1;
         this.get_total_graph(this.steps);
@@ -120,13 +128,17 @@ export class ListeningTestPage {
    */
   gotoNext() {
     if (this.stepindex != this.last_stepindex) {
-      this.stepindex = this.stepindex + 1
-      this.step = this.steps[this.stepindex]
-      // this.endDate = 601 * 1000
+      this.stepindex = this.stepindex + 1;
+      this.step = this.steps[this.stepindex];
     } else {
       this.showAlert();
     }
-    console.log(this.step)
+    let preStep = this.steps[this.stepindex - 1];
+    if (this.step == "q1" || preStep == "d2") {
+      this.isBackable = true;
+    } else {
+      this.isBackable = false;
+    }
   }
 
   /**
@@ -134,10 +146,19 @@ export class ListeningTestPage {
    */
   gotoBack() {
     if (this.stepindex != 0) {
-      this.stepindex = this.stepindex - 1
-      this.step = this.steps[this.stepindex]
+
+      //如果上一步不是问题则继续回溯
+      this.stepindex--;
+      while (this.steps[this.stepindex].indexOf("q") != 0) {
+        this.stepindex--;
+      }
+      this.step = this.steps[this.stepindex];
+
+      let preStep = this.steps[this.stepindex - 1];
+      if (this.step == "q1" || preStep == "d2") {
+        this.isBackable = true;
+      }
     }
-    console.log(this.step)
   }
 
   /**
