@@ -15,11 +15,11 @@
             <button class="tpobtn" ion-button (click)="pauseToBreak()" type="submit" block> 暂停 </button>
         </ion-buttons>
         <div style="text-align:center;">
-            <label *ngIf="step.indexOf('p')!=-1">{{passages.passage[step].title}} </label>
-            <label *ngIf="step.indexOf('q')!=-1">{{passages.question[step].title}}</label>
+            <label *ngIf="step.indexOf('p')==0">{{passages.passage[step].title}} </label>
+            <label *ngIf="step.indexOf('q')==0">{{passages.question[step].title}}</label>
         </div>
         <ion-buttons right>
-            <button ion-button *ngIf="(passages != undefined) && (step.indexOf('d')!=-1)" (click)="gotoNext()" type="submit" block> CONTINUE </button>
+            <button ion-button *ngIf="(passages != undefined) && (step.indexOf('d')==0)" (click)="gotoNext()" type="submit" block> CONTINUE </button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>

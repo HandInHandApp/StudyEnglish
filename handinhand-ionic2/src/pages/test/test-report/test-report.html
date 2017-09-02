@@ -73,7 +73,15 @@
         </div>
 
         <div *ngSwitchCase="'speaking'">
-            Speak
+            <ion-grid *ngIf="(paperType=='speaking') && (speakingpaper!= undefined)">
+                <div *ngFor="let rstep of speakingpaper['reportStep']; let idx=index;">
+                    <ion-row class="report-div">
+                        <ion-col (click)='gotoQuestion(rstep)' col-10>{{idx + 1}}
+                            <span class="report-question" [innerHTML]="speakingpaper.question[rstep].para"></span>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-grid>
         </div>
         <div *ngSwitchCase="'writing'">
             <ion-grid *ngIf="(paperType=='writing') && (writingpaper!= undefined)">

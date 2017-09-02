@@ -102,13 +102,18 @@ export class SpeakingTestPage {
         confData.getSpeakingTestData(this.tpourl)
           .subscribe(resulte => 
                   {
+                    this.step = this.navParams.get("curstep")
                     this.passages =resulte;
                     this.steps = this.passages["steps"];
-                    this.first_step =  this.steps[this.stepindex];
-                    this.step = this.first_step;
-                    this.last_step =  this.steps[this.passages["steps"].length-1];
+                    if(this.step == undefined){
+                        this.first_step =  this.steps[this.stepindex];
+                        this.step = this.first_step;
+                        this.last_step =  this.steps[this.passages["steps"].length-1];
+                        this.get_total_graph(this.steps);
+                    }else{
+                         this.stepindex = this.passages["steps"].indexOf(this.step)
+                    }
                     this.last_stepindex = this.passages["steps"].length-1;
-                    this.get_total_graph(this.steps);
                     console.log(resulte)
                   }
               );

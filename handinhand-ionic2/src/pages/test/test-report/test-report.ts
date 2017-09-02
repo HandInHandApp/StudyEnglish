@@ -3,6 +3,7 @@ import { NavController, AlertController, ViewController, NavParams } from 'ionic
 import { ConferenceData } from '../../../providers/conference-data';
 import { ReadingTestPage } from '../reading-test/reading-test';
 import { WritingTestPage } from '../writing-test/writing-test';
+import { SpeakingTestPage } from '../speaking-test/speaking-test';
 import { UserData } from '../../../providers/user-data';
 
 @Component({
@@ -31,6 +32,7 @@ export class TestReportPage {
     },
   }
   readingpaper: any;
+  speakingpaper: any;
   writingpaper: any;
   listeningpaper: any;
 
@@ -104,7 +106,17 @@ export class TestReportPage {
         this.steps = this.writingpaper["steps"];
       }
     );
-
+    
+    /**
+     * Speaking  
+     */
+    confData.getTestData(this.speakingUrl).subscribe(
+      resulte => {
+        console.log(resulte)
+        this.speakingpaper= resulte
+        this.steps = this.speakingpaper["steps"];
+      }
+    );
     /**
      * listening
      */
@@ -149,6 +161,10 @@ export class TestReportPage {
       "writing": {
         "page": WritingTestPage,
         "tpourl": this.writingUrl
+      },
+      "speaking": {
+        "page": SpeakingTestPage,
+        "tpourl": this.speakingUrl
       }
     }
     let page = paperTypes[this.paperType]
