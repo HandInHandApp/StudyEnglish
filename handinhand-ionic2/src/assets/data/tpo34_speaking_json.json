@@ -28,15 +28,6 @@
         }
       },
       "passage":{
-        "p2":{
-          "seq": 2,
-          "title":"", 
-          "img":"",
-          "mp3":"assets/tpo34/speaking_direction.mp3",
-          "contents": [
-           "Speaking Section Direction \n........."
-          ]
-        },
         "p_section1":{
           "seq": 3,
           "title":"Question 1 of 6", 
