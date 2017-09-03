@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 
-//import { NavParams } from 'ionic-angular';
+//import { NavParams, IonicPage } from 'ionic-angular';
 
-import { NavController, AlertController, NavParams } from 'ionic-angular';
+import { NavController, AlertController, NavParams,IonicPage } from 'ionic-angular';
 
 import { ConferenceData } from '../../../providers/conference-data';
 // import { TimerPage   } from '../timer/timer'
@@ -40,7 +40,7 @@ const PAUSE_ICON: string = 'pause';
 const MAX_GAIN_SLIDER_VALUE: number = 1000;
 
 
-
+@IonicPage()
 @Component({
   selector: 'page-speaking-page',
   providers: [WebAudioRecordWav,WebAudioSaveWav],
