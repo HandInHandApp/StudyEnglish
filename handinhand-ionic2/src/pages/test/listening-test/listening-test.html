@@ -10,7 +10,7 @@
             <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block>
                 Review
             </button>-->
-            <button class="navbtn" ion-button (click)="gotoBack()" type="submit" block>
+            <button class="navbtn" [disabled]="isBackable" ion-button (click)="gotoBack()" type="submit" block>
                 Back
             </button>
             <button class="navbtn" ion-button (click)="gotoNext()" type="submit" block>
@@ -30,11 +30,11 @@
         </ion-buttons>
 
         <div style="text-align:center;">
-            <label *ngIf="step.indexOf('d')==0">{{passages.passage[step].title}}</label>
-            <label *ngIf="step.indexOf('q')==0">{{passages.question[step].title}}</label>
+            <label class="white-word" *ngIf="step.indexOf('C')==0||step.indexOf('p')==0">{{passages.passage[step].title}}</label>
+            <label class="white-word" *ngIf="step.indexOf('q')==0">{{passages.question[step].title}}</label>
         </div>
 
-        <ion-buttons right *ngIf="step.indexOf('q')==0">
+        <ion-buttons right *ngIf="step.indexOf('d')!=0">
             <span class="button-inner">
                 <button class="tpobtn-small" ion-button (click)="toggleTimerHidden()" type="submit" block>
                    <div *ngIf="timer_hidden">SHOW TIME</div>
@@ -87,7 +87,7 @@
         </div>
 
         <!--如果是passage -->
-        <div *ngIf="step === item && (step.indexOf('p')==0 || step.indexOf('d')==0)">
+        <div *ngIf="step === item && (step.indexOf('C')==0 || step.indexOf('p')==0 || step.indexOf('d')==0)">
             <ion-row>
                 <ion-col col-3></ion-col>
                 <ion-col col-6>
@@ -99,10 +99,9 @@
                         <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
                     </div>
 
-                    <audio autoplay [controls]="step.indexOf('p')==0" id='Audio-{{step}}' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
+                    <audio autoplay (play)="audioPlayed()" (ended)="gotoNext()" [controls]="step.indexOf('p')==0 || step.indexOf('C')==0" id='Audio-{{step}}' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
                         <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
                     </audio>
-
                 </ion-col>
                 <ion-col col-3></ion-col>
             </ion-row>

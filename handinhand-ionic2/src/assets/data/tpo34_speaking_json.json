@@ -1,5 +1,6 @@
 {
       "qsteps":["p1","p2","q1","q2","q3","p2","p3"],
+      "reportStep":["q1", "q2","q3","q4","q5","q6"],
       "steps":["d1","d2",
               "p_section1",
               "q1",
@@ -28,15 +29,6 @@
         }
       },
       "passage":{
-        "p2":{
-          "seq": 2,
-          "title":"", 
-          "img":"",
-          "mp3":"assets/tpo34/speaking_direction.mp3",
-          "contents": [
-           "Speaking Section Direction \n........."
-          ]
-        },
         "p_section1":{
           "seq": 3,
           "title":"Question 1 of 6", 
@@ -221,14 +213,14 @@
           },
           "q4":{
             "seq": 4,
-             "title":"Question 4 of 6",
+            "title":"Question 4 of 6",
             "mp3":"assets/tpo34/tpo34_speaking_question4.mp3",
             "para":"Explain how the experiment described by the professor illustrates the familiarity principle. ",
             "answer":[]
           },
           "q5":{
             "seq": 5,
-             "title":"Question 5 of 6",
+            "title":"Question 5 of 6",
             "mp3":"assets/tpo34/tpo34_speaking_question5.mp3",
             "para":"Briefly summarize the problem the speakers are discussing. Then state which of the two solutions from the conversation you would recommend. Explain the reasons for your recommendation. ",
             "answer":[]

@@ -6,32 +6,20 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, NavParams,IonicPage } from 'ionic-angular';
 
 import { ConferenceData } from '../../../providers/conference-data';
-// import { TimerPage   } from '../timer/timer'
-
 import { Media } from '@ionic-native/media';
 import { MediaObject } from '@ionic-native/media';
-// import {  AlertController } from 'ionic-angular';
-
 import { File } from '@ionic-native/file';
-
-
-// import { RecordPage } from '../../record-page/record-page';
-
-
-
 import { TestReportPage } from '../test-report/test-report'
 import { ViewChild } from '@angular/core';
 import { Content } from 'ionic-angular';
 import { formatLocalTime } from '../../../models/utils/utils';
-import {AppState,GainState} from '../../../providers/app-state/app-state';
+import { AppState,GainState} from '../../../providers/app-state/app-state';
 import { WebAudioRecordWav } from '../../../providers/web-audio/record-wav';
 import { RecordStatus } from '../../../providers/web-audio/record';
 import { RecordingInfo } from '../../../providers/web-audio/common';
 import { IdbAppFS, UNFILED_FOLDER_KEY } from '../../../providers/idb-app-fs/idb-app-fs';
 import { WebAudioSaveWav } from '../../../providers/web-audio/save-wav';
-
 import { RecordListPage } from '../recordlist-page/recordlist-page';
-
 import { LoadingController } from 'ionic-angular';
 import { ProgressPage   } from '../progress/progress'
 
@@ -120,24 +108,27 @@ export class SpeakingTestPage {
         confData.getSpeakingTestData(this.tpourl)
           .subscribe(resulte => 
                   {
+                    this.step = this.navParams.get("curstep")
                     this.passages =resulte;
                     this.steps = this.passages["steps"];
-                    this.first_step =  this.steps[this.stepindex];
-                    this.step = this.first_step;
-                    this.last_step =  this.steps[this.passages["steps"].length-1];
+                    if(this.step == undefined){
+                        this.first_step =  this.steps[this.stepindex];
+                        this.step = this.first_step;
+                        this.last_step =  this.steps[this.passages["steps"].length-1];
+                        this.get_total_graph(this.steps);
+                    }else{
+                         this.stepindex = this.passages["steps"].indexOf(this.step)
+                    }
                     this.last_stepindex = this.passages["steps"].length-1;
-                    this.get_total_graph(this.steps);
                     console.log(resulte)
                   }
               );
 
         console.log('constructor():RecordPage');
-
         this.webAudioSaveWav = webAudioSaveWav;
         this.appState = appState;
         this.idbAppFS = idbAppFS;
         this.webAudioRecord = webAudioRecord;
-
         this.maxGainSliderValue = MAX_GAIN_SLIDER_VALUE;
 
         // initialize with "remembered" gain values
@@ -156,13 +147,38 @@ export class SpeakingTestPage {
                 this.onGainChangeEnd(this.gainRangeSliderValue);
             }
         );
+    }
+
+    stopTiming() {
+        if(this.timer_stop == false){
+            this.timer_stop=true;
+        }else{
+            this.timer_stop = false;
+        }
+    }
     
-
-  }
-
-
-
-
+    pauseToBreak() {
+        this.timer_stop = true;
+        if(this.audio){
+            this.audio.pause() ;
+        }
+        let prompt = this.alertCtrl.create({
+            title: '休息，休息一会~计时已停止',
+            message: "",
+            buttons: [
+            {
+                text: '继续答题',
+                handler: data => {
+                    console.log('RETURN clicked');
+                    this.timer_stop = false;
+                    if(this.audio){
+                        this.audio.play();
+                    }
+                }
+            }]
+        });
+        prompt.present();
+    }
 
     private get_total_graph(steps: any[]){
         for(let step of steps){
@@ -242,15 +258,13 @@ export class SpeakingTestPage {
     playStepMp3(mp3file){
         if(mp3file !=""){
             if(this.audio){
-              this.audio.pause() ;
+                this.audio.pause() ;
             }
-            
-          this.audio = new Audio(mp3file);
-          this.audio.play();
-
-          this.audio.onended= () => { 
-              console.log(mp3file+" ended !! ");
-          }
+            this.audio = new Audio(mp3file);
+            this.audio.play();
+            this.audio.onended= () => { 
+                console.log(mp3file+" ended !! ");
+            }
         }
     }
 
@@ -278,17 +292,9 @@ export class SpeakingTestPage {
           }
         audio.play();
     };
-
     stoprecord(){
         this.startrecord=0 ;
         this.onClickStopButton()
-    }
-    stopTiming() {
-        if(this.timer_stop == false){
-            this.timer_stop=true;
-        }else{
-            this.timer_stop = false;
-        }
     }
     timerEnd(timertitle) { 
         console.log(timertitle + ' timer End'); 
@@ -303,9 +309,6 @@ export class SpeakingTestPage {
           console.log("unkonw"+timertitle + ' timer End'); 
         }
     }
-
-
-
 
     /**
      * Returns whether this.ebAudioRecord is fully initialized

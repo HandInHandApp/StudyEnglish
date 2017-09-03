@@ -233,7 +233,6 @@ export class ReadingTestPage {
       }else{
           this.timer_stop = false;
       }
-      
   }
 
   toggleTimerHidden() {

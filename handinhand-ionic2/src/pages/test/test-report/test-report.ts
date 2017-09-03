@@ -3,6 +3,8 @@ import { NavController, AlertController, ViewController, NavParams } from 'ionic
 import { ConferenceData } from '../../../providers/conference-data';
 import { ReadingTestPage } from '../reading-test/reading-test';
 import { WritingTestPage } from '../writing-test/writing-test';
+import { SpeakingTestPage } from '../speaking-test/speaking-test';
+import { ListeningTestPage } from '../listening-test/listening-test';
 import { UserData } from '../../../providers/user-data';
 
 @Component({
@@ -21,7 +23,7 @@ export class TestReportPage {
     "listening": {
       "q1": "", "q2": "", "q3": "", "q4": "", "q5": "", "q6": "", "q7": "", "q8": "", "q9": "", "q10": "", "q11": "", "q12": "", "q13": "",
       "q14": "", "q15": "", "q16": "", "q17": "", "q18": "", "q19": "", "q20": "", "q21": "", "q22": "", "q23": "", "q24": "", "q25": "",
-      "q26": "", "q27": "", "q28": "", "q29": "", "q30": "", "q31": "", "q32": "", "q33": "", "q34": "", "q35": "", "q36": "", "q37": ""
+      "q26": "", "q27": "", "q28": "", "q29": "", "q30": "", "q31": "", "q32": "", "q33": "", "q34": ""
     },
 
     "speaking": {},
@@ -31,6 +33,7 @@ export class TestReportPage {
     },
   }
   readingpaper: any;
+  speakingpaper: any;
   writingpaper: any;
   listeningpaper: any;
 
@@ -41,6 +44,7 @@ export class TestReportPage {
 
   steps: any;
   score: number;
+  reading_correct_rate: any;
   correct_rate: any;
   headername: string;
 
@@ -83,6 +87,7 @@ export class TestReportPage {
           let total_count = 0;
           for (let step in this.useranswer["reading"]) {
             total_count = total_count + 1;
+
             if (this.readingpaper.questions[step].type == "drag-choice") {
               if (this.useranswer["reading"][step] != "" && this.readingpaper.questions[step].answer.join("") == this.useranswer["reading"][step].join("")) {
                 correct_answer = correct_answer + 1;
@@ -93,7 +98,7 @@ export class TestReportPage {
               }
             }
           }
-          this.correct_rate = correct_answer + "/" + total_count;
+          this.reading_correct_rate = correct_answer + "/" + total_count;
         });
       }
     );
@@ -104,13 +109,23 @@ export class TestReportPage {
         this.steps = this.writingpaper["steps"];
       }
     );
-
+    
+    /**
+     * Speaking  
+     */
+    confData.getTestData(this.speakingUrl).subscribe(
+      resulte => {
+        console.log(resulte)
+        this.speakingpaper= resulte
+        this.steps = this.speakingpaper["steps"];
+      }
+    );
     /**
      * listening
      */
     confData.getListeningTestData(this.listeningUrl).subscribe(
       resulte => {
-        console.log(resulte)
+        console.log("resulte:"+resulte);
         this.listeningpaper = resulte;
         this.steps = this.listeningpaper["steps"];
 
@@ -118,18 +133,20 @@ export class TestReportPage {
           this.useranswer["listening"] = value
           let correct_answer = 0;
           let total_count = 0;
-          // for (let step in this.useranswer["listening"]) {
-          //   total_count = total_count + 1;
-          //   if (typeof this.listeningpaper.question[step].type != 'undefined' && this.listeningpaper.question[step].type == "drag-choice") {
-          //     if (this.useranswer["listening"][step] != "" && this.listeningpaper.question[step].answer.join("") == this.useranswer["listening"][step].join("")) {
-          //       correct_answer = correct_answer + 1;
-          //     }
-          //   } else {
-          //     if (this.listeningpaper.question[step].answer.join("") == this.useranswer["listening"][step]) {
-          //       correct_answer = correct_answer + 1;
-          //     }
-          //   }
-          // }
+
+          for (let step in this.useranswer["listening"]) {
+            total_count++;
+            if ( this.listeningpaper.question[step].type == "multi-choice") {
+              if (this.useranswer["listening"][step] != "" && this.listeningpaper.question[step].answer.join("") == this.useranswer["listening"][step]) {
+                correct_answer = correct_answer + 1;
+              }
+            } else {
+              if (this.listeningpaper.question[step].answer.join("") == this.useranswer["listening"][step]) {
+                correct_answer = correct_answer + 1;
+              }
+            }
+          }
+
           this.correct_rate = correct_answer + "/" + total_count;
         });
       }
@@ -149,13 +166,23 @@ export class TestReportPage {
       "writing": {
         "page": WritingTestPage,
         "tpourl": this.writingUrl
+      },
+      "speaking": {
+        "page": SpeakingTestPage,
+        "tpourl": this.speakingUrl
+      },
+      "listening": {
+        "page": ListeningTestPage,
+        "tpourl": this.listeningUrl
       }
-    }
-    let page = paperTypes[this.paperType]
+    };
+    let page = paperTypes[this.paperType];
+    console.log("page:"+page);
     this.navCtrl.push(paperTypes[this.paperType]["page"], {
       curTPO: this.curTPO,
       headername: this.headername,
       curstep: step,
+      title: this.title,
       url: paperTypes[this.paperType]["tpourl"]
     })
   }
