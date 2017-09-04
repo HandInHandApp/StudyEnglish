@@ -52,4 +52,16 @@ export class ExerciseIndexPage {
     this.navCtrl.push(ExerciseTypePage, { category: category.name });
   }
 
+//   playStepVideo(mp3file){
+//     if(mp3file !=""){
+//         if(this.audio){
+//             this.audio.pause() ;
+//         }
+//         this.audio = new Audio(mp3file);
+//         this.audio.play();
+//         this.audio.onended= () => { 
+//             console.log(mp3file+" ended !! ");
+//         }
+//     }
+// }
 }
