@@ -70,7 +70,8 @@
                 "C":"They were sold primarily near mosques.",
                 "D":"Most books were intended for sale on the open market"
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q2":{
             "seq": 2,
@@ -87,7 +88,8 @@
                 "C":"praised ",
                 "D":"supported "
                 },
-            "answer":["D"]
+            "answer":["D"],
+            "score":1
         },
         "q3":{
             "seq": 3,
@@ -104,7 +106,8 @@
                 "C":"ancient  ",
                 "D":"well-known "
                 },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q4":{
             "seq": 4,
@@ -121,7 +124,8 @@
                 "C":"used rounded scripts",
                 "D":"were usually written on parchment"
             },
-            "answer":["D"]
+            "answer":["D"],
+            "score":1
         },
         "q5":{
             "seq": 5,
@@ -138,7 +142,8 @@
                 "C":"To emphasize how influential and well known the book markets were",
                 "D":"To demonstrate the need for religious texts in Islamic lands"
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q6":{
             "seq": 6,
@@ -155,7 +160,8 @@
                 "C":"discovered in",
                 "D":"combined with"
             },
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q7":{
             "seq": 7,
@@ -172,7 +178,8 @@
                 "C":"Papermaking spread beyond Egypt, Sicily, and Spain, but it was not widely used by artists for centuries, probably because of the conservative nature of art in those countries.",
                 "D":"Paper replaced parchment in copies of the Koran, probably at the request of conservative practitioners in areas like Egypt, Sicily, and Spain."
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q8":{
             "seq": 8,
@@ -190,7 +197,8 @@
                 "C":"Paper could be produced in sheets of varying weights and thicknesses",
                 "D":"More people could buy books made of paper because it was cheaper."
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q9":{
             "seq": 9,
@@ -207,7 +215,8 @@
                 "C":"To make the point that paper allowed artists to develop paintings that were more expressive and complex",
                 "D":"To prove that paper was more popular with artists who used large sheets, than it was with book printers, who used smaller sheets"
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q10":{
             "seq": 10,
@@ -224,7 +233,8 @@
                 "C":"made architectural plans more complex and therefore harder to read ",
                 "D":"allowed artists to create paintings that were smaller in scale"
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q11":{
             "seq": 11,
@@ -241,7 +251,8 @@
                 "C":"He promoted calligraphy as an art form and encouraged the use of rounded letters in religious texts.",
                 "D":"He persuaded the court in Baghdad to use rounded styles instead of more angular scripts in their documents."
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q12":{
             "seq": 12,
@@ -258,7 +269,8 @@
                 "C":"in addition to",
                 "D":"similar to"
             },
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q13":{
             "seq": 13,
@@ -284,7 +296,8 @@
             },
             "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage.",
             "content":"This change occurred for good reason.",
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q14":{
             "seq": 14,
@@ -299,7 +312,8 @@
                 "E":"The popularity of books led to major advances in the development and transfer of new artistic ideas. ",
                 "F":"Around the year 900, a set of rounded styles of Arabic handwriting began replacing angular scripts in copying the manuscripts of the Koran."
             },
-            "answer":["A","C","E"]
+            "answer":["A","C","E"],
+            "score":1
         },
         "q15":{
             "seq": 15,
@@ -316,7 +330,8 @@
                 "C":"Larger families required the construction of larger homes made from wood.  ",
                 "D":"What was left of the great forests after the medieval period was being strictly protected. "
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q16":{
             "seq": 16,
@@ -333,7 +348,8 @@
                 "C":"Russia’s appetite for iron increased rapidly after 1740. ",
                 "D":"Russia’s energy resources eventually became insufficient and limited the growth of its iron industry."
             },
-            "answer":["BD"]
+            "answer":["BD"],
+            "score":1
         },
         "q17":{
             "seq": 17,
@@ -350,7 +366,8 @@
                 "C":"well-preserved",
                 "D":"existing"
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q18":{
             "seq": 18,
@@ -367,7 +384,8 @@
                 "C":"To emphasize that after 1640, British homes required energy for more than heat ",
                 "D":"To indicate that coal had been used for the production of certain products before the eighteenth century"
             },
-            "answer":["D"]
+            "answer":["D"],
+            "score":1
         },
         "q19":{
             "seq": 19,
@@ -384,7 +402,8 @@
                 "C":"Both were used to operate pumps. ",
                 "D":"Both were very inefficient. "
             },
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q20":{
             "seq": 20,
@@ -401,7 +420,8 @@
                 "C":"famous ",
                 "D":"ambitious"
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q21":{
             "seq": 21,
@@ -418,7 +438,8 @@
                 "C":"He improved the efficiency of Newcomen’s engine by preventing energy from being lost.",
                 "D":"He redesigned Newcomen’s engine so that it no longer needed a separate condenser."
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q22":{
             "seq": 22,
@@ -435,7 +456,8 @@
                 "C":"magnificent ",
                 "D":"popular"
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q23":{
             "seq": 23,
@@ -452,7 +474,8 @@
                 "C":"The discovery of a method for increasing the production of charcoal ",
                 "D":"The invention of powerful machinery that could shape, form, and finish iron"
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q24":{
             "seq": 24,
@@ -469,7 +492,8 @@
                 "C":"To demonstrate the tremendous growth of the iron industry in Britain",
                 "D":"To demonstrate how inexpensive coal had become"
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q25":{
             "seq": 25,
@@ -486,7 +510,8 @@
                 "C":"less costly",
                 "D":"highly stimulating"
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q26":{
             "seq": 26,
@@ -501,7 +526,8 @@
                 "C":"Steam-power technology was largely the result of improvements developed to increase the supply of coal as a primary source of energy.",
                 "D":"Adaptations to steam engines required for their use in cotton-spinning mills led to radical developments in machinery used in the iron industry."
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q27":{
             "seq": 27,
@@ -527,7 +553,8 @@
             },
             "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage.",
             "content":"Energy had not been a problem for Britain in the past because it relied on a rich   source of energy: its vast forests.",
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q28":{
             "seq": 28,
@@ -542,7 +569,8 @@
                 "E":"The puddling furnace increased the availability of charcoal to a variety of industries from cotton to iron production. ",
                 "F":"Steam power increased coal production, which in turn allowed extraordinary growth of the iron industry and the British economy."
             },
-            "answer":["C","D","F"]
+            "answer":["C","D","F"],
+            "score":1
         },
         "q29":{
             "seq": 29,
@@ -559,7 +587,8 @@
                 "C":"they attract only insects that will defend the plant",
                 "D":"they are produced by the same parts of the plant "
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q30":{
             "seq": 30,
@@ -576,7 +605,8 @@
                 "C":"they are successful defenders of plants ",
                 "D":"they are easily observable defenders of plants"
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q31":{
             "seq": 31,
@@ -593,7 +623,8 @@
                 "C":"They spend most of their energy guarding extrafloral nectaries.",
                 "D":"They frequently fight among themselves over extrafloral nectar."
             },
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q32":{
             "seq": 32,
@@ -610,7 +641,8 @@
                 "C":"The secretion of extrafloral nectar plays a role in the plant’s internal functioning.",
                 "D":"Ants visit plants that secrete extrafloral nectar as often as they visit plants that do not. "
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q33":{
             "seq": 33,
@@ -627,7 +659,8 @@
                 "C":"open-minded",
                 "D":"practical"
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q34":{
             "seq": 34,
@@ -644,7 +677,8 @@
                 "C":"In 1977 Barbara Bentley conducted research that proved that all prior studies were wrong.",
                 "D":"Proof that ants benefit plants will require many more observations and experiments."
             },
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q35":{
             "seq": 35,
@@ -661,7 +695,8 @@
                 "C":"It keeps pollen grains from attaching properly.",
                 "D":"It prevents the flower from attracting pollinators."
             },
-            "answer":["D"]
+            "answer":["D"],
+            "score":1
         },
         "q36":{
             "seq": 36,
@@ -678,7 +713,8 @@
                 "C":"damage ",
                 "D":"prefer"
             },
-            "answer":["B"]
+            "answer":["B"],
+            "score":1
         },
         "q37":{
             "seq": 37,
@@ -695,7 +731,8 @@
                 "C":"It explains how insects find sources of nectar. ",
                 "D":"It presents information that partly contradicts the protectionist view. "
             },
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q38":{
             "seq": 38,
@@ -712,7 +749,8 @@
                 "C":"open to attack",
                 "D":"difficult to locate"
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q39":{
             "seq": 39,
@@ -729,7 +767,8 @@
                 "C":"The plants occupied by ants produced many more seeds than those that were not occupied by ants.",
                 "D":"The plants that grew in places without ants were much smaller and weaker than those that grew in places where ants were present."
             },
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q40":{
             "seq": 40,
@@ -746,7 +785,8 @@
                 "C":"eating beetle eggs they find on developing fruits",
                 "D":"making it difficult for beetles to lay eggs on developing fruits"
             },
-            "answer":["A"]
+            "answer":["A"],
+            "score":1
         },
         "q41":{
             "seq": 41,
@@ -771,7 +811,8 @@
             },
             "title":"Look at the four squares 【】 that indicate where the following sentence could be added to the passage. ",
             "content":"Sometimes they capture the insects to feed their protein-hungry larvae.",
-            "answer":["C"]
+            "answer":["C"],
+            "score":1
         },
         "q42":{
             "seq": 42,
@@ -786,7 +827,8 @@
                 "E":"Research has shown that American morning glory plants that are protected by ants produce significantly more seeds than morning glory plants that are not protected by ants. ",
                 "F":"Ants generally ignore small insects, but they will eat the adults of large insect species as well as their eggs and larvae."
             },
-            "answer":["C","D","E"]
+            "answer":["C","D","E"],
+            "score":1            
         }
     }
 }

@@ -25,11 +25,11 @@
     </ion-toolbar>
     <ion-grid class="score-header">
         <ion-row *ngIf="paperType == 'listening'" class="report-header-row">
-            <ion-col col-1>得分: <span>20</span></ion-col>
+            <ion-col col-1>得分: <span>{{score}}</span></ion-col>
             <ion-col col-1>准确率: <span>{{correct_rate}}</span></ion-col>
         </ion-row>
         <ion-row *ngIf="paperType == 'reading'" class="report-header-row">
-            <ion-col col-1>得分: <span>20</span></ion-col>
+            <ion-col col-1>得分: <span>{{reading_score}}</span></ion-col>
             <ion-col col-1>准确率: <span>{{reading_correct_rate}}</span></ion-col>
         </ion-row>
         <ion-row *ngIf="paperType == 'writing' || paperType == 'speaking'" class="report-header-row">

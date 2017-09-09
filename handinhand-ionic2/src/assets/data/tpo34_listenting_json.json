@@ -5,6 +5,7 @@
     "C_Conversion1",
     "p_Lecture1",
     "p_Lecture2",
+    "d3",
     "C_Conversion2",
     "p_Lecture3",
     "p_Lecture4"
@@ -247,7 +248,8 @@
       ],
       "answer": [
         "A"
-      ]
+      ],
+      "score": 1
     },
     "q2": {
       "seq": 2,
@@ -263,7 +265,8 @@
       ],
       "answer": [
         "A"
-      ]
+      ],
+      "score": 1
     },
     "q3": {
       "seq": 3,
@@ -278,8 +281,10 @@
         "d)It has been in the collection for more than ten years. "
       ],
       "answer": [
-        "B","C"
-      ]
+        "B",
+        "C"
+      ],
+      "score": 1
     },
     "q4": {
       "seq": 4,
@@ -295,7 +300,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q5": {
       "seq": 5,
@@ -311,7 +317,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q6": {
       "seq": 6,
@@ -327,7 +334,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q7": {
       "seq": 7,
@@ -343,7 +351,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q8": {
       "seq": 8,
@@ -359,7 +368,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q9": {
       "seq": 9,
@@ -374,8 +384,10 @@
         "d)Actors ignore the audience."
       ],
       "answer": [
-        "B","C"
-      ]
+        "B",
+        "C"
+      ],
+      "score": 1
     },
     "q10": {
       "seq": 10,
@@ -390,8 +402,10 @@
         "d)The performances varied from night to night. "
       ],
       "answer": [
-        "B","C"
-      ]
+        "B",
+        "C"
+      ],
+      "score": 1
     },
     "q11": {
       "seq": 11,
@@ -407,7 +421,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q12": {
       "seq": 12,
@@ -423,7 +438,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q13": {
       "seq": 13,
@@ -439,7 +455,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q14": {
       "seq": 14,
@@ -455,7 +472,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q15": {
       "seq": 15,
@@ -471,7 +489,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q16": {
       "seq": 16,
@@ -486,8 +505,10 @@
         "d)They can be monitored efficiently from one central location. "
       ],
       "answer": [
-        "B","C"
-      ]
+        "B",
+        "C"
+      ],
+      "score": 1
     },
     "q17": {
       "seq": 17,
@@ -503,7 +524,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q18": {
       "seq": 18,
@@ -519,7 +541,8 @@
       ],
       "answer": [
         "A"
-      ]
+      ],
+      "score": 1
     },
     "q19": {
       "seq": 19,
@@ -535,7 +558,8 @@
       ],
       "answer": [
         "A"
-      ]
+      ],
+      "score": 1
     },
     "q20": {
       "seq": 20,
@@ -551,7 +575,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q21": {
       "seq": 21,
@@ -567,7 +592,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q22": {
       "seq": 22,
@@ -583,7 +609,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q23": {
       "seq": 23,
@@ -599,7 +626,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q24": {
       "seq": 24,
@@ -615,7 +643,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q25": {
       "seq": 25,
@@ -630,8 +659,10 @@
         "d)The number of flowers that bloom at the same time "
       ],
       "answer": [
-        "B","C"
-      ]
+        "B",
+        "C"
+      ],
+      "score": 1
     },
     "q26": {
       "seq": 26,
@@ -647,7 +678,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q27": {
       "seq": 27,
@@ -663,7 +695,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q28": {
       "seq": 28,
@@ -679,7 +712,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q29": {
       "seq": 29,
@@ -694,8 +728,10 @@
         "d)Appropriate standards for evaluating a musical performance "
       ],
       "answer": [
-        "B","C"
-      ]
+        "B",
+        "C"
+      ],
+      "score": 1
     },
     "q30": {
       "seq": 30,
@@ -711,7 +747,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q31": {
       "seq": 31,
@@ -726,8 +763,10 @@
         "d)Many bought the album, making it a huge commercial success. "
       ],
       "answer": [
-        "B","C"
-      ]
+        "B",
+        "C"
+      ],
+      "score": 1
     },
     "q32": {
       "seq": 32,
@@ -743,7 +782,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q33": {
       "seq": 33,
@@ -759,7 +799,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     },
     "q34": {
       "seq": 34,
@@ -775,7 +816,8 @@
       ],
       "answer": [
         "B"
-      ]
+      ],
+      "score": 1
     }
   }
 }

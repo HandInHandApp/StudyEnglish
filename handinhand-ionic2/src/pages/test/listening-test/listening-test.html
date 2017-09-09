@@ -5,11 +5,13 @@
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>{{headername}}</ion-title>
-        <ion-buttons end>
+
+        <ion-buttons end *ngIf="step.indexOf('d')!=0">
             <!--Listening没有review 
             <button class="navbtn" ion-button (click)="gotoReview()" type="submit" block>
                 Review
             </button>-->
+
             <button class="navbtn" [disabled]="isBackable" ion-button (click)="gotoBack()" type="submit" block>
                 Back
             </button>
@@ -44,6 +46,18 @@
                     <timer-countdown title="headertimer" [hidden]="timer_hidden" [stop]="timer_stop" [endDate]="counttime" (endEvent)="timerEnd($event)"></timer-countdown>   
                 </button> 
             </span>
+        </ion-buttons>
+
+        <ion-buttons right *ngIf="step.indexOf('d')==0">
+            <button end class="navbtn" ion-button (click)="gotoNext()" type="submit" block>
+                CONTINUE
+            </button>
+        </ion-buttons>
+
+        <ion-buttons right *ngIf="step.indexOf('d')!=0">
+            <button end class="navbtn" ion-button (click)="gotoNextLecture()" type="submit" block>
+                下一篇
+            </button>
         </ion-buttons>
     </ion-toolbar>
 
@@ -90,7 +104,7 @@
                         {{passages.question[item].seq}}. {{passages.question[item].para}} {{useranswer[step]}}
                     </div>
                 </ion-list-header>
-                
+
                 <ion-item>
                     <ion-label class="label-pre-line">{{passages.question[step].choices[0]}}</ion-label>
                     <ion-checkbox value="A" [checked]="useranswer[step].indexOf('A')!=-1" (ionChange)="setPairAnswer($event, 'A')"></ion-checkbox>

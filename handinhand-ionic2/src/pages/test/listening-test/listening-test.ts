@@ -26,6 +26,7 @@ export class ListeningTestPage {
   step = "";
   steps: any[];
   last_stepindex: any;
+
   total_question: number = 0;
   total_passage: number = 0;
   timer_stop = true;
@@ -106,7 +107,9 @@ export class ListeningTestPage {
           this.step = this.navParams.get("curstep");
         }
         this.last_step = this.steps[this.passages["steps"].length - 1];
+
         this.last_stepindex = this.passages["steps"].length - 1;
+        // this.lastLecture_stepindex = this.passages["steps"].
         this.get_total_graph(this.steps);
         console.log(resulte)
       }
@@ -133,6 +136,31 @@ export class ListeningTestPage {
     } else {
       this.showAlert();
     }
+    let preStep = this.steps[this.stepindex - 1];
+    if (this.step == "q1" || preStep == "d2") {
+      this.isBackable = true;
+    } else {
+      this.isBackable = false;
+    }
+  }
+
+  /**
+   *  下一篇
+   */
+  gotoNextLecture() {
+    let nextStep = this.steps[this.stepindex++];
+    while (nextStep.indexOf("C") != 0 && nextStep.indexOf("p") != 0) {
+      nextStep = this.steps[this.stepindex++];
+      if (this.stepindex + 1 > this.last_stepindex) {
+        break;
+      }
+    }
+    if (this.stepindex == this.last_stepindex) {
+      this.showAlert();
+    } else {
+      this.step = nextStep;
+    }
+
     let preStep = this.steps[this.stepindex - 1];
     if (this.step == "q1" || preStep == "d2") {
       this.isBackable = true;
@@ -230,25 +258,25 @@ export class ListeningTestPage {
   }
 
 
-  setPairAnswer(event: any, choice: string){
+  setPairAnswer(event: any, choice: string) {
     let tempchoice: string;
     tempchoice = this.useranswer[this.step]
-    if(event.checked==true){
-      if(tempchoice==""){
-         tempchoice=choice
-      }else if(tempchoice.length>1){
-        event.checked=false
-      }else{
-        tempchoice=tempchoice+choice
+    if (event.checked == true) {
+      if (tempchoice == "") {
+        tempchoice = choice
+      } else if (tempchoice.length > 1) {
+        event.checked = false
+      } else {
+        tempchoice = tempchoice + choice
       }
-    }else{
-      tempchoice = tempchoice.replace(choice,"")
+    } else {
+      tempchoice = tempchoice.replace(choice, "")
     }
     console.log(tempchoice);
-    this.useranswer[this.step]=tempchoice.split("").sort(
-      function compareFunction(param1,param2){
-			    return param1.localeCompare(param2);
-			}
+    this.useranswer[this.step] = tempchoice.split("").sort(
+      function compareFunction(param1, param2) {
+        return param1.localeCompare(param2);
+      }
     ).join("")
   };
 

@@ -25,8 +25,8 @@ export class TestReportPage {
       "q14": "", "q15": "", "q16": "", "q17": "", "q18": "", "q19": "", "q20": "", "q21": "", "q22": "", "q23": "", "q24": "", "q25": "",
       "q26": "", "q27": "", "q28": "", "q29": "", "q30": "", "q31": "", "q32": "", "q33": "", "q34": ""
     },
-    "speaking": {"q1":"","q2":""},
-    "writing": { 
+    "speaking": { "q1": "", "q2": "" },
+    "writing": {
       "p_section1_1": "",
       "p_section2_1": ""
     },
@@ -43,9 +43,12 @@ export class TestReportPage {
 
   steps: any;
   score: number;
+  reading_score: number;
   reading_correct_rate: any;
   correct_rate: any;
   headername: string;
+
+
 
 
 
@@ -84,20 +87,24 @@ export class TestReportPage {
           this.useranswer["reading"] = value
           let correct_answer = 0;
           let total_count = 0;
+          let total_score = 0;
           for (let step in this.useranswer["reading"]) {
             total_count = total_count + 1;
 
             if (this.readingpaper.questions[step].type == "drag-choice") {
               if (this.useranswer["reading"][step] != "" && this.readingpaper.questions[step].answer.join("") == this.useranswer["reading"][step].join("")) {
                 correct_answer = correct_answer + 1;
+                total_score = total_score + this.readingpaper.questions[step].score;
               }
             } else {
               if (this.readingpaper.questions[step].answer.join("") == this.useranswer["reading"][step]) {
                 correct_answer = correct_answer + 1;
+                total_score = total_score + this.readingpaper.questions[step].score;
               }
             }
           }
           this.reading_correct_rate = correct_answer + "/" + total_count;
+          this.reading_score = total_score;
         });
       }
     );
@@ -112,14 +119,14 @@ export class TestReportPage {
         });
       }
     );
-    
+
     /**
      * Speaking  
      */
     confData.getTestData(this.speakingUrl).subscribe(
       resulte => {
         console.log(resulte)
-        this.speakingpaper= resulte
+        this.speakingpaper = resulte
         this.steps = this.speakingpaper["steps"];
       }
     );
@@ -128,7 +135,7 @@ export class TestReportPage {
      */
     confData.getListeningTestData(this.listeningUrl).subscribe(
       resulte => {
-        console.log("resulte:"+resulte);
+        console.log("resulte:" + resulte);
         this.listeningpaper = resulte;
         this.steps = this.listeningpaper["steps"];
 
@@ -136,21 +143,25 @@ export class TestReportPage {
           this.useranswer["listening"] = value
           let correct_answer = 0;
           let total_count = 0;
+          let total_score = 0;
 
           for (let step in this.useranswer["listening"]) {
             total_count++;
-            if ( this.listeningpaper.question[step].type == "multi-choice") {
+            if (this.listeningpaper.question[step].type == "multi-choice") {
               if (this.useranswer["listening"][step] != "" && this.listeningpaper.question[step].answer.join("") == this.useranswer["listening"][step]) {
                 correct_answer = correct_answer + 1;
+                total_score = total_score + this.listeningpaper.question[step].score;
               }
             } else {
               if (this.listeningpaper.question[step].answer.join("") == this.useranswer["listening"][step]) {
                 correct_answer = correct_answer + 1;
+                total_score = total_score + this.listeningpaper.question[step].score;
               }
             }
           }
 
           this.correct_rate = correct_answer + "/" + total_count;
+          this.score = total_score;
         });
       }
     );
@@ -180,7 +191,7 @@ export class TestReportPage {
       }
     };
     let page = paperTypes[this.paperType];
-    console.log("page:"+page);
+    console.log("page:" + page);
     this.navCtrl.push(paperTypes[this.paperType]["page"], {
       curTPO: this.curTPO,
       headername: this.headername,
