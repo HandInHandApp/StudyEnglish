@@ -99,11 +99,11 @@ export class ListeningTestPage {
         if (this.navParams.get("curstep") == undefined) {
           this.step = this.first_step;
         } else {//如果是跳转过来的
-          this.step = this.navParams.get("curstep");
-          this.stepindex = this.steps.indexOf(this.step);
           this.userData.getUserListeningAnswer().then((value) => {
             this.useranswer = value;
           });
+          this.stepindex = this.steps.indexOf(this.navParams.get("curstep"));
+          this.step = this.navParams.get("curstep");
         }
         this.last_step = this.steps[this.passages["steps"].length - 1];
         this.last_stepindex = this.passages["steps"].length - 1;
@@ -228,6 +228,29 @@ export class ListeningTestPage {
   audioEnded() {
     this.timer_stop = false;
   }
+
+
+  setPairAnswer(event: any, choice: string){
+    let tempchoice: string;
+    tempchoice = this.useranswer[this.step]
+    if(event.checked==true){
+      if(tempchoice==""){
+         tempchoice=choice
+      }else if(tempchoice.length>1){
+        event.checked=false
+      }else{
+        tempchoice=tempchoice+choice
+      }
+    }else{
+      tempchoice = tempchoice.replace(choice,"")
+    }
+    console.log(tempchoice);
+    this.useranswer[this.step]=tempchoice.split("").sort(
+      function compareFunction(param1,param2){
+			    return param1.localeCompare(param2);
+			}
+    ).join("")
+  };
 
   /**
    * 答题结束显示弹出框
