@@ -268,7 +268,7 @@
     "q3": {
       "seq": 3,
       "title": "Question 3 of 17",
-      "type": "mutli-choice",
+      "type": "multi-choice",
       "mp3": "assets/tpo34/tpo34_listening_question1_3.mp3",
       "para": "What are the criteria for deciding whether a book is put up for sale? [choose two answers] ",
       "choices": [

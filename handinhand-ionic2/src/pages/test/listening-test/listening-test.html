@@ -60,7 +60,7 @@
                 <source src={{passages.question[step].mp3}} type='audio/mpeg' />
             </audio>
 
-            <ion-list radio-group [(ngModel)]="useranswer[step]">
+            <ion-list radio-group [(ngModel)]="useranswer[step]" *ngIf="passages.question[step].type == 'single-choice'">
                 <ion-list-header>
                     <div #popoverText class="text-to-change">
                         {{passages.question[item].seq}}. {{passages.question[item].para}}
@@ -84,6 +84,30 @@
                     <ion-radio value="D"></ion-radio>
                 </ion-item>
             </ion-list>
+            <ion-list *ngIf="passages.question[step].type == 'multi-choice'">
+                <ion-list-header>
+                    <div #popoverText class="text-to-change">
+                        {{passages.question[item].seq}}. {{passages.question[item].para}} {{useranswer[step]}}
+                    </div>
+                </ion-list-header>
+                
+                <ion-item>
+                    <ion-label class="label-pre-line">{{passages.question[step].choices[0]}}</ion-label>
+                    <ion-checkbox value="A" [checked]="useranswer[step].indexOf('A')!=-1" (ionChange)="setPairAnswer($event, 'A')"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                    <ion-label class="label-pre-line">{{passages.question[step].choices[1]}}</ion-label>
+                    <ion-checkbox value="B" [checked]="useranswer[step].indexOf('B')!=-1" (ionChange)="setPairAnswer($event, 'B')"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                    <ion-label class="label-pre-line">{{passages.question[step].choices[2]}}</ion-label>
+                    <ion-checkbox value="C" [checked]="useranswer[step].indexOf('C')!=-1" (ionChange)="setPairAnswer($event, 'C')"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                    <ion-label class="label-pre-line">{{passages.question[step].choices[3]}}</ion-label>
+                    <ion-checkbox value="D" [checked]="useranswer[step].indexOf('D')!=-1" (ionChange)="setPairAnswer($event, 'D')"></ion-checkbox>
+                </ion-item>
+            </ion-list>
         </div>
 
         <!--如果是passage -->
@@ -99,7 +123,8 @@
                         <p *ngFor="let para of passages.passage[step].contents">{{para}}</p>
                     </div>
 
-                    <audio autoplay (play)="audioPlayed()" (ended)="gotoNext()" [controls]="step.indexOf('p')==0 || step.indexOf('C')==0" id='Audio-{{step}}' style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
+                    <audio autoplay (play)="audioPlayed()" (ended)="gotoNext()" [controls]="step.indexOf('p')==0 || step.indexOf('C')==0" id='Audio-{{step}}'
+                        style="width: 400px;" *ngIf="passages.passage[step].mp3!=''">
                         <source src={{passages.passage[step].mp3}} type='audio/mpeg' />
                     </audio>
                 </ion-col>
