@@ -16,7 +16,7 @@ export class WritingTestPage {
   grid_two_input: any;
   grid_three_input_number: any;
   grid_two_input_number: any;
-  useranswer: any={ "q1":"", "q2":"" };
+  useranswer: any={ "p_section1_1":"", "p_section2_1":"" };
   session: any;
   type: any;
   tpourl:any;

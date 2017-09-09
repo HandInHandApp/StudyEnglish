@@ -26,7 +26,7 @@ export class TestReportPage {
       "q26": "", "q27": "", "q28": "", "q29": "", "q30": "", "q31": "", "q32": "", "q33": "", "q34": ""
     },
     "speaking": {"q1":"","q2":""},
-    "writing": {
+    "writing": { 
       "p_section1_1": "",
       "p_section2_1": ""
     },
@@ -101,11 +101,15 @@ export class TestReportPage {
         });
       }
     );
+    
     confData.getTestData(this.writingUrl).subscribe(
       resulte => {
         console.log(resulte)
         this.writingpaper = resulte
-        this.steps = this.writingpaper["steps"];
+        this.steps = this.writingpaper["steps"]
+        this.userData.getUserWritingAnswer().then((value) => {
+          this.useranswer["writing"] = value
+        });
       }
     );
     
