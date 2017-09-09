@@ -213,7 +213,7 @@ export class ReadingTestPage {
   }
 
   gotoHome() {
-    this.navCtrl.popTo(this.navCtrl.first())
+    this.navCtrl.pop()
   }
 
   gotoReview(){

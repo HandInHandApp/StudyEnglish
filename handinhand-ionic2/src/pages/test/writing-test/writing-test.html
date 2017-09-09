@@ -106,7 +106,7 @@
                                 Word Count{{countInputNumber(grid_two_input)}}
                             </h4>
                             <textarea style="border-style: solid; border-color: #FFFFFF"
-                                [(ngModel)]="grid_two_input"  (change)="countInputNumber(grid_two_input)" 
+                                [(ngModel)]="useranswer['q1']" (change)="countInputNumber(useranswer['q2'])" 
                                 rows="300" cols="110">
                             </textarea>
                         </ion-col>
@@ -125,7 +125,7 @@
                                 Word Count{{countInputNumber(grid_three_input)}}
                             </h4>
                             <textarea style="border-style: solid; border-color: #FFFFFF"
-                                [(ngModel)]="grid_three_input"  (change)="countInputNumber(grid_three_input)" 
+                                [(ngModel)]="useranswer['q2']"  (change)="countInputNumber(useranswer['q2'])" 
                                 rows="300" cols="110">
                             </textarea>
                         </ion-col>

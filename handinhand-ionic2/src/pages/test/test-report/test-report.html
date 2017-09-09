@@ -95,9 +95,10 @@
             <ion-grid *ngIf="(paperType=='writing') && (writingpaper!= undefined)">
                 <div *ngFor="let rstep of writingpaper['reportStep']; let idx=index;">
                     <ion-row class="report-div">
-                        <ion-col (click)='gotoQuestion(rstep)' col-10>{{idx + 1}}
+                        <ion-col (click)='gotoQuestion(rstep)' col-11>{{idx + 1}}
                             <span class="report-question" [innerHTML]="writingpaper.passage[rstep].question"></span>
                         </ion-col>
+                        <ion-col col-1 class="answer-col">完成</ion-col>
                     </ion-row>
                 </div>
             </ion-grid>

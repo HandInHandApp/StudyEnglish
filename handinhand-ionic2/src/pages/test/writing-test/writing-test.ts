@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-
 import {NavController, AlertController, NavParams } from 'ionic-angular';
 import { TestReportPage } from '../test-report/test-report'
-
-
 import { ConferenceData } from '../../../providers/conference-data';
+import { UserData } from '../../../providers/user-data';
 
 @Component({
   selector: 'page-writing-page',
@@ -18,18 +16,13 @@ export class WritingTestPage {
   grid_two_input: any;
   grid_three_input_number: any;
   grid_two_input_number: any;
-
+  useranswer: any={ "q1":"", "q2":"" };
   session: any;
   type: any;
   tpourl:any;
   headername:any;
   step: string;
   first_step: any;
-  useranswer: any={
-    "q1":"", "q2":"", "q3":"", "q4":"", "q5":"", "q6":"", "q7":"", "q8":"","q9":"","q10":"","q11":"","q12":"", "q13":"", "q14":"",
-    "q15":"", "q16":"", "q17":"", "q18":"", "q19":"", "q20":"","q21":"","q22":"","q23":"","q24":"", "q25":"", "q26":"", "q27":"", "q28":"",
-    "q29":"", "q30":"", "q31":"", "q32":"","q33":"","q34":"","q35":"","q36":"","q37":"","q38":"","q39":"","q40":"","q41":"","q42":""
-  };
   passages: any;
   last_step: any;
   stepindex: number = 0;
@@ -45,7 +38,8 @@ export class WritingTestPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public alertCtrl: AlertController,
-    public confData: ConferenceData
+    public confData: ConferenceData,
+    public userData: UserData
   ) {
         this.curTPO = navParams.get("curTPO")
         this.session = navParams.data.session;
@@ -65,6 +59,9 @@ export class WritingTestPage {
                this.step = this.first_step;
                this.last_step = this.steps[this.last_stepindex];
             }else{
+              this.userData.getUserWritingAnswer().then((value)=>{
+                this.useranswer = value
+              })
               this.stepindex = this.passages["steps"].indexOf(this.step)
             }
             this.last_stepindex = this.passages["steps"].length - 1;
@@ -105,6 +102,7 @@ export class WritingTestPage {
   }
 
   gotoNext() {
+    this.userData.setUserWritingAnswer(this.useranswer)
     if (this.stepindex != this.last_stepindex) {
        this.stepindex = this.stepindex + 1
        this.step = this.steps[this.stepindex]
